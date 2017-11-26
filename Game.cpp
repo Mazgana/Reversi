@@ -5,8 +5,8 @@ using namespace std;
 
 Game::Game() {
   board = Board(8, 8);
-	blackPlayer = HumenPlayer(BLACK);
-	whitePlayer = HumenPlayer(WHITE);
+	blackPlayer = HumanPlayer(BLACK);
+	whitePlayer = HumanPlayer(WHITE);
 }
 
 void Game :: run() {
@@ -33,7 +33,7 @@ void Game :: run() {
     }
 }
 
-bool Game :: playTurn(HumenPlayer p) {
+bool Game :: playTurn(HumanPlayer p) {
     vector<Cell> options = board.getOptions(p.getChip());
     if (options.empty()) {
         cin.get();

@@ -2,13 +2,13 @@
 #define GAME_H_
 
 #include "Board.h"
-#include "HumenPlayer.h"
+#include "HumanPlayer.h"
 
 class Game {
 private:
   Board board;
-	HumenPlayer blackPlayer;
-	HumenPlayer whitePlayer;
+	HumanPlayer blackPlayer;
+	HumanPlayer whitePlayer;
 
 public:
 	Game();
@@ -20,7 +20,7 @@ public:
   void run();
   //calls on functions for each turn.
   //returns true if a piece was put on board. false otherwise.
-  bool playTurn(HumenPlayer p);
+  bool playTurn(HumanPlayer p);
   //ending game and declaring winner.
   void endGame() const;
 

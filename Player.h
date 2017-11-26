@@ -9,12 +9,11 @@ class Player {
 private:
     Status type;
 public:
-    Player();
-    virtual ~Player();
+    virtual ~Player() = 0;
     // passes player's char representing chip.
-    virtual Status getType() const;
+    virtual Status getType() const = 0;
     // presenting optional moves to player and getting move decision.
-    virtual Cell doTurn(vector<Cell> options);
+    virtual Cell doTurn(vector<Cell> options) = 0;
 };
 
 #endif /* PLAYER_H_ */
