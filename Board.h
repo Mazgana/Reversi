@@ -14,6 +14,7 @@ class Board {
 	public:
 		Board();
 		Board(int, int);
+		Board(const Board &b);
 
     //initializing game board with four pieces in middle of board.
     void initialize();

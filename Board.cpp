@@ -23,6 +23,12 @@ Board :: Board(int len, int wid) : length(len), width(wid){
 	}
 }
 
+Board::Board(const Board &b) {
+	length = b.length;
+	width = b.width;
+	CellArr = b.CellArr;
+}
+
 void Board :: initialize()
 {
 	int i, j;
