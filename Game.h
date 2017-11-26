@@ -24,6 +24,8 @@ public:
   //ending game and declaring winner.
   void endGame() const;
 
+  int findEnemyMaxMoves(Cell chosen, Player currentPlayer);
+
 };
 
 #endif /* GAME_H_ */

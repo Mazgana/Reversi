@@ -120,21 +120,22 @@ vector<Cell> Board :: getOptions(char player) {
     return options;
 }
 
-bool Board :: doOneWay(char player, int x, int dx, int y, int dy, bool flip) {
-    x = x + dx;
+int Board :: doOneWay(char player, int x, int dx, int y, int dy, bool flip) {
+		int chipCounter = 0;
+		x = x + dx;
     y= y + dy;
     if (x < 0 || x >= length || y < 0 || y >= width) {
-        return false;
+        return 0;
     }//out of bounds cell
     if (reveal(x,y) == EMPTY || reveal(x,y) == player) {
-        return false;
+        return 0;
     }// no continuation in direction
     else {
         while (reveal(x,y) != player && reveal(x,y) != ' ') {
             x = x + dx;
             y = y + dy;
             if(x < 0 || x >= length || y < 0 || y >= width) {
-                return false;
+                return 0;
             }// out of bounds
             if(reveal(x,y) == player) {
                 if (flip) {
@@ -144,13 +145,14 @@ bool Board :: doOneWay(char player, int x, int dx, int y, int dy, bool flip) {
                         CellArr[x][y].flip();
                         x = x - dx;
                         y = y - dy;
+                        chipCounter++;
                     }
         }//flipping if cell was chosen
-        return true;
+        return chipCounter;
             }
         }
     }
-    return false;
+    return 0;
 }
 
 void Board::flipChips(Status playerColr, Cell chosen) {

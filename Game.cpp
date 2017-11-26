@@ -59,3 +59,12 @@ void Game :: endGame() const {
     }
     cout << endl;
 }
+
+int findEnemyMaxMoves(Cell chosen, Player currentPlayer) {
+	 int temp, max = 0;
+	 Board currentBoard = Board(board);
+	 currentBoard.putChip(currentPlayer.getChip(), chosen.getCol(), chosen.getRow());
+	 currentBoard.flipChips(p.getChip(), chosen);
+
+	 return max;
+}

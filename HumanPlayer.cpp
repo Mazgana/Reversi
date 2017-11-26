@@ -1,7 +1,3 @@
-//
-// Created by leah on 25/11/17.
-//
-
 #include "HumanPlayer.h"
 #include <limits>
 #include <iostream>
@@ -60,4 +56,12 @@ Cell HumanPlayer :: doTurn(vector<Cell> options) {
 
 Status HumanPlayer :: getChip() const{
     return type;
-};
+}
+
+Status HumanPlayer::getOppositeType() {
+	if (type == BLACK) {
+		return WHITE;
+	} else {
+		return BLACK;
+	}
+}

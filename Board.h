@@ -32,7 +32,7 @@ class Board {
     void putChip(Status chip, int x, int y);
 
     //checks if a specific direction foloows game logic to make cell valid for turn.
-    bool doOneWay(char player, int x, int dx, int y, int dy, bool flip);
+    int doOneWay(char player, int x, int dx, int y, int dy, bool flip);
 
     //flips all the chips from specific cell in every optional direction for the current player.
     void flipChips(Status playerColr, Cell chosen);

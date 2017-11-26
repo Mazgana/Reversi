@@ -1,18 +1,18 @@
-#ifndef REVERSI_HUMANPLAYER_H
-#define REVERSI_HUMANPLAYER_H
+#ifndef REVERSI_AI_H
+#define REVERSI_AI_H
 
 #include "Player.h"
 #include "Cell.h"
 
-class HumanPlayer : public Player{
+class AI : public Player{
 private:
     // representing player's chip color.
     Status type;
 public:
     // constructor.
-    HumanPlayer();
+    AI();
 
-    HumanPlayer(Status color);
+    AI(Status color);
 
     // passes player's char representing chip.
     Status getChip() const;
@@ -23,4 +23,4 @@ public:
     Cell doTurn(vector<Cell> options) override;
 };
 
-#endif //REVERSI_HUMANPLAYER_H
+#endif //REVERSI_AI_H
