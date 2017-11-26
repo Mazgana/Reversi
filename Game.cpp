@@ -62,9 +62,42 @@ void Game :: endGame() const {
 
 int findEnemyMaxMoves(Cell chosen, Player currentPlayer) {
 	 int temp, max = 0;
+	 vector<Cell> oppositeOptions;
 	 Board currentBoard = Board(board);
 	 currentBoard.putChip(currentPlayer.getChip(), chosen.getCol(), chosen.getRow());
 	 currentBoard.flipChips(p.getChip(), chosen);
+
+	 oppositeOptions = currentBoard.getOptions(currentPlayer.getOppositeType());
+
+	 max = doOneWay(currentPlayer.getOppositeType(), chosen.getCol(), -1, chosen.getRow(), 0, true);
+
+	 temp = doOneWay(currentPlayer.getOppositeType(), chosen.getCol(), 1, chosen.getRow(), 0, true);
+	 if (temp > max)
+		 max = temp;
+
+	 temp = doOneWay(currentPlayer.getOppositeType(), chosen.getCol(), -1, chosen.getRow(), 1, true);
+	 if (temp > max)
+		 max = temp;
+
+	 temp = doOneWay(currentPlayer.getOppositeType(), chosen.getCol(), 1, chosen.getRow(), 1, true);
+	 if (temp > max)
+		 max = temp;
+
+	 temp = doOneWay(currentPlayer.getOppositeType(), chosen.getCol(), 0, chosen.getRow(), 1, true);
+	 if (temp > max)
+		 max = temp;
+
+	 temp = doOneWay(currentPlayer.getOppositeType(), chosen.getCol(), -1, chosen.getRow(), -1, true);
+	 if (temp > max)
+		 max = temp;
+
+	 temp = doOneWay(currentPlayer.getOppositeType(), chosen.getCol(), 1, chosen.getRow(), -1, true);
+	 if (temp > max)
+		 max = temp;
+
+	 temp = doOneWay(currentPlayer.getOppositeType(), chosen.getCol(), 0, chosen.getRow(), -1, true);
+	 if (temp > max)
+		 max = temp;
 
 	 return max;
 }

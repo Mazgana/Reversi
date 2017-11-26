@@ -26,13 +26,13 @@ class Board {
     void print() const;
 
     //returns list of optional cell according to reversi game logic.
-    vector <Cell> getOptions(char player);
+    vector <Cell> getOptions(Status player);
 
     //put a chip on a specific cell.
     void putChip(Status chip, int x, int y);
 
     //checks if a specific direction foloows game logic to make cell valid for turn.
-    int doOneWay(char player, int x, int dx, int y, int dy, bool flip);
+    int doOneWay(Status player, int x, int dx, int y, int dy, bool flip);
 
     //flips all the chips from specific cell in every optional direction for the current player.
     void flipChips(Status playerColr, Cell chosen);

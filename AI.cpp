@@ -11,7 +11,13 @@ AI::AI(Status t) : type(t){
 }
 
 Cell AI :: doTurn(vector<Cell> options) {
+		int i;
 
+		for (i = 0; i < options.size(); i++) {
+
+		}
+		Cell c(x,y);
+    return c;
 }
 
 Status AI :: getChip() const{

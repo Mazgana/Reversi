@@ -84,7 +84,7 @@ void Board :: print() const
 	}
 }
 
-vector<Cell> Board :: getOptions(char player) {
+vector<Cell> Board :: getOptions(Status player) {
      std :: vector<Cell> options;
     // loop over board finding valid cells.
     for(int i = 0; i < length; i++) {
@@ -120,7 +120,7 @@ vector<Cell> Board :: getOptions(char player) {
     return options;
 }
 
-int Board :: doOneWay(char player, int x, int dx, int y, int dy, bool flip) {
+int Board :: doOneWay(Status player, int x, int dx, int y, int dy, bool flip) {
 		int chipCounter = 0;
 		x = x + dx;
     y= y + dy;
