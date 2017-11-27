@@ -3,13 +3,13 @@
 //
 
 #include <gtest/gtest.h>
-/*#include "Player.h"
+#include "HumanPlayer.h"
 
 using namespace std;
 
 TEST(PlayerTest, player_creationTests) {
-    Player player('o');
-    EXPECT_EQ(player.getChip(), 'o');
+    HumanPlayer p;
+/*    EXPECT_EQ(player.getChip(), 'O');
     EXPECT_NE(player.getChip(),' ');
-    EXPECT_NE(player.getChip(),'x');
-}*/
+    EXPECT_NE(player.getChip(),'x');*/
+}

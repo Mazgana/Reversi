@@ -9,23 +9,23 @@ using namespace std;
 
 TEST(CellTest, creationTests) {
     Cell cell(1,2);
-    EXPECT_EQ(cell.getX(),1);
-    EXPECT_EQ(cell.getY(),2);
-    EXPECT_EQ(cell.getPos(),' ');
+    EXPECT_EQ(cell.getCol(),2);
+    EXPECT_EQ(cell.getRow(),1);
+    EXPECT_EQ(cell.getStatus(),EMPTY);
 }
 
 TEST(CellTest, settingChipTests) {
     Cell cell(1,2);
-    cell.setPos('x');
-    EXPECT_EQ(cell.getPos(),'x');
-    EXPECT_NE(cell.getPos(),' ');
-    EXPECT_ANY_THROW(cell.setPos('t'));
+    cell.setStatus(BLACK);
+    EXPECT_EQ(cell.getStatus(),'X');
+    EXPECT_NE(cell.getStatus(),' ');
+//    EXPECT_ANY_THROW(cell.setStatus('t'));
 }
 
 TEST(CellTest, flipTests) {
     Cell cell(1,2);
-    cell.setPos('o');
+    cell.setStatus(WHITE);
     cell.flip();
-    EXPECT_NE(cell.getPos(),'o');
-    EXPECT_EQ(cell.getPos(),'x');
+    EXPECT_NE(cell.getStatus(),'O');
+    EXPECT_EQ(cell.getStatus(),'X');
 }

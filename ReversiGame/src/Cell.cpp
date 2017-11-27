@@ -1,7 +1,6 @@
 #include "Cell.h"
 #include <iostream>
-#include <stdio.h>
-#include <string.h>
+
 using namespace std;
 
 Cell::Cell() {
@@ -26,8 +25,10 @@ Status Cell::getStatus() const {
 	return cellStat;
 }
 
-void Cell::setStatus(Status newSatus) {
-	cellStat = newSatus;
+void Cell::setStatus(char newStatus) {
+	if (newStatus == WHITE || newStatus == BLACK) {
+		cellStat = (Status) newStatus;
+	}
 }
 
 int Cell::getRow() {
@@ -47,5 +48,5 @@ void Cell::flip() {
     	cellStat = WHITE;
   } else if (cellStat == WHITE) {
     	cellStat = BLACK;
-    }
+  }
 }
