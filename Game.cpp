@@ -80,12 +80,14 @@ bool Game :: playTurn(AI p) {
    board.putChip(p.getChip(), minCell.getCol(), minCell.getRow());// putting chip on board
    board.flipChips(p.getChip(), minCell);
 
-   cout << (char) p.getChip() << " played " << minCell.printCell() << endl;
+   cout << (char) p.getChip() << " played ";
+   minCell.printCell();
+   cout << endl;
 
    return true;
 }
 
-int findEnemyMaxMoves(Cell chosen, AI currentPlayer) {
+int Game::findEnemyMaxMoves(Cell chosen, AI currentPlayer) {
 	 int temp, max = 0;
 	 vector<Cell> oppositeOptions;
 	 Board currentBoard = Board(board);

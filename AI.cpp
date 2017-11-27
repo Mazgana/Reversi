@@ -10,6 +10,9 @@ AI::AI() {
 AI::AI(Status t) : type(t){
 }
 
+AI::~AI() {
+}
+
 Cell AI :: doTurn(vector<Cell> options) {
 		Cell c;
     return c;

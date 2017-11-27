@@ -10,9 +10,11 @@ HumanPlayer::HumanPlayer() {
 HumanPlayer::HumanPlayer(Status t) : type(t){
 }
 
+HumanPlayer::~HumanPlayer() {
+}
+
 Cell HumanPlayer :: doTurn(vector<Cell> options) {
     int i, j;
-//    int size = options.size();
     bool repeat = false;
     cout << type << ": It's your move." << endl;
     cout << "your possible moves:" << endl;

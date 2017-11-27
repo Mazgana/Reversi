@@ -9,7 +9,7 @@ class Player {
 private:
     Status type;
 public:
-    virtual ~Player() = 0;
+    virtual ~Player();
     // passes player's char representing chip.
     virtual Status getChip() const = 0;
 

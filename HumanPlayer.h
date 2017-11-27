@@ -14,6 +14,8 @@ public:
 
     HumanPlayer(Status color);
 
+    ~HumanPlayer();
+
     // passes player's char representing chip.
     Status getChip() const;
 

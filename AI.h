@@ -14,6 +14,8 @@ public:
 
     AI(Status color);
 
+    ~AI();
+
     // passes player's char representing chip.
     Status getChip() const;
 
