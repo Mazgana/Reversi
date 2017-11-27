@@ -14,12 +14,12 @@ public:
 
     AI(Status color);
 
-    ~AI();
+//    ~AI() override;
 
     // passes player's char representing chip.
-    Status getChip() const;
+    Status getChip() const override;
 
-    Status getOppositeType();
+    Status getOppositeType() override;
 
     // presenting optional moves to player and getting move decision.
     Cell doTurn(vector<Cell> options) override;

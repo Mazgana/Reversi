@@ -9,12 +9,12 @@ class Player {
 private:
     Status type;
 public:
-    virtual ~Player();
+//    virtual ~Player();
     // passes player's char representing chip.
     virtual Status getChip() const = 0;
 
     // passes player's opposite char representing chip.
-    virtual Status getOppositeType();
+    virtual Status getOppositeType() = 0;
 
     // presenting optional moves to player and getting move decision.
     virtual Cell doTurn(vector<Cell> options) = 0;
