@@ -45,6 +45,7 @@ bool Game :: playTurn(HumanPlayer p) {
     Cell chosen = p.doTurn(options);
     board.putChip(p.getChip(), chosen.getCol(), chosen.getRow());// putting chip on board
     board.flipChips(p.getChip(), chosen);
+
     return true;
 }
 
@@ -58,6 +59,30 @@ void Game :: endGame() const {
         cout << "Player " << chip << " wins!";
     }
     cout << endl;
+}
+
+bool Game :: playTurn(AI p) {
+	int i, min, temp;
+	Cell minCell;
+
+	vector<Cell> options = board.getOptions(p.getChip());
+	minCell = options.get(0);
+	min = findEnemyMaxMoves(minCell, p);
+
+	for (i = 1; i < optios.size(); i++) {
+		temp = findEnemyMaxMoves(options.get(i), p);
+		if (temp < min) {
+			min = temp;
+			minCell = options.get(i);
+		}
+	}
+
+   board.putChip(p.getChip(), minCell.getCol(), minCell.getRow());// putting chip on board
+   board.flipChips(p.getChip(), minCell);
+
+   cout << (char) p.getChip() << " played " << minCell.printCell() << endl;
+
+   return true;
 }
 
 int findEnemyMaxMoves(Cell chosen, Player currentPlayer) {
