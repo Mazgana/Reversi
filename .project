@@ -3,6 +3,7 @@
 	<name>Reversi</name>
 	<comment></comment>
 	<projects>
+		<project>ReversiGame</project>
 	</projects>
 	<buildSpec>
 	</buildSpec>
