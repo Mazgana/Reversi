@@ -15,7 +15,7 @@ Cell HumanPlayer :: doTurn(vector<Cell> options) {
     bool repeat = false;
     cout << type << ": It's your move." << endl;
     cout << "your possible moves:" << endl;
-    for (i = 0; i < options.size(); i++) {
+    for (i = 0; i < (int)options.size(); i++) {
         for (j = 0; j < i; j++) {
             if (options[i].getCol() == options[j].getCol() && options[i].getRow() == options[j].getRow()) {
                 repeat = true;

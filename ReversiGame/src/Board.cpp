@@ -89,29 +89,29 @@ vector<Cell> Board :: getOptions(Status player) {
     // loop over board finding valid cells.
     for(int i = 0; i < length; i++) {
         for (int j = 0; j < width; j++) {
-            if (CellArr[i][j].getStatus() == EMPTY) {
-                if (doOneWay(player, i, -1, j, 0, false)) {
+            if (CellArr[i][j].getStatus() == player) {
+                if (doOneWay(player, i, -1, j, 0, false) != 0) {
                     options.push_back(CellArr[i][j]);
                 }// check North
-                if (doOneWay(player, i, 1, j, 0, false)) {
+                if (doOneWay(player, i, 1, j, 0, false) != 0) {
                     options.push_back(CellArr[i][j]);
                 }// check South
-                if (doOneWay(player, i, 0, j,-1, false)) {
+                if (doOneWay(player, i, 0, j,-1, false) != 0) {
                     options.push_back(CellArr[i][j]);
                 }// check West
-                if (doOneWay(player, i, 0, j, 1, false)) {
+                if (doOneWay(player, i, 0, j, 1, false) != 0) {
                     options.push_back(CellArr[i][j]);
                 }// check East
-                if (doOneWay(player, i, -1, j,-1, false)) {
+                if (doOneWay(player, i, -1, j,-1, false) != 0) {
                     options.push_back(CellArr[i][j]);
                 }// check NE
-                if (doOneWay(player, i, 1, j, 1, false)) {
+                if (doOneWay(player, i, 1, j, 1, false) != 0) {
                     options.push_back(CellArr[i][j]);
                 }// check SE
-                if (doOneWay(player, i, 1, j,-1, false)) {
+                if (doOneWay(player, i, 1, j,-1, false) != 0) {
                     options.push_back(CellArr[i][j]);
                 }// check SW
-                if (doOneWay(player, i, -1, j, 1, false)) {
+                if (doOneWay(player, i, -1, j, 1, false) != 0) {
                     options.push_back(CellArr[i][j]);
                 }// check NE
             }
@@ -119,6 +119,7 @@ vector<Cell> Board :: getOptions(Status player) {
     }
     return options;
 }
+
 
 int Board :: doOneWay(Status player, int x, int dx, int y, int dy, bool flip) {
 		int chipCounter = 0;
@@ -131,9 +132,10 @@ int Board :: doOneWay(Status player, int x, int dx, int y, int dy, bool flip) {
         return 0;
     }// no continuation in direction
     else {
-        while (reveal(x,y) != player && reveal(x,y) != ' ') {
+        while (reveal(x,y) != player && reveal(x,y) != EMPTY) {
             x = x + dx;
             y = y + dy;
+            chipCounter++;
             if(x < 0 || x >= length || y < 0 || y >= width) {
                 return 0;
             }// out of bounds
@@ -145,7 +147,6 @@ int Board :: doOneWay(Status player, int x, int dx, int y, int dy, bool flip) {
                         CellArr[x][y].flip();
                         x = x - dx;
                         y = y - dy;
-                        chipCounter++;
                     }
         }//flipping if cell was chosen
         return chipCounter;

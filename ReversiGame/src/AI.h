@@ -20,7 +20,7 @@ public:
     Status getOppositeType();
 
     // presenting optional moves to player and getting move decision.
-    Cell doTurn(vector<Cell> options) override;
+    Cell doTurn(vector<Cell> options);
 };
 
 #endif //REVERSI_AI_H

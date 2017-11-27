@@ -4,15 +4,21 @@
 #include "Board.h"
 #include "HumanPlayer.h"
 #include "AI.h"
+//#include "Player.h"
 
 class Game {
 private:
   Board board;
 	HumanPlayer blackPlayer;
 	HumanPlayer whitePlayer;
+	AI blackAiPlayer;
+	AI whiteAiPlayer;
+
+	int numOfPlayers;
 
 public:
 	Game();
+	Game(int);
 
 	//Starting new game with default settings of one board and two players.
 	void startNewGame();

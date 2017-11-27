@@ -7,6 +7,19 @@ Game::Game() {
   board = Board(8, 8);
 	blackPlayer = HumanPlayer(BLACK);
 	whitePlayer = HumanPlayer(WHITE);
+	numOfPlayers = 2;
+}
+
+Game::Game(int players) {
+	numOfPlayers = players;
+  board = Board(8, 8);
+  if (numOfPlayers == 2) {
+		blackPlayer = HumanPlayer(BLACK);
+		whitePlayer = HumanPlayer(WHITE);
+  } else if (numOfPlayers == 1) {
+	  whiteAiPlayer = AI(WHITE);
+		blackPlayer = HumanPlayer(BLACK);
+  }
 }
 
 void Game :: run() {
@@ -24,7 +37,11 @@ void Game :: run() {
             break;
         }
         board.print();
-        xPlayed = playTurn(whitePlayer);
+        if (numOfPlayers == 2)
+        	xPlayed = playTurn(whitePlayer);
+        else if (numOfPlayers == 1)
+        	xPlayed = playTurn(whiteAiPlayer);
+
         if (!xPlayed && !oPlayed) {
             //when no more moves can be done.
             endGame();
@@ -69,7 +86,7 @@ bool Game :: playTurn(AI p) {
 	minCell = options[0];
 	min = findEnemyMaxMoves(minCell, p);
 
-	for (i = 1; i < options.size(); i++) {
+	for (i = 1; i < (int)options.size(); i++) {
 		temp = findEnemyMaxMoves(options[i], p);
 		if (temp < min) {
 			min = temp;
