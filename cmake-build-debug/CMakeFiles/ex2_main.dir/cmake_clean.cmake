@@ -1,5 +1,5 @@
 
 # Per-language clean rules from dependency scanning.
 foreach(lang )
-  include(CMakeFiles/Reversi.dir/cmake_clean_${lang}.cmake OPTIONAL)
+  include(CMakeFiles/ex2_main.dir/cmake_clean_${lang}.cmake OPTIONAL)
 endforeach()

@@ -49,23 +49,23 @@ CMAKE_SOURCE_DIR = /home/leah/CLionProjects/Reversi
 CMAKE_BINARY_DIR = /home/leah/CLionProjects/Reversi/cmake-build-debug
 
 # Include any dependencies generated for this target.
-include CMakeFiles/Reversi.dir/depend.make
+include CMakeFiles/test_main.dir/depend.make
 
 # Include the progress variables for this target.
-include CMakeFiles/Reversi.dir/progress.make
+include CMakeFiles/test_main.dir/progress.make
 
 # Include the compile flags for this target's objects.
-include CMakeFiles/Reversi.dir/flags.make
+include CMakeFiles/test_main.dir/flags.make
 
-CMakeFiles/Reversi.dir/requires:
+CMakeFiles/test_main.dir/requires:
 
-.PHONY : CMakeFiles/Reversi.dir/requires
+.PHONY : CMakeFiles/test_main.dir/requires
 
-CMakeFiles/Reversi.dir/clean:
-	$(CMAKE_COMMAND) -P CMakeFiles/Reversi.dir/cmake_clean.cmake
-.PHONY : CMakeFiles/Reversi.dir/clean
+CMakeFiles/test_main.dir/clean:
+	$(CMAKE_COMMAND) -P CMakeFiles/test_main.dir/cmake_clean.cmake
+.PHONY : CMakeFiles/test_main.dir/clean
 
-CMakeFiles/Reversi.dir/depend:
-	cd /home/leah/CLionProjects/Reversi/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/leah/CLionProjects/Reversi /home/leah/CLionProjects/Reversi /home/leah/CLionProjects/Reversi/cmake-build-debug /home/leah/CLionProjects/Reversi/cmake-build-debug /home/leah/CLionProjects/Reversi/cmake-build-debug/CMakeFiles/Reversi.dir/DependInfo.cmake --color=$(COLOR)
-.PHONY : CMakeFiles/Reversi.dir/depend
+CMakeFiles/test_main.dir/depend:
+	cd /home/leah/CLionProjects/Reversi/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/leah/CLionProjects/Reversi /home/leah/CLionProjects/Reversi /home/leah/CLionProjects/Reversi/cmake-build-debug /home/leah/CLionProjects/Reversi/cmake-build-debug /home/leah/CLionProjects/Reversi/cmake-build-debug/CMakeFiles/test_main.dir/DependInfo.cmake --color=$(COLOR)
+.PHONY : CMakeFiles/test_main.dir/depend
 
