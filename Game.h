@@ -3,6 +3,7 @@
 
 #include "Board.h"
 #include "HumanPlayer.h"
+#include "AI.h"
 
 class Game {
 private:
@@ -26,7 +27,7 @@ public:
   //ending game and declaring winner.
   void endGame() const;
 
-  int findEnemyMaxMoves(Cell chosen, Player currentPlayer);
+  int findEnemyMaxMoves(Cell chosen, AI currentPlayer);
 
 };
 

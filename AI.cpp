@@ -11,12 +11,7 @@ AI::AI(Status t) : type(t){
 }
 
 Cell AI :: doTurn(vector<Cell> options) {
-		int i;
-
-		for (i = 0; i < options.size(); i++) {
-
-		}
-		Cell c(x,y);
+		Cell c;
     return c;
 }
 

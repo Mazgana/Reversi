@@ -11,7 +11,7 @@ private:
 public:
     virtual ~Player() = 0;
     // passes player's char representing chip.
-    virtual Status getType() const = 0;
+    virtual Status getChip() const = 0;
 
     // passes player's opposite char representing chip.
     virtual Status getOppositeType();
