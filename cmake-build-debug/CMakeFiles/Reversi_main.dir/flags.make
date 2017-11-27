@@ -6,5 +6,5 @@ CXX_FLAGS = -g   -std=gnu++11
 
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/home/leah/CLionProjects/Reversi/ReversiGame 
+CXX_INCLUDES = -I/home/leah/CLionProjects/Reversi/ReversiGame/lib/googletest-release-1.8.0/googletest/include -I/home/leah/CLionProjects/Reversi/ReversiGame/lib/googletest-release-1.8.0/googlemock/include -I/home/leah/CLionProjects/Reversi/ReversiGame -I/home/leah/CLionProjects/Reversi/ReversiGame/Tests -I/home/leah/CLionProjects/Reversi/ReversiGame/src 
 

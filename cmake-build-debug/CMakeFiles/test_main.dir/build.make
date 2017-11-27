@@ -57,7 +57,268 @@ include CMakeFiles/test_main.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/test_main.dir/flags.make
 
-CMakeFiles/test_main.dir/requires:
+CMakeFiles/test_main.dir/ReversiGame/Tests/BoardTest.cpp.o: CMakeFiles/test_main.dir/flags.make
+CMakeFiles/test_main.dir/ReversiGame/Tests/BoardTest.cpp.o: ../ReversiGame/Tests/BoardTest.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/leah/CLionProjects/Reversi/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/test_main.dir/ReversiGame/Tests/BoardTest.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/test_main.dir/ReversiGame/Tests/BoardTest.cpp.o -c /home/leah/CLionProjects/Reversi/ReversiGame/Tests/BoardTest.cpp
+
+CMakeFiles/test_main.dir/ReversiGame/Tests/BoardTest.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/test_main.dir/ReversiGame/Tests/BoardTest.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/leah/CLionProjects/Reversi/ReversiGame/Tests/BoardTest.cpp > CMakeFiles/test_main.dir/ReversiGame/Tests/BoardTest.cpp.i
+
+CMakeFiles/test_main.dir/ReversiGame/Tests/BoardTest.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/test_main.dir/ReversiGame/Tests/BoardTest.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/leah/CLionProjects/Reversi/ReversiGame/Tests/BoardTest.cpp -o CMakeFiles/test_main.dir/ReversiGame/Tests/BoardTest.cpp.s
+
+CMakeFiles/test_main.dir/ReversiGame/Tests/BoardTest.cpp.o.requires:
+
+.PHONY : CMakeFiles/test_main.dir/ReversiGame/Tests/BoardTest.cpp.o.requires
+
+CMakeFiles/test_main.dir/ReversiGame/Tests/BoardTest.cpp.o.provides: CMakeFiles/test_main.dir/ReversiGame/Tests/BoardTest.cpp.o.requires
+	$(MAKE) -f CMakeFiles/test_main.dir/build.make CMakeFiles/test_main.dir/ReversiGame/Tests/BoardTest.cpp.o.provides.build
+.PHONY : CMakeFiles/test_main.dir/ReversiGame/Tests/BoardTest.cpp.o.provides
+
+CMakeFiles/test_main.dir/ReversiGame/Tests/BoardTest.cpp.o.provides.build: CMakeFiles/test_main.dir/ReversiGame/Tests/BoardTest.cpp.o
+
+
+CMakeFiles/test_main.dir/ReversiGame/Tests/CellTest.cpp.o: CMakeFiles/test_main.dir/flags.make
+CMakeFiles/test_main.dir/ReversiGame/Tests/CellTest.cpp.o: ../ReversiGame/Tests/CellTest.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/leah/CLionProjects/Reversi/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/test_main.dir/ReversiGame/Tests/CellTest.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/test_main.dir/ReversiGame/Tests/CellTest.cpp.o -c /home/leah/CLionProjects/Reversi/ReversiGame/Tests/CellTest.cpp
+
+CMakeFiles/test_main.dir/ReversiGame/Tests/CellTest.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/test_main.dir/ReversiGame/Tests/CellTest.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/leah/CLionProjects/Reversi/ReversiGame/Tests/CellTest.cpp > CMakeFiles/test_main.dir/ReversiGame/Tests/CellTest.cpp.i
+
+CMakeFiles/test_main.dir/ReversiGame/Tests/CellTest.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/test_main.dir/ReversiGame/Tests/CellTest.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/leah/CLionProjects/Reversi/ReversiGame/Tests/CellTest.cpp -o CMakeFiles/test_main.dir/ReversiGame/Tests/CellTest.cpp.s
+
+CMakeFiles/test_main.dir/ReversiGame/Tests/CellTest.cpp.o.requires:
+
+.PHONY : CMakeFiles/test_main.dir/ReversiGame/Tests/CellTest.cpp.o.requires
+
+CMakeFiles/test_main.dir/ReversiGame/Tests/CellTest.cpp.o.provides: CMakeFiles/test_main.dir/ReversiGame/Tests/CellTest.cpp.o.requires
+	$(MAKE) -f CMakeFiles/test_main.dir/build.make CMakeFiles/test_main.dir/ReversiGame/Tests/CellTest.cpp.o.provides.build
+.PHONY : CMakeFiles/test_main.dir/ReversiGame/Tests/CellTest.cpp.o.provides
+
+CMakeFiles/test_main.dir/ReversiGame/Tests/CellTest.cpp.o.provides.build: CMakeFiles/test_main.dir/ReversiGame/Tests/CellTest.cpp.o
+
+
+CMakeFiles/test_main.dir/ReversiGame/Tests/PlayerTest.cpp.o: CMakeFiles/test_main.dir/flags.make
+CMakeFiles/test_main.dir/ReversiGame/Tests/PlayerTest.cpp.o: ../ReversiGame/Tests/PlayerTest.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/leah/CLionProjects/Reversi/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/test_main.dir/ReversiGame/Tests/PlayerTest.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/test_main.dir/ReversiGame/Tests/PlayerTest.cpp.o -c /home/leah/CLionProjects/Reversi/ReversiGame/Tests/PlayerTest.cpp
+
+CMakeFiles/test_main.dir/ReversiGame/Tests/PlayerTest.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/test_main.dir/ReversiGame/Tests/PlayerTest.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/leah/CLionProjects/Reversi/ReversiGame/Tests/PlayerTest.cpp > CMakeFiles/test_main.dir/ReversiGame/Tests/PlayerTest.cpp.i
+
+CMakeFiles/test_main.dir/ReversiGame/Tests/PlayerTest.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/test_main.dir/ReversiGame/Tests/PlayerTest.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/leah/CLionProjects/Reversi/ReversiGame/Tests/PlayerTest.cpp -o CMakeFiles/test_main.dir/ReversiGame/Tests/PlayerTest.cpp.s
+
+CMakeFiles/test_main.dir/ReversiGame/Tests/PlayerTest.cpp.o.requires:
+
+.PHONY : CMakeFiles/test_main.dir/ReversiGame/Tests/PlayerTest.cpp.o.requires
+
+CMakeFiles/test_main.dir/ReversiGame/Tests/PlayerTest.cpp.o.provides: CMakeFiles/test_main.dir/ReversiGame/Tests/PlayerTest.cpp.o.requires
+	$(MAKE) -f CMakeFiles/test_main.dir/build.make CMakeFiles/test_main.dir/ReversiGame/Tests/PlayerTest.cpp.o.provides.build
+.PHONY : CMakeFiles/test_main.dir/ReversiGame/Tests/PlayerTest.cpp.o.provides
+
+CMakeFiles/test_main.dir/ReversiGame/Tests/PlayerTest.cpp.o.provides.build: CMakeFiles/test_main.dir/ReversiGame/Tests/PlayerTest.cpp.o
+
+
+CMakeFiles/test_main.dir/ReversiGame/src/Board.cpp.o: CMakeFiles/test_main.dir/flags.make
+CMakeFiles/test_main.dir/ReversiGame/src/Board.cpp.o: ../ReversiGame/src/Board.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/leah/CLionProjects/Reversi/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/test_main.dir/ReversiGame/src/Board.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/test_main.dir/ReversiGame/src/Board.cpp.o -c /home/leah/CLionProjects/Reversi/ReversiGame/src/Board.cpp
+
+CMakeFiles/test_main.dir/ReversiGame/src/Board.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/test_main.dir/ReversiGame/src/Board.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/leah/CLionProjects/Reversi/ReversiGame/src/Board.cpp > CMakeFiles/test_main.dir/ReversiGame/src/Board.cpp.i
+
+CMakeFiles/test_main.dir/ReversiGame/src/Board.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/test_main.dir/ReversiGame/src/Board.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/leah/CLionProjects/Reversi/ReversiGame/src/Board.cpp -o CMakeFiles/test_main.dir/ReversiGame/src/Board.cpp.s
+
+CMakeFiles/test_main.dir/ReversiGame/src/Board.cpp.o.requires:
+
+.PHONY : CMakeFiles/test_main.dir/ReversiGame/src/Board.cpp.o.requires
+
+CMakeFiles/test_main.dir/ReversiGame/src/Board.cpp.o.provides: CMakeFiles/test_main.dir/ReversiGame/src/Board.cpp.o.requires
+	$(MAKE) -f CMakeFiles/test_main.dir/build.make CMakeFiles/test_main.dir/ReversiGame/src/Board.cpp.o.provides.build
+.PHONY : CMakeFiles/test_main.dir/ReversiGame/src/Board.cpp.o.provides
+
+CMakeFiles/test_main.dir/ReversiGame/src/Board.cpp.o.provides.build: CMakeFiles/test_main.dir/ReversiGame/src/Board.cpp.o
+
+
+CMakeFiles/test_main.dir/ReversiGame/src/Cell.cpp.o: CMakeFiles/test_main.dir/flags.make
+CMakeFiles/test_main.dir/ReversiGame/src/Cell.cpp.o: ../ReversiGame/src/Cell.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/leah/CLionProjects/Reversi/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/test_main.dir/ReversiGame/src/Cell.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/test_main.dir/ReversiGame/src/Cell.cpp.o -c /home/leah/CLionProjects/Reversi/ReversiGame/src/Cell.cpp
+
+CMakeFiles/test_main.dir/ReversiGame/src/Cell.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/test_main.dir/ReversiGame/src/Cell.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/leah/CLionProjects/Reversi/ReversiGame/src/Cell.cpp > CMakeFiles/test_main.dir/ReversiGame/src/Cell.cpp.i
+
+CMakeFiles/test_main.dir/ReversiGame/src/Cell.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/test_main.dir/ReversiGame/src/Cell.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/leah/CLionProjects/Reversi/ReversiGame/src/Cell.cpp -o CMakeFiles/test_main.dir/ReversiGame/src/Cell.cpp.s
+
+CMakeFiles/test_main.dir/ReversiGame/src/Cell.cpp.o.requires:
+
+.PHONY : CMakeFiles/test_main.dir/ReversiGame/src/Cell.cpp.o.requires
+
+CMakeFiles/test_main.dir/ReversiGame/src/Cell.cpp.o.provides: CMakeFiles/test_main.dir/ReversiGame/src/Cell.cpp.o.requires
+	$(MAKE) -f CMakeFiles/test_main.dir/build.make CMakeFiles/test_main.dir/ReversiGame/src/Cell.cpp.o.provides.build
+.PHONY : CMakeFiles/test_main.dir/ReversiGame/src/Cell.cpp.o.provides
+
+CMakeFiles/test_main.dir/ReversiGame/src/Cell.cpp.o.provides.build: CMakeFiles/test_main.dir/ReversiGame/src/Cell.cpp.o
+
+
+CMakeFiles/test_main.dir/ReversiGame/src/Game.cpp.o: CMakeFiles/test_main.dir/flags.make
+CMakeFiles/test_main.dir/ReversiGame/src/Game.cpp.o: ../ReversiGame/src/Game.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/leah/CLionProjects/Reversi/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/test_main.dir/ReversiGame/src/Game.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/test_main.dir/ReversiGame/src/Game.cpp.o -c /home/leah/CLionProjects/Reversi/ReversiGame/src/Game.cpp
+
+CMakeFiles/test_main.dir/ReversiGame/src/Game.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/test_main.dir/ReversiGame/src/Game.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/leah/CLionProjects/Reversi/ReversiGame/src/Game.cpp > CMakeFiles/test_main.dir/ReversiGame/src/Game.cpp.i
+
+CMakeFiles/test_main.dir/ReversiGame/src/Game.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/test_main.dir/ReversiGame/src/Game.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/leah/CLionProjects/Reversi/ReversiGame/src/Game.cpp -o CMakeFiles/test_main.dir/ReversiGame/src/Game.cpp.s
+
+CMakeFiles/test_main.dir/ReversiGame/src/Game.cpp.o.requires:
+
+.PHONY : CMakeFiles/test_main.dir/ReversiGame/src/Game.cpp.o.requires
+
+CMakeFiles/test_main.dir/ReversiGame/src/Game.cpp.o.provides: CMakeFiles/test_main.dir/ReversiGame/src/Game.cpp.o.requires
+	$(MAKE) -f CMakeFiles/test_main.dir/build.make CMakeFiles/test_main.dir/ReversiGame/src/Game.cpp.o.provides.build
+.PHONY : CMakeFiles/test_main.dir/ReversiGame/src/Game.cpp.o.provides
+
+CMakeFiles/test_main.dir/ReversiGame/src/Game.cpp.o.provides.build: CMakeFiles/test_main.dir/ReversiGame/src/Game.cpp.o
+
+
+CMakeFiles/test_main.dir/ReversiGame/src/AI.cpp.o: CMakeFiles/test_main.dir/flags.make
+CMakeFiles/test_main.dir/ReversiGame/src/AI.cpp.o: ../ReversiGame/src/AI.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/leah/CLionProjects/Reversi/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/test_main.dir/ReversiGame/src/AI.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/test_main.dir/ReversiGame/src/AI.cpp.o -c /home/leah/CLionProjects/Reversi/ReversiGame/src/AI.cpp
+
+CMakeFiles/test_main.dir/ReversiGame/src/AI.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/test_main.dir/ReversiGame/src/AI.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/leah/CLionProjects/Reversi/ReversiGame/src/AI.cpp > CMakeFiles/test_main.dir/ReversiGame/src/AI.cpp.i
+
+CMakeFiles/test_main.dir/ReversiGame/src/AI.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/test_main.dir/ReversiGame/src/AI.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/leah/CLionProjects/Reversi/ReversiGame/src/AI.cpp -o CMakeFiles/test_main.dir/ReversiGame/src/AI.cpp.s
+
+CMakeFiles/test_main.dir/ReversiGame/src/AI.cpp.o.requires:
+
+.PHONY : CMakeFiles/test_main.dir/ReversiGame/src/AI.cpp.o.requires
+
+CMakeFiles/test_main.dir/ReversiGame/src/AI.cpp.o.provides: CMakeFiles/test_main.dir/ReversiGame/src/AI.cpp.o.requires
+	$(MAKE) -f CMakeFiles/test_main.dir/build.make CMakeFiles/test_main.dir/ReversiGame/src/AI.cpp.o.provides.build
+.PHONY : CMakeFiles/test_main.dir/ReversiGame/src/AI.cpp.o.provides
+
+CMakeFiles/test_main.dir/ReversiGame/src/AI.cpp.o.provides.build: CMakeFiles/test_main.dir/ReversiGame/src/AI.cpp.o
+
+
+CMakeFiles/test_main.dir/ReversiGame/src/HumanPlayer.cpp.o: CMakeFiles/test_main.dir/flags.make
+CMakeFiles/test_main.dir/ReversiGame/src/HumanPlayer.cpp.o: ../ReversiGame/src/HumanPlayer.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/leah/CLionProjects/Reversi/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/test_main.dir/ReversiGame/src/HumanPlayer.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/test_main.dir/ReversiGame/src/HumanPlayer.cpp.o -c /home/leah/CLionProjects/Reversi/ReversiGame/src/HumanPlayer.cpp
+
+CMakeFiles/test_main.dir/ReversiGame/src/HumanPlayer.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/test_main.dir/ReversiGame/src/HumanPlayer.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/leah/CLionProjects/Reversi/ReversiGame/src/HumanPlayer.cpp > CMakeFiles/test_main.dir/ReversiGame/src/HumanPlayer.cpp.i
+
+CMakeFiles/test_main.dir/ReversiGame/src/HumanPlayer.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/test_main.dir/ReversiGame/src/HumanPlayer.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/leah/CLionProjects/Reversi/ReversiGame/src/HumanPlayer.cpp -o CMakeFiles/test_main.dir/ReversiGame/src/HumanPlayer.cpp.s
+
+CMakeFiles/test_main.dir/ReversiGame/src/HumanPlayer.cpp.o.requires:
+
+.PHONY : CMakeFiles/test_main.dir/ReversiGame/src/HumanPlayer.cpp.o.requires
+
+CMakeFiles/test_main.dir/ReversiGame/src/HumanPlayer.cpp.o.provides: CMakeFiles/test_main.dir/ReversiGame/src/HumanPlayer.cpp.o.requires
+	$(MAKE) -f CMakeFiles/test_main.dir/build.make CMakeFiles/test_main.dir/ReversiGame/src/HumanPlayer.cpp.o.provides.build
+.PHONY : CMakeFiles/test_main.dir/ReversiGame/src/HumanPlayer.cpp.o.provides
+
+CMakeFiles/test_main.dir/ReversiGame/src/HumanPlayer.cpp.o.provides.build: CMakeFiles/test_main.dir/ReversiGame/src/HumanPlayer.cpp.o
+
+
+CMakeFiles/test_main.dir/ReversiGame/Tests/gtest_main.cpp.o: CMakeFiles/test_main.dir/flags.make
+CMakeFiles/test_main.dir/ReversiGame/Tests/gtest_main.cpp.o: ../ReversiGame/Tests/gtest_main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/leah/CLionProjects/Reversi/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/test_main.dir/ReversiGame/Tests/gtest_main.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/test_main.dir/ReversiGame/Tests/gtest_main.cpp.o -c /home/leah/CLionProjects/Reversi/ReversiGame/Tests/gtest_main.cpp
+
+CMakeFiles/test_main.dir/ReversiGame/Tests/gtest_main.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/test_main.dir/ReversiGame/Tests/gtest_main.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/leah/CLionProjects/Reversi/ReversiGame/Tests/gtest_main.cpp > CMakeFiles/test_main.dir/ReversiGame/Tests/gtest_main.cpp.i
+
+CMakeFiles/test_main.dir/ReversiGame/Tests/gtest_main.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/test_main.dir/ReversiGame/Tests/gtest_main.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/leah/CLionProjects/Reversi/ReversiGame/Tests/gtest_main.cpp -o CMakeFiles/test_main.dir/ReversiGame/Tests/gtest_main.cpp.s
+
+CMakeFiles/test_main.dir/ReversiGame/Tests/gtest_main.cpp.o.requires:
+
+.PHONY : CMakeFiles/test_main.dir/ReversiGame/Tests/gtest_main.cpp.o.requires
+
+CMakeFiles/test_main.dir/ReversiGame/Tests/gtest_main.cpp.o.provides: CMakeFiles/test_main.dir/ReversiGame/Tests/gtest_main.cpp.o.requires
+	$(MAKE) -f CMakeFiles/test_main.dir/build.make CMakeFiles/test_main.dir/ReversiGame/Tests/gtest_main.cpp.o.provides.build
+.PHONY : CMakeFiles/test_main.dir/ReversiGame/Tests/gtest_main.cpp.o.provides
+
+CMakeFiles/test_main.dir/ReversiGame/Tests/gtest_main.cpp.o.provides.build: CMakeFiles/test_main.dir/ReversiGame/Tests/gtest_main.cpp.o
+
+
+# Object files for target test_main
+test_main_OBJECTS = \
+"CMakeFiles/test_main.dir/ReversiGame/Tests/BoardTest.cpp.o" \
+"CMakeFiles/test_main.dir/ReversiGame/Tests/CellTest.cpp.o" \
+"CMakeFiles/test_main.dir/ReversiGame/Tests/PlayerTest.cpp.o" \
+"CMakeFiles/test_main.dir/ReversiGame/src/Board.cpp.o" \
+"CMakeFiles/test_main.dir/ReversiGame/src/Cell.cpp.o" \
+"CMakeFiles/test_main.dir/ReversiGame/src/Game.cpp.o" \
+"CMakeFiles/test_main.dir/ReversiGame/src/AI.cpp.o" \
+"CMakeFiles/test_main.dir/ReversiGame/src/HumanPlayer.cpp.o" \
+"CMakeFiles/test_main.dir/ReversiGame/Tests/gtest_main.cpp.o"
+
+# External object files for target test_main
+test_main_EXTERNAL_OBJECTS =
+
+test_main: CMakeFiles/test_main.dir/ReversiGame/Tests/BoardTest.cpp.o
+test_main: CMakeFiles/test_main.dir/ReversiGame/Tests/CellTest.cpp.o
+test_main: CMakeFiles/test_main.dir/ReversiGame/Tests/PlayerTest.cpp.o
+test_main: CMakeFiles/test_main.dir/ReversiGame/src/Board.cpp.o
+test_main: CMakeFiles/test_main.dir/ReversiGame/src/Cell.cpp.o
+test_main: CMakeFiles/test_main.dir/ReversiGame/src/Game.cpp.o
+test_main: CMakeFiles/test_main.dir/ReversiGame/src/AI.cpp.o
+test_main: CMakeFiles/test_main.dir/ReversiGame/src/HumanPlayer.cpp.o
+test_main: CMakeFiles/test_main.dir/ReversiGame/Tests/gtest_main.cpp.o
+test_main: CMakeFiles/test_main.dir/build.make
+test_main: ReversiGame/lib/googletest-release-1.8.0/googlemock/gtest/libgtest.a
+test_main: ReversiGame/lib/googletest-release-1.8.0/googlemock/gtest/libgtest_main.a
+test_main: ReversiGame/lib/googletest-release-1.8.0/googlemock/gtest/libgtest.a
+test_main: CMakeFiles/test_main.dir/link.txt
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/leah/CLionProjects/Reversi/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Linking CXX executable test_main"
+	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/test_main.dir/link.txt --verbose=$(VERBOSE)
+
+# Rule to build all files generated by this target.
+CMakeFiles/test_main.dir/build: test_main
+
+.PHONY : CMakeFiles/test_main.dir/build
+
+CMakeFiles/test_main.dir/requires: CMakeFiles/test_main.dir/ReversiGame/Tests/BoardTest.cpp.o.requires
+CMakeFiles/test_main.dir/requires: CMakeFiles/test_main.dir/ReversiGame/Tests/CellTest.cpp.o.requires
+CMakeFiles/test_main.dir/requires: CMakeFiles/test_main.dir/ReversiGame/Tests/PlayerTest.cpp.o.requires
+CMakeFiles/test_main.dir/requires: CMakeFiles/test_main.dir/ReversiGame/src/Board.cpp.o.requires
+CMakeFiles/test_main.dir/requires: CMakeFiles/test_main.dir/ReversiGame/src/Cell.cpp.o.requires
+CMakeFiles/test_main.dir/requires: CMakeFiles/test_main.dir/ReversiGame/src/Game.cpp.o.requires
+CMakeFiles/test_main.dir/requires: CMakeFiles/test_main.dir/ReversiGame/src/AI.cpp.o.requires
+CMakeFiles/test_main.dir/requires: CMakeFiles/test_main.dir/ReversiGame/src/HumanPlayer.cpp.o.requires
+CMakeFiles/test_main.dir/requires: CMakeFiles/test_main.dir/ReversiGame/Tests/gtest_main.cpp.o.requires
 
 .PHONY : CMakeFiles/test_main.dir/requires
 

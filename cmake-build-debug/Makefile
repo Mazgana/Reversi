@@ -56,6 +56,52 @@ CMAKE_BINARY_DIR = /home/leah/CLionProjects/Reversi/cmake-build-debug
 #=============================================================================
 # Targets provided globally by CMake.
 
+# Special rule for the target install/strip
+install/strip: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
+	/home/leah/Downloads/clion-2017.2.3/bin/cmake/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip
+
+# Special rule for the target install/strip
+install/strip/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
+	/home/leah/Downloads/clion-2017.2.3/bin/cmake/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip/fast
+
+# Special rule for the target install/local
+install/local: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	/home/leah/Downloads/clion-2017.2.3/bin/cmake/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local
+
+# Special rule for the target install/local
+install/local/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	/home/leah/Downloads/clion-2017.2.3/bin/cmake/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local/fast
+
+# Special rule for the target install
+install: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	/home/leah/Downloads/clion-2017.2.3/bin/cmake/bin/cmake -P cmake_install.cmake
+.PHONY : install
+
+# Special rule for the target install
+install/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	/home/leah/Downloads/clion-2017.2.3/bin/cmake/bin/cmake -P cmake_install.cmake
+.PHONY : install/fast
+
+# Special rule for the target list_install_components
+list_install_components:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
+.PHONY : list_install_components
+
+# Special rule for the target list_install_components
+list_install_components/fast: list_install_components
+
+.PHONY : list_install_components/fast
+
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
@@ -111,6 +157,19 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named test_main
+
+# Build rule for target.
+test_main: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 test_main
+.PHONY : test_main
+
+# fast build rule for target.
+test_main/fast:
+	$(MAKE) -f CMakeFiles/test_main.dir/build.make CMakeFiles/test_main.dir/build
+.PHONY : test_main/fast
+
+#=============================================================================
 # Target rules for targets named Reversi_main
 
 # Build rule for target.
@@ -123,12 +182,173 @@ Reversi_main/fast:
 	$(MAKE) -f CMakeFiles/Reversi_main.dir/build.make CMakeFiles/Reversi_main.dir/build
 .PHONY : Reversi_main/fast
 
+#=============================================================================
+# Target rules for targets named gmock_main
+
+# Build rule for target.
+gmock_main: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 gmock_main
+.PHONY : gmock_main
+
+# fast build rule for target.
+gmock_main/fast:
+	$(MAKE) -f ReversiGame/lib/googletest-release-1.8.0/googlemock/CMakeFiles/gmock_main.dir/build.make ReversiGame/lib/googletest-release-1.8.0/googlemock/CMakeFiles/gmock_main.dir/build
+.PHONY : gmock_main/fast
+
+#=============================================================================
+# Target rules for targets named gmock
+
+# Build rule for target.
+gmock: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 gmock
+.PHONY : gmock
+
+# fast build rule for target.
+gmock/fast:
+	$(MAKE) -f ReversiGame/lib/googletest-release-1.8.0/googlemock/CMakeFiles/gmock.dir/build.make ReversiGame/lib/googletest-release-1.8.0/googlemock/CMakeFiles/gmock.dir/build
+.PHONY : gmock/fast
+
+#=============================================================================
+# Target rules for targets named gtest_main
+
+# Build rule for target.
+gtest_main: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 gtest_main
+.PHONY : gtest_main
+
+# fast build rule for target.
+gtest_main/fast:
+	$(MAKE) -f ReversiGame/lib/googletest-release-1.8.0/googlemock/gtest/CMakeFiles/gtest_main.dir/build.make ReversiGame/lib/googletest-release-1.8.0/googlemock/gtest/CMakeFiles/gtest_main.dir/build
+.PHONY : gtest_main/fast
+
+#=============================================================================
+# Target rules for targets named gtest
+
+# Build rule for target.
+gtest: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 gtest
+.PHONY : gtest
+
+# fast build rule for target.
+gtest/fast:
+	$(MAKE) -f ReversiGame/lib/googletest-release-1.8.0/googlemock/gtest/CMakeFiles/gtest.dir/build.make ReversiGame/lib/googletest-release-1.8.0/googlemock/gtest/CMakeFiles/gtest.dir/build
+.PHONY : gtest/fast
+
+ReversiGame/Tests/BoardTest.o: ReversiGame/Tests/BoardTest.cpp.o
+
+.PHONY : ReversiGame/Tests/BoardTest.o
+
+# target to build an object file
+ReversiGame/Tests/BoardTest.cpp.o:
+	$(MAKE) -f CMakeFiles/test_main.dir/build.make CMakeFiles/test_main.dir/ReversiGame/Tests/BoardTest.cpp.o
+.PHONY : ReversiGame/Tests/BoardTest.cpp.o
+
+ReversiGame/Tests/BoardTest.i: ReversiGame/Tests/BoardTest.cpp.i
+
+.PHONY : ReversiGame/Tests/BoardTest.i
+
+# target to preprocess a source file
+ReversiGame/Tests/BoardTest.cpp.i:
+	$(MAKE) -f CMakeFiles/test_main.dir/build.make CMakeFiles/test_main.dir/ReversiGame/Tests/BoardTest.cpp.i
+.PHONY : ReversiGame/Tests/BoardTest.cpp.i
+
+ReversiGame/Tests/BoardTest.s: ReversiGame/Tests/BoardTest.cpp.s
+
+.PHONY : ReversiGame/Tests/BoardTest.s
+
+# target to generate assembly for a file
+ReversiGame/Tests/BoardTest.cpp.s:
+	$(MAKE) -f CMakeFiles/test_main.dir/build.make CMakeFiles/test_main.dir/ReversiGame/Tests/BoardTest.cpp.s
+.PHONY : ReversiGame/Tests/BoardTest.cpp.s
+
+ReversiGame/Tests/CellTest.o: ReversiGame/Tests/CellTest.cpp.o
+
+.PHONY : ReversiGame/Tests/CellTest.o
+
+# target to build an object file
+ReversiGame/Tests/CellTest.cpp.o:
+	$(MAKE) -f CMakeFiles/test_main.dir/build.make CMakeFiles/test_main.dir/ReversiGame/Tests/CellTest.cpp.o
+.PHONY : ReversiGame/Tests/CellTest.cpp.o
+
+ReversiGame/Tests/CellTest.i: ReversiGame/Tests/CellTest.cpp.i
+
+.PHONY : ReversiGame/Tests/CellTest.i
+
+# target to preprocess a source file
+ReversiGame/Tests/CellTest.cpp.i:
+	$(MAKE) -f CMakeFiles/test_main.dir/build.make CMakeFiles/test_main.dir/ReversiGame/Tests/CellTest.cpp.i
+.PHONY : ReversiGame/Tests/CellTest.cpp.i
+
+ReversiGame/Tests/CellTest.s: ReversiGame/Tests/CellTest.cpp.s
+
+.PHONY : ReversiGame/Tests/CellTest.s
+
+# target to generate assembly for a file
+ReversiGame/Tests/CellTest.cpp.s:
+	$(MAKE) -f CMakeFiles/test_main.dir/build.make CMakeFiles/test_main.dir/ReversiGame/Tests/CellTest.cpp.s
+.PHONY : ReversiGame/Tests/CellTest.cpp.s
+
+ReversiGame/Tests/PlayerTest.o: ReversiGame/Tests/PlayerTest.cpp.o
+
+.PHONY : ReversiGame/Tests/PlayerTest.o
+
+# target to build an object file
+ReversiGame/Tests/PlayerTest.cpp.o:
+	$(MAKE) -f CMakeFiles/test_main.dir/build.make CMakeFiles/test_main.dir/ReversiGame/Tests/PlayerTest.cpp.o
+.PHONY : ReversiGame/Tests/PlayerTest.cpp.o
+
+ReversiGame/Tests/PlayerTest.i: ReversiGame/Tests/PlayerTest.cpp.i
+
+.PHONY : ReversiGame/Tests/PlayerTest.i
+
+# target to preprocess a source file
+ReversiGame/Tests/PlayerTest.cpp.i:
+	$(MAKE) -f CMakeFiles/test_main.dir/build.make CMakeFiles/test_main.dir/ReversiGame/Tests/PlayerTest.cpp.i
+.PHONY : ReversiGame/Tests/PlayerTest.cpp.i
+
+ReversiGame/Tests/PlayerTest.s: ReversiGame/Tests/PlayerTest.cpp.s
+
+.PHONY : ReversiGame/Tests/PlayerTest.s
+
+# target to generate assembly for a file
+ReversiGame/Tests/PlayerTest.cpp.s:
+	$(MAKE) -f CMakeFiles/test_main.dir/build.make CMakeFiles/test_main.dir/ReversiGame/Tests/PlayerTest.cpp.s
+.PHONY : ReversiGame/Tests/PlayerTest.cpp.s
+
+ReversiGame/Tests/gtest_main.o: ReversiGame/Tests/gtest_main.cpp.o
+
+.PHONY : ReversiGame/Tests/gtest_main.o
+
+# target to build an object file
+ReversiGame/Tests/gtest_main.cpp.o:
+	$(MAKE) -f CMakeFiles/test_main.dir/build.make CMakeFiles/test_main.dir/ReversiGame/Tests/gtest_main.cpp.o
+.PHONY : ReversiGame/Tests/gtest_main.cpp.o
+
+ReversiGame/Tests/gtest_main.i: ReversiGame/Tests/gtest_main.cpp.i
+
+.PHONY : ReversiGame/Tests/gtest_main.i
+
+# target to preprocess a source file
+ReversiGame/Tests/gtest_main.cpp.i:
+	$(MAKE) -f CMakeFiles/test_main.dir/build.make CMakeFiles/test_main.dir/ReversiGame/Tests/gtest_main.cpp.i
+.PHONY : ReversiGame/Tests/gtest_main.cpp.i
+
+ReversiGame/Tests/gtest_main.s: ReversiGame/Tests/gtest_main.cpp.s
+
+.PHONY : ReversiGame/Tests/gtest_main.s
+
+# target to generate assembly for a file
+ReversiGame/Tests/gtest_main.cpp.s:
+	$(MAKE) -f CMakeFiles/test_main.dir/build.make CMakeFiles/test_main.dir/ReversiGame/Tests/gtest_main.cpp.s
+.PHONY : ReversiGame/Tests/gtest_main.cpp.s
+
 ReversiGame/src/AI.o: ReversiGame/src/AI.cpp.o
 
 .PHONY : ReversiGame/src/AI.o
 
 # target to build an object file
 ReversiGame/src/AI.cpp.o:
+	$(MAKE) -f CMakeFiles/test_main.dir/build.make CMakeFiles/test_main.dir/ReversiGame/src/AI.cpp.o
 	$(MAKE) -f CMakeFiles/Reversi_main.dir/build.make CMakeFiles/Reversi_main.dir/ReversiGame/src/AI.cpp.o
 .PHONY : ReversiGame/src/AI.cpp.o
 
@@ -138,6 +358,7 @@ ReversiGame/src/AI.i: ReversiGame/src/AI.cpp.i
 
 # target to preprocess a source file
 ReversiGame/src/AI.cpp.i:
+	$(MAKE) -f CMakeFiles/test_main.dir/build.make CMakeFiles/test_main.dir/ReversiGame/src/AI.cpp.i
 	$(MAKE) -f CMakeFiles/Reversi_main.dir/build.make CMakeFiles/Reversi_main.dir/ReversiGame/src/AI.cpp.i
 .PHONY : ReversiGame/src/AI.cpp.i
 
@@ -147,6 +368,7 @@ ReversiGame/src/AI.s: ReversiGame/src/AI.cpp.s
 
 # target to generate assembly for a file
 ReversiGame/src/AI.cpp.s:
+	$(MAKE) -f CMakeFiles/test_main.dir/build.make CMakeFiles/test_main.dir/ReversiGame/src/AI.cpp.s
 	$(MAKE) -f CMakeFiles/Reversi_main.dir/build.make CMakeFiles/Reversi_main.dir/ReversiGame/src/AI.cpp.s
 .PHONY : ReversiGame/src/AI.cpp.s
 
@@ -156,6 +378,7 @@ ReversiGame/src/Board.o: ReversiGame/src/Board.cpp.o
 
 # target to build an object file
 ReversiGame/src/Board.cpp.o:
+	$(MAKE) -f CMakeFiles/test_main.dir/build.make CMakeFiles/test_main.dir/ReversiGame/src/Board.cpp.o
 	$(MAKE) -f CMakeFiles/Reversi_main.dir/build.make CMakeFiles/Reversi_main.dir/ReversiGame/src/Board.cpp.o
 .PHONY : ReversiGame/src/Board.cpp.o
 
@@ -165,6 +388,7 @@ ReversiGame/src/Board.i: ReversiGame/src/Board.cpp.i
 
 # target to preprocess a source file
 ReversiGame/src/Board.cpp.i:
+	$(MAKE) -f CMakeFiles/test_main.dir/build.make CMakeFiles/test_main.dir/ReversiGame/src/Board.cpp.i
 	$(MAKE) -f CMakeFiles/Reversi_main.dir/build.make CMakeFiles/Reversi_main.dir/ReversiGame/src/Board.cpp.i
 .PHONY : ReversiGame/src/Board.cpp.i
 
@@ -174,6 +398,7 @@ ReversiGame/src/Board.s: ReversiGame/src/Board.cpp.s
 
 # target to generate assembly for a file
 ReversiGame/src/Board.cpp.s:
+	$(MAKE) -f CMakeFiles/test_main.dir/build.make CMakeFiles/test_main.dir/ReversiGame/src/Board.cpp.s
 	$(MAKE) -f CMakeFiles/Reversi_main.dir/build.make CMakeFiles/Reversi_main.dir/ReversiGame/src/Board.cpp.s
 .PHONY : ReversiGame/src/Board.cpp.s
 
@@ -183,6 +408,7 @@ ReversiGame/src/Cell.o: ReversiGame/src/Cell.cpp.o
 
 # target to build an object file
 ReversiGame/src/Cell.cpp.o:
+	$(MAKE) -f CMakeFiles/test_main.dir/build.make CMakeFiles/test_main.dir/ReversiGame/src/Cell.cpp.o
 	$(MAKE) -f CMakeFiles/Reversi_main.dir/build.make CMakeFiles/Reversi_main.dir/ReversiGame/src/Cell.cpp.o
 .PHONY : ReversiGame/src/Cell.cpp.o
 
@@ -192,6 +418,7 @@ ReversiGame/src/Cell.i: ReversiGame/src/Cell.cpp.i
 
 # target to preprocess a source file
 ReversiGame/src/Cell.cpp.i:
+	$(MAKE) -f CMakeFiles/test_main.dir/build.make CMakeFiles/test_main.dir/ReversiGame/src/Cell.cpp.i
 	$(MAKE) -f CMakeFiles/Reversi_main.dir/build.make CMakeFiles/Reversi_main.dir/ReversiGame/src/Cell.cpp.i
 .PHONY : ReversiGame/src/Cell.cpp.i
 
@@ -201,6 +428,7 @@ ReversiGame/src/Cell.s: ReversiGame/src/Cell.cpp.s
 
 # target to generate assembly for a file
 ReversiGame/src/Cell.cpp.s:
+	$(MAKE) -f CMakeFiles/test_main.dir/build.make CMakeFiles/test_main.dir/ReversiGame/src/Cell.cpp.s
 	$(MAKE) -f CMakeFiles/Reversi_main.dir/build.make CMakeFiles/Reversi_main.dir/ReversiGame/src/Cell.cpp.s
 .PHONY : ReversiGame/src/Cell.cpp.s
 
@@ -210,6 +438,7 @@ ReversiGame/src/Game.o: ReversiGame/src/Game.cpp.o
 
 # target to build an object file
 ReversiGame/src/Game.cpp.o:
+	$(MAKE) -f CMakeFiles/test_main.dir/build.make CMakeFiles/test_main.dir/ReversiGame/src/Game.cpp.o
 	$(MAKE) -f CMakeFiles/Reversi_main.dir/build.make CMakeFiles/Reversi_main.dir/ReversiGame/src/Game.cpp.o
 .PHONY : ReversiGame/src/Game.cpp.o
 
@@ -219,6 +448,7 @@ ReversiGame/src/Game.i: ReversiGame/src/Game.cpp.i
 
 # target to preprocess a source file
 ReversiGame/src/Game.cpp.i:
+	$(MAKE) -f CMakeFiles/test_main.dir/build.make CMakeFiles/test_main.dir/ReversiGame/src/Game.cpp.i
 	$(MAKE) -f CMakeFiles/Reversi_main.dir/build.make CMakeFiles/Reversi_main.dir/ReversiGame/src/Game.cpp.i
 .PHONY : ReversiGame/src/Game.cpp.i
 
@@ -228,6 +458,7 @@ ReversiGame/src/Game.s: ReversiGame/src/Game.cpp.s
 
 # target to generate assembly for a file
 ReversiGame/src/Game.cpp.s:
+	$(MAKE) -f CMakeFiles/test_main.dir/build.make CMakeFiles/test_main.dir/ReversiGame/src/Game.cpp.s
 	$(MAKE) -f CMakeFiles/Reversi_main.dir/build.make CMakeFiles/Reversi_main.dir/ReversiGame/src/Game.cpp.s
 .PHONY : ReversiGame/src/Game.cpp.s
 
@@ -237,6 +468,7 @@ ReversiGame/src/HumanPlayer.o: ReversiGame/src/HumanPlayer.cpp.o
 
 # target to build an object file
 ReversiGame/src/HumanPlayer.cpp.o:
+	$(MAKE) -f CMakeFiles/test_main.dir/build.make CMakeFiles/test_main.dir/ReversiGame/src/HumanPlayer.cpp.o
 	$(MAKE) -f CMakeFiles/Reversi_main.dir/build.make CMakeFiles/Reversi_main.dir/ReversiGame/src/HumanPlayer.cpp.o
 .PHONY : ReversiGame/src/HumanPlayer.cpp.o
 
@@ -246,6 +478,7 @@ ReversiGame/src/HumanPlayer.i: ReversiGame/src/HumanPlayer.cpp.i
 
 # target to preprocess a source file
 ReversiGame/src/HumanPlayer.cpp.i:
+	$(MAKE) -f CMakeFiles/test_main.dir/build.make CMakeFiles/test_main.dir/ReversiGame/src/HumanPlayer.cpp.i
 	$(MAKE) -f CMakeFiles/Reversi_main.dir/build.make CMakeFiles/Reversi_main.dir/ReversiGame/src/HumanPlayer.cpp.i
 .PHONY : ReversiGame/src/HumanPlayer.cpp.i
 
@@ -255,6 +488,7 @@ ReversiGame/src/HumanPlayer.s: ReversiGame/src/HumanPlayer.cpp.s
 
 # target to generate assembly for a file
 ReversiGame/src/HumanPlayer.cpp.s:
+	$(MAKE) -f CMakeFiles/test_main.dir/build.make CMakeFiles/test_main.dir/ReversiGame/src/HumanPlayer.cpp.s
 	$(MAKE) -f CMakeFiles/Reversi_main.dir/build.make CMakeFiles/Reversi_main.dir/ReversiGame/src/HumanPlayer.cpp.s
 .PHONY : ReversiGame/src/HumanPlayer.cpp.s
 
@@ -291,9 +525,30 @@ help:
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
+	@echo "... install/strip"
+	@echo "... install/local"
+	@echo "... install"
+	@echo "... list_install_components"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
+	@echo "... test_main"
 	@echo "... Reversi_main"
+	@echo "... gmock_main"
+	@echo "... gmock"
+	@echo "... gtest_main"
+	@echo "... gtest"
+	@echo "... ReversiGame/Tests/BoardTest.o"
+	@echo "... ReversiGame/Tests/BoardTest.i"
+	@echo "... ReversiGame/Tests/BoardTest.s"
+	@echo "... ReversiGame/Tests/CellTest.o"
+	@echo "... ReversiGame/Tests/CellTest.i"
+	@echo "... ReversiGame/Tests/CellTest.s"
+	@echo "... ReversiGame/Tests/PlayerTest.o"
+	@echo "... ReversiGame/Tests/PlayerTest.i"
+	@echo "... ReversiGame/Tests/PlayerTest.s"
+	@echo "... ReversiGame/Tests/gtest_main.o"
+	@echo "... ReversiGame/Tests/gtest_main.i"
+	@echo "... ReversiGame/Tests/gtest_main.s"
 	@echo "... ReversiGame/src/AI.o"
 	@echo "... ReversiGame/src/AI.i"
 	@echo "... ReversiGame/src/AI.s"
