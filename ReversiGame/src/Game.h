@@ -11,7 +11,6 @@ private:
   Board board;
 	HumanPlayer blackPlayer;
 	HumanPlayer whitePlayer;
-	AI blackAiPlayer;
 	AI whiteAiPlayer;
 
 	int numOfPlayers;
@@ -34,6 +33,8 @@ public:
   void endGame() const;
 
   int findEnemyMaxMoves(Cell chosen, AI currentPlayer);
+
+  int max(int first, int second);
 
 };
 

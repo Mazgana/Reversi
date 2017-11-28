@@ -10,6 +10,7 @@ class Board {
 		int length;
 		int width;
 		vector<vector<Cell> > CellArr;
+		vector<Cell> optionalMoves;
 
 	public:
 		Board();
@@ -42,6 +43,10 @@ class Board {
 
 		//Checking if the current board has no more empty cells.
 		bool isBoardFull();
+
+		bool isCellInOptionArray(Cell c);
+
+		void cleanOptionalMovesList();
 };
 
 #endif /* BOARD_H_ */

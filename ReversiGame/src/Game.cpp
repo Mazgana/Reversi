@@ -30,7 +30,7 @@ void Game :: run() {
     //playing game, 1 round per player.
     while (play) {
         board.print();
-        oPlayed = playTurn(blackPlayer);
+        xPlayed = playTurn(blackPlayer);
         if (!xPlayed && !oPlayed) {
             //when no more moves can be done.
             endGame();
@@ -38,9 +38,9 @@ void Game :: run() {
         }
         board.print();
         if (numOfPlayers == 2)
-        	xPlayed = playTurn(whitePlayer);
+        	oPlayed = playTurn(whitePlayer);
         else if (numOfPlayers == 1)
-        	xPlayed = playTurn(whiteAiPlayer);
+        	oPlayed = playTurn(whiteAiPlayer);
 
         if (!xPlayed && !oPlayed) {
             //when no more moves can be done.
@@ -62,20 +62,9 @@ bool Game :: playTurn(HumanPlayer p) {
     Cell chosen = p.doTurn(options);
     board.putChip(p.getChip(), chosen.getCol(), chosen.getRow());// putting chip on board
     board.flipChips(p.getChip(), chosen);
+    board.cleanOptionalMovesList();
 
     return true;
-}
-
-void Game :: endGame() const {
-    cout << "GAME ENDED!" << endl;
-    char chip = board.getWinner();
-    if(chip == ' ') {
-        cout << "It's a tie!";
-    }
-    else {
-        cout << "Player " << chip << " wins!";
-    }
-    cout << endl;
 }
 
 bool Game :: playTurn(AI p) {
@@ -96,6 +85,7 @@ bool Game :: playTurn(AI p) {
 
    board.putChip(p.getChip(), minCell.getCol(), minCell.getRow());// putting chip on board
    board.flipChips(p.getChip(), minCell);
+   board.cleanOptionalMovesList();
 
    cout << (char) p.getChip() << " played ";
    minCell.printCell();
@@ -105,7 +95,7 @@ bool Game :: playTurn(AI p) {
 }
 
 int Game::findEnemyMaxMoves(Cell chosen, AI currentPlayer) {
-	 int temp, max = 0;
+	 int max = 0;
 	 vector<Cell> oppositeOptions;
 	 Board currentBoard = Board(board);
 	 currentBoard.putChip(currentPlayer.getChip(), chosen.getCol(), chosen.getRow());
@@ -113,35 +103,34 @@ int Game::findEnemyMaxMoves(Cell chosen, AI currentPlayer) {
 
 	 oppositeOptions = currentBoard.getOptions(currentPlayer.getOppositeType());
 
-	 max = currentBoard.doOneWay(currentPlayer.getOppositeType(), chosen.getCol(), -1, chosen.getRow(), 0, true);
-
-	 temp = currentBoard.doOneWay(currentPlayer.getOppositeType(), chosen.getCol(), 1, chosen.getRow(), 0, true);
-	 if (temp > max)
-		 max = temp;
-
-	 temp = currentBoard.doOneWay(currentPlayer.getOppositeType(), chosen.getCol(), -1, chosen.getRow(), 1, true);
-	 if (temp > max)
-		 max = temp;
-
-	 temp = currentBoard.doOneWay(currentPlayer.getOppositeType(), chosen.getCol(), 1, chosen.getRow(), 1, true);
-	 if (temp > max)
-		 max = temp;
-
-	 temp = currentBoard.doOneWay(currentPlayer.getOppositeType(), chosen.getCol(), 0, chosen.getRow(), 1, true);
-	 if (temp > max)
-		 max = temp;
-
-	 temp = currentBoard.doOneWay(currentPlayer.getOppositeType(), chosen.getCol(), -1, chosen.getRow(), -1, true);
-	 if (temp > max)
-		 max = temp;
-
-	 temp = currentBoard.doOneWay(currentPlayer.getOppositeType(), chosen.getCol(), 1, chosen.getRow(), -1, true);
-	 if (temp > max)
-		 max = temp;
-
-	 temp = currentBoard.doOneWay(currentPlayer.getOppositeType(), chosen.getCol(), 0, chosen.getRow(), -1, true);
-	 if (temp > max)
-		 max = temp;
+	 max = (currentBoard.doOneWay(currentPlayer.getOppositeType(), chosen.getCol(), -1, chosen.getRow(), 0, true), max);
+	 max = (currentBoard.doOneWay(currentPlayer.getOppositeType(), chosen.getCol(), 1, chosen.getRow(), 0, true), max);
+	 max = (currentBoard.doOneWay(currentPlayer.getOppositeType(), chosen.getCol(), -1, chosen.getRow(), 1, true), max);
+	 max = (currentBoard.doOneWay(currentPlayer.getOppositeType(), chosen.getCol(), 1, chosen.getRow(), 1, true), max);
+	 max = (currentBoard.doOneWay(currentPlayer.getOppositeType(), chosen.getCol(), 0, chosen.getRow(), 1, true), max);
+	 max = (currentBoard.doOneWay(currentPlayer.getOppositeType(), chosen.getCol(), -1, chosen.getRow(), -1, true), max);
+	 max = (currentBoard.doOneWay(currentPlayer.getOppositeType(), chosen.getCol(), 1, chosen.getRow(), -1, true), max);
+	 max = (currentBoard.doOneWay(currentPlayer.getOppositeType(), chosen.getCol(), 0, chosen.getRow(), -1, true), max);
 
 	 return max;
+}
+
+void Game :: endGame() const {
+    cout << "GAME ENDED!" << endl;
+    char chip = board.getWinner();
+    if(chip == ' ') {
+        cout << "It's a tie!";
+    }
+    else {
+        cout << "Player " << chip << " wins!";
+    }
+    cout << endl;
+}
+
+int Game::max(int first, int second) {
+	if (first > second) {
+		return first;
+	} else {
+		return second;
+	}
 }

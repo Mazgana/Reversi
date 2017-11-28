@@ -85,39 +85,46 @@ void Board :: print() const
 }
 
 vector<Cell> Board :: getOptions(Status player) {
-     std :: vector<Cell> options;
     // loop over board finding valid cells.
     for(int i = 0; i < length; i++) {
         for (int j = 0; j < width; j++) {
-            if (CellArr[i][j].getStatus() == player) {
-                if (doOneWay(player, i, -1, j, 0, false) != 0) {
-                    options.push_back(CellArr[i][j]);
+            if (CellArr[i][j].getStatus() == EMPTY) {
+                if (doOneWay(player, i, -1, j, 0, false)) {
+                	if (!isCellInOptionArray(CellArr[i][j]))
+                    optionalMoves.push_back(CellArr[i][j]);
                 }// check North
-                if (doOneWay(player, i, 1, j, 0, false) != 0) {
-                    options.push_back(CellArr[i][j]);
+                if (doOneWay(player, i, 1, j, 0, false)) {
+                	if (!isCellInOptionArray(CellArr[i][j]))
+                		optionalMoves.push_back(CellArr[i][j]);
                 }// check South
-                if (doOneWay(player, i, 0, j,-1, false) != 0) {
-                    options.push_back(CellArr[i][j]);
+                if (doOneWay(player, i, 0, j,-1, false)) {
+                	if (!isCellInOptionArray(CellArr[i][j]))
+                		optionalMoves.push_back(CellArr[i][j]);
                 }// check West
-                if (doOneWay(player, i, 0, j, 1, false) != 0) {
-                    options.push_back(CellArr[i][j]);
+                if (doOneWay(player, i, 0, j, 1, false)) {
+                	if (!isCellInOptionArray(CellArr[i][j]))
+                		optionalMoves.push_back(CellArr[i][j]);
                 }// check East
-                if (doOneWay(player, i, -1, j,-1, false) != 0) {
-                    options.push_back(CellArr[i][j]);
+                if (doOneWay(player, i, -1, j,-1, false)) {
+                	if (!isCellInOptionArray(CellArr[i][j]))
+                		optionalMoves.push_back(CellArr[i][j]);
                 }// check NE
-                if (doOneWay(player, i, 1, j, 1, false) != 0) {
-                    options.push_back(CellArr[i][j]);
+                if (doOneWay(player, i, 1, j, 1, false)) {
+                	if (!isCellInOptionArray(CellArr[i][j]))
+                		optionalMoves.push_back(CellArr[i][j]);
                 }// check SE
-                if (doOneWay(player, i, 1, j,-1, false) != 0) {
-                    options.push_back(CellArr[i][j]);
+                if (doOneWay(player, i, 1, j,-1, false)) {
+                	if (!isCellInOptionArray(CellArr[i][j]))
+                		optionalMoves.push_back(CellArr[i][j]);
                 }// check SW
-                if (doOneWay(player, i, -1, j, 1, false) != 0) {
-                    options.push_back(CellArr[i][j]);
+                if (doOneWay(player, i, -1, j, 1, false)) {
+                	if (!isCellInOptionArray(CellArr[i][j]))
+                		optionalMoves.push_back(CellArr[i][j]);
                 }// check NE
             }
         }
     }
-    return options;
+    return optionalMoves;
 }
 
 
@@ -175,7 +182,7 @@ char Board::getWinner() const {
         		  ++xCount;
         	             }
         	  if (CellArr[i][j].getStatus() == WHITE) {
-        	                  ++oCount;
+        	    ++oCount;
         	             }
                 }
     }// going over board and counting
@@ -188,4 +195,23 @@ char Board::getWinner() const {
     else {
         return  ' ';
     }
+}
+
+bool Board::isCellInOptionArray(Cell check) {
+  int i;
+
+  if ((int)optionalMoves.size() == 0) {
+	  return false;
+  }
+
+	for (i = 0; i < (int)optionalMoves.size(); i++) {
+		if (optionalMoves[i].getRow() == check.getRow() && optionalMoves[i].getCol() == check.getCol())
+			return true;
+    }
+
+	return false;
+}
+
+void Board::cleanOptionalMovesList(){
+	optionalMoves.clear();
 }

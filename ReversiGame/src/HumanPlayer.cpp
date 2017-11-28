@@ -11,21 +11,12 @@ HumanPlayer::HumanPlayer(Status t) : type(t){
 }
 
 Cell HumanPlayer :: doTurn(vector<Cell> options) {
-    int i, j;
-    bool repeat = false;
-    cout << type << ": It's your move." << endl;
+    int i;
+    cout << (char)type << ": It's your move." << endl;
     cout << "your possible moves:" << endl;
     for (i = 0; i < (int)options.size(); i++) {
-        for (j = 0; j < i; j++) {
-            if (options[i].getCol() == options[j].getCol() && options[i].getRow() == options[j].getRow()) {
-                repeat = true;
-            }
-        }//printing options
-        if (!repeat) {
-            cout << "(" << options[i].getCol() << "," << options[i].getRow() << ") ";
+       cout << "(" << options[i].getCol() << "," << options[i].getRow() << ") ";
         }
-        repeat = false;
-    }
     cout << endl << endl;
 
     int x = 0, y = 0;
@@ -39,7 +30,7 @@ Cell HumanPlayer :: doTurn(vector<Cell> options) {
             cin.ignore(numeric_limits<streamsize>::max(), '\n');
             cout << "invalid input. !" << endl;
         }
-        for (i = 0; i < options.size(); i++) {
+        for (i = 0; i < (int)options.size(); i++) {
             if (options[i].getCol() == x && options[i].getRow() == y) {
                 valid = true;
                 break;

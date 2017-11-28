@@ -23,5 +23,13 @@ CPP_DEPS :=
 
 # Every subdirectory with source files must be described here
 SUBDIRS := \
+Tests \
+lib/googletest-release-1.8.0/googlemock/src \
+lib/googletest-release-1.8.0/googlemock/test \
+lib/googletest-release-1.8.0/googletest/codegear \
+lib/googletest-release-1.8.0/googletest/samples \
+lib/googletest-release-1.8.0/googletest/src \
+lib/googletest-release-1.8.0/googletest/test \
+lib/googletest-release-1.8.0/googletest/xcode/Samples/FrameworkSample \
 src \
 
