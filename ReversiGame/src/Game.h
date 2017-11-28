@@ -4,7 +4,8 @@
 #include "Board.h"
 #include "HumanPlayer.h"
 #include "AI.h"
-//#include "Player.h"
+
+const int default_num_of_players = 2;
 
 class Game {
 private:
