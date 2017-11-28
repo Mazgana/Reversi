@@ -20,11 +20,16 @@ Cell HumanPlayer :: doTurn(vector<Cell> options) {
     cout << endl << endl;
 
     int x = 0, y = 0;
+    char tempY;
     bool valid = false;
     while (!valid) {
         cout << "Please enter your move row,col: " << endl;
-        char dumb;
-        cin >> x >> dumb >> y;
+        cin >> x >> tempY;
+        if (tempY == ',') {
+        	cin >> y;
+        } else {
+        	y = (int) tempY - 48;
+        		}
         if (cin.fail()) {
             cin.clear();
             cin.ignore(numeric_limits<streamsize>::max(), '\n');
