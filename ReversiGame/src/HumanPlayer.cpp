@@ -15,7 +15,7 @@ Cell HumanPlayer :: doTurn(vector<Cell> options) {
     cout << (char)type << ": It's your move." << endl;
     cout << "your possible moves:" << endl;
     for (i = 0; i < (int)options.size(); i++) {
-       cout << "(" << options[i].getCol() << "," << options[i].getRow() << ") ";
+       cout << "(" << options[i].getRow() << "," << options[i].getCol() << ") ";
         }
     cout << endl << endl;
 
@@ -31,7 +31,7 @@ Cell HumanPlayer :: doTurn(vector<Cell> options) {
             cout << "invalid input. !" << endl;
         }
         for (i = 0; i < (int)options.size(); i++) {
-            if (options[i].getCol() == x && options[i].getRow() == y) {
+            if (options[i].getRow() == x && options[i].getCol() == y) {
                 valid = true;
                 break;
             }

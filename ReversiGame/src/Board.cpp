@@ -85,7 +85,8 @@ void Board :: print() const
 }
 
 vector<Cell> Board :: getOptions(Status player) {
-    // loop over board finding valid cells.
+	vector<Cell> options;
+	// loop over board finding valid cells.
     for(int i = 0; i < length; i++) {
         for (int j = 0; j < width; j++) {
             if (CellArr[i][j].getStatus() == EMPTY) {
@@ -124,7 +125,8 @@ vector<Cell> Board :: getOptions(Status player) {
             }
         }
     }
-    return optionalMoves;
+    options = optionalMoves;
+    return options;
 }
 
 

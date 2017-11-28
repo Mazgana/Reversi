@@ -89,7 +89,7 @@ bool Game :: playTurn(AI p) {
 
    cout << (char) p.getChip() << " played ";
    minCell.printCell();
-   cout << endl;
+   cout << endl << endl;
 
    return true;
 }
@@ -103,14 +103,14 @@ int Game::findEnemyMaxMoves(Cell chosen, AI currentPlayer) {
 
 	 oppositeOptions = currentBoard.getOptions(currentPlayer.getOppositeType());
 
-	 max = (currentBoard.doOneWay(currentPlayer.getOppositeType(), chosen.getCol(), -1, chosen.getRow(), 0, true), max);
-	 max = (currentBoard.doOneWay(currentPlayer.getOppositeType(), chosen.getCol(), 1, chosen.getRow(), 0, true), max);
-	 max = (currentBoard.doOneWay(currentPlayer.getOppositeType(), chosen.getCol(), -1, chosen.getRow(), 1, true), max);
-	 max = (currentBoard.doOneWay(currentPlayer.getOppositeType(), chosen.getCol(), 1, chosen.getRow(), 1, true), max);
-	 max = (currentBoard.doOneWay(currentPlayer.getOppositeType(), chosen.getCol(), 0, chosen.getRow(), 1, true), max);
-	 max = (currentBoard.doOneWay(currentPlayer.getOppositeType(), chosen.getCol(), -1, chosen.getRow(), -1, true), max);
-	 max = (currentBoard.doOneWay(currentPlayer.getOppositeType(), chosen.getCol(), 1, chosen.getRow(), -1, true), max);
-	 max = (currentBoard.doOneWay(currentPlayer.getOppositeType(), chosen.getCol(), 0, chosen.getRow(), -1, true), max);
+	 max = maximum(currentBoard.doOneWay(currentPlayer.getOppositeType(), chosen.getCol(), -1, chosen.getRow(), 0, true), max);
+	 max = maximum(currentBoard.doOneWay(currentPlayer.getOppositeType(), chosen.getCol(), 1, chosen.getRow(), 0, true), max);
+	 max = maximum(currentBoard.doOneWay(currentPlayer.getOppositeType(), chosen.getCol(), -1, chosen.getRow(), 1, true), max);
+	 max = maximum(currentBoard.doOneWay(currentPlayer.getOppositeType(), chosen.getCol(), 1, chosen.getRow(), 1, true), max);
+	 max = maximum(currentBoard.doOneWay(currentPlayer.getOppositeType(), chosen.getCol(), 0, chosen.getRow(), 1, true), max);
+	 max = maximum(currentBoard.doOneWay(currentPlayer.getOppositeType(), chosen.getCol(), -1, chosen.getRow(), -1, true), max);
+	 max = maximum(currentBoard.doOneWay(currentPlayer.getOppositeType(), chosen.getCol(), 1, chosen.getRow(), -1, true), max);
+	 max = maximum(currentBoard.doOneWay(currentPlayer.getOppositeType(), chosen.getCol(), 0, chosen.getRow(), -1, true), max);
 
 	 return max;
 }
@@ -127,7 +127,7 @@ void Game :: endGame() const {
     cout << endl;
 }
 
-int Game::max(int first, int second) {
+int Game::maximum(int first, int second) {
 	if (first > second) {
 		return first;
 	} else {
