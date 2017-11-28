@@ -25,10 +25,8 @@ Status Cell::getStatus() const {
 	return cellStat;
 }
 
-void Cell::setStatus(char newStatus) {
-	if (newStatus == WHITE || newStatus == BLACK) {
-		cellStat = (Status) newStatus;
-	}
+void Cell::setStatus(Status newStatus) {
+		cellStat = newStatus;
 }
 
 int Cell::getRow() {

@@ -18,7 +18,7 @@ public:
 	Status getStatus() const;
 
 	//Set the cell's status to the given status.
-	void setStatus(char newStatus);
+	void setStatus(Status newStatus);
 
 	//Getting the cell's location.
 	int getRow();
