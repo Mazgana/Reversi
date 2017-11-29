@@ -1,0 +1,232 @@
+commit ec8c8d103a8bb4683c4a8c21fce4ed85cdfbb2bd
+Author: Leah Wachtfogel <leah.wach@gmail.com>
+Date:   Wed Nov 29 16:12:24 2017 +0200
+
+    adding player and cell tests, starting board test, added comments
+
+commit 2ef6b3bb172104c0fd426f3928ca22d236317a93
+Author: Leah Wachtfogel <leah.wach@gmail.com>
+Date:   Wed Nov 29 11:09:18 2017 +0200
+
+    changing limits of game logic
+
+commit f0239f1eb1b95ffec66f889194aae7e5141ac5f4
+Merge: 446fa4f 8591e7a
+Author: Leah Wachtfogel <leah.wach@gmail.com>
+Date:   Wed Nov 29 08:54:11 2017 +0200
+
+    change opening message in main
+
+commit 446fa4f1fdb6eefb44c055533bafedd66e8586ba
+Author: Leah Wachtfogel <leah.wach@gmail.com>
+Date:   Wed Nov 29 08:51:44 2017 +0200
+
+    change opening message in menu
+
+commit 8591e7a6c628bae6a0bd714b07ba327dbf1f660d
+Author: mazgana <adi.mazgani@gmail.com>
+Date:   Tue Nov 28 19:58:48 2017 +0200
+
+    Change the possible cell input from the user
+
+commit e5e9a0e9672a41e59b4e8a772973c975116b615d
+Author: mazgana <adi.mazgani@gmail.com>
+Date:   Tue Nov 28 19:51:55 2017 +0200
+
+    Adding default numbers & fixing wrong cell access
+
+commit 49c7f92dd0f0a67767be1ea2d91ecae21774de74
+Author: mazgana <adi.mazgani@gmail.com>
+Date:   Tue Nov 28 17:49:29 2017 +0200
+
+    Presenting row before col
+
+commit dd19d8af023acaa866098b4957463243bf6d78dc
+Author: mazgana <adi.mazgani@gmail.com>
+Date:   Tue Nov 28 17:28:08 2017 +0200
+
+    Compile
+
+commit 5a921cb45167a42a80a3525e1f23def7e9864556
+Author: mazgana <adi.mazgani@gmail.com>
+Date:   Tue Nov 28 14:27:17 2017 +0200
+
+    Changing 'setStatus' to get status instead of char
+
+commit e6cd3e049ddcad9172a49bbdd81e888fa46221b9
+Author: mazgana <adi.mazgani@gmail.com>
+Date:   Tue Nov 28 14:24:00 2017 +0200
+
+    adding optional moves list to board
+
+commit 426668076bae638e2e6b84f4542bd37085f0c412
+Merge: 3c59a0d 934c331
+Author: mazgana <adi.mazgani@gmail.com>
+Date:   Mon Nov 27 23:58:43 2017 +0200
+
+    Merge branch 'master' of https://github.com/Mazgana/Reversi
+
+commit 3c59a0df92dbe2161a48a26d1a7ccb73b86a7296
+Author: mazgana <adi.mazgani@gmail.com>
+Date:   Mon Nov 27 23:58:27 2017 +0200
+
+    Adding number of players to game
+
+commit 934c331c0264aff7edbfe91eb065f5ec9eb2dd09
+Author: Leah Wachtfogel <leah.wach@gmail.com>
+Date:   Mon Nov 27 23:00:38 2017 +0200
+
+    google testing changes and files
+
+commit 1d5c5dbf644a71e452a30ff9511674b905d55f6c
+Author: Leah Wachtfogel <leah.wach@gmail.com>
+Date:   Mon Nov 27 22:59:01 2017 +0200
+
+    google testing changes and files
+
+commit c9f407d7ccebfee5817fd2e2814cdef9aaf6eae2
+Author: Leah Wachtfogel <leah.wach@gmail.com>
+Date:   Mon Nov 27 22:14:32 2017 +0200
+
+    removing not needed couts
+
+commit 74382acb32fd5206854168e186d350137e669b88
+Author: mazgana <adi.mazgani@gmail.com>
+Date:   Mon Nov 27 21:22:35 2017 +0200
+
+    Adding files
+
+commit 54d5a80149b4a8b31a5f4e7a6cc1cede4f6a402b
+Author: Leah Wachtfogel <leah.wach@gmail.com>
+Date:   Mon Nov 27 19:28:06 2017 +0200
+
+    adding test files
+
+commit 7d055a42c15bc8486d31aa260af6da0593c66484
+Author: mazgana <adi.mazgani@gmail.com>
+Date:   Mon Nov 27 19:08:55 2017 +0200
+
+    Delete files
+
+commit 068d57b0770cb77900ed654a3eb6c9b231dc7db3
+Merge: e69b269 e36d40a
+Author: Leah Wachtfogel <leah.wach@gmail.com>
+Date:   Mon Nov 27 18:55:47 2017 +0200
+
+    Merge https://github.com/Mazgana/Reversi
+
+commit e36d40a4c45e946d90114517d1b0193834e03591
+Merge: 566b77d abfaa9e
+Author: mazgana <adi.mazgani@gmail.com>
+Date:   Mon Nov 27 18:54:51 2017 +0200
+
+    Merge https://github.com/Mazgana/Reversi
+
+commit 566b77d327a07c10d4ac31f87346e880f37cb965
+Author: mazgana <adi.mazgani@gmail.com>
+Date:   Mon Nov 27 18:53:51 2017 +0200
+
+    Delete all deconstructors
+
+commit e69b269a72354e7428488a7273dce210c21b93ee
+Author: Leah Wachtfogel <leah.wach@gmail.com>
+Date:   Mon Nov 27 18:48:58 2017 +0200
+
+    trying commit
+
+commit abfaa9e0be6c30aba745867a58e7fd0535449778
+Author: mazgana <adi.mazgani@gmail.com>
+Date:   Mon Nov 27 18:30:29 2017 +0200
+
+    Adding src
+
+commit a308108ff003ab640f557a0dbf961458869ad65d
+Author: mazgana <adi.mazgani@gmail.com>
+Date:   Mon Nov 27 15:36:33 2017 +0200
+
+    adding .project
+
+commit 3b7bcc635944e2722efcedfa12614ccc39ca4ac6
+Author: mazgana <adi.mazgani@gmail.com>
+Date:   Mon Nov 27 13:06:20 2017 +0200
+
+    adding deconstructor
+
+commit 38ca6011645af4db9ae4ffae288c18eca549e9a1
+Author: mazgana <adi.mazgani@gmail.com>
+Date:   Mon Nov 27 12:17:35 2017 +0200
+
+    Fixing errors
+
+commit 94355203e36734c85604d2b8290196aaeaa80823
+Author: mazgana <adi.mazgani@gmail.com>
+Date:   Mon Nov 27 11:32:18 2017 +0200
+
+    Adding playTurn for AI player
+
+commit bd0655603e616192033b712319a9c9da951727b2
+Author: mazgana <adi.mazgani@gmail.com>
+Date:   Sun Nov 26 23:23:28 2017 +0200
+
+    Adding 'find enemy max moves' method
+
+commit d8562fe9369bc0d344e8ec5296802841dba15f44
+Author: mazgana <adi.mazgani@gmail.com>
+Date:   Sun Nov 26 22:38:17 2017 +0200
+
+    Create AI class
+
+commit 359055c60355a774f132ca481a480648ed1e9c88
+Author: mazgana <adi.mazgani@gmail.com>
+Date:   Sun Nov 26 21:41:15 2017 +0200
+
+    Copy constructor
+
+commit a617290df57c65fb9ec4d7e814c6f870fecb41df
+Author: Leah Wachtfogel <leah.wach@gmail.com>
+Date:   Sun Nov 26 16:31:03 2017 +0200
+
+    changing small human-humen changes
+
+commit dc3bb5fcda5ea9cb66f093a10181023c65a20721
+Author: Leah Wachtfogel <leah.wach@gmail.com>
+Date:   Sun Nov 26 16:28:28 2017 +0200
+
+    adding contents to human player
+
+commit 91d67546bc3ecedff1b00d480e6dd999429b85fe
+Author: Leah Wachtfogel <leah.wach@gmail.com>
+Date:   Sun Nov 26 16:27:27 2017 +0200
+
+    adding contents to human player
+
+commit c8c58875987ee2c71ce9bc18b99ea4b6cd00b7d0
+Merge: 902c94d bd56853
+Author: Leah Wachtfogel <leah.wach@gmail.com>
+Date:   Sun Nov 26 16:11:43 2017 +0200
+
+    Merge remote-tracking branch 'origin/master'
+
+commit 902c94dbf549973e57494967b032f0137f6aa2bd
+Author: Leah Wachtfogel <leah.wach@gmail.com>
+Date:   Sun Nov 26 15:59:11 2017 +0200
+
+    interface and human-humen
+
+commit bd5685368794b07085344f71a9ac0054ff7aceb1
+Author: wachtfl <33896946+wachtfl@users.noreply.github.com>
+Date:   Sat Nov 25 19:13:13 2017 +0200
+
+    Add files via upload
+
+commit f7990fb34052d6db512acf104c6e91b60e231d1b
+Author: Mazgana <33939685+Mazgana@users.noreply.github.com>
+Date:   Fri Nov 24 01:32:58 2017 +0200
+
+    Add files via upload
+
+commit 7352185dc0710a15515ba4dd54cd313c39d8b95e
+Author: Mazgana <33939685+Mazgana@users.noreply.github.com>
+Date:   Fri Nov 24 01:31:19 2017 +0200
+
+    Create README.md
