@@ -19,6 +19,10 @@ TEST(CellTest, settingChipTests) {
     cell.setStatus(BLACK);
     EXPECT_EQ(cell.getStatus(),'X');
     EXPECT_NE(cell.getStatus(),' ');
+    cell.setStatus(WHITE);
+    EXPECT_EQ(cell.getStatus(),'O');
+    EXPECT_NE(cell.getStatus(),' ');
+    EXPECT_NE(cell.getStatus(),'X');
 }
 
 TEST(CellTest, flipTests) {

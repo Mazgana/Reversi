@@ -128,10 +128,10 @@ vector<Cell> Board :: getOptions(Status player) {
 
 
 int Board :: doOneWay(Status player, int x, int dx, int y, int dy, bool flip) {
-		int chipCounter = 0;
-		x = x + dx;
-    y = y + dy;
-    if (x < 0 || x >= length || y < 0 || y >= width) {
+	int chipCounter = 0;
+	x = x + dx;
+	y = y + dy;
+	if (x < 0 || x > length || y < 0 || y > width) {
         return 0;
     }//out of bounds cell
     if (reveal(x,y) == EMPTY || reveal(x,y) == player) {
@@ -142,7 +142,7 @@ int Board :: doOneWay(Status player, int x, int dx, int y, int dy, bool flip) {
             x = x + dx;
             y = y + dy;
             chipCounter++;
-            if(x < 0 || x >= length || y < 0 || y >= width) {
+            if(x < 0 || x > length || y < 0 || y > width) {
                 return 0;
             }// out of bounds
             if(reveal(x,y) == player) {
@@ -153,7 +153,7 @@ int Board :: doOneWay(Status player, int x, int dx, int y, int dy, bool flip) {
                         CellArr[x][y].flip();
                         x = x - dx;
                         y = y - dy;
-                        if(x < 0 || x >= length || y < 0 || y >= width) return 0;
+                        if(x < 0 || x > length || y < 0 || y > width) return 0;
                     }
         }//flipping if cell was chosen
         return chipCounter;
