@@ -34,7 +34,7 @@ public:
 
   int findEnemyMaxMoves(Cell chosen, AI currentPlayer);
 
-  int max(int first, int second);
+  int maximum(int first, int second);
 
 };
 

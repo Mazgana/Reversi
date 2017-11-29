@@ -4,9 +4,9 @@
 using namespace std;
 
 int main() {
-	int numOfPlayers;
+	int numOfPlayers = 2;
 	bool invalid = true;
-	cout << "Choose the amount of players in this game (1 or 2): " << endl;
+	cout << "Choose number of players for this game (1 or 2): " << endl;
 	while (invalid) {
 		cin >> numOfPlayers;
 		if (numOfPlayers != 1 && numOfPlayers != 2) {

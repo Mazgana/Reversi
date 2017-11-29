@@ -8,8 +8,8 @@
 using namespace std;
 
 TEST(PlayerTest, player_creationTests) {
-    HumanPlayer p;
-/*    EXPECT_EQ(player.getChip(), 'O');
-    EXPECT_NE(player.getChip(),' ');
-    EXPECT_NE(player.getChip(),'x');*/
+    HumanPlayer p = HumanPlayer(WHITE);
+    EXPECT_EQ(p.getChip(), 'O');
+    EXPECT_NE(p.getChip(),' ');
+    EXPECT_NE(p.getChip(),EMPTY);
 }
