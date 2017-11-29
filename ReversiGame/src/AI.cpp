@@ -11,7 +11,7 @@ AI::AI(Status t) : type(t){
 }
 
 Cell AI :: doTurn(vector<Cell> options) {
-		Cell c;
+	Cell c;
     return c;
 }
 

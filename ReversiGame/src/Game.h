@@ -24,18 +24,18 @@ public:
 	void startNewGame();
 
 	//runs basic game loop.
-    void run();
-    //calls on functions for each turn.
-    //returns true if a piece was put on board. false otherwise.
-    bool playTurn(HumanPlayer p);
+  void run();
+  //calls on functions for each turn.
+  //returns true if a piece was put on board. false otherwise.
+  bool playTurn(HumanPlayer p);
 
-    bool playTurn(AI p);
-    //ending game and declaring winner.
-    void endGame() const;
+  bool playTurn(AI p);
+  //ending game and declaring winner.
+  void endGame() const;
 
-    int findEnemyMaxMoves(Cell chosen, AI currentPlayer);
+  int findEnemyMaxMoves(Cell chosen, AI currentPlayer);
 
-    int maximum(int first, int second);
+  int maximum(int first, int second);
 
 };
 

@@ -4,7 +4,7 @@
 using namespace std;
 
 Game::Game() {
-    board = Board(default_lenth, default_width);
+  board = Board(default_lenth, default_width);
 	blackPlayer = HumanPlayer(BLACK);
 	whitePlayer = HumanPlayer(WHITE);
 	numOfPlayers = default_num_of_players;
@@ -17,14 +17,14 @@ Game::Game(int players) {
 	 	blackPlayer = HumanPlayer(BLACK);
 		whitePlayer = HumanPlayer(WHITE);
     } else if (numOfPlayers == 1) {
-        whiteAiPlayer = AI(WHITE);
+	  whiteAiPlayer = AI(WHITE);
 		blackPlayer = HumanPlayer(BLACK);
-    }
+  }
 }
 
 void Game :: run() {
     //initializing board and starting.
-    bool oPlayed = true, xPlayed;
+    bool oPlayed = true, xPlayed = true;
     board.initialize();
     board.print();
     //playing game, 1 round per player.
@@ -34,7 +34,7 @@ void Game :: run() {
             //when no more moves can be done.
             endGame();
             break;
-        }
+        		}
         board.print();
         if (numOfPlayers == 2)
         	oPlayed = playTurn(whitePlayer);
@@ -84,7 +84,6 @@ bool Game :: playTurn(AI p) {
 	}
 
    board.putChip(p.getChip(), minCell.getRow(), minCell.getCol());// putting chip on board
-   board.flipChips(p.getChip(), minCell);
    board.cleanOptionalMovesList();
 
    cout << (char) p.getChip() << " played ";
@@ -98,7 +97,6 @@ int Game::findEnemyMaxMoves(Cell chosen, AI currentPlayer) {
 	 int max = 0;
 	 Board currentBoard = board;
 	 currentBoard.putChip(currentPlayer.getChip(), chosen.getCol(), chosen.getRow());
-	 currentBoard.flipChips(currentPlayer.getChip(), chosen);
 
 	 max = maximum(currentBoard.doOneWay(currentPlayer.getOppositeType(), chosen.getRow(), -1, chosen.getCol(), 0, true), max);
 	 max = maximum(currentBoard.doOneWay(currentPlayer.getOppositeType(), chosen.getRow(), 1, chosen.getCol(), 0, true), max);

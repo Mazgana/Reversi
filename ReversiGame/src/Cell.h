@@ -27,6 +27,7 @@ public:
 	//Print the cell location in the following format: (row, col).
 	void printCell();
 
+	//fliiping chip- changing status from black to white or vice versa
 	void flip();
 };
 

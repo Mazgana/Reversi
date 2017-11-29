@@ -55,6 +55,7 @@ Status Board ::reveal(int x, int y) const {
 
 void Board :: putChip(Status chip, int x, int y) {
     CellArr[x][y].setStatus(chip);
+	flipChips(chip, Cell(x,y));
 }
 
 void Board :: print() const

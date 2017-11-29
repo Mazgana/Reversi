@@ -462,6 +462,18 @@ cxxabi.h
 acxx_demangle.h
 -
 
+../ReversiGame/src/AI.h
+Player.h
+../ReversiGame/src/Player.h
+Cell.h
+../ReversiGame/src/Cell.h
+
+../ReversiGame/src/Board.h
+Cell.h
+../ReversiGame/src/Cell.h
+vector
+-
+
 ../ReversiGame/src/Cell.h
 
 ../ReversiGame/src/HumanPlayer.h
@@ -477,6 +489,10 @@ vector
 -
 
 /home/leah/CLionProjects/Reversi/ReversiGame/Tests/BoardTest.cpp
+gtest/gtest.h
+-
+Board.h
+/home/leah/CLionProjects/Reversi/ReversiGame/Tests/Board.h
 
 /home/leah/CLionProjects/Reversi/ReversiGame/Tests/CellTest.cpp
 gtest/gtest.h
@@ -489,6 +505,8 @@ gtest/gtest.h
 -
 HumanPlayer.h
 /home/leah/CLionProjects/Reversi/ReversiGame/Tests/HumanPlayer.h
+AI.h
+/home/leah/CLionProjects/Reversi/ReversiGame/Tests/AI.h
 
 /home/leah/CLionProjects/Reversi/ReversiGame/Tests/gtest_main.cpp
 gtest/gtest.h
