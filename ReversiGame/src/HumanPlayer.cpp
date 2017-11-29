@@ -15,23 +15,28 @@ Cell HumanPlayer :: doTurn(vector<Cell> options) {
     cout << (char)type << ": It's your move." << endl;
     cout << "your possible moves:" << endl;
     for (i = 0; i < (int)options.size(); i++) {
-       cout << "(" << options[i].getCol() << "," << options[i].getRow() << ") ";
+       cout << "(" << options[i].getRow() << "," << options[i].getCol() << ") ";
         }
     cout << endl << endl;
 
     int x = 0, y = 0;
+    char tempY;
     bool valid = false;
     while (!valid) {
         cout << "Please enter your move row,col: " << endl;
-        char dumb;
-        cin >> x >> dumb >> y;
+        cin >> x >> tempY;
+        if (tempY == ',') {
+        	cin >> y;
+        } else {
+        	y = (int) tempY - 48;
+        		}
         if (cin.fail()) {
             cin.clear();
             cin.ignore(numeric_limits<streamsize>::max(), '\n');
             cout << "invalid input. !" << endl;
         }
         for (i = 0; i < (int)options.size(); i++) {
-            if (options[i].getCol() == x && options[i].getRow() == y) {
+            if (options[i].getRow() == x && options[i].getCol() == y) {
                 valid = true;
                 break;
             }

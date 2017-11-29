@@ -1,9 +1,6 @@
 #include "Board.h"
 #include <iostream>
 
-const int default_width = 8;
-const int default_lenth = 8;
-
 Board::Board() {
 	length = default_lenth;
 	width = default_width;
@@ -63,8 +60,8 @@ void Board :: putChip(Status chip, int x, int y) {
 void Board :: print() const
 {
 	int i, j, k;
-	for (i = 0; i <= width; i++) {
-		for (j = 0; j <= length; j++) {
+	for (i = 0; i <= length; i++) {
+		for (j = 0; j <= width; j++) {
 			if ((i == 0) && (j == 0)){
 				cout << "  |";
 			} else if ((i == 0) && (j != 0)) {
@@ -85,9 +82,10 @@ void Board :: print() const
 }
 
 vector<Cell> Board :: getOptions(Status player) {
-    // loop over board finding valid cells.
-    for(int i = 0; i < length; i++) {
-        for (int j = 0; j < width; j++) {
+	vector<Cell> options;
+	// loop over board finding valid cells.
+    for(int i = 1; i <= length; i++) {
+        for (int j = 1; j <= width; j++) {
             if (CellArr[i][j].getStatus() == EMPTY) {
                 if (doOneWay(player, i, -1, j, 0, false)) {
                 	if (!isCellInOptionArray(CellArr[i][j]))
@@ -124,14 +122,15 @@ vector<Cell> Board :: getOptions(Status player) {
             }
         }
     }
-    return optionalMoves;
+    options = optionalMoves;
+    return options;
 }
 
 
 int Board :: doOneWay(Status player, int x, int dx, int y, int dy, bool flip) {
 		int chipCounter = 0;
 		x = x + dx;
-    y= y + dy;
+    y = y + dy;
     if (x < 0 || x >= length || y < 0 || y >= width) {
         return 0;
     }//out of bounds cell
@@ -154,6 +153,7 @@ int Board :: doOneWay(Status player, int x, int dx, int y, int dy, bool flip) {
                         CellArr[x][y].flip();
                         x = x - dx;
                         y = y - dy;
+                        if(x < 0 || x >= length || y < 0 || y >= width) return 0;
                     }
         }//flipping if cell was chosen
         return chipCounter;
@@ -164,17 +164,17 @@ int Board :: doOneWay(Status player, int x, int dx, int y, int dy, bool flip) {
 }
 
 void Board::flipChips(Status playerColr, Cell chosen) {
-    doOneWay(playerColr, chosen.getCol(), -1, chosen.getRow(), 0, true);
-    doOneWay(playerColr, chosen.getCol(), 1, chosen.getRow(), 0, true);
-    doOneWay(playerColr, chosen.getCol(), -1, chosen.getRow(), 1, true);
-    doOneWay(playerColr, chosen.getCol(), 1, chosen.getRow(), 1, true);
-    doOneWay(playerColr, chosen.getCol(), 0, chosen.getRow(), 1, true);
-    doOneWay(playerColr, chosen.getCol(), -1, chosen.getRow(), -1, true);
-    doOneWay(playerColr, chosen.getCol(), 1, chosen.getRow(), -1, true);
-    doOneWay(playerColr, chosen.getCol(), 0, chosen.getRow(), -1, true);
+    doOneWay(playerColr, chosen.getRow(), -1, chosen.getCol(), 0, true);
+    doOneWay(playerColr, chosen.getRow(), 1, chosen.getCol(), 0, true);
+    doOneWay(playerColr, chosen.getRow(), -1, chosen.getCol(), 1, true);
+    doOneWay(playerColr, chosen.getRow(), 1, chosen.getCol(), 1, true);
+    doOneWay(playerColr, chosen.getRow(), 0, chosen.getCol(), 1, true);
+    doOneWay(playerColr, chosen.getRow(), -1, chosen.getCol(), -1, true);
+    doOneWay(playerColr, chosen.getRow(), 1, chosen.getCol(), -1, true);
+    doOneWay(playerColr, chosen.getRow(), 0, chosen.getCol(), -1, true);
 }
 
-char Board::getWinner() const {
+Status Board::getWinner() const {
     int xCount = 0, oCount = 0;
     for(int i = 0; i < length; i++) {
         for (int j = 0; j < width; j++) {
@@ -187,13 +187,13 @@ char Board::getWinner() const {
                 }
     }// going over board and counting
     if (xCount > oCount) {
-        return  'x';
+        return  BLACK;
     }
     else if (xCount < oCount) {
-        return  'o';
+        return  WHITE;
     }
     else {
-        return  ' ';
+        return EMPTY;
     }
 }
 
@@ -214,4 +214,16 @@ bool Board::isCellInOptionArray(Cell check) {
 
 void Board::cleanOptionalMovesList(){
 	optionalMoves.clear();
+}
+
+bool Board::isBoardFull() {
+	int i, j;
+	for (i = 1; i <= length; i++) {
+		for (j = 1; j <= width; j++) {
+			if (CellArr[i][j].getStatus() == EMPTY) {
+				return false;
+			}
+		}
+	}
+	return true;
 }

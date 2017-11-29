@@ -5,6 +5,9 @@
 #include <vector>
 using namespace std;
 
+const int default_width = 8;
+const int default_lenth = 8;
+
 class Board {
 	private:
 		int length;
@@ -39,7 +42,7 @@ class Board {
     void flipChips(Status playerColr, Cell chosen);
 
     //check score and counts chips. returns the chip with highest score.
-    char getWinner() const;
+    Status getWinner() const;
 
 		//Checking if the current board has no more empty cells.
 		bool isBoardFull();
