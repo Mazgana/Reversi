@@ -21,6 +21,8 @@ public:
 
     // presenting optional moves to player and getting move decision.
     Cell doTurn(vector<Cell> options);
+
+    bool isComp();
 };
 
 #endif //REVERSI_AI_H

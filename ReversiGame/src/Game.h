@@ -9,34 +9,35 @@ const int default_num_of_players = 2;
 
 class Game {
 private:
-  Board board;
-	HumanPlayer blackPlayer;
-	HumanPlayer whitePlayer;
-	AI whiteAiPlayer;
+	Board board;
+	Player* blackPlayer;
+	Player* whitePlayer;
 
 	int numOfPlayers;
 
 public:
 	Game();
 	Game(int);
+	~Game();
 
 	//Starting new game with default settings of one board and two players.
 	void startNewGame();
 
 	//runs basic game loop.
-  void run();
-  //calls on functions for each turn.
-  //returns true if a piece was put on board. false otherwise.
-  bool playTurn(HumanPlayer p);
+	void run();
+	//calls on functions for each turn.
+	//returns true if a piece was put on board. false otherwise.
+	bool playTurn(Player* p);
 
-  bool playTurn(AI p);
-  //ending game and declaring winner.
-  void endGame() const;
+	bool compPlayTurn(Player* p);
+	//ending game and declaring winner.
+	void endGame() const;
 
-  int findEnemyMaxMoves(Cell chosen, AI currentPlayer);
+	int findEnemyMaxMoves(Cell chosen, Player* p);
 
-  int maximum(int first, int second);
+	int maximum(int first, int second);
 
 };
 
 #endif /* GAME_H_ */
+

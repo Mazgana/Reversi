@@ -17,6 +17,8 @@ public:
 
     // presenting optional moves to player and getting move decision.
     virtual Cell doTurn(vector<Cell> options) = 0;
+
+    virtual bool isComp() = 0;
 };
 
 #endif /* PLAYER_H_ */

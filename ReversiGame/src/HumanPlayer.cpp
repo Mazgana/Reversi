@@ -60,3 +60,7 @@ Status HumanPlayer::getOppositeType() {
 		return BLACK;
 	}
 }
+
+bool HumanPlayer::isComp() {
+    return false;
+}

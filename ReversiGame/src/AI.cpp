@@ -26,3 +26,7 @@ Status AI::getOppositeType() {
 		return BLACK;
 	}
 }
+
+bool AI::isComp() {
+    return true;
+}

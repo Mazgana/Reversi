@@ -177,15 +177,15 @@ void Board::flipChips(Status playerColr, Cell chosen) {
 
 Status Board::getWinner() const {
     int xCount = 0, oCount = 0;
-    for(int i = 0; i < length; i++) {
-        for (int j = 0; j < width; j++) {
+    for(int i = 0; i <= length; i++) {
+        for (int j = 0; j <= width; j++) {
         	  if (CellArr[i][j].getStatus() == BLACK) {
         		  ++xCount;
-        	             }
+			  }
         	  if (CellArr[i][j].getStatus() == WHITE) {
-        	    ++oCount;
-        	             }
-                }
+        	      ++oCount;
+			  }
+		}
     }// going over board and counting
     if (xCount > oCount) {
         return  BLACK;
