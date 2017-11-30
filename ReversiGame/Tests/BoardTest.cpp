@@ -1,7 +1,3 @@
-//
-// Created by leah on 27/11/17.
-//
-
 #include <gtest/gtest.h>
 #include "Board.h"
 
@@ -22,7 +18,7 @@ public:
 };
 
 TEST_F(BoardTest, puttingAndRevealingChips) {
-    EXPECT_EQ(setBrd.reveal(3,2),setBrd.reveal(2,3));
+    EXPECT_EQ(setBrd.reveal(1,2),setBrd.reveal(3,2));
     EXPECT_EQ(setBrd.reveal(1,2), BLACK);
 }
 

@@ -84,34 +84,7 @@ bool Game :: playTurn(Player* p) {
 
     return true;
 }
-/*
-bool Game :: compPlayTurn(Player* p) {
-    int i, min, temp;
-    Cell minCell;
 
-    vector<Cell> options = board.getOptions(p->getChip());
-    minCell = options[0];
-    min = findEnemyMaxMoves(minCell, p);
-
-    for (i = 1; i < (int)options.size(); i++) {
-        temp = findEnemyMaxMoves(options[i], p);
-        if (temp < min) {
-            min = temp;
-            minCell = options[i];
-        }
-    }
-
-    board.putChip(p->getChip(), minCell.getRow(), minCell.getCol());// putting chip on board
-    board.flipChips(p->getChip(), minCell);
-    board.cleanOptionalMovesList();
-
-    cout << (char) p->getChip() << " played ";
-    minCell.printCell();
-    cout << endl << endl;
-
-    return true;
-}
-*/
 int Game::findEnemyMaxMoves(Cell chosen, Player *p) {
     int max = 0;
     Board currentBoard = board;
