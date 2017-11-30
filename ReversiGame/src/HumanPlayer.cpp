@@ -54,7 +54,7 @@ Status HumanPlayer :: getChip() const{
     return type;
 }
 
-Status HumanPlayer::getOppositeType() {
+Status HumanPlayer::getOppositeType() const {
 	if (type == BLACK) {
 		return WHITE;
 	} else {
@@ -62,6 +62,6 @@ Status HumanPlayer::getOppositeType() {
 	}
 }
 
-bool HumanPlayer::isComp() {
+bool HumanPlayer::isComp() const {
     return false;
 }

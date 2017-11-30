@@ -13,12 +13,12 @@ public:
     virtual Status getChip() const = 0;
 
     // passes player's opposite char representing chip.
-    virtual Status getOppositeType() = 0;
+    virtual Status getOppositeType() const = 0;
 
     // presenting optional moves to player and getting move decision.
     virtual Cell doTurn(vector<Cell> options) = 0;
 
-    virtual bool isComp() = 0;
+    virtual bool isComp() const = 0;
 };
 
 #endif /* PLAYER_H_ */

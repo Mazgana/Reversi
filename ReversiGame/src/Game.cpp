@@ -115,7 +115,7 @@ void Game :: endGame() const {
     cout << endl;
 }
 
-int Game::maximum(int first, int second) {
+int Game::maximum(int first, int second) const{
     if (first > second) {
         return first;
     } else {

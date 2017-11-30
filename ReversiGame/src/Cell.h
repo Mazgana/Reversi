@@ -21,11 +21,11 @@ public:
 	void setStatus(Status newStatus);
 
 	//Getting the cell's location.
-	int getRow();
-	int getCol();
+	int getRow() const;
+	int getCol() const;
 
 	//Print the cell location in the following format: (row, col).
-	void printCell();
+	void printCell() const;
 
 	//fliiping chip- changing status from black to white or vice versa
 	void flip();

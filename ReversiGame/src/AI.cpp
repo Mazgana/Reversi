@@ -19,7 +19,7 @@ Status AI :: getChip() const{
     return type;
 }
 
-Status AI::getOppositeType() {
+Status AI::getOppositeType() const {
 	if (type == BLACK) {
 		return WHITE;
 	} else {
@@ -27,6 +27,6 @@ Status AI::getOppositeType() {
 	}
 }
 
-bool AI::isComp() {
+bool AI::isComp() const{
     return true;
 }

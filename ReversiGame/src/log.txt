@@ -1,3 +1,28 @@
+commit 455310a5942193238d2e8ff67a77e87c230b58ce
+Author: Leah Wachtfogel <leah.wach@gmail.com>
+Date:   Thu Nov 30 17:50:05 2017 +0200
+
+    comments cleanup
+
+commit f20f067d55545d6d47437243d18c5685ba9ba8de
+Merge: acef649 6367cd9
+Author: Leah Wachtfogel <leah.wach@gmail.com>
+Date:   Wed Nov 29 23:17:05 2017 +0200
+
+    Merge https://github.com/Mazgana/Reversi
+
+commit acef6495ed6ea88a8f55e8e656c37968bfb39844
+Author: Leah Wachtfogel <leah.wach@gmail.com>
+Date:   Wed Nov 29 23:16:02 2017 +0200
+
+    using generic player and pointers, optimizing playTurn methods,small end of game bugs, putChip and flip together
+
+commit 6367cd9784dad218d01af3356f147cf3cce33e07
+Author: mazgana <adi.mazgani@gmail.com>
+Date:   Wed Nov 29 23:02:46 2017 +0200
+
+    Add board test and log txt file
+
 commit ec8c8d103a8bb4683c4a8c21fce4ed85cdfbb2bd
 Author: Leah Wachtfogel <leah.wach@gmail.com>
 Date:   Wed Nov 29 16:12:24 2017 +0200
