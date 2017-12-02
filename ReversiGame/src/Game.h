@@ -12,31 +12,27 @@ private:
 	Board board;
 	Player* blackPlayer;
 	Player* whitePlayer;
-
 	int numOfPlayers;
+
+    //finds best move using given strategy (least moves for next turn).
+    int findEnemyMaxMoves(Cell chosen, Player* p);
+
+    //returns maximum number
+    int maximum(int first, int second) const;
+
+    //ending game and declaring winner.
+    void endGame() const;
 
 public:
 	Game();
 	Game(int);
 	~Game();
 
-	//Starting new game with default settings of one board and two players.
-	void startNewGame();
-
 	//runs basic game loop.
 	void run();
 	//calls on functions for each turn.
 	//returns true if a piece was put on board. false otherwise.
 	bool playTurn(Player* p);
-
-	bool compPlayTurn(Player* p);
-	//ending game and declaring winner.
-	void endGame() const;
-
-	int findEnemyMaxMoves(Cell chosen, Player* p);
-
-	int maximum(int first, int second);
-
 };
 
 #endif /* GAME_H_ */

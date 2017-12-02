@@ -15,14 +15,14 @@ public:
     AI(Status color);
 
     // passes player's char representing chip.
-    Status getChip() const;
+    Status getChip() const override;
 
-    Status getOppositeType();
+    Status getOppositeType() const override;
 
     // presenting optional moves to player and getting move decision.
-    Cell doTurn(vector<Cell> options);
+    Cell doTurn(vector<Cell> options) override;
 
-    bool isComp();
+    bool isComp() const override;
 };
 
 #endif //REVERSI_AI_H

@@ -19,6 +19,7 @@ Cell HumanPlayer :: doTurn(vector<Cell> options) {
         }
     cout << endl << endl;
 
+    //validating choice
     int x = 0, y = 0;
     char tempY;
     bool valid = false;
@@ -45,7 +46,7 @@ Cell HumanPlayer :: doTurn(vector<Cell> options) {
             cout << "That is not an option." << endl;
         }
     }
-    Cell c(x,y);
+    Cell c(x,y);//returning console choice
     return c;
 }
 
@@ -53,7 +54,7 @@ Status HumanPlayer :: getChip() const{
     return type;
 }
 
-Status HumanPlayer::getOppositeType() {
+Status HumanPlayer::getOppositeType() const {
 	if (type == BLACK) {
 		return WHITE;
 	} else {
@@ -61,6 +62,6 @@ Status HumanPlayer::getOppositeType() {
 	}
 }
 
-bool HumanPlayer::isComp() {
+bool HumanPlayer::isComp() const {
     return false;
 }

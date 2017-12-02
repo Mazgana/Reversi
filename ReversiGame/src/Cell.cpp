@@ -29,15 +29,15 @@ void Cell::setStatus(Status newStatus) {
 		cellStat = newStatus;
 }
 
-int Cell::getRow() {
+int Cell::getRow() const {
 	return row;
 }
 
-int Cell::getCol() {
+int Cell::getCol() const {
 	return col;
 }
 
-void Cell::printCell() {
+void Cell::printCell() const {
 	cout << "(" << row << ", " << col << ")";
 }
 
