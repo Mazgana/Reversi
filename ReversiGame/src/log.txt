@@ -1,3 +1,9 @@
+commit 6367cd9784dad218d01af3356f147cf3cce33e07
+Author: mazgana <adi.mazgani@gmail.com>
+Date:   Wed Nov 29 23:02:46 2017 +0200
+
+    Add board test and log txt file
+
 commit ec8c8d103a8bb4683c4a8c21fce4ed85cdfbb2bd
 Author: Leah Wachtfogel <leah.wach@gmail.com>
 Date:   Wed Nov 29 16:12:24 2017 +0200
