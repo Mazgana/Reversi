@@ -22,8 +22,8 @@ Game::Game(int players) {
 }
 
 Game:: ~Game() {
-    delete  blackPlayer;
-    delete whitePlayer;
+    delete[]  blackPlayer;
+    delete[] whitePlayer;
 }
 
 void Game :: run() {
@@ -31,9 +31,9 @@ void Game :: run() {
     bool oPlayed = true, xPlayed;
     board.initialize();
     board.print();
+
     //playing game, 1 round per player.
     while (!board.isBoardFull()) {
-//        xPlayed = playTurn(blackPlayer);
         xPlayed = playTurn(blackPlayer);
         if (!xPlayed && !oPlayed) {
             //when no more moves can be done.
