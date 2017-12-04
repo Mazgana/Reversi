@@ -1,8 +1,10 @@
-src/HumanPlayer.o: ../src/HumanPlayer.cpp ../src/HumanPlayer.h \
- ../src/Player.h ../src/Cell.h
+src/HumanPlayer.o: ../src/HumanPlayer.cpp \
+ /home/adi/Reversi/ReversiGame/include/HumanPlayer.h \
+ /home/adi/Reversi/ReversiGame/include/Player.h \
+ /home/adi/Reversi/ReversiGame/include/Cell.h
 
-../src/HumanPlayer.h:
+/home/adi/Reversi/ReversiGame/include/HumanPlayer.h:
 
-../src/Player.h:
+/home/adi/Reversi/ReversiGame/include/Player.h:
 
-../src/Cell.h:
+/home/adi/Reversi/ReversiGame/include/Cell.h:

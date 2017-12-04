@@ -1,3 +1,3 @@
-src/Cell.o: ../src/Cell.cpp ../src/Cell.h
+src/Cell.o: ../src/Cell.cpp /home/adi/Reversi/ReversiGame/include/Cell.h
 
-../src/Cell.h:
+/home/adi/Reversi/ReversiGame/include/Cell.h:

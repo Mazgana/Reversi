@@ -1,14 +1,18 @@
-src/Game.o: ../src/Game.cpp ../src/Game.h ../src/Board.h ../src/Cell.h \
- ../src/HumanPlayer.h ../src/Player.h ../src/AI.h
+src/Game.o: ../src/Game.cpp /home/adi/Reversi/ReversiGame/include/Game.h \
+ /home/adi/Reversi/ReversiGame/include/Board.h \
+ /home/adi/Reversi/ReversiGame/include/Cell.h \
+ /home/adi/Reversi/ReversiGame/include/HumanPlayer.h \
+ /home/adi/Reversi/ReversiGame/include/Player.h \
+ /home/adi/Reversi/ReversiGame/include/AI.h
 
-../src/Game.h:
+/home/adi/Reversi/ReversiGame/include/Game.h:
 
-../src/Board.h:
+/home/adi/Reversi/ReversiGame/include/Board.h:
 
-../src/Cell.h:
+/home/adi/Reversi/ReversiGame/include/Cell.h:
 
-../src/HumanPlayer.h:
+/home/adi/Reversi/ReversiGame/include/HumanPlayer.h:
 
-../src/Player.h:
+/home/adi/Reversi/ReversiGame/include/Player.h:
 
-../src/AI.h:
+/home/adi/Reversi/ReversiGame/include/AI.h:

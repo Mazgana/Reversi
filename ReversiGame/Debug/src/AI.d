@@ -1,7 +1,9 @@
-src/AI.o: ../src/AI.cpp ../src/AI.h ../src/Player.h ../src/Cell.h
+src/AI.o: ../src/AI.cpp /home/adi/Reversi/ReversiGame/include/AI.h \
+ /home/adi/Reversi/ReversiGame/include/Player.h \
+ /home/adi/Reversi/ReversiGame/include/Cell.h
 
-../src/AI.h:
+/home/adi/Reversi/ReversiGame/include/AI.h:
 
-../src/Player.h:
+/home/adi/Reversi/ReversiGame/include/Player.h:
 
-../src/Cell.h:
+/home/adi/Reversi/ReversiGame/include/Cell.h:

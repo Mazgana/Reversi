@@ -8,15 +8,9 @@ RM := rm -rf
 
 # All of the sources participating in the build are defined here
 -include sources.mk
+-include test/subdir.mk
 -include src/subdir.mk
--include lib/googletest-release-1.8.0/googletest/xcode/Samples/FrameworkSample/subdir.mk
--include lib/googletest-release-1.8.0/googletest/test/subdir.mk
--include lib/googletest-release-1.8.0/googletest/src/subdir.mk
--include lib/googletest-release-1.8.0/googletest/samples/subdir.mk
--include lib/googletest-release-1.8.0/googletest/codegear/subdir.mk
--include lib/googletest-release-1.8.0/googlemock/test/subdir.mk
--include lib/googletest-release-1.8.0/googlemock/src/subdir.mk
--include Tests/subdir.mk
+-include gtest_src/gtest/subdir.mk
 -include subdir.mk
 -include objects.mk
 
