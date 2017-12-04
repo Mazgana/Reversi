@@ -8,6 +8,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/home/leah/CLionProjects/Reversi/ReversiGame/src/Board.cpp" "/home/leah/CLionProjects/Reversi/cmake-build-debug/CMakeFiles/Reversi_main.dir/ReversiGame/src/Board.cpp.o"
   "/home/leah/CLionProjects/Reversi/ReversiGame/src/Cell.cpp" "/home/leah/CLionProjects/Reversi/cmake-build-debug/CMakeFiles/Reversi_main.dir/ReversiGame/src/Cell.cpp.o"
   "/home/leah/CLionProjects/Reversi/ReversiGame/src/Client.cpp" "/home/leah/CLionProjects/Reversi/cmake-build-debug/CMakeFiles/Reversi_main.dir/ReversiGame/src/Client.cpp.o"
+  "/home/leah/CLionProjects/Reversi/ReversiGame/src/ClientPlayer.cpp" "/home/leah/CLionProjects/Reversi/cmake-build-debug/CMakeFiles/Reversi_main.dir/ReversiGame/src/ClientPlayer.cpp.o"
   "/home/leah/CLionProjects/Reversi/ReversiGame/src/Game.cpp" "/home/leah/CLionProjects/Reversi/cmake-build-debug/CMakeFiles/Reversi_main.dir/ReversiGame/src/Game.cpp.o"
   "/home/leah/CLionProjects/Reversi/ReversiGame/src/HumanPlayer.cpp" "/home/leah/CLionProjects/Reversi/cmake-build-debug/CMakeFiles/Reversi_main.dir/ReversiGame/src/HumanPlayer.cpp.o"
   "/home/leah/CLionProjects/Reversi/ReversiGame/src/Main.cpp" "/home/leah/CLionProjects/Reversi/cmake-build-debug/CMakeFiles/Reversi_main.dir/ReversiGame/src/Main.cpp.o"

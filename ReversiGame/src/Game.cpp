@@ -1,6 +1,7 @@
 #include "Game.h"
-
+#include "Client.h"
 #include <iostream>
+#include <stdlib.h>
 using namespace std;
 
 Game::Game() {
@@ -13,11 +14,36 @@ Game::Game() {
 Game::Game(int players) {
     numOfPlayers = players;
     board = Board(default_lenth, default_width);
-    blackPlayer = new HumanPlayer(BLACK);
     if (numOfPlayers == 2) {
+        blackPlayer = new HumanPlayer(BLACK);
         whitePlayer = new HumanPlayer(WHITE);
     } else if (numOfPlayers == 1) {
+        blackPlayer = new HumanPlayer(BLACK);
         whitePlayer = new AI(WHITE);
+    } else if (numOfPlayers == 3) {
+        Client client("127.0.0.1", 5000);
+        try {
+            client.connectToServer();
+        } catch  (const char *msg) {
+            cout << "Failed to connect to server. Reason:" << msg << endl;
+            exit(-1);
+        }
+        int num1, num2;
+        char op;
+        while (true) {
+            cout << "Enter 15*19";
+            cin >> num1 >> op >> num2;
+            cout << "sending.." << num1 << op << num2 <<endl;
+            try {
+                int result = client.sendExercise(num1, op, num2);
+                cout << "result: " << result << endl;
+            } catch (const char *msg) {
+                cout << "failed to send to server. reason: " << msg << endl;
+            }
+            if (num1 == 0 || num2 == 0) {
+                break;
+            }
+        }
     }
 }
 

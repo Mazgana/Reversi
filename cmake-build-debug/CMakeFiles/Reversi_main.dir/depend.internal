@@ -14,12 +14,18 @@ CMakeFiles/Reversi_main.dir/ReversiGame/src/Cell.cpp.o
  ../ReversiGame/include/Cell.h
  /home/leah/CLionProjects/Reversi/ReversiGame/src/Cell.cpp
 CMakeFiles/Reversi_main.dir/ReversiGame/src/Client.cpp.o
+ ../ReversiGame/include/Client.h
  /home/leah/CLionProjects/Reversi/ReversiGame/src/Client.cpp
- /home/leah/CLionProjects/Reversi/ReversiGame/src/Client.h
+CMakeFiles/Reversi_main.dir/ReversiGame/src/ClientPlayer.cpp.o
+ ../ReversiGame/include/Cell.h
+ ../ReversiGame/include/ClientPlayer.h
+ ../ReversiGame/include/Player.h
+ /home/leah/CLionProjects/Reversi/ReversiGame/src/ClientPlayer.cpp
 CMakeFiles/Reversi_main.dir/ReversiGame/src/Game.cpp.o
  ../ReversiGame/include/AI.h
  ../ReversiGame/include/Board.h
  ../ReversiGame/include/Cell.h
+ ../ReversiGame/include/Client.h
  ../ReversiGame/include/Game.h
  ../ReversiGame/include/HumanPlayer.h
  ../ReversiGame/include/Player.h

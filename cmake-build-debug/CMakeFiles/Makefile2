@@ -67,7 +67,7 @@ CMakeFiles/test_main.dir/all: ReversiGame/googletest-release-1.8.0/googlemock/gt
 CMakeFiles/test_main.dir/all: ReversiGame/googletest-release-1.8.0/googlemock/gtest/CMakeFiles/gtest.dir/all
 	$(MAKE) -f CMakeFiles/test_main.dir/build.make CMakeFiles/test_main.dir/depend
 	$(MAKE) -f CMakeFiles/test_main.dir/build.make CMakeFiles/test_main.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/leah/CLionProjects/Reversi/cmake-build-debug/CMakeFiles --progress-num=20,21,22,23,24,25,26,27,28,29 "Built target test_main"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/leah/CLionProjects/Reversi/cmake-build-debug/CMakeFiles --progress-num=21,22,23,24,25,26,27,28,29,30 "Built target test_main"
 .PHONY : CMakeFiles/test_main.dir/all
 
 # Include target in all.
@@ -105,7 +105,7 @@ CMakeFiles/Reversi_main.dir/all: ReversiGame/googletest-release-1.8.0/googlemock
 CMakeFiles/Reversi_main.dir/all: ReversiGame/googletest-release-1.8.0/googlemock/gtest/CMakeFiles/gtest.dir/all
 	$(MAKE) -f CMakeFiles/Reversi_main.dir/build.make CMakeFiles/Reversi_main.dir/depend
 	$(MAKE) -f CMakeFiles/Reversi_main.dir/build.make CMakeFiles/Reversi_main.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/leah/CLionProjects/Reversi/cmake-build-debug/CMakeFiles --progress-num=1,2,3,4,5,6,7,8 "Built target Reversi_main"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/leah/CLionProjects/Reversi/cmake-build-debug/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9 "Built target Reversi_main"
 .PHONY : CMakeFiles/Reversi_main.dir/all
 
 # Include target in all.
@@ -115,7 +115,7 @@ all: CMakeFiles/Reversi_main.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/Reversi_main.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/leah/CLionProjects/Reversi/cmake-build-debug/CMakeFiles 12
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/leah/CLionProjects/Reversi/cmake-build-debug/CMakeFiles 13
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/Reversi_main.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/leah/CLionProjects/Reversi/cmake-build-debug/CMakeFiles 0
 .PHONY : CMakeFiles/Reversi_main.dir/rule
@@ -182,7 +182,7 @@ ReversiGame/googletest-release-1.8.0/googlemock/preinstall: ReversiGame/googlete
 ReversiGame/googletest-release-1.8.0/googlemock/CMakeFiles/gmock_main.dir/all:
 	$(MAKE) -f ReversiGame/googletest-release-1.8.0/googlemock/CMakeFiles/gmock_main.dir/build.make ReversiGame/googletest-release-1.8.0/googlemock/CMakeFiles/gmock_main.dir/depend
 	$(MAKE) -f ReversiGame/googletest-release-1.8.0/googlemock/CMakeFiles/gmock_main.dir/build.make ReversiGame/googletest-release-1.8.0/googlemock/CMakeFiles/gmock_main.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/leah/CLionProjects/Reversi/cmake-build-debug/CMakeFiles --progress-num=12,13,14,15 "Built target gmock_main"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/leah/CLionProjects/Reversi/cmake-build-debug/CMakeFiles --progress-num=13,14,15,16 "Built target gmock_main"
 .PHONY : ReversiGame/googletest-release-1.8.0/googlemock/CMakeFiles/gmock_main.dir/all
 
 # Include target in all.
@@ -219,7 +219,7 @@ clean: ReversiGame/googletest-release-1.8.0/googlemock/CMakeFiles/gmock_main.dir
 ReversiGame/googletest-release-1.8.0/googlemock/CMakeFiles/gmock.dir/all:
 	$(MAKE) -f ReversiGame/googletest-release-1.8.0/googlemock/CMakeFiles/gmock.dir/build.make ReversiGame/googletest-release-1.8.0/googlemock/CMakeFiles/gmock.dir/depend
 	$(MAKE) -f ReversiGame/googletest-release-1.8.0/googlemock/CMakeFiles/gmock.dir/build.make ReversiGame/googletest-release-1.8.0/googlemock/CMakeFiles/gmock.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/leah/CLionProjects/Reversi/cmake-build-debug/CMakeFiles --progress-num=9,10,11 "Built target gmock"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/leah/CLionProjects/Reversi/cmake-build-debug/CMakeFiles --progress-num=10,11,12 "Built target gmock"
 .PHONY : ReversiGame/googletest-release-1.8.0/googlemock/CMakeFiles/gmock.dir/all
 
 # Include target in all.
@@ -276,7 +276,7 @@ ReversiGame/googletest-release-1.8.0/googlemock/gtest/preinstall:
 ReversiGame/googletest-release-1.8.0/googlemock/gtest/CMakeFiles/gtest_main.dir/all: ReversiGame/googletest-release-1.8.0/googlemock/gtest/CMakeFiles/gtest.dir/all
 	$(MAKE) -f ReversiGame/googletest-release-1.8.0/googlemock/gtest/CMakeFiles/gtest_main.dir/build.make ReversiGame/googletest-release-1.8.0/googlemock/gtest/CMakeFiles/gtest_main.dir/depend
 	$(MAKE) -f ReversiGame/googletest-release-1.8.0/googlemock/gtest/CMakeFiles/gtest_main.dir/build.make ReversiGame/googletest-release-1.8.0/googlemock/gtest/CMakeFiles/gtest_main.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/leah/CLionProjects/Reversi/cmake-build-debug/CMakeFiles --progress-num=18,19 "Built target gtest_main"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/leah/CLionProjects/Reversi/cmake-build-debug/CMakeFiles --progress-num=19,20 "Built target gtest_main"
 .PHONY : ReversiGame/googletest-release-1.8.0/googlemock/gtest/CMakeFiles/gtest_main.dir/all
 
 # Include target in all.
@@ -313,7 +313,7 @@ clean: ReversiGame/googletest-release-1.8.0/googlemock/gtest/CMakeFiles/gtest_ma
 ReversiGame/googletest-release-1.8.0/googlemock/gtest/CMakeFiles/gtest.dir/all:
 	$(MAKE) -f ReversiGame/googletest-release-1.8.0/googlemock/gtest/CMakeFiles/gtest.dir/build.make ReversiGame/googletest-release-1.8.0/googlemock/gtest/CMakeFiles/gtest.dir/depend
 	$(MAKE) -f ReversiGame/googletest-release-1.8.0/googlemock/gtest/CMakeFiles/gtest.dir/build.make ReversiGame/googletest-release-1.8.0/googlemock/gtest/CMakeFiles/gtest.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/leah/CLionProjects/Reversi/cmake-build-debug/CMakeFiles --progress-num=16,17 "Built target gtest"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/leah/CLionProjects/Reversi/cmake-build-debug/CMakeFiles --progress-num=17,18 "Built target gtest"
 .PHONY : ReversiGame/googletest-release-1.8.0/googlemock/gtest/CMakeFiles/gtest.dir/all
 
 # Include target in all.
