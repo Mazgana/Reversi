@@ -429,6 +429,12 @@
 			<Option target="test_main"/>
 			<Option target="Reversi_main"/>
 		</Unit>
+		<Unit filename="/home/leah/CLionProjects/Reversi/ReversiGame/include/Client.h">
+			<Option target="Reversi_main"/>
+		</Unit>
+		<Unit filename="/home/leah/CLionProjects/Reversi/ReversiGame/include/ClientPlayer.h">
+			<Option target="test_main"/>
+		</Unit>
 		<Unit filename="/home/leah/CLionProjects/Reversi/ReversiGame/include/Game.h">
 			<Option target="test_main"/>
 			<Option target="Reversi_main"/>
@@ -456,7 +462,7 @@
 		<Unit filename="/home/leah/CLionProjects/Reversi/ReversiGame/src/Client.cpp">
 			<Option target="Reversi_main"/>
 		</Unit>
-		<Unit filename="/home/leah/CLionProjects/Reversi/ReversiGame/src/Client.h">
+		<Unit filename="/home/leah/CLionProjects/Reversi/ReversiGame/src/ClientPlayer.cpp">
 			<Option target="Reversi_main"/>
 		</Unit>
 		<Unit filename="/home/leah/CLionProjects/Reversi/ReversiGame/src/Game.cpp">
