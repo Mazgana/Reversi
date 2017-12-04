@@ -192,7 +192,7 @@ gmock_main: cmake_check_build_system
 
 # fast build rule for target.
 gmock_main/fast:
-	$(MAKE) -f ReversiGame/lib/googletest-release-1.8.0/googlemock/CMakeFiles/gmock_main.dir/build.make ReversiGame/lib/googletest-release-1.8.0/googlemock/CMakeFiles/gmock_main.dir/build
+	$(MAKE) -f ReversiGame/googletest-release-1.8.0/googlemock/CMakeFiles/gmock_main.dir/build.make ReversiGame/googletest-release-1.8.0/googlemock/CMakeFiles/gmock_main.dir/build
 .PHONY : gmock_main/fast
 
 #=============================================================================
@@ -205,7 +205,7 @@ gmock: cmake_check_build_system
 
 # fast build rule for target.
 gmock/fast:
-	$(MAKE) -f ReversiGame/lib/googletest-release-1.8.0/googlemock/CMakeFiles/gmock.dir/build.make ReversiGame/lib/googletest-release-1.8.0/googlemock/CMakeFiles/gmock.dir/build
+	$(MAKE) -f ReversiGame/googletest-release-1.8.0/googlemock/CMakeFiles/gmock.dir/build.make ReversiGame/googletest-release-1.8.0/googlemock/CMakeFiles/gmock.dir/build
 .PHONY : gmock/fast
 
 #=============================================================================
@@ -218,7 +218,7 @@ gtest_main: cmake_check_build_system
 
 # fast build rule for target.
 gtest_main/fast:
-	$(MAKE) -f ReversiGame/lib/googletest-release-1.8.0/googlemock/gtest/CMakeFiles/gtest_main.dir/build.make ReversiGame/lib/googletest-release-1.8.0/googlemock/gtest/CMakeFiles/gtest_main.dir/build
+	$(MAKE) -f ReversiGame/googletest-release-1.8.0/googlemock/gtest/CMakeFiles/gtest_main.dir/build.make ReversiGame/googletest-release-1.8.0/googlemock/gtest/CMakeFiles/gtest_main.dir/build
 .PHONY : gtest_main/fast
 
 #=============================================================================
@@ -231,116 +231,8 @@ gtest: cmake_check_build_system
 
 # fast build rule for target.
 gtest/fast:
-	$(MAKE) -f ReversiGame/lib/googletest-release-1.8.0/googlemock/gtest/CMakeFiles/gtest.dir/build.make ReversiGame/lib/googletest-release-1.8.0/googlemock/gtest/CMakeFiles/gtest.dir/build
+	$(MAKE) -f ReversiGame/googletest-release-1.8.0/googlemock/gtest/CMakeFiles/gtest.dir/build.make ReversiGame/googletest-release-1.8.0/googlemock/gtest/CMakeFiles/gtest.dir/build
 .PHONY : gtest/fast
-
-ReversiGame/Tests/BoardTest.o: ReversiGame/Tests/BoardTest.cpp.o
-
-.PHONY : ReversiGame/Tests/BoardTest.o
-
-# target to build an object file
-ReversiGame/Tests/BoardTest.cpp.o:
-	$(MAKE) -f CMakeFiles/test_main.dir/build.make CMakeFiles/test_main.dir/ReversiGame/Tests/BoardTest.cpp.o
-.PHONY : ReversiGame/Tests/BoardTest.cpp.o
-
-ReversiGame/Tests/BoardTest.i: ReversiGame/Tests/BoardTest.cpp.i
-
-.PHONY : ReversiGame/Tests/BoardTest.i
-
-# target to preprocess a source file
-ReversiGame/Tests/BoardTest.cpp.i:
-	$(MAKE) -f CMakeFiles/test_main.dir/build.make CMakeFiles/test_main.dir/ReversiGame/Tests/BoardTest.cpp.i
-.PHONY : ReversiGame/Tests/BoardTest.cpp.i
-
-ReversiGame/Tests/BoardTest.s: ReversiGame/Tests/BoardTest.cpp.s
-
-.PHONY : ReversiGame/Tests/BoardTest.s
-
-# target to generate assembly for a file
-ReversiGame/Tests/BoardTest.cpp.s:
-	$(MAKE) -f CMakeFiles/test_main.dir/build.make CMakeFiles/test_main.dir/ReversiGame/Tests/BoardTest.cpp.s
-.PHONY : ReversiGame/Tests/BoardTest.cpp.s
-
-ReversiGame/Tests/CellTest.o: ReversiGame/Tests/CellTest.cpp.o
-
-.PHONY : ReversiGame/Tests/CellTest.o
-
-# target to build an object file
-ReversiGame/Tests/CellTest.cpp.o:
-	$(MAKE) -f CMakeFiles/test_main.dir/build.make CMakeFiles/test_main.dir/ReversiGame/Tests/CellTest.cpp.o
-.PHONY : ReversiGame/Tests/CellTest.cpp.o
-
-ReversiGame/Tests/CellTest.i: ReversiGame/Tests/CellTest.cpp.i
-
-.PHONY : ReversiGame/Tests/CellTest.i
-
-# target to preprocess a source file
-ReversiGame/Tests/CellTest.cpp.i:
-	$(MAKE) -f CMakeFiles/test_main.dir/build.make CMakeFiles/test_main.dir/ReversiGame/Tests/CellTest.cpp.i
-.PHONY : ReversiGame/Tests/CellTest.cpp.i
-
-ReversiGame/Tests/CellTest.s: ReversiGame/Tests/CellTest.cpp.s
-
-.PHONY : ReversiGame/Tests/CellTest.s
-
-# target to generate assembly for a file
-ReversiGame/Tests/CellTest.cpp.s:
-	$(MAKE) -f CMakeFiles/test_main.dir/build.make CMakeFiles/test_main.dir/ReversiGame/Tests/CellTest.cpp.s
-.PHONY : ReversiGame/Tests/CellTest.cpp.s
-
-ReversiGame/Tests/PlayerTest.o: ReversiGame/Tests/PlayerTest.cpp.o
-
-.PHONY : ReversiGame/Tests/PlayerTest.o
-
-# target to build an object file
-ReversiGame/Tests/PlayerTest.cpp.o:
-	$(MAKE) -f CMakeFiles/test_main.dir/build.make CMakeFiles/test_main.dir/ReversiGame/Tests/PlayerTest.cpp.o
-.PHONY : ReversiGame/Tests/PlayerTest.cpp.o
-
-ReversiGame/Tests/PlayerTest.i: ReversiGame/Tests/PlayerTest.cpp.i
-
-.PHONY : ReversiGame/Tests/PlayerTest.i
-
-# target to preprocess a source file
-ReversiGame/Tests/PlayerTest.cpp.i:
-	$(MAKE) -f CMakeFiles/test_main.dir/build.make CMakeFiles/test_main.dir/ReversiGame/Tests/PlayerTest.cpp.i
-.PHONY : ReversiGame/Tests/PlayerTest.cpp.i
-
-ReversiGame/Tests/PlayerTest.s: ReversiGame/Tests/PlayerTest.cpp.s
-
-.PHONY : ReversiGame/Tests/PlayerTest.s
-
-# target to generate assembly for a file
-ReversiGame/Tests/PlayerTest.cpp.s:
-	$(MAKE) -f CMakeFiles/test_main.dir/build.make CMakeFiles/test_main.dir/ReversiGame/Tests/PlayerTest.cpp.s
-.PHONY : ReversiGame/Tests/PlayerTest.cpp.s
-
-ReversiGame/Tests/gtest_main.o: ReversiGame/Tests/gtest_main.cpp.o
-
-.PHONY : ReversiGame/Tests/gtest_main.o
-
-# target to build an object file
-ReversiGame/Tests/gtest_main.cpp.o:
-	$(MAKE) -f CMakeFiles/test_main.dir/build.make CMakeFiles/test_main.dir/ReversiGame/Tests/gtest_main.cpp.o
-.PHONY : ReversiGame/Tests/gtest_main.cpp.o
-
-ReversiGame/Tests/gtest_main.i: ReversiGame/Tests/gtest_main.cpp.i
-
-.PHONY : ReversiGame/Tests/gtest_main.i
-
-# target to preprocess a source file
-ReversiGame/Tests/gtest_main.cpp.i:
-	$(MAKE) -f CMakeFiles/test_main.dir/build.make CMakeFiles/test_main.dir/ReversiGame/Tests/gtest_main.cpp.i
-.PHONY : ReversiGame/Tests/gtest_main.cpp.i
-
-ReversiGame/Tests/gtest_main.s: ReversiGame/Tests/gtest_main.cpp.s
-
-.PHONY : ReversiGame/Tests/gtest_main.s
-
-# target to generate assembly for a file
-ReversiGame/Tests/gtest_main.cpp.s:
-	$(MAKE) -f CMakeFiles/test_main.dir/build.make CMakeFiles/test_main.dir/ReversiGame/Tests/gtest_main.cpp.s
-.PHONY : ReversiGame/Tests/gtest_main.cpp.s
 
 ReversiGame/src/AI.o: ReversiGame/src/AI.cpp.o
 
@@ -432,6 +324,33 @@ ReversiGame/src/Cell.cpp.s:
 	$(MAKE) -f CMakeFiles/Reversi_main.dir/build.make CMakeFiles/Reversi_main.dir/ReversiGame/src/Cell.cpp.s
 .PHONY : ReversiGame/src/Cell.cpp.s
 
+ReversiGame/src/Client.o: ReversiGame/src/Client.cpp.o
+
+.PHONY : ReversiGame/src/Client.o
+
+# target to build an object file
+ReversiGame/src/Client.cpp.o:
+	$(MAKE) -f CMakeFiles/Reversi_main.dir/build.make CMakeFiles/Reversi_main.dir/ReversiGame/src/Client.cpp.o
+.PHONY : ReversiGame/src/Client.cpp.o
+
+ReversiGame/src/Client.i: ReversiGame/src/Client.cpp.i
+
+.PHONY : ReversiGame/src/Client.i
+
+# target to preprocess a source file
+ReversiGame/src/Client.cpp.i:
+	$(MAKE) -f CMakeFiles/Reversi_main.dir/build.make CMakeFiles/Reversi_main.dir/ReversiGame/src/Client.cpp.i
+.PHONY : ReversiGame/src/Client.cpp.i
+
+ReversiGame/src/Client.s: ReversiGame/src/Client.cpp.s
+
+.PHONY : ReversiGame/src/Client.s
+
+# target to generate assembly for a file
+ReversiGame/src/Client.cpp.s:
+	$(MAKE) -f CMakeFiles/Reversi_main.dir/build.make CMakeFiles/Reversi_main.dir/ReversiGame/src/Client.cpp.s
+.PHONY : ReversiGame/src/Client.cpp.s
+
 ReversiGame/src/Game.o: ReversiGame/src/Game.cpp.o
 
 .PHONY : ReversiGame/src/Game.o
@@ -519,6 +438,114 @@ ReversiGame/src/Main.cpp.s:
 	$(MAKE) -f CMakeFiles/Reversi_main.dir/build.make CMakeFiles/Reversi_main.dir/ReversiGame/src/Main.cpp.s
 .PHONY : ReversiGame/src/Main.cpp.s
 
+ReversiGame/test/BoardTest.o: ReversiGame/test/BoardTest.cpp.o
+
+.PHONY : ReversiGame/test/BoardTest.o
+
+# target to build an object file
+ReversiGame/test/BoardTest.cpp.o:
+	$(MAKE) -f CMakeFiles/test_main.dir/build.make CMakeFiles/test_main.dir/ReversiGame/test/BoardTest.cpp.o
+.PHONY : ReversiGame/test/BoardTest.cpp.o
+
+ReversiGame/test/BoardTest.i: ReversiGame/test/BoardTest.cpp.i
+
+.PHONY : ReversiGame/test/BoardTest.i
+
+# target to preprocess a source file
+ReversiGame/test/BoardTest.cpp.i:
+	$(MAKE) -f CMakeFiles/test_main.dir/build.make CMakeFiles/test_main.dir/ReversiGame/test/BoardTest.cpp.i
+.PHONY : ReversiGame/test/BoardTest.cpp.i
+
+ReversiGame/test/BoardTest.s: ReversiGame/test/BoardTest.cpp.s
+
+.PHONY : ReversiGame/test/BoardTest.s
+
+# target to generate assembly for a file
+ReversiGame/test/BoardTest.cpp.s:
+	$(MAKE) -f CMakeFiles/test_main.dir/build.make CMakeFiles/test_main.dir/ReversiGame/test/BoardTest.cpp.s
+.PHONY : ReversiGame/test/BoardTest.cpp.s
+
+ReversiGame/test/CellTest.o: ReversiGame/test/CellTest.cpp.o
+
+.PHONY : ReversiGame/test/CellTest.o
+
+# target to build an object file
+ReversiGame/test/CellTest.cpp.o:
+	$(MAKE) -f CMakeFiles/test_main.dir/build.make CMakeFiles/test_main.dir/ReversiGame/test/CellTest.cpp.o
+.PHONY : ReversiGame/test/CellTest.cpp.o
+
+ReversiGame/test/CellTest.i: ReversiGame/test/CellTest.cpp.i
+
+.PHONY : ReversiGame/test/CellTest.i
+
+# target to preprocess a source file
+ReversiGame/test/CellTest.cpp.i:
+	$(MAKE) -f CMakeFiles/test_main.dir/build.make CMakeFiles/test_main.dir/ReversiGame/test/CellTest.cpp.i
+.PHONY : ReversiGame/test/CellTest.cpp.i
+
+ReversiGame/test/CellTest.s: ReversiGame/test/CellTest.cpp.s
+
+.PHONY : ReversiGame/test/CellTest.s
+
+# target to generate assembly for a file
+ReversiGame/test/CellTest.cpp.s:
+	$(MAKE) -f CMakeFiles/test_main.dir/build.make CMakeFiles/test_main.dir/ReversiGame/test/CellTest.cpp.s
+.PHONY : ReversiGame/test/CellTest.cpp.s
+
+ReversiGame/test/PlayerTest.o: ReversiGame/test/PlayerTest.cpp.o
+
+.PHONY : ReversiGame/test/PlayerTest.o
+
+# target to build an object file
+ReversiGame/test/PlayerTest.cpp.o:
+	$(MAKE) -f CMakeFiles/test_main.dir/build.make CMakeFiles/test_main.dir/ReversiGame/test/PlayerTest.cpp.o
+.PHONY : ReversiGame/test/PlayerTest.cpp.o
+
+ReversiGame/test/PlayerTest.i: ReversiGame/test/PlayerTest.cpp.i
+
+.PHONY : ReversiGame/test/PlayerTest.i
+
+# target to preprocess a source file
+ReversiGame/test/PlayerTest.cpp.i:
+	$(MAKE) -f CMakeFiles/test_main.dir/build.make CMakeFiles/test_main.dir/ReversiGame/test/PlayerTest.cpp.i
+.PHONY : ReversiGame/test/PlayerTest.cpp.i
+
+ReversiGame/test/PlayerTest.s: ReversiGame/test/PlayerTest.cpp.s
+
+.PHONY : ReversiGame/test/PlayerTest.s
+
+# target to generate assembly for a file
+ReversiGame/test/PlayerTest.cpp.s:
+	$(MAKE) -f CMakeFiles/test_main.dir/build.make CMakeFiles/test_main.dir/ReversiGame/test/PlayerTest.cpp.s
+.PHONY : ReversiGame/test/PlayerTest.cpp.s
+
+ReversiGame/test/gtest_main.o: ReversiGame/test/gtest_main.cpp.o
+
+.PHONY : ReversiGame/test/gtest_main.o
+
+# target to build an object file
+ReversiGame/test/gtest_main.cpp.o:
+	$(MAKE) -f CMakeFiles/test_main.dir/build.make CMakeFiles/test_main.dir/ReversiGame/test/gtest_main.cpp.o
+.PHONY : ReversiGame/test/gtest_main.cpp.o
+
+ReversiGame/test/gtest_main.i: ReversiGame/test/gtest_main.cpp.i
+
+.PHONY : ReversiGame/test/gtest_main.i
+
+# target to preprocess a source file
+ReversiGame/test/gtest_main.cpp.i:
+	$(MAKE) -f CMakeFiles/test_main.dir/build.make CMakeFiles/test_main.dir/ReversiGame/test/gtest_main.cpp.i
+.PHONY : ReversiGame/test/gtest_main.cpp.i
+
+ReversiGame/test/gtest_main.s: ReversiGame/test/gtest_main.cpp.s
+
+.PHONY : ReversiGame/test/gtest_main.s
+
+# target to generate assembly for a file
+ReversiGame/test/gtest_main.cpp.s:
+	$(MAKE) -f CMakeFiles/test_main.dir/build.make CMakeFiles/test_main.dir/ReversiGame/test/gtest_main.cpp.s
+.PHONY : ReversiGame/test/gtest_main.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -537,18 +564,6 @@ help:
 	@echo "... gmock"
 	@echo "... gtest_main"
 	@echo "... gtest"
-	@echo "... ReversiGame/Tests/BoardTest.o"
-	@echo "... ReversiGame/Tests/BoardTest.i"
-	@echo "... ReversiGame/Tests/BoardTest.s"
-	@echo "... ReversiGame/Tests/CellTest.o"
-	@echo "... ReversiGame/Tests/CellTest.i"
-	@echo "... ReversiGame/Tests/CellTest.s"
-	@echo "... ReversiGame/Tests/PlayerTest.o"
-	@echo "... ReversiGame/Tests/PlayerTest.i"
-	@echo "... ReversiGame/Tests/PlayerTest.s"
-	@echo "... ReversiGame/Tests/gtest_main.o"
-	@echo "... ReversiGame/Tests/gtest_main.i"
-	@echo "... ReversiGame/Tests/gtest_main.s"
 	@echo "... ReversiGame/src/AI.o"
 	@echo "... ReversiGame/src/AI.i"
 	@echo "... ReversiGame/src/AI.s"
@@ -558,6 +573,9 @@ help:
 	@echo "... ReversiGame/src/Cell.o"
 	@echo "... ReversiGame/src/Cell.i"
 	@echo "... ReversiGame/src/Cell.s"
+	@echo "... ReversiGame/src/Client.o"
+	@echo "... ReversiGame/src/Client.i"
+	@echo "... ReversiGame/src/Client.s"
 	@echo "... ReversiGame/src/Game.o"
 	@echo "... ReversiGame/src/Game.i"
 	@echo "... ReversiGame/src/Game.s"
@@ -567,6 +585,18 @@ help:
 	@echo "... ReversiGame/src/Main.o"
 	@echo "... ReversiGame/src/Main.i"
 	@echo "... ReversiGame/src/Main.s"
+	@echo "... ReversiGame/test/BoardTest.o"
+	@echo "... ReversiGame/test/BoardTest.i"
+	@echo "... ReversiGame/test/BoardTest.s"
+	@echo "... ReversiGame/test/CellTest.o"
+	@echo "... ReversiGame/test/CellTest.i"
+	@echo "... ReversiGame/test/CellTest.s"
+	@echo "... ReversiGame/test/PlayerTest.o"
+	@echo "... ReversiGame/test/PlayerTest.i"
+	@echo "... ReversiGame/test/PlayerTest.s"
+	@echo "... ReversiGame/test/gtest_main.o"
+	@echo "... ReversiGame/test/gtest_main.i"
+	@echo "... ReversiGame/test/gtest_main.s"
 .PHONY : help
 
 

@@ -5,6 +5,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/Reversi_main.dir/ReversiGame/src/AI.cpp.o"
   "CMakeFiles/Reversi_main.dir/ReversiGame/src/HumanPlayer.cpp.o"
   "CMakeFiles/Reversi_main.dir/ReversiGame/src/Main.cpp.o"
+  "CMakeFiles/Reversi_main.dir/ReversiGame/src/Client.cpp.o"
   "Reversi_main.pdb"
   "Reversi_main"
 )

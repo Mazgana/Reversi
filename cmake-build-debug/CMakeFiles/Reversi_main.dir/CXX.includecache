@@ -6,6 +6,40 @@
 
 #IncludeRegexTransform: 
 
+../ReversiGame/include/AI.h
+Player.h
+../ReversiGame/include/Player.h
+Cell.h
+../ReversiGame/include/Cell.h
+
+../ReversiGame/include/Board.h
+Cell.h
+../ReversiGame/include/Cell.h
+vector
+-
+
+../ReversiGame/include/Cell.h
+
+../ReversiGame/include/Game.h
+Board.h
+../ReversiGame/include/Board.h
+HumanPlayer.h
+../ReversiGame/include/HumanPlayer.h
+AI.h
+../ReversiGame/include/AI.h
+
+../ReversiGame/include/HumanPlayer.h
+Player.h
+../ReversiGame/include/Player.h
+Cell.h
+../ReversiGame/include/Cell.h
+
+../ReversiGame/include/Player.h
+Cell.h
+../ReversiGame/include/Cell.h
+vector
+-
+
 /home/leah/CLionProjects/Reversi/ReversiGame/src/AI.cpp
 AI.h
 /home/leah/CLionProjects/Reversi/ReversiGame/src/AI.h
@@ -14,22 +48,10 @@ limits
 iostream
 -
 
-/home/leah/CLionProjects/Reversi/ReversiGame/src/AI.h
-Player.h
-/home/leah/CLionProjects/Reversi/ReversiGame/src/Player.h
-Cell.h
-/home/leah/CLionProjects/Reversi/ReversiGame/src/Cell.h
-
 /home/leah/CLionProjects/Reversi/ReversiGame/src/Board.cpp
 Board.h
 /home/leah/CLionProjects/Reversi/ReversiGame/src/Board.h
 iostream
--
-
-/home/leah/CLionProjects/Reversi/ReversiGame/src/Board.h
-Cell.h
-/home/leah/CLionProjects/Reversi/ReversiGame/src/Cell.h
-vector
 -
 
 /home/leah/CLionProjects/Reversi/ReversiGame/src/Cell.cpp
@@ -38,21 +60,31 @@ Cell.h
 iostream
 -
 
-/home/leah/CLionProjects/Reversi/ReversiGame/src/Cell.h
+/home/leah/CLionProjects/Reversi/ReversiGame/src/Client.cpp
+Client.h
+/home/leah/CLionProjects/Reversi/ReversiGame/src/Client.h
+iostream
+-
+sys/socket.h
+-
+netinet/in.h
+-
+arpa/inet.h
+-
+netdb.h
+-
+string.h
+-
+unistd.h
+-
+
+/home/leah/CLionProjects/Reversi/ReversiGame/src/Client.h
 
 /home/leah/CLionProjects/Reversi/ReversiGame/src/Game.cpp
 Game.h
 /home/leah/CLionProjects/Reversi/ReversiGame/src/Game.h
 iostream
 -
-
-/home/leah/CLionProjects/Reversi/ReversiGame/src/Game.h
-Board.h
-/home/leah/CLionProjects/Reversi/ReversiGame/src/Board.h
-HumanPlayer.h
-/home/leah/CLionProjects/Reversi/ReversiGame/src/HumanPlayer.h
-AI.h
-/home/leah/CLionProjects/Reversi/ReversiGame/src/AI.h
 
 /home/leah/CLionProjects/Reversi/ReversiGame/src/HumanPlayer.cpp
 HumanPlayer.h
@@ -62,21 +94,9 @@ limits
 iostream
 -
 
-/home/leah/CLionProjects/Reversi/ReversiGame/src/HumanPlayer.h
-Player.h
-/home/leah/CLionProjects/Reversi/ReversiGame/src/Player.h
-Cell.h
-/home/leah/CLionProjects/Reversi/ReversiGame/src/Cell.h
-
 /home/leah/CLionProjects/Reversi/ReversiGame/src/Main.cpp
 Game.h
 /home/leah/CLionProjects/Reversi/ReversiGame/src/Game.h
 iostream
--
-
-/home/leah/CLionProjects/Reversi/ReversiGame/src/Player.h
-Cell.h
-/home/leah/CLionProjects/Reversi/ReversiGame/src/Cell.h
-vector
 -
 
