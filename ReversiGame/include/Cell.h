@@ -31,5 +31,4 @@ public:
 	void flip();
 };
 
-
 #endif /* CELL_H_ */

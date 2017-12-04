@@ -22,7 +22,7 @@ Game::Game(int players) {
 }
 
 Game:: ~Game() {
-    delete[]  blackPlayer;
+    delete[] blackPlayer;
     delete[] whitePlayer;
 }
 

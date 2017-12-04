@@ -7,6 +7,7 @@ CPP_SRCS += \
 ../src/AI.cpp \
 ../src/Board.cpp \
 ../src/Cell.cpp \
+../src/Client.cpp \
 ../src/Game.cpp \
 ../src/HumanPlayer.cpp \
 ../src/Main.cpp 
@@ -15,6 +16,7 @@ OBJS += \
 ./src/AI.o \
 ./src/Board.o \
 ./src/Cell.o \
+./src/Client.o \
 ./src/Game.o \
 ./src/HumanPlayer.o \
 ./src/Main.o 
@@ -23,6 +25,7 @@ CPP_DEPS += \
 ./src/AI.d \
 ./src/Board.d \
 ./src/Cell.d \
+./src/Client.d \
 ./src/Game.d \
 ./src/HumanPlayer.d \
 ./src/Main.d 

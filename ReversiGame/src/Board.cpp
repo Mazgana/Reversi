@@ -55,7 +55,7 @@ Status Board ::reveal(int x, int y) const {
 
 void Board :: putChip(Status chip, int x, int y) {
     CellArr[x][y].setStatus(chip);
-	flipChips(chip, Cell(x,y));
+		flipChips(chip, Cell(x,y));
 }
 
 void Board :: print() const
@@ -84,6 +84,7 @@ void Board :: print() const
 
 vector<Cell> Board :: getOptions(Status player) {
 	vector<Cell> options;
+
 	// loop over board finding valid cells.
     for(int i = 1; i <= length; i++) {
         for (int j = 1; j <= width; j++) {
@@ -181,11 +182,11 @@ Status Board::getWinner() const {
         for (int j = 0; j <= width; j++) {
         	  if (CellArr[i][j].getStatus() == BLACK) {
         		  ++xCount;
-			  }
+			  	  	  	}
         	  if (CellArr[i][j].getStatus() == WHITE) {
         	      ++oCount;
-			  }
-		}
+			  	  	  	}
+				}
     }// going over board and counting
     if (xCount > oCount) {
         return  BLACK;

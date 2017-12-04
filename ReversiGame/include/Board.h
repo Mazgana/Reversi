@@ -5,8 +5,8 @@
 #include <vector>
 using namespace std;
 
-const int default_width = 4;
-const int default_lenth = 4;
+const int default_width = 8;
+const int default_lenth = 8;
 
 class Board {
 	private:
@@ -14,6 +14,9 @@ class Board {
 		int width;
 		vector<vector<Cell> > CellArr;
 		vector<Cell> optionalMoves;
+
+		//validating that given cell is an optional move on board
+		bool isCellInOptionArray(Cell c);
 
 	public:
 		Board();
@@ -44,14 +47,11 @@ class Board {
     //check score and counts chips. returns the chip with highest score.
     Status getWinner() const;
 
-	//Checking if the current board has no more empty cells.
-	bool isBoardFull();
+		//Checking if the current board has no more empty cells.
+		bool isBoardFull();
 
-	//validating that given cell is an optional move on board
-	bool isCellInOptionArray(Cell c);
-
-	//erasing current list of possible moves, for next turn.
-	void cleanOptionalMovesList();
+		//erasing current list of possible moves, for next turn.
+		void cleanOptionalMovesList();
 };
 
 #endif /* BOARD_H_ */
