@@ -1,3 +1,4 @@
-src/Client.o: ../src/Client.cpp ../src/Client.h
+src/Client.o: ../src/Client.cpp \
+ /home/adi/Reversi/ReversiGame/include/Client.h
 
-../src/Client.h:
+/home/adi/Reversi/ReversiGame/include/Client.h:
