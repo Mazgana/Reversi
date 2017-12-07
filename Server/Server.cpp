@@ -37,6 +37,7 @@ void Server::start() {
 	socklen_t secondClientAddressLen = sizeof(secondClientAddress);
 
 	while (true) {
+		cout << "waiting for client connections..." << endl;
 		int firstClientSocket = accept(serverSocket, (struct sockaddr *)&firstClientAddress, &firstClientAddressLen);
 		cout << "Connected to server" << endl;
 
@@ -99,13 +100,13 @@ void Server::handleClient(int firstClientSocket, int secondClientSocket) {
 		 }
 
 		 // Write the result back to the client
-		 int w = write(firstClientSocket, &arg1, sizeof(arg1));
+		 int w = write(secondClientSocket, &arg1, sizeof(arg1));
 		 if (w == -1) {
 				cout << "Error writing to socket" << endl;
 				return;
 		 }
 
-		 int m = write(firstClientSocket, &arg2, sizeof(arg2));
+		 int m = write(secondClientSocket, &arg2, sizeof(arg2));
 		 if (m == -1) {
 				cout << "Error writing to socket" << endl;
 				return;

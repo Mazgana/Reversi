@@ -1,16 +1,55 @@
+#include <iostream>
+#include <limits>
 #include "ClientPlayer.h"
 
 using namespace std;
 
-ClientPlayer::ClientPlayer() {
+ClientPlayer::ClientPlayer(Client client) : contactServer(client) {
     type = BLACK;
 }
 
-ClientPlayer::ClientPlayer(Status t) : type(t){
+ClientPlayer::ClientPlayer(Status t, Client client) : type(t), contactServer(client) {
 }
 
 Cell ClientPlayer :: doTurn(vector<Cell> options) {
+    int i;
+    cout << (char)type << ": It's your move." << endl;
+    cout << "your possible moves:" << endl;
+    for (i = 0; i < (int)options.size(); i++) {
+        cout << "(" << options[i].getRow() << "," << options[i].getCol() << ") ";
+    }
+    cout << endl << endl;
 
+    //validating choice
+    int x = 0, y = 0;
+    char tempY;
+    bool valid = false;
+    while (!valid) {
+        cout << "Please enter your move row,col: " << endl;
+        cin >> x >> tempY;
+        if (tempY == ',') {
+            cin >> y;
+        } else {
+            y = (int) tempY - 48;
+        }
+        if (cin.fail()) {
+            cin.clear();
+            cin.ignore(numeric_limits<streamsize>::max(), '\n');
+            cout << "invalid input. !" << endl;
+        }
+        for (i = 0; i < (int)options.size(); i++) {
+            if (options[i].getRow() == x && options[i].getCol() == y) {
+                valid = true;
+                break;
+            }
+        }
+        if (!valid) {
+            cout << "That is not an option." << endl;
+        }
+    }
+    Cell c(x,y);//returning console choice
+    contactServer.sendMove(x,y);
+    return c;
 }
 
 Status ClientPlayer :: getChip() const{

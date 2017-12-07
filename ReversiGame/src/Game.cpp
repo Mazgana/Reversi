@@ -2,6 +2,8 @@
 #include "Client.h"
 #include <iostream>
 #include <stdlib.h>
+#include <include/componentClientPlayer.h>
+
 using namespace std;
 
 Game::Game() {
@@ -28,21 +30,13 @@ Game::Game(int players) {
             cout << "Failed to connect to server. Reason:" << msg << endl;
             exit(-1);
         }
-        int num1, num2;
-        char op;
-        while (true) {
-            cout << "Enter 15*19";
-            cin >> num1 >> op >> num2;
-            cout << "sending.." << num1 << op << num2 <<endl;
-            try {
-                int result = client.sendExercise(num1, op, num2);
-                cout << "result: " << result << endl;
-            } catch (const char *msg) {
-                cout << "failed to send to server. reason: " << msg << endl;
-            }
-            if (num1 == 0 || num2 == 0) {
-                break;
-            }
+        char chip = client.getOpeningPlayer();
+        if(chip == 'X') {
+            blackPlayer = new ClientPlayer(BLACK, client);
+            whitePlayer = new ComponentClientPlayer(WHITE, client);
+        } else if (chip == 'O') {
+            whitePlayer = new ClientPlayer(WHITE, client);
+            blackPlayer = new ComponentClientPlayer(BLACK, client);
         }
     }
 }

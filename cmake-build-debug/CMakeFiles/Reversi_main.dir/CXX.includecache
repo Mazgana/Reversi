@@ -27,6 +27,8 @@ Player.h
 ../ReversiGame/include/Player.h
 Cell.h
 ../ReversiGame/include/Cell.h
+Client.h
+../ReversiGame/include/Client.h
 
 ../ReversiGame/include/Game.h
 Board.h
@@ -35,6 +37,8 @@ HumanPlayer.h
 ../ReversiGame/include/HumanPlayer.h
 AI.h
 ../ReversiGame/include/AI.h
+ClientPlayer.h
+../ReversiGame/include/ClientPlayer.h
 
 ../ReversiGame/include/HumanPlayer.h
 Player.h
@@ -47,6 +51,14 @@ Cell.h
 ../ReversiGame/include/Cell.h
 vector
 -
+
+../ReversiGame/include/componentClientPlayer.h
+Player.h
+../ReversiGame/include/Player.h
+Cell.h
+../ReversiGame/include/Cell.h
+Client.h
+../ReversiGame/include/Client.h
 
 /home/leah/CLionProjects/Reversi/ReversiGame/src/AI.cpp
 AI.h
@@ -87,6 +99,10 @@ unistd.h
 -
 
 /home/leah/CLionProjects/Reversi/ReversiGame/src/ClientPlayer.cpp
+iostream
+-
+limits
+-
 ClientPlayer.h
 /home/leah/CLionProjects/Reversi/ReversiGame/src/ClientPlayer.h
 
@@ -98,6 +114,8 @@ Client.h
 iostream
 -
 stdlib.h
+-
+include/componentClientPlayer.h
 -
 
 /home/leah/CLionProjects/Reversi/ReversiGame/src/HumanPlayer.cpp
@@ -113,4 +131,10 @@ Game.h
 /home/leah/CLionProjects/Reversi/ReversiGame/src/Game.h
 iostream
 -
+
+/home/leah/CLionProjects/Reversi/ReversiGame/src/componentClientPlayer.cpp
+iostream
+-
+componentClientPlayer.h
+/home/leah/CLionProjects/Reversi/ReversiGame/src/componentClientPlayer.h
 

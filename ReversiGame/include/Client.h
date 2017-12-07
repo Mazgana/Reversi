@@ -10,6 +10,10 @@ public:
     Client(const char *serverIP, int serverPort);
     void connectToServer();
     int sendExercise(int arg1, char op, int arg2);
+    char getOpeningPlayer();
+
+    void sendMove(int i, int i1);
+    int receiveCoordinate();
 
 private:
     const char *serverIP;

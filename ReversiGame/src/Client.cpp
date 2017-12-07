@@ -69,3 +69,41 @@ int Client::sendExercise(int arg1, char op, int arg2) {
     }
     return result;
 }
+
+char Client::getOpeningPlayer() {
+    int playersPlace;
+    int n = read(clientSocket, &playersPlace, sizeof(playersPlace));
+    if (n == -1) {
+        throw "Error reading result from socket";
+    }
+    if(playersPlace == 1) {
+        cout << "You are the black player X, you go first" << endl;
+        return 'X';
+    } else if (playersPlace == 2) {
+        cout << "You are the white player O, you go second" << endl;
+        return 'O';
+    } else {
+        cout << "got unreadable starting player from server" << endl;
+        return ' ';
+    }
+}
+
+int Client::receiveCoordinate() {
+    int cor;
+    int n = read(clientSocket, &cor, sizeof(cor));
+    if (n == -1) {
+        throw "Error reading result from socket";
+    }
+    return cor;
+}
+
+void Client::sendMove(int x, int y) {
+    int n = write(clientSocket, &x, sizeof(x));
+    if (n == -1) {
+        throw "Error writing x to socket";
+    }
+    n = write(clientSocket, &y, sizeof(y));
+    if (n == -1) {
+        throw "Error writing y to socket";
+    }
+}

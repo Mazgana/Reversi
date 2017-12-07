@@ -10,7 +10,7 @@ int main() {
 	while (invalid) {
 		cin >> numOfPlayers;
 		if (numOfPlayers != 1 && numOfPlayers != 2 && numOfPlayers != 3) {
-			cout << "Please chose 1, 2 or 3 players." << endl;
+			cout << "Please choose 1, 2 or 3 players." << endl;
 			cin >> numOfPlayers;
 		} else {
 			invalid = false;

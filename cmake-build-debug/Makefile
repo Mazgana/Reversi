@@ -465,6 +465,33 @@ ReversiGame/src/Main.cpp.s:
 	$(MAKE) -f CMakeFiles/Reversi_main.dir/build.make CMakeFiles/Reversi_main.dir/ReversiGame/src/Main.cpp.s
 .PHONY : ReversiGame/src/Main.cpp.s
 
+ReversiGame/src/componentClientPlayer.o: ReversiGame/src/componentClientPlayer.cpp.o
+
+.PHONY : ReversiGame/src/componentClientPlayer.o
+
+# target to build an object file
+ReversiGame/src/componentClientPlayer.cpp.o:
+	$(MAKE) -f CMakeFiles/Reversi_main.dir/build.make CMakeFiles/Reversi_main.dir/ReversiGame/src/componentClientPlayer.cpp.o
+.PHONY : ReversiGame/src/componentClientPlayer.cpp.o
+
+ReversiGame/src/componentClientPlayer.i: ReversiGame/src/componentClientPlayer.cpp.i
+
+.PHONY : ReversiGame/src/componentClientPlayer.i
+
+# target to preprocess a source file
+ReversiGame/src/componentClientPlayer.cpp.i:
+	$(MAKE) -f CMakeFiles/Reversi_main.dir/build.make CMakeFiles/Reversi_main.dir/ReversiGame/src/componentClientPlayer.cpp.i
+.PHONY : ReversiGame/src/componentClientPlayer.cpp.i
+
+ReversiGame/src/componentClientPlayer.s: ReversiGame/src/componentClientPlayer.cpp.s
+
+.PHONY : ReversiGame/src/componentClientPlayer.s
+
+# target to generate assembly for a file
+ReversiGame/src/componentClientPlayer.cpp.s:
+	$(MAKE) -f CMakeFiles/Reversi_main.dir/build.make CMakeFiles/Reversi_main.dir/ReversiGame/src/componentClientPlayer.cpp.s
+.PHONY : ReversiGame/src/componentClientPlayer.cpp.s
+
 ReversiGame/test/BoardTest.o: ReversiGame/test/BoardTest.cpp.o
 
 .PHONY : ReversiGame/test/BoardTest.o
@@ -615,6 +642,9 @@ help:
 	@echo "... ReversiGame/src/Main.o"
 	@echo "... ReversiGame/src/Main.i"
 	@echo "... ReversiGame/src/Main.s"
+	@echo "... ReversiGame/src/componentClientPlayer.o"
+	@echo "... ReversiGame/src/componentClientPlayer.i"
+	@echo "... ReversiGame/src/componentClientPlayer.s"
 	@echo "... ReversiGame/test/BoardTest.o"
 	@echo "... ReversiGame/test/BoardTest.i"
 	@echo "... ReversiGame/test/BoardTest.s"

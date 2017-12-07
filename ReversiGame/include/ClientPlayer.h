@@ -4,27 +4,29 @@
 
 #include "Player.h"
 #include "Cell.h"
+#include "Client.h"
 
 using namespace std;
 
 class ClientPlayer : public Player {
 private:
     Status type;
+    Client contactServer;
 public:
-    ClientPlayer();
+    ClientPlayer(Client client);
 
-    ClientPlayer(Status color);
+    ClientPlayer(Status color, Client client);
 
     // passes player's char representing chip.
-    virtual Status getChip() const = 0;
+    Status getChip() const;
 
     // passes player's opposite char representing chip.
-    virtual Status getOppositeType() const = 0;
+    Status getOppositeType() const;
 
     // presenting optional moves to player and getting move decision.
-    virtual Cell doTurn(vector<Cell> options) = 0;
+    Cell doTurn(vector<Cell> options);
 
-    virtual bool isComp() const = 0;
+    bool isComp() const;
 };
 
 #endif //REVERSI_CLIENTPLAYER_H
