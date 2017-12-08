@@ -5,8 +5,8 @@
 #include <vector>
 using namespace std;
 
-const int default_width = 8;
-const int default_lenth = 8;
+const int default_width = 4;
+const int default_lenth = 4;
 
 class Board {
 	private:

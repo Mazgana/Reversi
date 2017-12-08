@@ -1,6 +1,6 @@
 
-#ifndef REVERSI_CLIENTPLAYER_H
-#define REVERSI_CLIENTPLAYER_H
+#ifndef REVERSI_OPPONENTCLIENTPLAYER_H
+#define REVERSI_OPPONENTCLIENTPLAYER_H
 
 #include "Player.h"
 #include "Cell.h"
@@ -8,14 +8,14 @@
 
 using namespace std;
 
-class ClientPlayer : public Player {
+class OpponentClientPlayer : public Player {
 private:
     Status type;
-    Client contactServer;
+    Client messageReceiver;
 public:
-    ClientPlayer(Client client);
+    OpponentClientPlayer(Client client);
 
-    ClientPlayer(Status color, Client client);
+    OpponentClientPlayer(Status color, Client client);
 
     // passes player's char representing chip.
     Status getChip() const;
@@ -31,4 +31,4 @@ public:
     void skipTurn();
 };
 
-#endif //REVERSI_CLIENTPLAYER_H
+#endif //REVERSI_OPPONENTCLIENTPLAYER_H

@@ -2,7 +2,7 @@
 #include "Client.h"
 #include <iostream>
 #include <stdlib.h>
-#include <include/componentClientPlayer.h>
+#include <include/OpponentClientPlayer.h>
 
 using namespace std;
 
@@ -33,10 +33,10 @@ Game::Game(int players) {
         char chip = client.getOpeningPlayer();
         if(chip == 'X') {
             blackPlayer = new ClientPlayer(BLACK, client);
-            whitePlayer = new ComponentClientPlayer(WHITE, client);
+            whitePlayer = new OpponentClientPlayer(WHITE, client);
         } else if (chip == 'O') {
             whitePlayer = new ClientPlayer(WHITE, client);
-            blackPlayer = new ComponentClientPlayer(BLACK, client);
+            blackPlayer = new OpponentClientPlayer(BLACK, client);
         }
     }
 }
@@ -57,14 +57,12 @@ void Game :: run() {
         xPlayed = playTurn(blackPlayer);
         if (!xPlayed && !oPlayed) {
             //when no more moves can be done.
-            endGame();
             break;
         }
         board.print();
         oPlayed = playTurn(whitePlayer);
         if (!xPlayed && !oPlayed) {
             //when no more moves can be done.
-            endGame();
             break;
         }
         board.print();
@@ -75,9 +73,7 @@ void Game :: run() {
 bool Game :: playTurn(Player* p) {
     vector<Cell> options = board.getOptions(p->getChip());
     if (options.empty()) {
-        cout << (char)p->getChip() << ": got no moves." << endl;
-        cout << "press enter to continue.." << endl;
-        cin.get();
+        p->skipTurn();
         return false;
     }//no moves can be done, turn passes to other player
     Cell chosen;

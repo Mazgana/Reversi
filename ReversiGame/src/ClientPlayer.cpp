@@ -67,3 +67,10 @@ Status ClientPlayer::getOppositeType() const {
 bool ClientPlayer::isComp() const{
     return false;
 }
+
+void ClientPlayer::skipTurn() {
+    cout << "You have got no moves. Turn passes to " << (char) getOppositeType() << endl;
+    cout << "press enter to continue.." << endl;
+    cin.get();
+    contactServer.sendMove(10,10);
+}

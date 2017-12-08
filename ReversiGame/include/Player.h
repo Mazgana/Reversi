@@ -3,6 +3,8 @@
 
 #include "Cell.h"
 #include <vector>
+#include <iostream>
+
 using namespace std;
 
 class Player {
@@ -19,6 +21,13 @@ public:
     virtual Cell doTurn(vector<Cell> options) = 0;
 
     virtual bool isComp() const = 0;
+
+    virtual void skipTurn() {
+        cout << (char) getChip() << ": you have got no moves." << endl;
+        cout << "press enter to continue.." << endl;
+        cin.get();
+    }
+
 };
 
 #endif /* PLAYER_H_ */

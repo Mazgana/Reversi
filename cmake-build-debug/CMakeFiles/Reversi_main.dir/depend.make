@@ -29,8 +29,8 @@ CMakeFiles/Reversi_main.dir/ReversiGame/src/Game.cpp.o: ../ReversiGame/include/C
 CMakeFiles/Reversi_main.dir/ReversiGame/src/Game.cpp.o: ../ReversiGame/include/ClientPlayer.h
 CMakeFiles/Reversi_main.dir/ReversiGame/src/Game.cpp.o: ../ReversiGame/include/Game.h
 CMakeFiles/Reversi_main.dir/ReversiGame/src/Game.cpp.o: ../ReversiGame/include/HumanPlayer.h
+CMakeFiles/Reversi_main.dir/ReversiGame/src/Game.cpp.o: ../ReversiGame/include/OpponentClientPlayer.h
 CMakeFiles/Reversi_main.dir/ReversiGame/src/Game.cpp.o: ../ReversiGame/include/Player.h
-CMakeFiles/Reversi_main.dir/ReversiGame/src/Game.cpp.o: ../ReversiGame/include/componentClientPlayer.h
 CMakeFiles/Reversi_main.dir/ReversiGame/src/Game.cpp.o: ../ReversiGame/src/Game.cpp
 
 CMakeFiles/Reversi_main.dir/ReversiGame/src/HumanPlayer.cpp.o: ../ReversiGame/include/Cell.h
@@ -48,9 +48,9 @@ CMakeFiles/Reversi_main.dir/ReversiGame/src/Main.cpp.o: ../ReversiGame/include/H
 CMakeFiles/Reversi_main.dir/ReversiGame/src/Main.cpp.o: ../ReversiGame/include/Player.h
 CMakeFiles/Reversi_main.dir/ReversiGame/src/Main.cpp.o: ../ReversiGame/src/Main.cpp
 
-CMakeFiles/Reversi_main.dir/ReversiGame/src/componentClientPlayer.cpp.o: ../ReversiGame/include/Cell.h
-CMakeFiles/Reversi_main.dir/ReversiGame/src/componentClientPlayer.cpp.o: ../ReversiGame/include/Client.h
-CMakeFiles/Reversi_main.dir/ReversiGame/src/componentClientPlayer.cpp.o: ../ReversiGame/include/Player.h
-CMakeFiles/Reversi_main.dir/ReversiGame/src/componentClientPlayer.cpp.o: ../ReversiGame/include/componentClientPlayer.h
-CMakeFiles/Reversi_main.dir/ReversiGame/src/componentClientPlayer.cpp.o: ../ReversiGame/src/componentClientPlayer.cpp
+CMakeFiles/Reversi_main.dir/ReversiGame/src/OpponentClientPlayer.cpp.o: ../ReversiGame/include/Cell.h
+CMakeFiles/Reversi_main.dir/ReversiGame/src/OpponentClientPlayer.cpp.o: ../ReversiGame/include/Client.h
+CMakeFiles/Reversi_main.dir/ReversiGame/src/OpponentClientPlayer.cpp.o: ../ReversiGame/include/OpponentClientPlayer.h
+CMakeFiles/Reversi_main.dir/ReversiGame/src/OpponentClientPlayer.cpp.o: ../ReversiGame/include/Player.h
+CMakeFiles/Reversi_main.dir/ReversiGame/src/OpponentClientPlayer.cpp.o: ../ReversiGame/src/OpponentClientPlayer.cpp
 

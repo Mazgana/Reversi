@@ -30,8 +30,8 @@ CMakeFiles/Reversi_main.dir/ReversiGame/src/Game.cpp.o
  ../ReversiGame/include/ClientPlayer.h
  ../ReversiGame/include/Game.h
  ../ReversiGame/include/HumanPlayer.h
+ ../ReversiGame/include/OpponentClientPlayer.h
  ../ReversiGame/include/Player.h
- ../ReversiGame/include/componentClientPlayer.h
  /home/leah/CLionProjects/Reversi/ReversiGame/src/Game.cpp
 CMakeFiles/Reversi_main.dir/ReversiGame/src/HumanPlayer.cpp.o
  ../ReversiGame/include/Cell.h
@@ -48,9 +48,9 @@ CMakeFiles/Reversi_main.dir/ReversiGame/src/Main.cpp.o
  ../ReversiGame/include/HumanPlayer.h
  ../ReversiGame/include/Player.h
  /home/leah/CLionProjects/Reversi/ReversiGame/src/Main.cpp
-CMakeFiles/Reversi_main.dir/ReversiGame/src/componentClientPlayer.cpp.o
+CMakeFiles/Reversi_main.dir/ReversiGame/src/OpponentClientPlayer.cpp.o
  ../ReversiGame/include/Cell.h
  ../ReversiGame/include/Client.h
+ ../ReversiGame/include/OpponentClientPlayer.h
  ../ReversiGame/include/Player.h
- ../ReversiGame/include/componentClientPlayer.h
- /home/leah/CLionProjects/Reversi/ReversiGame/src/componentClientPlayer.cpp
+ /home/leah/CLionProjects/Reversi/ReversiGame/src/OpponentClientPlayer.cpp
