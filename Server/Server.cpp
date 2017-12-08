@@ -71,7 +71,6 @@ void Server::start() {
 // Handle requests from two clients
 void Server::handleClient(int firstClientSocket, int secondClientSocket) {
  int arg1, arg2;
- char space;
 
  while (true) {
 		 // Read new exercise arguments
@@ -86,19 +85,14 @@ void Server::handleClient(int firstClientSocket, int secondClientSocket) {
 				return;
 		 }
 
-		 n = read(firstClientSocket, &space, sizeof(space));
-
-		 if (n == -1) {
-				 cout << "Error reading operator" << endl;
-				 return;
-		 }
-
 		 n = read(firstClientSocket, &arg2, sizeof(arg2));
 		 if (n == -1) {
 				 cout << "Error reading arg2" << endl;
 				 return;
 		 }
 
+         cout << "arg1: " << arg1 << endl;
+         cout << "arg2: " << arg2 << endl;
 		 // Write the result back to the client
 		 int w = write(secondClientSocket, &arg1, sizeof(arg1));
 		 if (w == -1) {
