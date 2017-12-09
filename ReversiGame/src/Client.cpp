@@ -47,6 +47,7 @@ void Client::connectToServer() {
 }
 
 char Client::getOpeningPlayer() {
+    //reading first integer sent from server.
     int playersPlace;
     int n = read(clientSocket, &playersPlace, sizeof(playersPlace));
     if (n == -1) {
@@ -66,6 +67,7 @@ char Client::getOpeningPlayer() {
 }
 
 int Client::receiveCoordinate() {
+    //reading an integer from server to be coordinate
     int cor;
     int n = read(clientSocket, &cor, sizeof(cor));
     if (n == -1) {
@@ -75,6 +77,7 @@ int Client::receiveCoordinate() {
 }
 
 void Client::sendMove(int x, int y) {
+    //writing to server 2 integers that will be read as coordinates.
     int n = write(clientSocket, &x, sizeof(x));
     if (n == -1) {
         throw "Error writing x to socket";

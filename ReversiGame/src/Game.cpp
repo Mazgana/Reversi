@@ -10,27 +10,27 @@ Game::Game() {
     board = Board(default_lenth, default_width);
     blackPlayer = new HumanPlayer(BLACK);
     whitePlayer = new HumanPlayer(WHITE);
-    numOfPlayers = default_num_of_players;
+    gameType = default_game_type;
 }
 
 Game::Game(int players) {
-    numOfPlayers = players;
+    gameType = players;
     board = Board(default_lenth, default_width);
-    if (numOfPlayers == 2) {
+    if (gameType == 1) {//two humans on same computer
         blackPlayer = new HumanPlayer(BLACK);
         whitePlayer = new HumanPlayer(WHITE);
-    } else if (numOfPlayers == 1) {
+    } else if (gameType == 2) {//one player vs computer
         blackPlayer = new HumanPlayer(BLACK);
         whitePlayer = new AI(WHITE);
-    } else if (numOfPlayers == 3) {
-        Client client("127.0.0.1", 5000);
+    } else if (gameType == 3) {//two clients, using server.
+        Client client("127.0.0.1", 5000);//creating a client and connecting it to server.
         try {
             client.connectToServer();
         } catch  (const char *msg) {
             cout << "Failed to connect to server. Reason:" << msg << endl;
             exit(-1);
         }
-        char chip = client.getOpeningPlayer();
+        char chip = client.getOpeningPlayer();//find first client to connect to server, set to be black player
         if(chip == 'X') {
             blackPlayer = new ClientPlayer(BLACK, client);
             whitePlayer = new OpponentClientPlayer(WHITE, client);
@@ -77,10 +77,10 @@ bool Game :: playTurn(Player* p) {
         return false;
     }//no moves can be done, turn passes to other player
     Cell chosen;
-    if (p->isComp()) {
+    if (p->isComp()) {//get board to play computer strategy.
         int i, min, temp;
         chosen = options[0];
-        min = findEnemyMaxMoves(chosen, p);
+        min = findEnemyMaxMoves(chosen, p);//finding maximum moves and choosing the minimum of those.
 
         for (i = 1; i < (int)options.size(); i++) {
             temp = findEnemyMaxMoves(options[i], p);
@@ -93,9 +93,9 @@ bool Game :: playTurn(Player* p) {
         chosen.printCell();
         cout << endl << endl;
     } else {
-        chosen = p->doTurn(options);
+        chosen = p->doTurn(options);//getting cell to play
     }
-    board.putChip(p->getChip(), chosen.getRow(), chosen.getCol());// putting chip on board
+    board.putChip(p->getChip(), chosen.getRow(), chosen.getCol());// putting chip on board and flipping chips accordingly
     board.cleanOptionalMovesList();
 
     return true;
@@ -103,10 +103,10 @@ bool Game :: playTurn(Player* p) {
 
 int Game::findEnemyMaxMoves(Cell chosen, Player *p) {
     int max = 0;
-    Board currentBoard = board;
+    Board currentBoard = board;//creating board copy to try strategy
     currentBoard.putChip(p->getChip(), chosen.getCol(), chosen.getRow());
     currentBoard.flipChips(p->getChip(), chosen);
-
+    //checking for maximum opponent moves.
     max = maximum(currentBoard.doOneWay(p->getOppositeType(), chosen.getRow(), -1, chosen.getCol(), 0, true), max);
     max = maximum(currentBoard.doOneWay(p->getOppositeType(), chosen.getRow(), 1, chosen.getCol(), 0, true), max);
     max = maximum(currentBoard.doOneWay(p->getOppositeType(), chosen.getRow(), -1, chosen.getCol(), 1, true), max);
@@ -120,6 +120,7 @@ int Game::findEnemyMaxMoves(Cell chosen, Player *p) {
 }
 
 void Game :: endGame() const {
+    //ending game and announcing winner
     cout << "GAME ENDED!" << endl;
     Status winner = board.getWinner();
     if(winner == EMPTY) {

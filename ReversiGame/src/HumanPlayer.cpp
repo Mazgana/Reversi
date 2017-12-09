@@ -14,7 +14,7 @@ Cell HumanPlayer :: doTurn(vector<Cell> options) {
     int i;
     cout << (char)type << ": It's your move." << endl;
     cout << "your possible moves:" << endl;
-    for (i = 0; i < (int)options.size(); i++) {
+    for (i = 0; i < (int)options.size(); i++) {//getting move from console
        cout << "(" << options[i].getRow() << "," << options[i].getCol() << ") ";
         }
     cout << endl << endl;

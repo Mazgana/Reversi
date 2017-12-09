@@ -5,6 +5,7 @@
 using namespace std;
 
 int main() {
+	//create server with specified IP and starting it
 	Server server(5000);
 	try {
 		server.start();

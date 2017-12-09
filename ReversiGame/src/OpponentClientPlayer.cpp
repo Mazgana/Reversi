@@ -13,6 +13,7 @@ OpponentClientPlayer::OpponentClientPlayer(Status t, Client client) : type(t), m
 Cell OpponentClientPlayer :: doTurn(vector<Cell> options) {
     int x,y;
     cout << "Waiting for opponent to play turn..." << endl;
+    //reading two integers that will represent coordinates
     x = messageReceiver.receiveCoordinate();
     y = messageReceiver.receiveCoordinate();
     Cell c(x,y);
@@ -40,6 +41,7 @@ bool OpponentClientPlayer::isComp() const{
 
 void OpponentClientPlayer::skipTurn() {
     cout << "Waiting for opponent to play turn..." << endl;
+    //reading two integers and dumping them, so server knows to skip turn
     int dump = messageReceiver.receiveCoordinate();
     dump = messageReceiver.receiveCoordinate();
     cout << "opponnent ";

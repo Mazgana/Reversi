@@ -72,5 +72,6 @@ void ClientPlayer::skipTurn() {
     cout << "You have got no moves. Turn passes to " << (char) getOppositeType() << endl;
     cout << "press enter to continue.." << endl;
     cin.get();
+    //sending random move so server knows to skip turn.
     contactServer.sendMove(10,10);
 }

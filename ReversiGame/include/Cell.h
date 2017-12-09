@@ -2,7 +2,9 @@
 #define CELL_H_
 
 enum Status {BLACK = 'X', WHITE = 'O', EMPTY = ' '};
-
+/*
+ * Cell class. holds coordinate and changes chip according to game.
+ */
 class Cell {
 private:
 	Status cellStat;

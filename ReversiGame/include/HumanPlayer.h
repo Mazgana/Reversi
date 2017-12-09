@@ -3,7 +3,9 @@
 
 #include "Player.h"
 #include "Cell.h"
-
+/*
+ * human player, playing on current computer, using console
+ */
 class HumanPlayer : public Player{
 private:
     // representing player's chip color.
