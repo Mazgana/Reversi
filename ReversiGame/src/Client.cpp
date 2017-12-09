@@ -51,7 +51,8 @@ char Client::getOpeningPlayer() {
     int n = read(clientSocket, &playersPlace, sizeof(playersPlace));
     if (n == -1) {
         throw "Error reading result from socket";
-    }
+    	}
+
     if(playersPlace == 1) {
         cout << "You are the black player X, you go first" << endl;
         return 'X';
