@@ -5,23 +5,26 @@
 #include <vector>
 using namespace std;
 
-const int default_width = 4;
-const int default_lenth = 4;
-
+const int default_width = 8;
+const int default_lenth = 8;
+/*
+ * Board class. holds all cells and is updated throughout the game with each player's turn.
+ */
 class Board {
-	private:
-		int length;
-		int width;
-		vector<vector<Cell> > CellArr;
-		vector<Cell> optionalMoves;
+private:
+    int length;
+    int width;
+    vector<vector<Cell> > CellArr;
+    vector<Cell> optionalMoves;
 
-		//validating that given cell is an optional move on board
-		bool isCellInOptionArray(Cell c);
+    //validating that given cell is an optional move on board
+    bool isCellInOptionArray(Cell c);
 
-	public:
-		Board();
-		Board(int, int);
-		Board(const Board &b);
+public:
+    //constructors
+    Board();
+    Board(int, int);
+    Board(const Board &b);
 
     //initializing game board with four pieces in middle of board.
     void initialize();
@@ -47,11 +50,11 @@ class Board {
     //check score and counts chips. returns the chip with highest score.
     Status getWinner() const;
 
-		//Checking if the current board has no more empty cells.
-		bool isBoardFull();
+    //Checking if the current board has no more empty cells.
+    bool isBoardFull();
 
-		//erasing current list of possible moves, for next turn.
-		void cleanOptionalMovesList();
+    //erasing current list of possible moves, for next turn.
+    void cleanOptionalMovesList();
 };
 
 #endif /* BOARD_H_ */

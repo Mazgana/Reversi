@@ -14,6 +14,7 @@ Board::Board() {
 
 Board :: Board(int len, int wid) : length(len), width(wid){
 	int i;
+	//creating a 2D array of cells as board
 	CellArr.resize(width + 1);
 	for (i = 0; i <= width ; i++) {
 		CellArr[i].resize(length + 1);
@@ -21,6 +22,7 @@ Board :: Board(int len, int wid) : length(len), width(wid){
 }
 
 Board::Board(const Board &b) {
+	//creating shallow copy of Board
 	length = b.length;
 	width = b.width;
 	CellArr = b.CellArr;
@@ -31,14 +33,14 @@ void Board :: initialize()
 	int i, j;
 	int x = width/2;
 	int y = length/2;
-
+	//initializing all clean cells
 	for (i = 0; i <= length ; i++) {
 		for (j = 0; j <= width; j++) {
 			Cell cleanCEll(EMPTY, i, j);
 			CellArr[i][j] = cleanCEll;
 		}
 	}
-
+	//putting first chips in middle of board
 	Cell whiteCell(WHITE, x, y);
 	CellArr[x][y] = whiteCell;
 	Cell whiteCell2(WHITE, x + 1, y + 1);
@@ -54,6 +56,7 @@ Status Board ::reveal(int x, int y) const {
 }
 
 void Board :: putChip(Status chip, int x, int y) {
+	//making move of putting chip and calling to flipping chips accordingly.
     CellArr[x][y].setStatus(chip);
 	flipChips(chip, Cell(x,y));
 }
@@ -61,7 +64,7 @@ void Board :: putChip(Status chip, int x, int y) {
 void Board :: print() const
 {
 	int i, j, k;
-	for (i = 0; i <= length; i++) {
+	for (i = 0; i <= length; i++) {//printing board in given format
 		for (j = 0; j <= width; j++) {
 			if ((i == 0) && (j == 0)){
 				cout << "  |";
@@ -200,12 +203,11 @@ Status Board::getWinner() const {
 }
 
 bool Board::isCellInOptionArray(Cell check) {
-  int i;
-
-  if ((int)optionalMoves.size() == 0) {
-	  return false;
-  }
-
+    int i;
+	//checking if given cell is an empty one
+    if ((int)optionalMoves.size() == 0) {
+	    return false;
+    }
 	for (i = 0; i < (int)optionalMoves.size(); i++) {
 		if (optionalMoves[i].getRow() == check.getRow() && optionalMoves[i].getCol() == check.getCol())
 			return true;
@@ -220,7 +222,7 @@ void Board::cleanOptionalMovesList(){
 
 bool Board::isBoardFull() {
 	int i, j;
-	for (i = 1; i <= length; i++) {
+	for (i = 1; i <= length; i++) {//checking in all cells contain chips.
 		for (j = 1; j <= width; j++) {
 			if (CellArr[i][j].getStatus() == EMPTY) {
 				return false;

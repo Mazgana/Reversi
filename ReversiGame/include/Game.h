@@ -5,15 +5,18 @@
 #include "HumanPlayer.h"
 #include "AI.h"
 #include "ClientPlayer.h"
+#include "OpponentClientPlayer.h"
 
-const int default_num_of_players = 2;
-
+const int default_game_type = 2;
+/*
+ * game class. runs game and game logic, moving from one player to other until game ends.
+ */
 class Game {
 private:
 	Board board;
 	Player* blackPlayer;
 	Player* whitePlayer;
-	int numOfPlayers;
+	int gameType;
 
   //finds best move using given strategy (least moves for next turn).
   int findEnemyMaxMoves(Cell chosen, Player* p);
@@ -29,6 +32,7 @@ private:
 	bool playTurn(Player* p);
 
 public:
+	//constructors.
 	Game();
 	Game(int);
 	~Game();

@@ -70,10 +70,10 @@ void Server::start() {
 
 // Handle requests from two clients
 void Server::handleClient(int firstClientSocket, int secondClientSocket) {
- int arg1, arg2;
+   int arg1, arg2;
 
- while (true) {
-		 // Read new exercise arguments
+   while (true) {
+		 // Read new coordinate arguments from player
 		 int n = read(firstClientSocket, &arg1, sizeof(arg1));
 		 if (n == -1) {
 				 cout << "Error reading arg1" << endl;
@@ -91,9 +91,7 @@ void Server::handleClient(int firstClientSocket, int secondClientSocket) {
 				 return;
 		 }
 
-         cout << "arg1: " << arg1 << endl;
-         cout << "arg2: " << arg2 << endl;
-		 // Write the result back to the client
+		 // Write the result coordinates back to the client
 		 int w = write(secondClientSocket, &arg1, sizeof(arg1));
 		 if (w == -1) {
 				cout << "Error writing to socket" << endl;
@@ -119,5 +117,5 @@ void Server::handleClient(int firstClientSocket, int secondClientSocket) {
 }
 
 void Server::stop() {
- close(serverSocket);
+   close(serverSocket);
 }

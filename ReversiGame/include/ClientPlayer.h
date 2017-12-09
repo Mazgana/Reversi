@@ -7,14 +7,16 @@
 #include "Client.h"
 
 using namespace std;
-
+/*
+ * Client player class. current player connecting to server to play against another remote player.
+ */
 class ClientPlayer : public Player {
 private:
     Status type;
     Client contactServer;
 public:
+    //constructors
     ClientPlayer(Client client);
-
     ClientPlayer(Status color, Client client);
 
     // passes player's char representing chip.
@@ -26,8 +28,10 @@ public:
     // presenting optional moves to player and getting move decision.
     Cell doTurn(vector<Cell> options);
 
+    //checking if this player is a computer
     bool isComp() const;
 
+    //send message that turn was skipped
     void skipTurn();
 };
 

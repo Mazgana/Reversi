@@ -3,15 +3,16 @@
 
 #include "Player.h"
 #include "Cell.h"
-
+/*
+ * AI player class. plays game specified game logic and printing it to console.
+ */
 class AI : public Player{
 private:
     // representing player's chip color.
     Status type;
 public:
-    // constructor.
+    // constructors.
     AI();
-
     AI(Status color);
 
     // passes player's char representing chip.

@@ -4,20 +4,23 @@
 using namespace std;
 
 int main() {
-	int numOfPlayers = 2;
+	int gameType = 0;
 	bool invalid = true;
-	cout << "Choose number of players for this game (1 or 2): " << endl;
-	while (invalid) {
-		cin >> numOfPlayers;
-		if (numOfPlayers != 1 && numOfPlayers != 2 && numOfPlayers != 3) {
-			cout << "Please choose 1, 2 or 3 players." << endl;
-			cin >> numOfPlayers;
+	//opening message for reversi game.
+	cout << "Welcome to Reversi!" << endl << endl;
+	cout << "Choose an opponent type: " << endl << "1. a human local player" << endl
+		 << "2. an AI player" << endl << "3. a remote player" <<endl;
+	while (invalid) {//validating users game choice.
+		cin >> gameType;
+		if (gameType != 1 && gameType != 2 && gameType != 3) {
+			cout << "Invalid input. Please enter 1, 2 or 3." << endl;
+			cin >> gameType;
 		} else {
 			invalid = false;
 		}
 	}
-
-	Game g(numOfPlayers);
+	//creating and running chosen game
+	Game g(gameType);
 	g.run();
 	return 0;
 }

@@ -7,14 +7,16 @@
 #include "Client.h"
 
 using namespace std;
-
+/*
+ * player of game with two clients. this player is the opponent playing on another computer.
+ */
 class OpponentClientPlayer : public Player {
 private:
     Status type;
     Client messageReceiver;
 public:
+    //constructors
     OpponentClientPlayer(Client client);
-
     OpponentClientPlayer(Status color, Client client);
 
     // passes player's char representing chip.
@@ -26,8 +28,10 @@ public:
     // presenting optional moves to player and getting move decision.
     Cell doTurn(vector<Cell> options);
 
+    //checkimg if player is a computer
     bool isComp() const;
 
+    //sending message that turn was skipped
     void skipTurn();
 };
 
