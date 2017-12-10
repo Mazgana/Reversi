@@ -73,5 +73,9 @@ void ClientPlayer::skipTurn() {
     cout << "press enter to continue.." << endl;
     cin.get();
     //sending random move so server knows to skip turn.
-    contactServer.sendMove(10,10);
+    contactServer.sendMove(-2,-2);
 }
+
+ void ClientPlayer::endGame() {
+	 contactServer.sendMove(-3, -3);
+ }

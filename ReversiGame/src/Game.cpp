@@ -94,7 +94,9 @@ bool Game :: playTurn(Player* p) {
         cout << endl << endl;
     } else {
         chosen = p->doTurn(options);//getting cell to play
-    }
+        if (chosen.getRow() == -4)
+        	return false;
+    	}
     board.putChip(p->getChip(), chosen.getRow(), chosen.getCol());// putting chip on board and flipping chips accordingly
     board.cleanOptionalMovesList();
 
@@ -125,11 +127,14 @@ void Game :: endGame() const {
     Status winner = board.getWinner();
     if(winner == EMPTY) {
         cout << "It's a tie!";
-    }
+    	}
     else {
         cout << "Player " << (char) winner << " wins!";
-    }
+    	}
     cout << endl;
+
+  	blackPlayer->endGame();
+    whitePlayer->endGame();
 }
 
 int Game::maximum(int first, int second) const{

@@ -17,9 +17,11 @@ Cell OpponentClientPlayer :: doTurn(vector<Cell> options) {
     x = messageReceiver.receiveCoordinate();
     y = messageReceiver.receiveCoordinate();
     Cell c(x,y);
-    cout << (char) getChip() << " played ";
-    c.printCell();
-    cout << endl;
+    if (x != -4) { //The opponent player disconnected
+			cout << (char) getChip() << " played ";
+			c.printCell();
+			cout << endl;
+    	}
     return c;
 }
 
@@ -42,8 +44,8 @@ bool OpponentClientPlayer::isComp() const{
 void OpponentClientPlayer::skipTurn() {
     cout << "Waiting for opponent to play turn..." << endl;
     //reading two integers and dumping them, so server knows to skip turn
-    int dump = messageReceiver.receiveCoordinate();
-    dump = messageReceiver.receiveCoordinate();
-    cout << "opponnent ";
+    messageReceiver.receiveCoordinate();
+    messageReceiver.receiveCoordinate();
+    cout << "opponent ";
     cout << (char) getChip() << " had no moves." << endl;
 }

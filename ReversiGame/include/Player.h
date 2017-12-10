@@ -30,7 +30,9 @@ public:
         cout << (char) getChip() << ": you have got no moves." << endl;
         cout << "press enter to continue.." << endl;
         cin.get();
-    }
+    	}
+
+    virtual void endGame(){};
 
 };
 

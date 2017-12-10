@@ -33,6 +33,8 @@ public:
 
     //send message that turn was skipped
     void skipTurn();
+
+    void endGame();
 };
 
 #endif //REVERSI_CLIENTPLAYER_H

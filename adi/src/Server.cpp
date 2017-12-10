@@ -31,6 +31,7 @@ void Server::start() {
 
 	listen(serverSocket, MAX_CONNECTED_CLIENTS);
 
+
 	while (true) {
 		struct sockaddr_in firstClientAddress;
 		socklen_t firstClientAddressLen = sizeof(firstClientAddress);
@@ -76,21 +77,17 @@ void Server::start() {
 // Handle requests from two clients
 void Server::handleClient(int firstClientSocket, int secondClientSocket) {
    int arg1, arg2, n;
-   int disconnection = -4;
 
    while (true) {
 		 // Read new coordinate arguments from player
 		 n = read(firstClientSocket, &arg1, sizeof(arg1));
+		 cout << n << endl;
 		 if (n == -1) {
 				 cout << "Error reading arg1" << endl;
 				 return;
 		 }
 
-		 if (arg1 == -3)
-			 return;
-
 		 if (n == 0) {
-			 	write(secondClientSocket, &disconnection, sizeof(disconnection));
 				cout << "Client disconnected" << endl;
 				return;
 		 }
@@ -110,15 +107,20 @@ void Server::handleClient(int firstClientSocket, int secondClientSocket) {
 		 }
 
 		 int m = write(secondClientSocket, &arg2, sizeof(arg2));
-		 if (m == -1) { //Client disconnected
-			 	write(firstClientSocket, &disconnection, sizeof(disconnection));
+		 if (m == -1) {
+				cout << "Error writing to socket" << endl;
 				return;
 		 }
 
-		 //swapping the clients
-		 int temp = firstClientSocket;
-		 firstClientSocket = secondClientSocket;
-		 secondClientSocket = temp;
+		 //The end
+		 if (arg1 == -3) {
+			 return;
+		 } else {
+			 //swapping the clients
+			 int temp = firstClientSocket;
+			 firstClientSocket = secondClientSocket;
+			 secondClientSocket = temp;
+		 }
  	 }
 }
 
