@@ -1,3 +1,0 @@
-/home/leah/CLionProjects/Reversi/Server/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/home/leah/CLionProjects/Reversi/Server/cmake-build-debug/CMakeFiles/edit_cache.dir
-/home/leah/CLionProjects/Reversi/Server/cmake-build-debug/CMakeFiles/Server.dir

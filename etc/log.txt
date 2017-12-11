@@ -1,3 +1,21 @@
+commit e6707c3e7f1bd71cf3cd3cc0d54ebe5cadd67318
+Author: mazgana <adi.mazgani@gmail.com>
+Date:   Sun Dec 10 20:37:36 2017 +0200
+
+    Adding makefile to server
+
+commit fc94947a04d83807a4a6ec82de82bdfe03175839
+Author: mazgana <adi.mazgani@gmail.com>
+Date:   Sun Dec 10 18:04:30 2017 +0200
+
+    Deleting unnecessary folder and adding Exe folder
+
+commit 0ff9b96346c3cc1e98d8ab57534af96912e56a5f
+Author: mazgana <adi.mazgani@gmail.com>
+Date:   Sun Dec 10 17:46:53 2017 +0200
+
+    Adding comments to server
+
 commit ae229d47f2d90a2ec40dea264b18f62f530adc02
 Merge: 225cf4f 683637c
 Author: mazgana <adi.mazgani@gmail.com>

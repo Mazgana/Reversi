@@ -87,3 +87,10 @@ void Client::sendMove(int x, int y) {
         throw "Error writing y to socket";
     }
 }
+
+void Client::attending(int mes) {
+    int n = write(clientSocket, &mes, sizeof(mes));
+    if (n == -1) {
+        throw "Error writing x to socket";
+    }
+}

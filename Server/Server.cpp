@@ -75,7 +75,7 @@ void Server::start() {
 
 // Handle requests from two clients
 void Server::handleClient(int firstClientSocket, int secondClientSocket) {
-   int arg1, arg2, n;
+   int arg1, arg2, n, dumb;
    int disconnection = -4;
 
    while (true) {
@@ -106,6 +106,14 @@ void Server::handleClient(int firstClientSocket, int secondClientSocket) {
 
 		 if (w == -1) {
 				cout << "Error writing to socket" << endl;
+				return;
+		 }
+
+		 int check = read(secondClientSocket, &dumb, sizeof(dumb));
+
+		 if (check == 0) {
+			 	write(firstClientSocket, &disconnection, sizeof(disconnection));
+				cout << "Client disconnected" << endl;
 				return;
 		 }
 

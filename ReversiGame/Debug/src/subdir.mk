@@ -11,7 +11,8 @@ CPP_SRCS += \
 ../src/ClientPlayer.cpp \
 ../src/Game.cpp \
 ../src/HumanPlayer.cpp \
-../src/Main.cpp 
+../src/Main.cpp \
+../src/OpponentClientPlayer.cpp 
 
 OBJS += \
 ./src/AI.o \
@@ -21,7 +22,8 @@ OBJS += \
 ./src/ClientPlayer.o \
 ./src/Game.o \
 ./src/HumanPlayer.o \
-./src/Main.o 
+./src/Main.o \
+./src/OpponentClientPlayer.o 
 
 CPP_DEPS += \
 ./src/AI.d \
@@ -31,7 +33,8 @@ CPP_DEPS += \
 ./src/ClientPlayer.d \
 ./src/Game.d \
 ./src/HumanPlayer.d \
-./src/Main.d 
+./src/Main.d \
+./src/OpponentClientPlayer.d 
 
 
 # Each subdirectory must supply rules for building sources it contributes

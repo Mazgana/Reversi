@@ -1,7 +1,10 @@
 #include "Game.h"
 #include "Client.h"
 #include <iostream>
+#include <fstream>
 #include <stdlib.h>
+#include <string.h>
+#include <string>
 #include "OpponentClientPlayer.h"
 
 using namespace std;
@@ -23,21 +26,38 @@ Game::Game(int players) {
         blackPlayer = new HumanPlayer(BLACK);
         whitePlayer = new AI(WHITE);
     } else if (gameType == 3) {//two clients, using server.
-        Client client("127.0.0.1", 5000);//creating a client and connecting it to server.
-        try {
-            client.connectToServer();
-        } catch  (const char *msg) {
-            cout << "Failed to connect to server. Reason:" << msg << endl;
-            exit(-1);
-        }
-        char chip = client.getOpeningPlayer();//find first client to connect to server, set to be black player
-        if(chip == 'X') {
-            blackPlayer = new ClientPlayer(BLACK, client);
-            whitePlayer = new OpponentClientPlayer(WHITE, client);
-        } else if (chip == 'O') {
-            whitePlayer = new ClientPlayer(WHITE, client);
-            blackPlayer = new OpponentClientPlayer(BLACK, client);
-        }
+    	ifstream File;
+    	std::string details;
+
+    	File.open("clientConfiguration.txt");
+    	if (!File) {
+    		cout << "Error in opening client configuration file." << endl;
+    		exit(1);
+    		}
+
+    	std::getline(File,details);
+    	std::size_t pos = details.find("IP: ");
+    	std::string ipAddres = details.substr(pos + 4);
+    	std::getline(File,details);
+    	pos = details.find("Port: ");
+    	std::string port = details.substr (pos + 6);
+    	int portNum = atoi(port.c_str());
+
+      Client client(ipAddres.c_str(), portNum);//creating a client and connecting it to server.
+      try {
+          client.connectToServer();
+      } catch  (const char *msg) {
+          cout << "Failed to connect to server. Reason:" << msg << endl;
+          exit(-1);
+        	}
+      char chip = client.getOpeningPlayer();//find first client to connect to server, set to be black player
+      if(chip == 'X') {
+          blackPlayer = new ClientPlayer(BLACK, client);
+          whitePlayer = new OpponentClientPlayer(WHITE, client);
+      } else if (chip == 'O') {
+          whitePlayer = new ClientPlayer(WHITE, client);
+          blackPlayer = new OpponentClientPlayer(BLACK, client);
+        	}
     }
 }
 

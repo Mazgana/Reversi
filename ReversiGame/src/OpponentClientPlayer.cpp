@@ -15,6 +15,7 @@ Cell OpponentClientPlayer :: doTurn(vector<Cell> options) {
     cout << "Waiting for opponent to play turn..." << endl;
     //reading two integers that will represent coordinates
     x = messageReceiver.receiveCoordinate();
+    messageReceiver.attending(1);
     y = messageReceiver.receiveCoordinate();
     Cell c(x,y);
     if (x != -4) { //The opponent player disconnected

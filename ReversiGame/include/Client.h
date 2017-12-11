@@ -20,6 +20,8 @@ public:
     //receive move just done by other client player
     int receiveCoordinate();
 
+    void attending(int mes);
+
 private:
     const char *serverIP;
     int serverPort;
