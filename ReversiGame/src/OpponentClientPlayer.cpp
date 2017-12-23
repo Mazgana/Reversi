@@ -46,6 +46,7 @@ void OpponentClientPlayer::skipTurn() {
     cout << "Waiting for opponent to play turn..." << endl;
     //reading two integers and dumping them, so server knows to skip turn
     messageReceiver.receiveCoordinate();
+    messageReceiver.attending(1);
     messageReceiver.receiveCoordinate();
     cout << "opponent ";
     cout << (char) getChip() << " had no moves." << endl;

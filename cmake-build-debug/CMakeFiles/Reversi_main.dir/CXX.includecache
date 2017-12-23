@@ -115,10 +115,16 @@ Client.h
 /home/leah/CLionProjects/Reversi/ReversiGame/src/Client.h
 iostream
 -
+fstream
+-
 stdlib.h
 -
-include/OpponentClientPlayer.h
+string.h
 -
+string
+-
+OpponentClientPlayer.h
+/home/leah/CLionProjects/Reversi/ReversiGame/src/OpponentClientPlayer.h
 
 /home/leah/CLionProjects/Reversi/ReversiGame/src/HumanPlayer.cpp
 HumanPlayer.h

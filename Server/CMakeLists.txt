@@ -4,8 +4,12 @@ project(Server)
 set(CMAKE_CXX_STANDARD 11)
 
 set(SOURCE_FILES
+        Command.h
+        CommandManager.cpp
+        CommandManager.h
         Main.cpp
         Server.cpp
-        Server.h)
+        Server.h
+        serverConfiguration.txt)
 
 add_executable(Server ${SOURCE_FILES})

@@ -13,7 +13,7 @@ int main() {
 	if (!File) {
 		cout << "Error in opening server configuration file." << endl;
 		exit(1);
-		}
+    }
 
 	std::getline(File,details);
 	std::size_t pos = details.find("Port: ");

@@ -1,3 +1,15 @@
+commit f24d7095ac00012bb3a24971757cdbdfb445a45b
+Author: Leah Wachtfogel <leah.wach@gmail.com>
+Date:   Mon Dec 11 15:07:52 2017 +0200
+
+    empty project update
+
+commit bf662c73bfb12d808d97c30fdbc5f0db7d50a722
+Author: mazgana <adi.mazgani@gmail.com>
+Date:   Mon Dec 11 12:49:33 2017 +0200
+
+    Handling client disconnection and reading from configuration files
+
 commit e6707c3e7f1bd71cf3cd3cc0d54ebe5cadd67318
 Author: mazgana <adi.mazgani@gmail.com>
 Date:   Sun Dec 10 20:37:36 2017 +0200
