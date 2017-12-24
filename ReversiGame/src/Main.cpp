@@ -1,4 +1,6 @@
-#include "Game.h"
+#include "TwoClientsGame.h"
+#include "AiGame.h"
+#include "RemoteGame.h"
 
 #include <iostream>
 using namespace std;
@@ -20,7 +22,16 @@ int main() {
 		}
 	}
 	//creating and running chosen game
-	Game g(gameType);
-	g.run();
+
+	if (gameType == 1) {
+		TwoClientsGame clients;
+		clients.run();
+	} else if (gameType == 2) {
+		AiGame computer;
+		computer.run();
+	} else {
+		RemoteGame remote;
+		remote.run();
+	}
 	return 0;
 }

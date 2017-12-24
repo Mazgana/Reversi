@@ -1,72 +1,19 @@
-#include "Game.h"
-#include "Client.h"
-#include <iostream>
-#include <fstream>
-#include <stdlib.h>
-#include <string.h>
-#include <string>
-#include "OpponentClientPlayer.h"
+#include "AiGame.h"
 
-using namespace std;
-
-Game::Game() {
+AiGame::AiGame() {
+    gameType = 2;
     board = Board(default_lenth, default_width);
+
     blackPlayer = new HumanPlayer(BLACK);
-    whitePlayer = new HumanPlayer(WHITE);
-    gameType = default_game_type;
+    whitePlayer = new AI(WHITE);
 }
 
-Game::Game(int players) {
-    gameType = players;
-    board = Board(default_lenth, default_width);
-    if (gameType == 1) {//two humans on same computer
-        blackPlayer = new HumanPlayer(BLACK);
-        whitePlayer = new HumanPlayer(WHITE);
-    } else if (gameType == 2) {//one player vs computer
-        blackPlayer = new HumanPlayer(BLACK);
-        whitePlayer = new AI(WHITE);
-    } else if (gameType == 3) {//two clients, using server.
-    	ifstream File;
-    	std::string details;
-
-    	File.open("clientConfiguration.txt");
-    	if (!File) {
-    		cout << "Error in opening client configuration file." << endl;
-    		exit(1);
-    		}
-
-    	std::getline(File,details);
-    	std::size_t pos = details.find("IP: ");
-    	std::string ipAddres = details.substr(pos + 4);
-    	std::getline(File,details);
-    	pos = details.find("Port: ");
-    	std::string port = details.substr (pos + 6);
-    	int portNum = atoi(port.c_str());
-
-      Client client(ipAddres.c_str(), portNum);//creating a client and connecting it to server.
-      try {
-          client.connectToServer();
-      } catch  (const char *msg) {
-          cout << "Failed to connect to server. Reason:" << msg << endl;
-          exit(-1);
-        	}
-      char chip = client.getOpeningPlayer();//find first client to connect to server, set to be black player
-      if(chip == 'X') {
-          blackPlayer = new ClientPlayer(BLACK, client);
-          whitePlayer = new OpponentClientPlayer(WHITE, client);
-      } else if (chip == 'O') {
-          whitePlayer = new ClientPlayer(WHITE, client);
-          blackPlayer = new OpponentClientPlayer(BLACK, client);
-        	}
-    }
-}
-
-Game:: ~Game() {
+AiGame :: ~AiGame() {
     delete[] blackPlayer;
     delete[] whitePlayer;
 }
 
-void Game :: run() {
+void AiGame :: run() {
     //initializing board and starting.
     bool oPlayed = true, xPlayed;
     board.initialize();
@@ -90,7 +37,7 @@ void Game :: run() {
     endGame();
 }
 
-bool Game :: playTurn(Player* p) {
+bool AiGame :: playTurn(Player* p) {
     vector<Cell> options = board.getOptions(p->getChip());
     if (options.empty()) {
         p->skipTurn();
@@ -123,7 +70,7 @@ bool Game :: playTurn(Player* p) {
     return true;
 }
 
-int Game::findEnemyMaxMoves(Cell chosen, Player *p) {
+int AiGame::findEnemyMaxMoves(Cell chosen, Player *p) const {
     int max = 0;
     Board currentBoard = board;//creating board copy to try strategy
     currentBoard.putChip(p->getChip(), chosen.getCol(), chosen.getRow());
@@ -141,7 +88,7 @@ int Game::findEnemyMaxMoves(Cell chosen, Player *p) {
     return max;
 }
 
-void Game :: endGame() const {
+void AiGame :: endGame() {
     //ending game and announcing winner
     cout << "GAME ENDED!" << endl;
     Status winner = board.getWinner();
@@ -157,7 +104,7 @@ void Game :: endGame() const {
     whitePlayer->endGame();
 }
 
-int Game::maximum(int first, int second) const{
+int AiGame::maximum(int first, int second) const {
     if (first > second) {
         return first;
     } else {

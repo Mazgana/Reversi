@@ -1,17 +1,10 @@
-#ifndef GAME_H_
-#define GAME_H_
+#ifndef INCLUDE_TWOCLIENTSGAME_H_
+#define INCLUDE_TWOCLIENTSGAME_H_
 
-#include "Board.h"
+#include "GameLogic.h"
 #include "HumanPlayer.h"
-#include "AI.h"
-#include "ClientPlayer.h"
-#include "OpponentClientPlayer.h"
 
-const int default_game_type = 2;
-/*
- * game class. runs game and game logic, moving from one player to other until game ends.
- */
-class Game {
+class TwoClientsGame : public GameLogic {
 private:
 	Board board;
 	Player* blackPlayer;
@@ -19,26 +12,24 @@ private:
 	int gameType;
 
   //finds best move using given strategy (least moves for next turn).
-  int findEnemyMaxMoves(Cell chosen, Player* p);
+  int findEnemyMaxMoves(Cell chosen, Player *p) const;
 
   //returns maximum number
   int maximum(int first, int second) const;
 
   //ending game and declaring winner.
-  void endGame() const;
+  void endGame();
 
 	//calls on functions for each turn.
 	//returns true if a piece was put on board. false otherwise.
-	bool playTurn(Player* p);
+	bool playTurn(Player *p);
 
 public:
-	//constructors.
-	Game();
-	Game(int);
-	~Game();
+	//constructors
+	TwoClientsGame();
+	~TwoClientsGame();
 
 	//runs basic game loop.
 	void run();
 };
-
-#endif /* GAME_H_ */
+#endif /* INCLUDE_TWOCLIENTSGAME_H_ */
