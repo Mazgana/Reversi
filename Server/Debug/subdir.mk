@@ -4,14 +4,17 @@
 
 # Add inputs and outputs from these tool invocations to the build variables 
 CPP_SRCS += \
+../CommandManager.cpp \
 ../Main.cpp \
 ../Server.cpp 
 
 OBJS += \
+./CommandManager.o \
 ./Main.o \
 ./Server.o 
 
 CPP_DEPS += \
+./CommandManager.d \
 ./Main.d \
 ./Server.d 
 

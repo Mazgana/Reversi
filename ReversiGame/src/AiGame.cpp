@@ -13,30 +13,6 @@ AiGame :: ~AiGame() {
     delete[] whitePlayer;
 }
 
-void AiGame :: run() {
-    //initializing board and starting.
-    bool oPlayed = true, xPlayed;
-    board.initialize();
-    board.print();
-
-    //playing game, 1 round per player.
-    while (!board.isBoardFull()) {
-        xPlayed = playTurn(blackPlayer);
-        if (!xPlayed && !oPlayed) {
-            //when no more moves can be done.
-            break;
-        }
-        board.print();
-        oPlayed = playTurn(whitePlayer);
-        if (!xPlayed && !oPlayed) {
-            //when no more moves can be done.
-            break;
-        }
-        board.print();
-    }
-    endGame();
-}
-
 bool AiGame :: playTurn(Player* p) {
     vector<Cell> options = board.getOptions(p->getChip());
     if (options.empty()) {
@@ -70,7 +46,7 @@ bool AiGame :: playTurn(Player* p) {
     return true;
 }
 
-int AiGame::findEnemyMaxMoves(Cell chosen, Player *p) const {
+int AiGame::findEnemyMaxMoves(Cell chosen, Player *p) {
     int max = 0;
     Board currentBoard = board;//creating board copy to try strategy
     currentBoard.putChip(p->getChip(), chosen.getCol(), chosen.getRow());
@@ -88,23 +64,7 @@ int AiGame::findEnemyMaxMoves(Cell chosen, Player *p) const {
     return max;
 }
 
-void AiGame :: endGame() {
-    //ending game and announcing winner
-    cout << "GAME ENDED!" << endl;
-    Status winner = board.getWinner();
-    if(winner == EMPTY) {
-        cout << "It's a tie!";
-    	}
-    else {
-        cout << "Player " << (char) winner << " wins!";
-    	}
-    cout << endl;
-
-  	blackPlayer->endGame();
-    whitePlayer->endGame();
-}
-
-int AiGame::maximum(int first, int second) const {
+int AiGame::maximum(int first, int second) {
     if (first > second) {
         return first;
     } else {

@@ -19,14 +19,22 @@ private:
 	Player* whitePlayer;
 	int gameType;
 
-  //finds best move using given strategy (least moves for next turn).
-  virtual int findEnemyMaxMoves(Cell chosen, Player* p) const = 0;
-
-  //returns maximum number
-  virtual int maximum(int first, int second) const = 0;
-
   //ending game and declaring winner.
-  virtual void endGame() {};
+  virtual void endGame() {
+	    //ending game and announcing winner
+	    cout << "GAME ENDED!" << endl;
+	    Status winner = board.getWinner();
+	    if(winner == EMPTY) {
+	        cout << "It's a tie!";
+	    	}
+	    else {
+	        cout << "Player " << (char) winner << " wins!";
+	    	}
+	    cout << endl;
+
+	  	blackPlayer->endGame();
+	    whitePlayer->endGame();
+  	  }
 
 	//calls on functions for each turn.
 	//returns true if a piece was put on board. false otherwise.
@@ -34,8 +42,7 @@ private:
 
 public:
 	//runs basic game loop.
-	virtual void run() {
-	    //initializing board and starting.
+	virtual void run() {    //initializing board and starting.
 	    bool oPlayed = true, xPlayed;
 	    board.initialize();
 	    board.print();
@@ -56,7 +63,7 @@ public:
 	        board.print();
 	    }
 	    endGame();
-	};
+	}
 
 	virtual ~GameLogic() {};
 };
