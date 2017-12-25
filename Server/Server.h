@@ -18,6 +18,10 @@ private:
 
 	//reading and writing coordinates to clients while game is running.
 	void handleClient(int clientSocket, int secondClientSocket);
+
+    void handleStarterClient(int firstClientSocket);
+
+	void handleStarterClient(int firstClientSocket, char *buffer);
 };
 
 #endif /* SERVER_H_ */

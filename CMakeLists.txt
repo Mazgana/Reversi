@@ -17,17 +17,33 @@ include_directories(ReversiGame/include)
 
 set(TEST_FILES ReversiGame/test/BoardTest.cpp ReversiGame/test/CellTest.cpp ReversiGame/test/PlayerTest.cpp ReversiGame/include/ClientPlayer.h ReversiGame/include/OpponentClientPlayer.h)
 set(SOURCE_FILES
-        ReversiGame/src/Board.cpp
-        ReversiGame/include/Board.h
-        ReversiGame/src/Cell.cpp
-        ReversiGame/include/Cell.h
-        ReversiGame/src/Game.cpp
-        ReversiGame/include/Game.h
+        ReversiGame/src/OpponentClientPlayer.cpp
+        ReversiGame/src/Client.cpp
+        ReversiGame/src/ClientPlayer.cpp
+        ReversiGame/src/Main.cpp
         ReversiGame/src/AI.cpp
-        ReversiGame/include/AI.h
+        ReversiGame/src/AiGame.cpp
+        ReversiGame/src/Board.cpp
+        ReversiGame/src/Cell.cpp
+        ReversiGame/src/ConsoleDisplay.cpp
         ReversiGame/src/HumanPlayer.cpp
+        ReversiGame/src/RemoteGame.cpp
+        ReversiGame/src/TwoClientsGame.cpp
+        ReversiGame/include/Client.h
+        ReversiGame/include/AI.h
+        ReversiGame/include/AiGame.h
+        ReversiGame/include/Client.h
+        ReversiGame/include/Board.h
+        ReversiGame/include/ClientPlayer.h
+        ReversiGame/include/OpponentClientPlayer.h
+        ReversiGame/include/Cell.h
+        ReversiGame/include/ConsoleDisplay.h
+        ReversiGame/include/Display.h
+        ReversiGame/include/GameLogic.h
         ReversiGame/include/HumanPlayer.h
-        ReversiGame/include/Player.h)
+        ReversiGame/include/Player.h
+        ReversiGame/include/RemoteGame.h
+        ReversiGame/include/TwoClientsGame.h)
 
 add_executable(Reversi_main ${SOURCE_FILES} ReversiGame/src/Main.cpp ReversiGame/src/Client.cpp ReversiGame/include/Client.h ReversiGame/src/ClientPlayer.cpp ReversiGame/src/OpponentClientPlayer.cpp)
 add_executable(test_main ${TEST_FILES} ${SOURCE_FILES} ReversiGame/test/gtest_main.cpp)

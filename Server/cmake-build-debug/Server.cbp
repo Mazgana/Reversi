@@ -84,6 +84,12 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/home/leah/CLionProjects/Reversi/Server/ClientHandler.cpp">
+			<Option target="Server"/>
+		</Unit>
+		<Unit filename="/home/leah/CLionProjects/Reversi/Server/ClientHandler.h">
+			<Option target="Server"/>
+		</Unit>
 		<Unit filename="/home/leah/CLionProjects/Reversi/Server/Command.h">
 			<Option target="Server"/>
 		</Unit>
