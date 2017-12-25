@@ -16,7 +16,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/home/leah/CLionProjects/Reversi/ReversiGame/src/Main.cpp" "/home/leah/CLionProjects/Reversi/cmake-build-debug/CMakeFiles/Reversi_main.dir/ReversiGame/src/Main.cpp.o"
   "/home/leah/CLionProjects/Reversi/ReversiGame/src/OpponentClientPlayer.cpp" "/home/leah/CLionProjects/Reversi/cmake-build-debug/CMakeFiles/Reversi_main.dir/ReversiGame/src/OpponentClientPlayer.cpp.o"
   "/home/leah/CLionProjects/Reversi/ReversiGame/src/RemoteGame.cpp" "/home/leah/CLionProjects/Reversi/cmake-build-debug/CMakeFiles/Reversi_main.dir/ReversiGame/src/RemoteGame.cpp.o"
-  "/home/leah/CLionProjects/Reversi/ReversiGame/src/TwoClientsGame.cpp" "/home/leah/CLionProjects/Reversi/cmake-build-debug/CMakeFiles/Reversi_main.dir/ReversiGame/src/TwoClientsGame.cpp.o"
+  "/home/leah/CLionProjects/Reversi/ReversiGame/src/TwoHumansGame.cpp" "/home/leah/CLionProjects/Reversi/cmake-build-debug/CMakeFiles/Reversi_main.dir/ReversiGame/src/TwoHumansGame.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

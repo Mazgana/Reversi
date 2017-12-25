@@ -60,7 +60,7 @@ CMakeFiles/Reversi_main.dir/ReversiGame/src/GameFlow.cpp.o
  ../ReversiGame/include/HumanPlayer.h
  ../ReversiGame/include/Player.h
  ../ReversiGame/include/RemoteGame.h
- ../ReversiGame/include/TwoClientsGame.h
+ ../ReversiGame/include/TwoHumansGame.h
  /home/leah/CLionProjects/Reversi/ReversiGame/src/GameFlow.cpp
 CMakeFiles/Reversi_main.dir/ReversiGame/src/HumanPlayer.cpp.o
  ../ReversiGame/include/Board.h
@@ -101,7 +101,7 @@ CMakeFiles/Reversi_main.dir/ReversiGame/src/RemoteGame.cpp.o
  ../ReversiGame/include/Player.h
  ../ReversiGame/include/RemoteGame.h
  /home/leah/CLionProjects/Reversi/ReversiGame/src/RemoteGame.cpp
-CMakeFiles/Reversi_main.dir/ReversiGame/src/TwoClientsGame.cpp.o
+CMakeFiles/Reversi_main.dir/ReversiGame/src/TwoHumansGame.cpp.o
  ../ReversiGame/include/Board.h
  ../ReversiGame/include/Cell.h
  ../ReversiGame/include/Client.h
@@ -110,5 +110,5 @@ CMakeFiles/Reversi_main.dir/ReversiGame/src/TwoClientsGame.cpp.o
  ../ReversiGame/include/GameLogic.h
  ../ReversiGame/include/HumanPlayer.h
  ../ReversiGame/include/Player.h
- ../ReversiGame/include/TwoClientsGame.h
- /home/leah/CLionProjects/Reversi/ReversiGame/src/TwoClientsGame.cpp
+ ../ReversiGame/include/TwoHumansGame.h
+ /home/leah/CLionProjects/Reversi/ReversiGame/src/TwoHumansGame.cpp

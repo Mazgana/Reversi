@@ -594,35 +594,35 @@ ReversiGame/src/RemoteGame.cpp.s:
 	$(MAKE) -f CMakeFiles/Reversi_main.dir/build.make CMakeFiles/Reversi_main.dir/ReversiGame/src/RemoteGame.cpp.s
 .PHONY : ReversiGame/src/RemoteGame.cpp.s
 
-ReversiGame/src/TwoClientsGame.o: ReversiGame/src/TwoClientsGame.cpp.o
+ReversiGame/src/TwoHumansGame.o: ReversiGame/src/TwoHumansGame.cpp.o
 
-.PHONY : ReversiGame/src/TwoClientsGame.o
+.PHONY : ReversiGame/src/TwoHumansGame.o
 
 # target to build an object file
-ReversiGame/src/TwoClientsGame.cpp.o:
-	$(MAKE) -f CMakeFiles/test_main.dir/build.make CMakeFiles/test_main.dir/ReversiGame/src/TwoClientsGame.cpp.o
-	$(MAKE) -f CMakeFiles/Reversi_main.dir/build.make CMakeFiles/Reversi_main.dir/ReversiGame/src/TwoClientsGame.cpp.o
-.PHONY : ReversiGame/src/TwoClientsGame.cpp.o
+ReversiGame/src/TwoHumansGame.cpp.o:
+	$(MAKE) -f CMakeFiles/test_main.dir/build.make CMakeFiles/test_main.dir/ReversiGame/src/TwoHumansGame.cpp.o
+	$(MAKE) -f CMakeFiles/Reversi_main.dir/build.make CMakeFiles/Reversi_main.dir/ReversiGame/src/TwoHumansGame.cpp.o
+.PHONY : ReversiGame/src/TwoHumansGame.cpp.o
 
-ReversiGame/src/TwoClientsGame.i: ReversiGame/src/TwoClientsGame.cpp.i
+ReversiGame/src/TwoHumansGame.i: ReversiGame/src/TwoHumansGame.cpp.i
 
-.PHONY : ReversiGame/src/TwoClientsGame.i
+.PHONY : ReversiGame/src/TwoHumansGame.i
 
 # target to preprocess a source file
-ReversiGame/src/TwoClientsGame.cpp.i:
-	$(MAKE) -f CMakeFiles/test_main.dir/build.make CMakeFiles/test_main.dir/ReversiGame/src/TwoClientsGame.cpp.i
-	$(MAKE) -f CMakeFiles/Reversi_main.dir/build.make CMakeFiles/Reversi_main.dir/ReversiGame/src/TwoClientsGame.cpp.i
-.PHONY : ReversiGame/src/TwoClientsGame.cpp.i
+ReversiGame/src/TwoHumansGame.cpp.i:
+	$(MAKE) -f CMakeFiles/test_main.dir/build.make CMakeFiles/test_main.dir/ReversiGame/src/TwoHumansGame.cpp.i
+	$(MAKE) -f CMakeFiles/Reversi_main.dir/build.make CMakeFiles/Reversi_main.dir/ReversiGame/src/TwoHumansGame.cpp.i
+.PHONY : ReversiGame/src/TwoHumansGame.cpp.i
 
-ReversiGame/src/TwoClientsGame.s: ReversiGame/src/TwoClientsGame.cpp.s
+ReversiGame/src/TwoHumansGame.s: ReversiGame/src/TwoHumansGame.cpp.s
 
-.PHONY : ReversiGame/src/TwoClientsGame.s
+.PHONY : ReversiGame/src/TwoHumansGame.s
 
 # target to generate assembly for a file
-ReversiGame/src/TwoClientsGame.cpp.s:
-	$(MAKE) -f CMakeFiles/test_main.dir/build.make CMakeFiles/test_main.dir/ReversiGame/src/TwoClientsGame.cpp.s
-	$(MAKE) -f CMakeFiles/Reversi_main.dir/build.make CMakeFiles/Reversi_main.dir/ReversiGame/src/TwoClientsGame.cpp.s
-.PHONY : ReversiGame/src/TwoClientsGame.cpp.s
+ReversiGame/src/TwoHumansGame.cpp.s:
+	$(MAKE) -f CMakeFiles/test_main.dir/build.make CMakeFiles/test_main.dir/ReversiGame/src/TwoHumansGame.cpp.s
+	$(MAKE) -f CMakeFiles/Reversi_main.dir/build.make CMakeFiles/Reversi_main.dir/ReversiGame/src/TwoHumansGame.cpp.s
+.PHONY : ReversiGame/src/TwoHumansGame.cpp.s
 
 ReversiGame/test/BoardTest.o: ReversiGame/test/BoardTest.cpp.o
 
@@ -786,9 +786,9 @@ help:
 	@echo "... ReversiGame/src/RemoteGame.o"
 	@echo "... ReversiGame/src/RemoteGame.i"
 	@echo "... ReversiGame/src/RemoteGame.s"
-	@echo "... ReversiGame/src/TwoClientsGame.o"
-	@echo "... ReversiGame/src/TwoClientsGame.i"
-	@echo "... ReversiGame/src/TwoClientsGame.s"
+	@echo "... ReversiGame/src/TwoHumansGame.o"
+	@echo "... ReversiGame/src/TwoHumansGame.i"
+	@echo "... ReversiGame/src/TwoHumansGame.s"
 	@echo "... ReversiGame/test/BoardTest.o"
 	@echo "... ReversiGame/test/BoardTest.i"
 	@echo "... ReversiGame/test/BoardTest.s"

@@ -1,5 +1,5 @@
 #include "GameFlow.h"
-#include "TwoClientsGame.h"
+#include "TwoHumansGame.h"
 #include "AiGame.h"
 #include "RemoteGame.h"
 #include "ConsoleDisplay.h"

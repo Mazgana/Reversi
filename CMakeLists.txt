@@ -28,7 +28,7 @@ set(SOURCE_FILES
         ReversiGame/src/ConsoleDisplay.cpp
         ReversiGame/src/HumanPlayer.cpp
         ReversiGame/src/RemoteGame.cpp
-        ReversiGame/src/TwoClientsGame.cpp
+        ReversiGame/src/TwoHumansGame.cpp
         ReversiGame/src/GameFlow
         ReversiGame/include/Client.h
         ReversiGame/include/AI.h
@@ -44,7 +44,7 @@ set(SOURCE_FILES
         ReversiGame/include/HumanPlayer.h
         ReversiGame/include/Player.h
         ReversiGame/include/RemoteGame.h
-        ReversiGame/include/TwoClientsGame.h
+        ReversiGame/include/TwoHumansGame.h
         ReversiGame/include/GameFlow)
 
 add_executable(Reversi_main ${SOURCE_FILES} ReversiGame/src/Main.cpp ReversiGame/src/Client.cpp ReversiGame/include/Client.h ReversiGame/src/ClientPlayer.cpp ReversiGame/src/OpponentClientPlayer.cpp)

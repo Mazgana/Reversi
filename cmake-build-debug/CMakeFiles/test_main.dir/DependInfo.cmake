@@ -16,7 +16,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/home/leah/CLionProjects/Reversi/ReversiGame/src/Main.cpp" "/home/leah/CLionProjects/Reversi/cmake-build-debug/CMakeFiles/test_main.dir/ReversiGame/src/Main.cpp.o"
   "/home/leah/CLionProjects/Reversi/ReversiGame/src/OpponentClientPlayer.cpp" "/home/leah/CLionProjects/Reversi/cmake-build-debug/CMakeFiles/test_main.dir/ReversiGame/src/OpponentClientPlayer.cpp.o"
   "/home/leah/CLionProjects/Reversi/ReversiGame/src/RemoteGame.cpp" "/home/leah/CLionProjects/Reversi/cmake-build-debug/CMakeFiles/test_main.dir/ReversiGame/src/RemoteGame.cpp.o"
-  "/home/leah/CLionProjects/Reversi/ReversiGame/src/TwoClientsGame.cpp" "/home/leah/CLionProjects/Reversi/cmake-build-debug/CMakeFiles/test_main.dir/ReversiGame/src/TwoClientsGame.cpp.o"
+  "/home/leah/CLionProjects/Reversi/ReversiGame/src/TwoHumansGame.cpp" "/home/leah/CLionProjects/Reversi/cmake-build-debug/CMakeFiles/test_main.dir/ReversiGame/src/TwoHumansGame.cpp.o"
   "/home/leah/CLionProjects/Reversi/ReversiGame/test/BoardTest.cpp" "/home/leah/CLionProjects/Reversi/cmake-build-debug/CMakeFiles/test_main.dir/ReversiGame/test/BoardTest.cpp.o"
   "/home/leah/CLionProjects/Reversi/ReversiGame/test/CellTest.cpp" "/home/leah/CLionProjects/Reversi/cmake-build-debug/CMakeFiles/test_main.dir/ReversiGame/test/CellTest.cpp.o"
   "/home/leah/CLionProjects/Reversi/ReversiGame/test/PlayerTest.cpp" "/home/leah/CLionProjects/Reversi/cmake-build-debug/CMakeFiles/test_main.dir/ReversiGame/test/PlayerTest.cpp.o"
