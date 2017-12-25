@@ -4,6 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
+  "/home/leah/CLionProjects/Reversi/Server/ClientHandler.cpp" "/home/leah/CLionProjects/Reversi/Server/cmake-build-debug/CMakeFiles/Server.dir/ClientHandler.cpp.o"
   "/home/leah/CLionProjects/Reversi/Server/CommandManager.cpp" "/home/leah/CLionProjects/Reversi/Server/cmake-build-debug/CMakeFiles/Server.dir/CommandManager.cpp.o"
   "/home/leah/CLionProjects/Reversi/Server/Main.cpp" "/home/leah/CLionProjects/Reversi/Server/cmake-build-debug/CMakeFiles/Server.dir/Main.cpp.o"
   "/home/leah/CLionProjects/Reversi/Server/Server.cpp" "/home/leah/CLionProjects/Reversi/Server/cmake-build-debug/CMakeFiles/Server.dir/Server.cpp.o"

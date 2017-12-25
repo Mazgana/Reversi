@@ -123,6 +123,33 @@ Server/fast:
 	$(MAKE) -f CMakeFiles/Server.dir/build.make CMakeFiles/Server.dir/build
 .PHONY : Server/fast
 
+ClientHandler.o: ClientHandler.cpp.o
+
+.PHONY : ClientHandler.o
+
+# target to build an object file
+ClientHandler.cpp.o:
+	$(MAKE) -f CMakeFiles/Server.dir/build.make CMakeFiles/Server.dir/ClientHandler.cpp.o
+.PHONY : ClientHandler.cpp.o
+
+ClientHandler.i: ClientHandler.cpp.i
+
+.PHONY : ClientHandler.i
+
+# target to preprocess a source file
+ClientHandler.cpp.i:
+	$(MAKE) -f CMakeFiles/Server.dir/build.make CMakeFiles/Server.dir/ClientHandler.cpp.i
+.PHONY : ClientHandler.cpp.i
+
+ClientHandler.s: ClientHandler.cpp.s
+
+.PHONY : ClientHandler.s
+
+# target to generate assembly for a file
+ClientHandler.cpp.s:
+	$(MAKE) -f CMakeFiles/Server.dir/build.make CMakeFiles/Server.dir/ClientHandler.cpp.s
+.PHONY : ClientHandler.cpp.s
+
 CommandManager.o: CommandManager.cpp.o
 
 .PHONY : CommandManager.o
@@ -213,6 +240,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... Server"
+	@echo "... ClientHandler.o"
+	@echo "... ClientHandler.i"
+	@echo "... ClientHandler.s"
 	@echo "... CommandManager.o"
 	@echo "... CommandManager.i"
 	@echo "... CommandManager.s"

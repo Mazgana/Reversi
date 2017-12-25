@@ -3,6 +3,8 @@ project(Server)
 
 set(CMAKE_CXX_STANDARD 11)
 
+set(CMAKE_CXX_FLAGS -pthread)
+
 set(SOURCE_FILES
         Command.h
         CommandManager.cpp
@@ -10,6 +12,6 @@ set(SOURCE_FILES
         Main.cpp
         Server.cpp
         Server.h
-        serverConfiguration.txt)
+        serverConfiguration.txt ClientHandler.cpp ClientHandler.h)
 
 add_executable(Server ${SOURCE_FILES})

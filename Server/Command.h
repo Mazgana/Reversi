@@ -12,7 +12,6 @@ public:
 };
 
 
-//#include "Command.h"
 class PrintCommand: public Command {
 public:
     virtual void execute(vector<string> args) {
@@ -23,10 +22,10 @@ public:
     }
 };
 
-//#include "Command.h"
 class StartCommand: public Command {
 public:
     virtual void execute(vector<string> args) {
+        cout << "started command" << endl;
     }
 };
 
@@ -34,6 +33,7 @@ public:
 class JoinCommand: public Command {
 public:
     virtual void execute(vector<string> args) {
+
     }
 };
 

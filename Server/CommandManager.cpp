@@ -8,11 +8,13 @@ CommandManager::CommandManager() {
     commandsMap["play"] = new StartCommand();
     commandsMap["close"] = new StartCommand();
 }
+
 void CommandManager::executeCommand(string
                                      command, vector<string> args) {
     Command *commandObj = commandsMap[command];
     commandObj->execute(args);
 }
+
 CommandManager::~CommandManager() {
     map<string, Command *>::iterator it;
     for (it = commandsMap.begin(); it !=

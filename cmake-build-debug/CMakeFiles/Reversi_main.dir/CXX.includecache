@@ -12,6 +12,14 @@ Player.h
 Cell.h
 ../ReversiGame/include/Cell.h
 
+../ReversiGame/include/AiGame.h
+GameLogic.h
+../ReversiGame/include/GameLogic.h
+AI.h
+../ReversiGame/include/AI.h
+HumanPlayer.h
+../ReversiGame/include/HumanPlayer.h
+
 ../ReversiGame/include/Board.h
 Cell.h
 ../ReversiGame/include/Cell.h
@@ -30,15 +38,21 @@ Cell.h
 Client.h
 ../ReversiGame/include/Client.h
 
-../ReversiGame/include/Game.h
+../ReversiGame/include/ConsoleDisplay.h
+Display.h
+../ReversiGame/include/Display.h
+
+../ReversiGame/include/Display.h
+iostream
+-
+
+../ReversiGame/include/GameLogic.h
+iostream
+-
 Board.h
 ../ReversiGame/include/Board.h
-HumanPlayer.h
-../ReversiGame/include/HumanPlayer.h
-AI.h
-../ReversiGame/include/AI.h
-ClientPlayer.h
-../ReversiGame/include/ClientPlayer.h
+Player.h
+../ReversiGame/include/Player.h
 
 ../ReversiGame/include/HumanPlayer.h
 Player.h
@@ -62,6 +76,20 @@ vector
 iostream
 -
 
+../ReversiGame/include/RemoteGame.h
+GameLogic.h
+../ReversiGame/include/GameLogic.h
+HumanPlayer.h
+../ReversiGame/include/HumanPlayer.h
+ClientPlayer.h
+../ReversiGame/include/ClientPlayer.h
+
+../ReversiGame/include/TwoClientsGame.h
+GameLogic.h
+../ReversiGame/include/GameLogic.h
+HumanPlayer.h
+../ReversiGame/include/HumanPlayer.h
+
 /home/leah/CLionProjects/Reversi/ReversiGame/src/AI.cpp
 AI.h
 /home/leah/CLionProjects/Reversi/ReversiGame/src/AI.h
@@ -69,6 +97,10 @@ limits
 -
 iostream
 -
+
+/home/leah/CLionProjects/Reversi/ReversiGame/src/AiGame.cpp
+AiGame.h
+/home/leah/CLionProjects/Reversi/ReversiGame/src/AiGame.h
 
 /home/leah/CLionProjects/Reversi/ReversiGame/src/Board.cpp
 Board.h
@@ -108,23 +140,9 @@ limits
 ClientPlayer.h
 /home/leah/CLionProjects/Reversi/ReversiGame/src/ClientPlayer.h
 
-/home/leah/CLionProjects/Reversi/ReversiGame/src/Game.cpp
-Game.h
-/home/leah/CLionProjects/Reversi/ReversiGame/src/Game.h
-Client.h
-/home/leah/CLionProjects/Reversi/ReversiGame/src/Client.h
-iostream
--
-fstream
--
-stdlib.h
--
-string.h
--
-string
--
-OpponentClientPlayer.h
-/home/leah/CLionProjects/Reversi/ReversiGame/src/OpponentClientPlayer.h
+/home/leah/CLionProjects/Reversi/ReversiGame/src/ConsoleDisplay.cpp
+ConsoleDisplay.h
+/home/leah/CLionProjects/Reversi/ReversiGame/src/ConsoleDisplay.h
 
 /home/leah/CLionProjects/Reversi/ReversiGame/src/HumanPlayer.cpp
 HumanPlayer.h
@@ -145,4 +163,38 @@ iostream
 -
 OpponentClientPlayer.h
 /home/leah/CLionProjects/Reversi/ReversiGame/src/OpponentClientPlayer.h
+
+/home/leah/CLionProjects/Reversi/ReversiGame/src/RemoteGame.cpp
+RemoteGame.h
+/home/leah/CLionProjects/Reversi/ReversiGame/src/RemoteGame.h
+Client.h
+/home/leah/CLionProjects/Reversi/ReversiGame/src/Client.h
+OpponentClientPlayer.h
+/home/leah/CLionProjects/Reversi/ReversiGame/src/OpponentClientPlayer.h
+iostream
+-
+fstream
+-
+stdlib.h
+-
+string.h
+-
+string
+-
+
+/home/leah/CLionProjects/Reversi/ReversiGame/src/TwoClientsGame.cpp
+TwoClientsGame.h
+/home/leah/CLionProjects/Reversi/ReversiGame/src/TwoClientsGame.h
+Client.h
+/home/leah/CLionProjects/Reversi/ReversiGame/src/Client.h
+iostream
+-
+fstream
+-
+stdlib.h
+-
+string.h
+-
+string
+-
 

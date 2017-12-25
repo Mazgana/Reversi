@@ -6,6 +6,24 @@
 
 #IncludeRegexTransform: 
 
+/home/leah/CLionProjects/Reversi/Server/ClientHandler.cpp
+CommandManager.h
+/home/leah/CLionProjects/Reversi/Server/CommandManager.h
+ClientHandler.h
+/home/leah/CLionProjects/Reversi/Server/ClientHandler.h
+sys/socket.h
+-
+netinet/in.h
+-
+unistd.h
+-
+string.h
+-
+cstdlib
+-
+
+/home/leah/CLionProjects/Reversi/Server/ClientHandler.h
+
 /home/leah/CLionProjects/Reversi/Server/Command.h
 vector
 -
@@ -27,16 +45,24 @@ Command.h
 /home/leah/CLionProjects/Reversi/Server/Main.cpp
 Server.h
 /home/leah/CLionProjects/Reversi/Server/Server.h
+CommandManager.h
+/home/leah/CLionProjects/Reversi/Server/CommandManager.h
+fstream
+-
 iostream
 -
-stdlib.h
+pthread.h
 -
-fstream
+cstdlib
 -
 
 /home/leah/CLionProjects/Reversi/Server/Server.cpp
 Server.h
 /home/leah/CLionProjects/Reversi/Server/Server.h
+CommandManager.h
+/home/leah/CLionProjects/Reversi/Server/CommandManager.h
+ClientHandler.h
+/home/leah/CLionProjects/Reversi/Server/ClientHandler.h
 sys/socket.h
 -
 netinet/in.h

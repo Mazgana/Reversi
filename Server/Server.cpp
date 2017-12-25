@@ -1,4 +1,6 @@
 #include "Server.h"
+#include "CommandManager.h"
+#include "ClientHandler.h"
 #include <sys/socket.h>
 #include <netinet/in.h>
 #include <unistd.h>
@@ -9,11 +11,18 @@
 using namespace std;
 #define MAX_CONNECTED_CLIENTS 2
 
+void *handleClient1(void *clientSocket) {
+    ClientHandler ch;
+    long tid = (long)clientSocket;
+    cout << "Hello world. It's me, thread " << tid << endl;
+    ch.handleClient((int)tid);
+}
+
 Server::Server(int port): port(port), serverSocket(0) {
 }
 
 void Server::start() {
-	serverSocket = socket(AF_INET , SOCK_STREAM , 0);
+    serverSocket = socket(AF_INET , SOCK_STREAM , 0);
 	if (serverSocket == -1) {
 		throw "Error opening socket";
 	}
@@ -31,48 +40,27 @@ void Server::start() {
 
 	listen(serverSocket, MAX_CONNECTED_CLIENTS);
 
-	while (true) {
-		struct sockaddr_in firstClientAddress;
-		socklen_t firstClientAddressLen = sizeof(firstClientAddress);
+    struct sockaddr_in clientAddress;
+    socklen_t clientAddressLen = sizeof(clientAddress);
 
-		struct sockaddr_in secondClientAddress;
-		socklen_t secondClientAddressLen = sizeof(secondClientAddress);
-
+    pthread_t thread;
+    while (true) {
 		cout << "waiting for client connections..." << endl;
 
 		//The first client login
-		int firstClientSocket = accept(serverSocket, (struct sockaddr *)&firstClientAddress, &firstClientAddressLen);
+		int clientSocket = accept(serverSocket, (struct sockaddr *)&clientAddress, &clientAddressLen);
 		cout << "Connected to server" << endl;
 
-		if (firstClientSocket == -1)
+		if (clientSocket == -1)
 			throw "Failed to connect the server";
 
-		cout << "Waiting for other player to join..." << endl;
+        int rc = pthread_create(&thread, NULL, handleClient1, (void *)clientSocket);
 
-		//The second client login
-		int secondClientSocket = accept(serverSocket, (struct sockaddr *)&secondClientAddress, &secondClientAddressLen);
-
-		cout << "Client connected" << endl;
-		if (secondClientSocket == -1)
-			throw "The other client failed to connect the server";
-
-		//Sending the clients their login order number
-		int firstClient = 1;
-		int secondClient = 2;
-
-		int x = write(firstClientSocket, &firstClient, sizeof(firstClient));
-		int o = write(secondClientSocket, &secondClient, sizeof(secondClient));
-
-		if (x == -1 || o == -1)
-			throw "Error in sending the clients messages.";
-
-		handleClient(firstClientSocket, secondClientSocket);
-
-		close(firstClientSocket);
-		close(secondClientSocket);
+        close(clientSocket);
 	}
 }
 
+/*
 // Handle requests from two clients
 void Server::handleClient(int firstClientSocket, int secondClientSocket) {
    int arg1, arg2, n, dumb;
@@ -128,8 +116,77 @@ void Server::handleClient(int firstClientSocket, int secondClientSocket) {
 		 firstClientSocket = secondClientSocket;
 		 secondClientSocket = temp;
  	 }
-}
+}*/
 
 void Server::stop() {
    close(serverSocket);
 }
+/*
+void Server::start() {
+    CommandManager CM;
+    vector<string> args;
+
+    char choice[MAX_STR];
+    serverSocket = socket(AF_INET , SOCK_STREAM , 0);
+    if (serverSocket == -1) {
+        throw "Error opening socket";
+    }
+
+    //Defining the server's settings and binding
+    struct sockaddr_in serverAddress;
+    bzero((void *)&serverAddress, sizeof(serverAddress));
+    serverAddress.sin_family = AF_INET;
+    serverAddress.sin_addr.s_addr = INADDR_ANY;
+    serverAddress.sin_port = htons(port);
+
+    if (bind(serverSocket, (struct sockaddr *)&serverAddress, sizeof(serverAddress)) == -1) {
+        throw "Error on binding";
+    }
+
+    listen(serverSocket, MAX_CONNECTED_CLIENTS);
+
+    while (true) {
+        struct sockaddr_in firstClientAddress;
+        socklen_t firstClientAddressLen = sizeof(firstClientAddress);
+
+        cout << "waiting for client connections..." << endl;
+
+        //The first client login
+        int firstClientSocket = accept(serverSocket, (struct sockaddr *)&firstClientAddress, &firstClientAddressLen);
+        cout << "Connected to server" << endl;
+
+        if (firstClientSocket == -1)
+            throw "Failed to connect the server";
+//
+        handleStarterClient(firstClientSocket, choice);
+        CM.executeCommand(choice, args);
+//
+        cout << "Waiting for other player to join..." << endl;
+
+
+        struct sockaddr_in secondClientAddress;
+        socklen_t secondClientAddressLen = sizeof(secondClientAddress);
+
+        //The second client login
+        int secondClientSocket = accept(serverSocket, (struct sockaddr *)&secondClientAddress, &secondClientAddressLen);
+
+        cout << "Client connected" << endl;
+        if (secondClientSocket == -1)
+            throw "The other client failed to connect the server";
+
+        //Sending the clients their login order number
+        int firstClient = 1;
+        int secondClient = 2;
+
+        int x = write(firstClientSocket, &firstClient, sizeof(firstClient));
+        int o = write(secondClientSocket, &secondClient, sizeof(secondClient));
+
+        if (x == -1 || o == -1)
+            throw "Error in sending the clients messages.";
+
+        handleClient(firstClientSocket, secondClientSocket);
+
+        close(firstClientSocket);
+        close(secondClientSocket);
+    }
+}*/
