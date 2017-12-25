@@ -3,11 +3,13 @@
 
 #include "GameLogic.h"
 #include "HumanPlayer.h"
+#include "Display.h"
 
 class TwoClientsGame : public GameLogic {
 private:
 	Player* blackPlayer;
 	Player* whitePlayer;
+	Display* displayer;
 
 public:
 	//constructors

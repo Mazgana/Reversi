@@ -17,7 +17,6 @@ public:
 		~GameFlow();
 
 		void run();
-		void skipTurn();
 		void endGame();
 };
 

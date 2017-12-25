@@ -39,7 +39,7 @@ void ConsoleDisplay :: printBoard(Board b) {
 }
 
 void ConsoleDisplay :: printCell(Cell c) {
-	cout << "(" << c.getRow() << ", " << c.getCol() << ")";
+	cout << "(" << c.getRow() << "," << c.getCol() << ")";
 }
 
 void ConsoleDisplay :: printNewLine() {

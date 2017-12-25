@@ -26,15 +26,7 @@ public:
     //checking if this player is a computer.
     virtual bool isComp() const = 0;
 
-    //sending message that this players turn was skipped since he has no moves.
-    virtual void skipTurn() {
-        cout << (char) getChip() << ": you have got no moves." << endl;
-        cout << "press enter to continue.." << endl;
-        cin.get();
-    	}
-
     virtual void endGame(){};
-
 };
 
 #endif /* PLAYER_H_ */
