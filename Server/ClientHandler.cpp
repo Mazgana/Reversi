@@ -12,6 +12,17 @@
 ClientHandler::ClientHandler(){}
 
 void ClientHandler :: handleClient (int firstClientSocket) {
+    int n;
+    char buffer[MAX_STR];
+    vector<string> args;
+    args.emplace_back("lord");
+    long firstClient = (long)firstClientSocket;
+    /*n = read((int)firstClient, &buffer, sizeof(buffer));
+    if (n == -1) {
+        cout << "Error reading choice" << endl;
+    }*/
+    string choice = "start";
+    CM.executeCommand(choice, args);
 /*    pthread_t thread;
     cout << "creating thread..." << endl;
     threads.push_back(thread);
@@ -25,14 +36,16 @@ void ClientHandler :: handleClient (int firstClientSocket) {
  }
 
 
-void *ClientHandler :: getChoice (void *firstClientSocket) {
+void ClientHandler :: getChoice (void *firstClientSocket) {
     int n;
     char buffer[MAX_STR];
+    vector<string> args;
+    args.emplace_back("lord");
     long firstClient = (long)firstClientSocket;
     n = read((int)firstClient, &buffer, sizeof(buffer));
     if (n == -1) {
         cout << "Error reading choice" << endl;
     }
     string choice = "start";
-    CM.executeCommand(choice, gamesList);
+    CM.executeCommand(choice, args);
 }

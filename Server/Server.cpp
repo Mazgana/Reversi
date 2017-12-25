@@ -20,7 +20,7 @@ void *handleClient1(void *clientSocket) {
 
 Server::Server(int port): port(port), serverSocket(0) {
 }
-
+/*
 void Server::start() {
     serverSocket = socket(AF_INET , SOCK_STREAM , 0);
 	if (serverSocket == -1) {
@@ -59,74 +59,69 @@ void Server::start() {
         close(clientSocket);
 	}
 }
+*/
 
-/*
-// Handle requests from two clients
 void Server::handleClient(int firstClientSocket, int secondClientSocket) {
-   int arg1, arg2, n, dumb;
-   int disconnection = -4;
+    int arg1, arg2, n, dumb;
+    int disconnection = -4;
 
-   while (true) {
-		 // Read new coordinate arguments from player
-		 n = read(firstClientSocket, &arg1, sizeof(arg1));
-		 if (n == -1) {
-				 cout << "Error reading arg1" << endl;
-				 return;
-		 }
+    while (true) {
+        // Read new coordinate arguments from player
+        n = read(firstClientSocket, &arg1, sizeof(arg1));
+        if (n == -1) {
+            cout << "Error reading arg1" << endl;
+            return;
+        }
 
-		 if (arg1 == -3)
-			 return;
+        if (arg1 == -3)
+            return;
 
-		 if (n == 0) {
-			 	write(secondClientSocket, &disconnection, sizeof(disconnection));
-				cout << "Client disconnected" << endl;
-				return;
-		 }
+        if (n == 0) {
+            write(secondClientSocket, &disconnection, sizeof(disconnection));
+            cout << "Client 1 disconnected" << endl;
+            return;
+        }
 
-		 n = read(firstClientSocket, &arg2, sizeof(arg2));
-		 if (n == -1) {
-				 cout << "Error reading arg2" << endl;
-				 return;
-		 }
+        n = read(firstClientSocket, &arg2, sizeof(arg2));
+        if (n == -1) {
+            cout << "Error reading arg2" << endl;
+            return;
+        }
 
-		 // Write the result coordinates back to the client
-		 int w = write(secondClientSocket, &arg1, sizeof(arg1));
+        // Write the result coordinates back to the client
+        int w = write(secondClientSocket, &arg1, sizeof(arg1));
 
-		 if (w == -1) {
-				cout << "Error writing to socket" << endl;
-				return;
-		 }
+        if (w == -1) {
+            cout << "Error writing to socket" << endl;
+            return;
+        }
 
-		 int check = read(secondClientSocket, &dumb, sizeof(dumb));
+        int check = read(secondClientSocket, &dumb, sizeof(dumb));
 
-		 if (check == 0) {
-			 	write(firstClientSocket, &disconnection, sizeof(disconnection));
-				cout << "Client disconnected" << endl;
-				return;
-		 }
+        if (check == 0) {
+            write(firstClientSocket, &disconnection, sizeof(disconnection));
+            cout << "Client 2 disconnected" << endl;
+            return;
+        }
 
-		 int m = write(secondClientSocket, &arg2, sizeof(arg2));
-		 if (m == -1) { //Client disconnected
-			 	write(firstClientSocket, &disconnection, sizeof(disconnection));
-				return;
-		 }
+        int m = write(secondClientSocket, &arg2, sizeof(arg2));
+        if (m == -1) { //Client disconnected
+            write(firstClientSocket, &disconnection, sizeof(disconnection));
+            return;
+        }
 
-		 //swapping the clients
-		 int temp = firstClientSocket;
-		 firstClientSocket = secondClientSocket;
-		 secondClientSocket = temp;
- 	 }
-}*/
+        //swapping the clients
+        int temp = firstClientSocket;
+        firstClientSocket = secondClientSocket;
+        secondClientSocket = temp;
+    }
+}
 
 void Server::stop() {
    close(serverSocket);
 }
-/*
-void Server::start() {
-    CommandManager CM;
-    vector<string> args;
 
-    char choice[MAX_STR];
+void Server::start() {
     serverSocket = socket(AF_INET , SOCK_STREAM , 0);
     if (serverSocket == -1) {
         throw "Error opening socket";
@@ -149,6 +144,9 @@ void Server::start() {
         struct sockaddr_in firstClientAddress;
         socklen_t firstClientAddressLen = sizeof(firstClientAddress);
 
+        struct sockaddr_in secondClientAddress;
+        socklen_t secondClientAddressLen = sizeof(secondClientAddress);
+
         cout << "waiting for client connections..." << endl;
 
         //The first client login
@@ -157,15 +155,8 @@ void Server::start() {
 
         if (firstClientSocket == -1)
             throw "Failed to connect the server";
-//
-        handleStarterClient(firstClientSocket, choice);
-        CM.executeCommand(choice, args);
-//
+
         cout << "Waiting for other player to join..." << endl;
-
-
-        struct sockaddr_in secondClientAddress;
-        socklen_t secondClientAddressLen = sizeof(secondClientAddress);
 
         //The second client login
         int secondClientSocket = accept(serverSocket, (struct sockaddr *)&secondClientAddress, &secondClientAddressLen);
@@ -189,4 +180,4 @@ void Server::start() {
         close(firstClientSocket);
         close(secondClientSocket);
     }
-}*/
+}

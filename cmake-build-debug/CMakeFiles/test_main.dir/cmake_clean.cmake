@@ -14,6 +14,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/test_main.dir/ReversiGame/src/HumanPlayer.cpp.o"
   "CMakeFiles/test_main.dir/ReversiGame/src/RemoteGame.cpp.o"
   "CMakeFiles/test_main.dir/ReversiGame/src/TwoClientsGame.cpp.o"
+  "CMakeFiles/test_main.dir/ReversiGame/src/GameFlow.cpp.o"
   "CMakeFiles/test_main.dir/ReversiGame/test/gtest_main.cpp.o"
   "test_main.pdb"
   "test_main"

@@ -6,12 +6,11 @@ class ClientHandler {
 private:
     vector<pthread_t> threads;
     CommandManager CM;
-    vector<string> gamesList;
 
 public:
     ClientHandler();
 
-    void *getChoice(void* firstClientSocket);
+    void getChoice(void* firstClientSocket);
 
     void handleClient(int firstClientSocket);
 };

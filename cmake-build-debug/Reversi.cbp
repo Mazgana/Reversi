@@ -449,6 +449,10 @@
 			<Option target="test_main"/>
 			<Option target="Reversi_main"/>
 		</Unit>
+		<Unit filename="/home/leah/CLionProjects/Reversi/ReversiGame/include/GameFlow.h">
+			<Option target="test_main"/>
+			<Option target="Reversi_main"/>
+		</Unit>
 		<Unit filename="/home/leah/CLionProjects/Reversi/ReversiGame/include/GameLogic.h">
 			<Option target="test_main"/>
 			<Option target="Reversi_main"/>
@@ -498,6 +502,10 @@
 			<Option target="Reversi_main"/>
 		</Unit>
 		<Unit filename="/home/leah/CLionProjects/Reversi/ReversiGame/src/ConsoleDisplay.cpp">
+			<Option target="test_main"/>
+			<Option target="Reversi_main"/>
+		</Unit>
+		<Unit filename="/home/leah/CLionProjects/Reversi/ReversiGame/src/GameFlow.cpp">
 			<Option target="test_main"/>
 			<Option target="Reversi_main"/>
 		</Unit>

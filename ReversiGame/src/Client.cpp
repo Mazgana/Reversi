@@ -16,7 +16,6 @@ Client::Client(const char *serverIP, int serverPort): serverIP(serverIP), server
 }
 
 Client :: ~Client() {
-	delete[] displayer;
 }
 
 void Client::connectToServer() {

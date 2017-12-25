@@ -1,24 +1,21 @@
 #include "CommandManager.h"
 
 CommandManager::CommandManager() {
-    commandsMap["print"] = new PrintCommand();
-    commandsMap["start"] = new StartCommand();
-    commandsMap["list_games"] = new StartCommand();
-    commandsMap["join"] = new StartCommand();
-    commandsMap["play"] = new StartCommand();
-    commandsMap["close"] = new StartCommand();
+    commandsMap["start"] = new StartCommand(gamesList);
+    commandsMap["list_games"] = new ListGamesCommand();
+    commandsMap["join"] = new JoinCommand();
+    commandsMap["play"] = new PlayCommand();
+    commandsMap["close"] = new CloseCommand();
 }
 
-void CommandManager::executeCommand(string
-                                     command, vector<string> args) {
+void CommandManager::executeCommand(string command, vector<string> args) {
     Command *commandObj = commandsMap[command];
     commandObj->execute(args);
 }
 
 CommandManager::~CommandManager() {
     map<string, Command *>::iterator it;
-    for (it = commandsMap.begin(); it !=
-                                   commandsMap.end(); it++) {
+    for (it = commandsMap.begin(); it != commandsMap.end(); it++) {
         delete it->second;
     }
 }
