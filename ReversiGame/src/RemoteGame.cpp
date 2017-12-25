@@ -44,11 +44,11 @@ RemoteGame::RemoteGame() {
     } else if (chip == 'O') {
         whitePlayer = new ClientPlayer(WHITE, client);
         blackPlayer = new OpponentClientPlayer(BLACK, client);
-       	}
+    }
 }
 
 RemoteGame :: ~RemoteGame() {
-		delete[] displayer;
+    delete[] displayer;
     delete[] blackPlayer;
     delete[] whitePlayer;
 }

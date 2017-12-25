@@ -5,12 +5,14 @@
 #include <map>
 #include "Command.h"
 class CommandManager {
+
 public:
     CommandManager();
     ~CommandManager();
-    void executeCommand(string command,
-                        vector<string> args);
+    void executeCommand(string command, vector<string> args);
+
 private:
+    vector<string> gamesList;
     map<string, Command *> commandsMap;
 };
 

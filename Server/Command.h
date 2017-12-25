@@ -6,26 +6,33 @@
 
 using namespace std;
 class Command {
+protected:
+    vector<string> gamesList;
+    int socket;
 public:
     virtual void execute(vector<string> args) = 0;
     virtual ~Command() {}
 };
 
+class StartCommand: public Command {
 
-class PrintCommand: public Command {
 public:
-    virtual void execute(vector<string> args) {
-        for (int i = 0; i < args.size(); i++) {
-            cout << args[i] << " ";
-        }
-        cout << endl;
+    StartCommand(vector<string> &list){
+        gamesList = list;
+//        socket = sock;
+    }
+    void execute(vector<string> args) {
+        cout << "started command" << endl;
+        string &add = args.front();
+        gamesList.push_back(add);
     }
 };
 
-class StartCommand: public Command {
+//#include "Command.h"
+class ListGamesCommand: public Command {
 public:
-    virtual void execute(vector<string> args) {
-        cout << "started command" << endl;
+    void execute(vector<string> args) {
+
     }
 };
 

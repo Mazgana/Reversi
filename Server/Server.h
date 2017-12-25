@@ -16,12 +16,7 @@ private:
 	int port;
 	int serverSocket;
 
-	//reading and writing coordinates to clients while game is running.
-	void handleClient(int clientSocket, int secondClientSocket);
-
-    void handleStarterClient(int firstClientSocket);
-
-	void handleStarterClient(int firstClientSocket, char *buffer);
+    void handleClient(int firstClientSocket, int secondClientSocket);
 };
 
 #endif /* SERVER_H_ */
