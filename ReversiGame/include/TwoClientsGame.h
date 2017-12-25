@@ -6,19 +6,20 @@
 
 class TwoClientsGame : public GameLogic {
 private:
-	Board board;
 	Player* blackPlayer;
 	Player* whitePlayer;
-	int gameType;
-
-	//calls on functions for each turn.
-	//returns true if a piece was put on board. false otherwise.
-	bool playTurn(Player *p);
 
 public:
 	//constructors
 	TwoClientsGame();
-	~TwoClientsGame();
+	~	TwoClientsGame();
+
+	//calls on functions for each turn.
+	//returns true if a piece was put on board. false otherwise.
+	bool playTurn(Player *p, Board* board);
+
+	Player* getBlackPlayer();
+	Player* getWhitePlayer();
 
 };
 #endif /* INCLUDE_TWOCLIENTSGAME_H_ */

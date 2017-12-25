@@ -14,10 +14,13 @@ class ClientPlayer : public Player {
 private:
     Status type;
     Client contactServer;
+		Display* displayer;
+
 public:
     //constructors
     ClientPlayer(Client client);
     ClientPlayer(Status color, Client client);
+    ~ClientPlayer();
 
     // passes player's char representing chip.
     Status getChip() const;

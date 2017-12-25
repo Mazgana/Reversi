@@ -5,6 +5,7 @@
 #include "Player.h"
 #include "Cell.h"
 #include "Client.h"
+#include "Display.h"
 
 using namespace std;
 /*
@@ -14,10 +15,13 @@ class OpponentClientPlayer : public Player {
 private:
     Status type;
     Client messageReceiver;
+		Display* displayer;
+
 public:
     //constructors
     OpponentClientPlayer(Client client);
     OpponentClientPlayer(Status color, Client client);
+    ~OpponentClientPlayer();
 
     // passes player's char representing chip.
     Status getChip() const;

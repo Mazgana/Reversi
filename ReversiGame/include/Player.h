@@ -12,6 +12,7 @@ using namespace std;
 class Player {
 private:
     Status type;
+
 public:
     // passes player's char representing chip.
     virtual Status getChip() const = 0;

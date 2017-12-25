@@ -1,50 +1,64 @@
 #include "HumanPlayer.h"
+#include "ConsoleDisplay.h"
 #include <limits>
 #include <iostream>
 using namespace std;
 
 HumanPlayer::HumanPlayer() {
     type = BLACK;
+		displayer = new ConsoleDisplay();
 }
 
 HumanPlayer::HumanPlayer(Status t) : type(t){
+	displayer = new ConsoleDisplay();
+}
+
+HumanPlayer :: ~HumanPlayer() {
+	delete[] displayer;
 }
 
 Cell HumanPlayer :: doTurn(vector<Cell> options) {
     int i;
-    cout << (char)type << ": It's your move." << endl;
-    cout << "your possible moves:" << endl;
+    displayer->printChar((char) type);
+    displayer->printMessageWitheNewLine(": It's your move.");
+    displayer->printMessageWitheNewLine("your possible moves:");
+
     for (i = 0; i < (int)options.size(); i++) {//getting move from console
-       cout << "(" << options[i].getRow() << "," << options[i].getCol() << ") ";
+    	displayer->printCell(options[i]);
+    	displayer->printMessage(" ");
         }
-    cout << endl << endl;
+    displayer->printNewLine();
+    displayer->printNewLine();
 
     //validating choice
     int x = 0, y = 0;
     char tempY;
     bool valid = false;
     while (!valid) {
-        cout << "Please enter your move row,col: " << endl;
+        displayer->printMessageWitheNewLine("Please enter your move row,col: ");
         cin >> x >> tempY;
         if (tempY == ',') {
         	cin >> y;
         } else {
         	y = (int) tempY - 48;
         		}
+
         if (cin.fail()) {
             cin.clear();
             cin.ignore(numeric_limits<streamsize>::max(), '\n');
-            cout << "invalid input. !" << endl;
-        }
+            displayer->printMessageWitheNewLine("Invalid input!");
+        		}
+
         for (i = 0; i < (int)options.size(); i++) {
             if (options[i].getRow() == x && options[i].getCol() == y) {
                 valid = true;
                 break;
-            }
-        }
+            			}
+        		}
+
         if (!valid) {
-            cout << "That is not an option." << endl;
-        }
+            displayer->printMessageWitheNewLine("That is not an option.");
+        		}
     }
     Cell c(x,y);//returning console choice
     return c;

@@ -10,6 +10,8 @@ O_SRCS += \
 ../Cell.o \
 ../Client.o \
 ../ClientPlayer.o \
+../ConsoleDisplay.o \
+../GameFlow.o \
 ../HumanPlayer.o \
 ../Main.o \
 ../OpponentClientPlayer.o \

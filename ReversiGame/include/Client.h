@@ -1,12 +1,18 @@
 #ifndef REVERSI_CLIENT_H
 #define REVERSI_CLIENT_H
+
+#include "Display.h"
 /*
  * Client class. connects client to server, writes and reads messages to server.
  */
 class Client {
+private:
+	Display* displayer;
+
 public:
     //constructor
     Client(const char *serverIP, int serverPort);
+    ~Client();
 
     //connecting current player to server
     void connectToServer();

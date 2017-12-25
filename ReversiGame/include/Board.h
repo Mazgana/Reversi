@@ -26,14 +26,16 @@ public:
     Board(int, int);
     Board(const Board &b);
 
+    int getLength();
+    int getWidth();
+
+    Cell getSpecificCell(int row, int col);
+
     //initializing game board with four pieces in middle of board.
     void initialize();
 
     //returns piece currently on specific board cell.
     Status reveal(int x, int y) const;
-
-    //prints cell content to console.
-    void print() const;
 
     //returns list of optional cell according to reversi game logic.
     vector <Cell> getOptions(Status player);

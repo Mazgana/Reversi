@@ -7,19 +7,21 @@
 
 class RemoteGame : public GameLogic {
 private:
-		Board board;
-		Player* blackPlayer;
-		Player* whitePlayer;
-		int gameType;
-
-	//calls on functions for each turn.
-	//returns true if a piece was put on board. false otherwise.
-	bool playTurn(Player *p);
+	Player* blackPlayer;
+	Player* whitePlayer;
+	Display* displayer;
 
 public:
 	//constructors
 	RemoteGame();
 	~RemoteGame();
+
+	//calls on functions for each turn.
+	//returns true if a piece was put on board. false otherwise.
+	bool playTurn(Player *p, Board* b);
+
+	Player* getBlackPlayer();
+	Player* getWhitePlayer();
 };
 
 #endif /* INCLUDE_REMOTEGAME_H_ */

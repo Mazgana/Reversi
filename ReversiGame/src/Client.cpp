@@ -1,4 +1,5 @@
 #include "Client.h"
+#include "ConsoleDisplay.h"
 #include <iostream>
 #include <sys/socket.h>
 #include <netinet/in.h>
@@ -10,7 +11,12 @@
 using namespace std;
 
 Client::Client(const char *serverIP, int serverPort): serverIP(serverIP), serverPort(serverPort), clientSocket(0){
-    cout << "Client" << endl;
+	displayer = new ConsoleDisplay();
+	displayer->printMessageWitheNewLine("Client");
+}
+
+Client :: ~Client() {
+	delete[] displayer;
 }
 
 void Client::connectToServer() {
@@ -43,7 +49,8 @@ void Client::connectToServer() {
     if (connect(clientSocket, (struct sockaddr *)&serverAddress, sizeof(serverAddress)) == -1) {
         throw "Error connecting to server";
     }
-    cout << "Connected to server" << endl;
+
+	displayer->printMessageWitheNewLine("Connected to server");
 }
 
 char Client::getOpeningPlayer() {
@@ -55,13 +62,13 @@ char Client::getOpeningPlayer() {
     	}
 
     if(playersPlace == 1) {
-        cout << "You are the black player X, you go first" << endl;
+    		displayer->printMessageWitheNewLine("You are the black player X, you go first");
         return 'X';
     } else if (playersPlace == 2) {
-        cout << "You are the white player O, you go second" << endl;
+    		displayer->printMessageWitheNewLine("You are the white player O, you go second");
         return 'O';
     } else {
-        cout << "got unreadable starting player from server" << endl;
+    		displayer->printMessageWitheNewLine("got unreadable starting player from server");
         return ' ';
     }
 }

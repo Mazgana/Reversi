@@ -10,15 +10,14 @@
 using namespace std;
 
 RemoteGame::RemoteGame() {
-    gameType = 3;
-    board = Board(default_lenth, default_width);
+		displayer = new ConsoleDisplay();
 
    	ifstream File;
    	std::string details;
 
    	File.open("clientConfiguration.txt");
    	if (!File) {
-   		cout << "Error in opening client configuration file." << endl;
+   		displayer->printMessageWitheNewLine("Error in opening client configuration file.");
    		exit(1);
    		}
 
@@ -34,7 +33,8 @@ RemoteGame::RemoteGame() {
     try {
         client.connectToServer();
     } catch  (const char *msg) {
-        cout << "Failed to connect to server. Reason:" << msg << endl;
+    	  displayer->printMessage("Failed to connect to server. Reason: ");
+    	  displayer->printMessageWitheNewLine(msg);
         exit(-1);
       	}
     char chip = client.getOpeningPlayer();//find first client to connect to server, set to be black player
@@ -48,12 +48,13 @@ RemoteGame::RemoteGame() {
 }
 
 RemoteGame :: ~RemoteGame() {
+		delete[] displayer;
     delete[] blackPlayer;
     delete[] whitePlayer;
 }
 
-bool RemoteGame :: playTurn(Player* p) {
-    vector<Cell> options = board.getOptions(p->getChip());
+bool RemoteGame :: playTurn(Player* p, Board* board) {
+    vector<Cell> options = board->getOptions(p->getChip());
     if (options.empty()) {
         p->skipTurn();
         return false;
@@ -64,8 +65,16 @@ bool RemoteGame :: playTurn(Player* p) {
     if (chosen.getRow() == -4)
         	return false;
 
-    board.putChip(p->getChip(), chosen.getRow(), chosen.getCol());// putting chip on board and flipping chips accordingly
-    board.cleanOptionalMovesList();
+    board->putChip(p->getChip(), chosen.getRow(), chosen.getCol());// putting chip on board and flipping chips accordingly
+    board->cleanOptionalMovesList();
 
     return true;
+}
+
+Player* RemoteGame :: getBlackPlayer() {
+	return blackPlayer;
+}
+
+Player* RemoteGame :: getWhitePlayer() {
+	return whitePlayer;
 }

@@ -26,9 +26,6 @@ public:
 	int getRow() const;
 	int getCol() const;
 
-	//Print the cell location in the following format: (row, col).
-	void printCell() const;
-
 	//fliiping chip- changing status from black to white or vice versa
 	void flip();
 };

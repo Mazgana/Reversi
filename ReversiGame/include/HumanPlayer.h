@@ -3,6 +3,8 @@
 
 #include "Player.h"
 #include "Cell.h"
+#include "Display.h"
+
 /*
  * human player, playing on current computer, using console
  */
@@ -10,11 +12,13 @@ class HumanPlayer : public Player{
 private:
     // representing player's chip color.
     Status type;
+		Display* displayer;
+
 public:
     // constructor.
     HumanPlayer();
-
     HumanPlayer(Status color);
+    ~HumanPlayer();
 
     // passes player's char representing chip.
     Status getChip() const;

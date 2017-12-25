@@ -28,6 +28,18 @@ Board::Board(const Board &b) {
 	CellArr = b.CellArr;
 }
 
+int Board :: getLength() {
+	return length;
+}
+
+int Board :: getWidth() {
+	return width;
+}
+
+Cell Board :: getSpecificCell(int row, int col) {
+	return CellArr[row][col];
+}
+
 void Board :: initialize()
 {
 	int i, j;
@@ -59,30 +71,6 @@ void Board :: putChip(Status chip, int x, int y) {
 	//making move of putting chip and calling to flipping chips accordingly.
     CellArr[x][y].setStatus(chip);
 	flipChips(chip, Cell(x,y));
-}
-
-void Board :: print() const
-{
-	int i, j, k;
-	for (i = 0; i <= length; i++) {//printing board in given format
-		for (j = 0; j <= width; j++) {
-			if ((i == 0) && (j == 0)){
-				cout << "  |";
-			} else if ((i == 0) && (j != 0)) {
-				cout << " " << j << " |";
-			} else if ((j == 0) && (i != 0)) {
-				cout << i << " |";
-			} else {
-				cout << " " << (char) CellArr[i][j].getStatus() << " |";
-			}
-		}
-
-		cout << "\n";
-		for (k = 0; k <= (width); k++) {
-			cout << "----";
-		}
-		cout << "\n";
-	}
 }
 
 vector<Cell> Board :: getOptions(Status player) {

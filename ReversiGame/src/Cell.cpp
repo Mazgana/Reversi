@@ -37,10 +37,6 @@ int Cell::getCol() const {
 	return col;
 }
 
-void Cell::printCell() const {
-	cout << "(" << row << ", " << col << ")";
-}
-
 void Cell::flip() {
   if (cellStat == BLACK) {
     	cellStat = WHITE;

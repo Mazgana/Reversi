@@ -11,6 +11,7 @@ CPP_SRCS += \
 ../src/Client.cpp \
 ../src/ClientPlayer.cpp \
 ../src/ConsoleDisplay.cpp \
+../src/GameFlow.cpp \
 ../src/HumanPlayer.cpp \
 ../src/Main.cpp \
 ../src/OpponentClientPlayer.cpp \
@@ -25,6 +26,7 @@ OBJS += \
 ./src/Client.o \
 ./src/ClientPlayer.o \
 ./src/ConsoleDisplay.o \
+./src/GameFlow.o \
 ./src/HumanPlayer.o \
 ./src/Main.o \
 ./src/OpponentClientPlayer.o \
@@ -39,6 +41,7 @@ CPP_DEPS += \
 ./src/Client.d \
 ./src/ClientPlayer.d \
 ./src/ConsoleDisplay.d \
+./src/GameFlow.d \
 ./src/HumanPlayer.d \
 ./src/Main.d \
 ./src/OpponentClientPlayer.d \
