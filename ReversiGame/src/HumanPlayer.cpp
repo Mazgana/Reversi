@@ -47,6 +47,7 @@ Cell HumanPlayer :: doTurn(vector<Cell> options) {
             cin.clear();
             cin.ignore(numeric_limits<streamsize>::max(), '\n');
             displayer->printMessageWitheNewLine("Invalid input!");
+            cin.get();
         		}
 
         for (i = 0; i < (int)options.size(); i++) {
@@ -58,6 +59,7 @@ Cell HumanPlayer :: doTurn(vector<Cell> options) {
 
         if (!valid) {
             displayer->printMessageWitheNewLine("That is not an option.");
+            cin.get();
         		}
     }
     Cell c(x,y);//returning console choice

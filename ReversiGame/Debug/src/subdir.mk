@@ -16,7 +16,7 @@ CPP_SRCS += \
 ../src/Main.cpp \
 ../src/OpponentClientPlayer.cpp \
 ../src/RemoteGame.cpp \
-../src/TwoClientsGame.cpp 
+../src/TwoHumansGame.cpp 
 
 OBJS += \
 ./src/AI.o \
@@ -31,7 +31,7 @@ OBJS += \
 ./src/Main.o \
 ./src/OpponentClientPlayer.o \
 ./src/RemoteGame.o \
-./src/TwoClientsGame.o 
+./src/TwoHumansGame.o 
 
 CPP_DEPS += \
 ./src/AI.d \
@@ -46,7 +46,7 @@ CPP_DEPS += \
 ./src/Main.d \
 ./src/OpponentClientPlayer.d \
 ./src/RemoteGame.d \
-./src/TwoClientsGame.d 
+./src/TwoHumansGame.d 
 
 
 # Each subdirectory must supply rules for building sources it contributes

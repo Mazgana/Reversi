@@ -21,6 +21,7 @@ GameFlow :: GameFlow() {
 		cin >> gameType;
 		if (gameType != 1 && gameType != 2 && gameType != 3) {
 			displayer->printMessageWitheNewLine("Invalid input. Please enter 1, 2 or 3.");
+			cin.get();
 		} else {
 			invalid = false;
 		}

@@ -1,5 +1,5 @@
-src/TwoClientsGame.o: ../src/TwoClientsGame.cpp \
- /home/adi/Reversi/ReversiGame/include/TwoClientsGame.h \
+src/TwoHumansGame.o: ../src/TwoHumansGame.cpp \
+ /home/adi/Reversi/ReversiGame/include/TwoHumansGame.h \
  /home/adi/Reversi/ReversiGame/include/GameLogic.h \
  /home/adi/Reversi/ReversiGame/include/Board.h \
  /home/adi/Reversi/ReversiGame/include/Cell.h \
@@ -9,7 +9,7 @@ src/TwoClientsGame.o: ../src/TwoClientsGame.cpp \
  /home/adi/Reversi/ReversiGame/include/HumanPlayer.h \
  /home/adi/Reversi/ReversiGame/include/Client.h
 
-/home/adi/Reversi/ReversiGame/include/TwoClientsGame.h:
+/home/adi/Reversi/ReversiGame/include/TwoHumansGame.h:
 
 /home/adi/Reversi/ReversiGame/include/GameLogic.h:
 

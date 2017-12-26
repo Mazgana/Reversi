@@ -6,7 +6,7 @@ src/GameFlow.o: ../src/GameFlow.cpp \
  /home/adi/Reversi/ReversiGame/include/Player.h \
  /home/adi/Reversi/ReversiGame/include/ConsoleDisplay.h \
  /home/adi/Reversi/ReversiGame/include/Display.h \
- /home/adi/Reversi/ReversiGame/include/TwoClientsGame.h \
+ /home/adi/Reversi/ReversiGame/include/TwoHumansGame.h \
  /home/adi/Reversi/ReversiGame/include/HumanPlayer.h \
  /home/adi/Reversi/ReversiGame/include/AiGame.h \
  /home/adi/Reversi/ReversiGame/include/AI.h \
@@ -29,7 +29,7 @@ src/GameFlow.o: ../src/GameFlow.cpp \
 
 /home/adi/Reversi/ReversiGame/include/Display.h:
 
-/home/adi/Reversi/ReversiGame/include/TwoClientsGame.h:
+/home/adi/Reversi/ReversiGame/include/TwoHumansGame.h:
 
 /home/adi/Reversi/ReversiGame/include/HumanPlayer.h:
 
