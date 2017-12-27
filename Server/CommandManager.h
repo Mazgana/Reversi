@@ -4,6 +4,8 @@
 
 #include <map>
 #include "Command.h"
+#include "StartCommand.h"
+
 class CommandManager {
 
 public:

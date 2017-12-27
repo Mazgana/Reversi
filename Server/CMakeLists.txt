@@ -12,6 +12,6 @@ set(SOURCE_FILES
         Main.cpp
         Server.cpp
         Server.h
-        serverConfiguration.txt ClientHandler.cpp ClientHandler.h)
+        serverConfiguration.txt ClientHandler.cpp ClientHandler.h StartCommand.cpp StartCommand.h ListFileManager.cpp ListFileManager.h)
 
 add_executable(Server ${SOURCE_FILES})

@@ -10,14 +10,14 @@
 
 #define MAX_STR 50
 
+pthread_mutex_t mutex1;
+
 ClientHandler::ClientHandler(){}
 
 void ClientHandler :: handleClient (int firstClientSocket) {
     int n;
     char buffer[MAX_STR];
     vector<string> args;
-
-    cout << "good" << endl;
 
     long firstClient = (long)firstClientSocket;
     n = recv((int)firstClient, buffer, MAX_STR, 0);
@@ -35,9 +35,11 @@ void ClientHandler :: handleClient (int firstClientSocket) {
     while (getline(ss, arg, ' ')) {
         args.push_back(arg);
     }
+
+    pthread_mutex_lock(&mutex1);
     string command = args[0];
     args.erase(args.begin());
+    pthread_mutex_unlock(&mutex1);
 
-    cout << "got command from client: " << command << endl;
     CM.executeCommand(command, args, firstClientSocket);
  }

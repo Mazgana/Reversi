@@ -21,6 +21,8 @@ string.h
 -
 cstdlib
 -
+sstream
+-
 
 /home/leah/CLionProjects/Reversi/Server/ClientHandler.h
 
@@ -41,6 +43,20 @@ map
 -
 Command.h
 /home/leah/CLionProjects/Reversi/Server/Command.h
+StartCommand.h
+/home/leah/CLionProjects/Reversi/Server/StartCommand.h
+
+/home/leah/CLionProjects/Reversi/Server/ListFileManager.cpp
+ListFileManager.h
+/home/leah/CLionProjects/Reversi/Server/ListFileManager.h
+
+/home/leah/CLionProjects/Reversi/Server/ListFileManager.h
+iostream
+-
+map
+-
+vector
+-
 
 /home/leah/CLionProjects/Reversi/Server/Main.cpp
 Server.h
@@ -75,6 +91,16 @@ iostream
 -
 stdio.h
 -
+vector
+-
 
 /home/leah/CLionProjects/Reversi/Server/Server.h
+
+/home/leah/CLionProjects/Reversi/Server/StartCommand.cpp
+StartCommand.h
+/home/leah/CLionProjects/Reversi/Server/StartCommand.h
+
+/home/leah/CLionProjects/Reversi/Server/StartCommand.h
+Command.h
+/home/leah/CLionProjects/Reversi/Server/Command.h
 

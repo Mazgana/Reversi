@@ -6,8 +6,10 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_CHECK_CXX
   "/home/leah/CLionProjects/Reversi/Server/ClientHandler.cpp" "/home/leah/CLionProjects/Reversi/Server/cmake-build-debug/CMakeFiles/Server.dir/ClientHandler.cpp.o"
   "/home/leah/CLionProjects/Reversi/Server/CommandManager.cpp" "/home/leah/CLionProjects/Reversi/Server/cmake-build-debug/CMakeFiles/Server.dir/CommandManager.cpp.o"
+  "/home/leah/CLionProjects/Reversi/Server/ListFileManager.cpp" "/home/leah/CLionProjects/Reversi/Server/cmake-build-debug/CMakeFiles/Server.dir/ListFileManager.cpp.o"
   "/home/leah/CLionProjects/Reversi/Server/Main.cpp" "/home/leah/CLionProjects/Reversi/Server/cmake-build-debug/CMakeFiles/Server.dir/Main.cpp.o"
   "/home/leah/CLionProjects/Reversi/Server/Server.cpp" "/home/leah/CLionProjects/Reversi/Server/cmake-build-debug/CMakeFiles/Server.dir/Server.cpp.o"
+  "/home/leah/CLionProjects/Reversi/Server/StartCommand.cpp" "/home/leah/CLionProjects/Reversi/Server/cmake-build-debug/CMakeFiles/Server.dir/StartCommand.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

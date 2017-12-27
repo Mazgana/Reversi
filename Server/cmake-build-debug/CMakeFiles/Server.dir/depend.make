@@ -5,19 +5,30 @@ CMakeFiles/Server.dir/ClientHandler.cpp.o: ../ClientHandler.cpp
 CMakeFiles/Server.dir/ClientHandler.cpp.o: ../ClientHandler.h
 CMakeFiles/Server.dir/ClientHandler.cpp.o: ../Command.h
 CMakeFiles/Server.dir/ClientHandler.cpp.o: ../CommandManager.h
+CMakeFiles/Server.dir/ClientHandler.cpp.o: ../StartCommand.h
 
 CMakeFiles/Server.dir/CommandManager.cpp.o: ../Command.h
 CMakeFiles/Server.dir/CommandManager.cpp.o: ../CommandManager.cpp
 CMakeFiles/Server.dir/CommandManager.cpp.o: ../CommandManager.h
+CMakeFiles/Server.dir/CommandManager.cpp.o: ../StartCommand.h
+
+CMakeFiles/Server.dir/ListFileManager.cpp.o: ../ListFileManager.cpp
+CMakeFiles/Server.dir/ListFileManager.cpp.o: ../ListFileManager.h
 
 CMakeFiles/Server.dir/Main.cpp.o: ../Command.h
 CMakeFiles/Server.dir/Main.cpp.o: ../CommandManager.h
 CMakeFiles/Server.dir/Main.cpp.o: ../Main.cpp
 CMakeFiles/Server.dir/Main.cpp.o: ../Server.h
+CMakeFiles/Server.dir/Main.cpp.o: ../StartCommand.h
 
 CMakeFiles/Server.dir/Server.cpp.o: ../ClientHandler.h
 CMakeFiles/Server.dir/Server.cpp.o: ../Command.h
 CMakeFiles/Server.dir/Server.cpp.o: ../CommandManager.h
 CMakeFiles/Server.dir/Server.cpp.o: ../Server.cpp
 CMakeFiles/Server.dir/Server.cpp.o: ../Server.h
+CMakeFiles/Server.dir/Server.cpp.o: ../StartCommand.h
+
+CMakeFiles/Server.dir/StartCommand.cpp.o: ../Command.h
+CMakeFiles/Server.dir/StartCommand.cpp.o: ../StartCommand.cpp
+CMakeFiles/Server.dir/StartCommand.cpp.o: ../StartCommand.h
 

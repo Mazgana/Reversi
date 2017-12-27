@@ -14,20 +14,6 @@ public:
     virtual ~Command() {}
 };
 
-class StartCommand: public Command {
-
-public:
-    StartCommand(vector<string> &list){
-        gamesList = list;
-//        socket = sock;
-    }
-    void execute(vector<string> args) {
-        cout << "started command" << endl;
-        string &add = args.front();
-        gamesList.push_back(add);
-    }
-};
-
 //#include "Command.h"
 class ListGamesCommand: public Command {
 public:

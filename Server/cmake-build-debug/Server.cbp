@@ -99,6 +99,12 @@
 		<Unit filename="/home/leah/CLionProjects/Reversi/Server/CommandManager.h">
 			<Option target="Server"/>
 		</Unit>
+		<Unit filename="/home/leah/CLionProjects/Reversi/Server/ListFileManager.cpp">
+			<Option target="Server"/>
+		</Unit>
+		<Unit filename="/home/leah/CLionProjects/Reversi/Server/ListFileManager.h">
+			<Option target="Server"/>
+		</Unit>
 		<Unit filename="/home/leah/CLionProjects/Reversi/Server/Main.cpp">
 			<Option target="Server"/>
 		</Unit>
@@ -106,6 +112,12 @@
 			<Option target="Server"/>
 		</Unit>
 		<Unit filename="/home/leah/CLionProjects/Reversi/Server/Server.h">
+			<Option target="Server"/>
+		</Unit>
+		<Unit filename="/home/leah/CLionProjects/Reversi/Server/StartCommand.cpp">
+			<Option target="Server"/>
+		</Unit>
+		<Unit filename="/home/leah/CLionProjects/Reversi/Server/StartCommand.h">
 			<Option target="Server"/>
 		</Unit>
 		<Unit filename="/home/leah/CLionProjects/Reversi/Server/serverConfiguration.txt">
