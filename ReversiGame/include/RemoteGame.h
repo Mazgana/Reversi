@@ -19,11 +19,11 @@ public:
 	// The client choose his action - start new game, get list of games or join to an on going game.
 	int chooseSeverOption();
 
-	char startNewGame(Client client);
+	int startNewGame(Client client);
 
-	void printListOfGames();
+	void printListOfGames(Client client);
 
-	char joinGame();
+	int joinGame(Client client);
 
 	//calls on functions for each turn.
 	//returns true if a piece was put on board. false otherwise.

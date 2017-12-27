@@ -95,8 +95,8 @@ void Client::sendMove(int x, int y) {
 
 int Client :: sendCommandMessage(string message) {
 		int serverResponse;
-		//Sending the server the user's command
 
+		//Sending the server the user's command
 		int n =	send(clientSocket, message.c_str(), message.length(), 0);
 
     if (n == -1) {
@@ -116,4 +116,27 @@ void Client::attending(int mes) {
     if (n == -1) {
         throw "Error writing x to socket";
     }
+}
+
+vector<string> Client :: reciveStringList(string messageToServer) {
+	vector<string> list;
+    char line[MAX_STR] = "";
+
+		//Sending the server the user's command
+		int n =	send(clientSocket, messageToServer.c_str(), messageToServer.length(), 0);
+
+		if (n == -1) {
+			throw "Error writing message to socket.";
+		}
+
+    while (line != '\0') {
+			int n = recv((int)clientSocket, line, MAX_STR, 0);
+			if (n == -1) {
+				cout << "Error reading choice" << endl;
+			}
+
+			list.push_back(line);
+    	}
+
+    return list;
 }

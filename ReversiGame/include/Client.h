@@ -3,6 +3,8 @@
 
 #include "Display.h"
 
+#define MAX_STR 50
+
 /*
  * Client class. connects client to server, writes and reads messages to server.
  */
@@ -27,6 +29,8 @@ public:
     int receiveCoordinate();
 
     void attending(int mes);
+
+    vector<string> reciveStringList(string messageToServer);
 
 private:
     const char *serverIP;

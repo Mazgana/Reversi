@@ -7,8 +7,6 @@
 #include <string.h>
 #include <string>
 
-#define MAX_LEN 50
-
 using namespace std;
 
 RemoteGame::RemoteGame() {
@@ -45,9 +43,9 @@ RemoteGame::RemoteGame() {
     if(clientChoice == 1)
     		startNewGame(client);
     else if (clientChoice == 2)
-    		printListOfGames();
+    		printListOfGames(client);
     else
-    		joinGame();
+    		joinGame(client);
 
 
     char chip = client.getOpeningPlayer();//find first client to connect to server, set to be black player
@@ -78,9 +76,9 @@ int RemoteGame :: chooseSeverOption() {
 
 		while (invalid) { //validating user's choice.
 			choice = displayer->getInt();
-			if (choice != 1 && choice != 2 && choice != 3) {
+			if (choice != 1 || choice != 2 || choice != 3) {
 				displayer->printMessageWitheNewLine("Invalid input. Please enter 1, 2 or 3.");
-				displayer->getBufferContent();
+				displayer->clearBuffer();
 			} else {
 				invalid = false;
 			}
@@ -89,30 +87,41 @@ int RemoteGame :: chooseSeverOption() {
 		return choice;
 }
 
-char RemoteGame :: startNewGame(Client client) {
-	string gameName;
-	int serverResponse = 0;
+int RemoteGame :: startNewGame(Client client) {
+		string gameName;
+		int serverResponse = 0;
 
-	displayer->printMessageWitheNewLine("Please enter your new game's name:");
-	while (serverResponse != 1) {
+		displayer->printMessageWitheNewLine("Please enter your new game's name:");
 		gameName = displayer->getString();
 
 		string startCommand = "start " + gameName;
 		serverResponse = client.sendCommandMessage(startCommand);
 
-		if (serverResponse == -1) {
-			displayer->printMessageWitheNewLine("Game already exists, please retry with new name:");
+		return serverResponse;
+}
+
+void RemoteGame :: printListOfGames(Client client) {
+		vector<string> listOfGames;
+
+		string listCommand = "list_games ";
+		listOfGames = client.reciveStringList(listCommand);
+
+		for (int i = 0; i < (int) listOfGames.size(); i++) {
+			displayer->printMessageWitheNewLine(listOfGames[i]);
 		}
-	}
-
-	return 'X';
 }
 
-void RemoteGame :: printListOfGames() {
-	string listCommand = "list_games ";
-}
+int RemoteGame :: joinGame(Client client) {
+		string gameName;
+		int serverResponse = 0;
 
-char RemoteGame :: joinGame() {
+		displayer->printMessageWitheNewLine("Which game you would like to join:");
+		gameName = displayer->getString();
+
+		string joinCommand = "join " + gameName;
+		serverResponse = client.sendCommandMessage(joinCommand);
+
+		return serverResponse;
 
 }
 
