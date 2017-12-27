@@ -16,7 +16,8 @@ private:
 	int port;
 	int serverSocket;
 
-    void handleClient(int firstClientSocket, int secondClientSocket);
+	void handleClient(int firstClientSocket, int secondClientSocket);
+
 };
 
 #endif /* SERVER_H_ */

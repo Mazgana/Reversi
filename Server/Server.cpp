@@ -12,18 +12,12 @@
 using namespace std;
 #define MAX_CONNECTED_CLIENTS 2
 
-void *handleClient1(void *clientSocket) {
-    ClientHandler ch;
-    long tid = (long)clientSocket;
-    cout << "Hello world. It's me, thread " << tid << endl;
-    ch.handleClient((int)tid);
-}
-
 Server::Server(int port): port(port), serverSocket(0) {
 }
 
 
 void Server::start() {
+    ClientHandler ch;
 		vector<int> listOfSockets;
 
 	  serverSocket = socket(AF_INET , SOCK_STREAM , 0);
@@ -48,8 +42,6 @@ void Server::start() {
 	  socklen_t clientAddressLen = sizeof(clientAddress);
 
 	  while (true) {
-            pthread_t thread;
-
 			cout << "waiting for client connections..." << endl;
 
 			//The first client login
@@ -60,8 +52,7 @@ void Server::start() {
 				throw "Failed to connect the server";
 
 			listOfSockets.push_back(clientSocket);
-
-			int rc = pthread_create(&thread, NULL, handleClient1, (void *)clientSocket);
+			ch.createNewThread(clientSocket);
 		}
 
 	  for (int i = 0; i < (int) listOfSockets.size(); i++) {

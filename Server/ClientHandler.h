@@ -3,6 +3,9 @@
 
 #define MAX_STR 50
 
+#include <map>
+static map<string, int> GameList;
+
 class ClientHandler {
 private:
     vector<pthread_t> threads;
@@ -14,6 +17,8 @@ public:
     void getChoice(void* firstClientSocket);
 
     void handleClient(int firstClientSocket);
+
+    void createNewThread(int socketId);
 };
 
 

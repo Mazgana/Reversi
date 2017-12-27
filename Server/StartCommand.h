@@ -12,7 +12,7 @@ class StartCommand: public Command {
 
 public:
     StartCommand();
-    void execute(string gameName, int socketID);
+    void execute(string gameName, int socketID, map<string, int> &gameList);
 };
 
 #endif //SERVER_STARTCOMMAND_H

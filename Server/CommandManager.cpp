@@ -4,14 +4,14 @@
 CommandManager::CommandManager() {
     commandsMap["start"] = new StartCommand();
     commandsMap["list_games"] = new ListGamesCommand();
-    commandsMap["join"] = new JoinCommand();
-    commandsMap["play"] = new PlayCommand();
-    commandsMap["close"] = new CloseCommand();
+//    commandsMap["join"] = new JoinCommand();
+//    commandsMap["play"] = new PlayCommand();
+//    commandsMap["close"] = new CloseCommand();
 }
 
-void CommandManager::executeCommand(string command, string gameName, int socketID) {
+void CommandManager::executeCommand(string command, string gameName, int socketID, map<string, int> &gameList) {
     Command *commandObj = commandsMap[command];
-    commandObj->execute(gameName, socketID);
+    commandObj->execute(gameName, socketID, gameList);
 }
 
 CommandManager::~CommandManager() {

@@ -10,8 +10,6 @@
 
 using namespace std;
 
-static map<string, int> GameList;
-
 class CommandManager {
 private:
 //    vector<string> gamesList;
@@ -19,7 +17,7 @@ private:
 public:
     CommandManager();
     ~CommandManager();
-    void executeCommand(string command, string gameName, int socketID);
+    void executeCommand(string command, string gameName, int socketID, map<string, int> &gameList);
 };
 
 #endif //SERVER_COMMANDMANAGER_H

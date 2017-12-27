@@ -1,12 +1,13 @@
 #include <unistd.h>
 #include <sys/socket.h>
 #include "StartCommand.h"
+#include <map>
 
 StartCommand::StartCommand() {
 
 }
 
-void StartCommand::execute(string gameName, int socketID) {
+void StartCommand::execute(string gameName, int socketID, map<string, int> &GameList) {
     string name = gameName;
     while(GameList.count(name)) {
         int fail = -1;
@@ -24,6 +25,7 @@ void StartCommand::execute(string gameName, int socketID) {
     }
 
     GameList[name] = socketID;
+
     int success = 1;
     int m = write(socketID, &success, sizeof(success));
     if (m == -1) {
