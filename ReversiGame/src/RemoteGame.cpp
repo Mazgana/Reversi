@@ -41,7 +41,7 @@ RemoteGame::RemoteGame() {
     int clientChoice = chooseSeverOption();
 
     if(clientChoice == 1)
-    		startNewGame();
+    		startNewGame(client);
     else if (clientChoice == 2)
     		printListOfGames();
     else

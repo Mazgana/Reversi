@@ -58,9 +58,9 @@ void Server::start() {
 		if (clientSocket == -1)
 			throw "Failed to connect the server";
 
-	  listOfSockets.push_back(clientSocket);
+        listOfSockets.push_back(clientSocket);
 
-    int rc = pthread_create(&thread, NULL, handleClient1, (void *)clientSocket);
+        int rc = pthread_create(&thread, NULL, handleClient1, (void *)clientSocket);
 	}
 
   for (int i = 0; i < (int) listOfSockets.size(); i++) {
