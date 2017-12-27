@@ -9,7 +9,7 @@ class CommandManager {
 public:
     CommandManager();
     ~CommandManager();
-    void executeCommand(string command, vector<string> args);
+    void executeCommand(string command, vector<string> args, int socketID);
 
 private:
     vector<string> gamesList;

@@ -8,7 +8,7 @@ CommandManager::CommandManager() {
     commandsMap["close"] = new CloseCommand();
 }
 
-void CommandManager::executeCommand(string command, vector<string> args) {
+void CommandManager::executeCommand(string command, vector<string> args, int socketID) {
     Command *commandObj = commandsMap[command];
     commandObj->execute(args);
 }
