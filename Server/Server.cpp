@@ -47,9 +47,9 @@ void Server::start() {
 	  struct sockaddr_in clientAddress;
 	  socklen_t clientAddressLen = sizeof(clientAddress);
 
-	  pthread_t thread;
-
 	  while (true) {
+            pthread_t thread;
+
 			cout << "waiting for client connections..." << endl;
 
 			//The first client login

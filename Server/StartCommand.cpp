@@ -14,15 +14,14 @@ void StartCommand::execute(string gameName, int socketID) {
         if (w == -1) {
             cout << "Error writing to socket" << endl;
             return;
-				}
-
-				char buffer[MAX_STR];
-				int n = recv(socketID, buffer, MAX_STR, 0);
-				if (n == -1) {
-					cout << "Error reading choice" << endl;
-				}
-				name = buffer;
-			}
+        }
+        char buffer[MAX_STR];
+        int n = recv(socketID, buffer, MAX_STR, 0);
+        if (n == -1) {
+            cout << "Error reading choice" << endl;
+        }
+        name = buffer;
+    }
 
     GameList[name] = socketID;
     int success = 1;
