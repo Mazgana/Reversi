@@ -26,4 +26,5 @@ SUBDIRS := \
 gtest_src/gtest \
 src \
 test \
+. \
 

@@ -8,7 +8,7 @@ using namespace std;
 int main() {
 
 	ifstream File;
-	std::string details;
+	string details;
 
 	File.open("serverConfiguration.txt");
 	if (!File) {
@@ -16,9 +16,9 @@ int main() {
 		exit(1);
     }
 
-	std::getline(File,details);
-	std::size_t pos = details.find("Port: ");
-	std::string port = details.substr (pos + 6);
+	getline(File,details);
+	size_t pos = details.find("Port: ");
+	string port = details.substr (pos + 6);
 	int portNum = atoi(port.c_str());
 
 	//create server with specified IP and starting it

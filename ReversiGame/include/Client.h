@@ -2,13 +2,11 @@
 #define REVERSI_CLIENT_H
 
 #include "Display.h"
+
 /*
  * Client class. connects client to server, writes and reads messages to server.
  */
 class Client {
-private:
-	Display* displayer;
-
 public:
     //constructor
     Client(const char *serverIP, int serverPort);
@@ -23,7 +21,7 @@ public:
     //send chosen move to other client
     void sendMove(int i, int i1);
 
-    int sendCommandMessage(std::string message);
+    int sendCommandMessage(string message);
 
     //receive move just done by other client player
     int receiveCoordinate();
@@ -34,6 +32,8 @@ private:
     const char *serverIP;
     int serverPort;
     int clientSocket;
+
+		Display* displayer;
 };
 
 #endif //REVERSI_CLIENT_H

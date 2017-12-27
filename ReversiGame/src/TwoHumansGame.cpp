@@ -24,7 +24,7 @@ bool TwoClientsGame :: playTurn(Player* p, Board* board) {
 				displayer->printChar((char) p->getChip());
 				displayer->printMessageWitheNewLine(": you have got no moves.");
 				displayer->printMessageWitheNewLine("press enter to continue..");
-				cin.get();
+				displayer->getBufferContent();
 
         return false;
     }//no moves can be done, turn passes to other player

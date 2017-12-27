@@ -36,18 +36,19 @@ Cell HumanPlayer :: doTurn(vector<Cell> options) {
     bool valid = false;
     while (!valid) {
         displayer->printMessageWitheNewLine("Please enter your move row,col: ");
-        cin >> x >> tempY;
+        x = displayer->getInt();
+        tempY = displayer->getInt();
         if (tempY == ',') {
-        	cin >> y;
+        	y = displayer->getInt();
         } else {
         	y = (int) tempY - 48;
         		}
 
-        if (cin.fail()) {
-            cin.clear();
-            cin.ignore(numeric_limits<streamsize>::max(), '\n');
+        if (displayer->isInputFailed()) {
+            displayer->clearBuffer();
+            displayer->ignoreInput('\n');
             displayer->printMessageWitheNewLine("Invalid input!");
-            cin.get();
+            displayer->getBufferContent();
         		}
 
         for (i = 0; i < (int)options.size(); i++) {

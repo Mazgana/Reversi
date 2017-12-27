@@ -18,10 +18,10 @@ GameFlow :: GameFlow() {
 	displayer->printMessageWitheNewLine("3. a remote player");
 
 	while (invalid) {//validating users game choice.
-		cin >> gameType;
+		gameType = displayer->getInt();
 		if (gameType != 1 && gameType != 2 && gameType != 3) {
 			displayer->printMessageWitheNewLine("Invalid input. Please enter 1, 2 or 3.");
-			cin.get();
+			displayer->getBufferContent();
 		} else {
 			invalid = false;
 		}

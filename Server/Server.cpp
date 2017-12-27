@@ -24,7 +24,7 @@ Server::Server(int port): port(port), serverSocket(0) {
 
 
 void Server::start() {
-	std::vector<int> listOfSockets;
+	vector<int> listOfSockets;
 
   serverSocket = socket(AF_INET , SOCK_STREAM , 0);
 	if (serverSocket == -1) {

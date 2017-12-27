@@ -36,18 +36,19 @@ Cell ClientPlayer :: doTurn(vector<Cell> options) {
     bool valid = false;
     while (!valid) {
     		displayer->printMessageWitheNewLine("Please enter your move row,col: ");
-        cin >> x >> tempY;
+    		x = displayer->getInt();
+    		tempY = displayer->getInt();
         if (tempY == ',') {
-            cin >> y;
+            y = displayer->getInt();
         } else {
             y = (int) tempY - 48;
         		}
 
-        if (cin.fail()) {
-            cin.clear();
-            cin.ignore(numeric_limits<streamsize>::max(), '\n');
+        if (displayer->isInputFailed()) {
+        		displayer->clearBuffer();
+            displayer->ignoreInput('\n');
     				displayer->printMessageWitheNewLine("Invalid input!");
-    				cin.get();
+    				displayer->getBufferContent();
         		}
 
         for (i = 0; i < (int)options.size(); i++) {
@@ -59,7 +60,7 @@ Cell ClientPlayer :: doTurn(vector<Cell> options) {
 
         if (!valid) {
 					displayer->printMessageWitheNewLine("That is not an option.");
-					cin.get();
+					displayer->getBufferContent();
         		}
     }
     Cell c(x,y);//returning console choice
@@ -89,7 +90,7 @@ void ClientPlayer::skipTurn() {
 		displayer->printNewLine();
 
 		displayer->printMessageWitheNewLine("press enter to continue..");
-		cin.get();
+		displayer->getBufferContent();
 
     //sending random move so server knows to skip turn.
     contactServer.sendMove(-2,-2);
