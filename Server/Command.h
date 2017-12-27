@@ -7,7 +7,7 @@
 
 using namespace std;
 
-map<string, int> GameList;
+static map<string, int> GameList;
 
 class Command {
 protected:

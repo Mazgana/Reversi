@@ -1,4 +1,5 @@
 #include "CommandManager.h"
+#include "ListGamesCommand.h"
 
 CommandManager::CommandManager() {
     commandsMap["start"] = new StartCommand();
@@ -10,7 +11,7 @@ CommandManager::CommandManager() {
 
 void CommandManager::executeCommand(string command, string gameName, int socketID) {
     Command *commandObj = commandsMap[command];
-    commandObj->execute(gameName, socketID, lfm);
+    commandObj->execute(gameName, socketID);
 }
 
 CommandManager::~CommandManager() {

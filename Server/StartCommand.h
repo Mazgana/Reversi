@@ -2,11 +2,11 @@
 #define SERVER_STARTCOMMAND_H
 
 #include "Command.h"
-#include <mutex>
+#include <pthread.h>
 
 #define MAX_STR 50
 
-pthread_mutex_t start_mutex;
+//pthread_mutex_t start_mutex;
 
 class StartCommand: public Command {
 
