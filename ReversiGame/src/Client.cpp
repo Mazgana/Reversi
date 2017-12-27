@@ -98,7 +98,8 @@ int Client :: sendCommandMessage(std::string message) {
 		int serverResponse;
 		//Sending the server the user's command
 
-    int n = write(clientSocket, &message, sizeof(message));
+		int n =	send(clientSocket, message.c_str(), message.length(), 0);
+
     if (n == -1) {
         throw "Error writing message to socket.";
     	}
