@@ -4,32 +4,17 @@
 
 # Add inputs and outputs from these tool invocations to the build variables 
 CPP_SRCS += \
-../ClientHandler.cpp \
-../CommandManager.cpp \
-../ListGamesCommand.cpp \
-../Main.cpp \
-../Server.cpp \
-../StartCommand.cpp 
+../test/gtest_main.cpp 
 
 OBJS += \
-./ClientHandler.o \
-./CommandManager.o \
-./ListGamesCommand.o \
-./Main.o \
-./Server.o \
-./StartCommand.o 
+./test/gtest_main.o 
 
 CPP_DEPS += \
-./ClientHandler.d \
-./CommandManager.d \
-./ListGamesCommand.d \
-./Main.d \
-./Server.d \
-./StartCommand.d 
+./test/gtest_main.d 
 
 
 # Each subdirectory must supply rules for building sources it contributes
-%.o: ../%.cpp
+test/%.o: ../test/%.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: Cross G++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@)" -o "$@" "$<"
