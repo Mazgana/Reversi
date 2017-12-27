@@ -41,7 +41,7 @@ RemoteGame::RemoteGame() {
     int clientChoice = chooseSeverOption();
 
     if(clientChoice == 1)
-    		startNewGame();
+    		startNewGame(client);
     else if (clientChoice == 2)
     		printListOfGames();
     else
@@ -89,11 +89,20 @@ int RemoteGame :: chooseSeverOption() {
 
 char RemoteGame :: startNewGame(Client client) {
 	std::string gameName;
-	displayer->printMessageWitheNewLine("Please enter your new game's name:");
-	cin >> gameName;
+	int serverResponse = 0;
 
-	std::string startCommand = "Start <" + gameName + ">";
-	client.sendCommandMessage(startCommand);
+	displayer->printMessageWitheNewLine("Please enter your new game's name:");
+	while (serverResponse != 1) {
+		cin >> gameName;
+
+		std::string startCommand = "Start <" + gameName + ">";
+		serverResponse = client.sendCommandMessage(startCommand);
+		if (serverResponse == -1) {
+			displayer->printMessageWitheNewLine("Game already exists, please retry with new name:");
+		}
+	}
+
+	return 'X';
 }
 
 void RemoteGame :: printListOfGames() {

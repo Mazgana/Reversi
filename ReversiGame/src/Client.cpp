@@ -95,12 +95,20 @@ void Client::sendMove(int x, int y) {
 }
 
 int Client :: sendCommandMessage(std::string message) {
+		int serverResponse;
 		//Sending the server the user's command
 
     int n = write(clientSocket, &message, sizeof(message));
     if (n == -1) {
-        throw "Error writing x to socket";
+        throw "Error writing message to socket.";
     	}
+
+    n = read(clientSocket, &serverResponse, sizeof(serverResponse));
+    if (n == -1) {
+        throw "Error reading response from socket.";
+    	}
+
+    return serverResponse;
 }
 
 void Client::attending(int mes) {
