@@ -16,7 +16,6 @@ void ClientHandler :: handleClient (int firstClientSocket) {
     string command = "get_list";
 
     while(command.compare("get_list")) {
-        pthread_mutex_lock(&mutex1);
         long firstClient = (long) firstClientSocket;
         n = recv((int) firstClient, buffer, MAX_STR, 0);
         if (n == -1) {
@@ -39,7 +38,6 @@ void ClientHandler :: handleClient (int firstClientSocket) {
         if (tokens.size() > 0) {
             gameName = tokens[1];
         }
-        pthread_mutex_unlock(&mutex1);
 
         cout << "got command from client: " << command << endl;
 
