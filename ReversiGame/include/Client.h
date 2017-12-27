@@ -23,7 +23,7 @@ public:
     //send chosen move to other client
     void sendMove(int i, int i1);
 
-    int sendCommandMessage(char* message);
+    int sendCommandMessage(std::string message);
 
     //receive move just done by other client player
     int receiveCoordinate();

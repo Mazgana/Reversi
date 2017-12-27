@@ -91,17 +91,17 @@ int RemoteGame :: chooseSeverOption() {
 
 char RemoteGame :: startNewGame(Client client) {
 	std::string gameName;
-	char command[MAX_LEN];
+//	char command[MAX_LEN];
 	int serverResponse = 0;
 
 	displayer->printMessageWitheNewLine("Please enter your new game's name:");
 	while (serverResponse != 1) {
 		cin >> gameName;
 
-		std::string startCommand = "start <" + gameName + ">";
-		strcpy(command, startCommand.c_str());
+		std::string startCommand = "start " + gameName;
+//		strcpy(command, startCommand.c_str());
 
-		serverResponse = client.sendCommandMessage(command);
+		serverResponse = client.sendCommandMessage(startCommand);
 
 		if (serverResponse == -1) {
 			displayer->printMessageWitheNewLine("Game already exists, please retry with new name:");
