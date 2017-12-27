@@ -15,7 +15,8 @@ void ClientHandler :: handleClient (int firstClientSocket) {
     char buffer[MAX_STR] = "";
     string command = "get_list";
 
-    while(command.compare("get_list")) {
+    cout << "handling" << endl;
+    while(!command.compare("get_list")) {
         long firstClient = (long) firstClientSocket;
         n = recv((int) firstClient, buffer, MAX_STR, 0);
         if (n == -1) {

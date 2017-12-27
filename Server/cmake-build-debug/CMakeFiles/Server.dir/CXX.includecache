@@ -109,6 +109,6 @@ StartCommand.h
 /home/leah/CLionProjects/Reversi/Server/StartCommand.h
 Command.h
 /home/leah/CLionProjects/Reversi/Server/Command.h
-mutex
+pthread.h
 -
 
