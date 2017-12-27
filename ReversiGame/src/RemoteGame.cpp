@@ -7,6 +7,8 @@
 #include <string.h>
 #include <string>
 
+#define MAX_LEN 50
+
 using namespace std;
 
 RemoteGame::RemoteGame() {
@@ -89,14 +91,18 @@ int RemoteGame :: chooseSeverOption() {
 
 char RemoteGame :: startNewGame(Client client) {
 	std::string gameName;
+	char command[MAX_LEN];
 	int serverResponse = 0;
 
 	displayer->printMessageWitheNewLine("Please enter your new game's name:");
 	while (serverResponse != 1) {
 		cin >> gameName;
 
-		std::string startCommand = "Start <" + gameName + ">";
-		serverResponse = client.sendCommandMessage(startCommand);
+		std::string startCommand = "start <" + gameName + ">";
+		strcpy(command, startCommand.c_str());
+
+		serverResponse = client.sendCommandMessage(command);
+
 		if (serverResponse == -1) {
 			displayer->printMessageWitheNewLine("Game already exists, please retry with new name:");
 		}

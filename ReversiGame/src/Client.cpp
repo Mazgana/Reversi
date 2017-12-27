@@ -94,7 +94,7 @@ void Client::sendMove(int x, int y) {
     }
 }
 
-int Client :: sendCommandMessage(std::string message) {
+int Client :: sendCommandMessage(char* message) {
 		int serverResponse;
 		//Sending the server the user's command
 
