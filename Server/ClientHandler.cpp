@@ -15,7 +15,7 @@ void ClientHandler :: handleClient (int firstClientSocket) {
     int n;
     char buffer[MAX_STR];
     vector<string> args;
-    args.emplace_back("lord");
+//    args.emplace_back("lord");
     long firstClient = (long)firstClientSocket;
     /*n = read((int)firstClient, &buffer, sizeof(buffer));
     if (n == -1) {
@@ -40,7 +40,7 @@ void ClientHandler :: getChoice (void *firstClientSocket) {
     int n;
     char buffer[MAX_STR];
     vector<string> args;
-    args.emplace_back("lord");
+//    args.emplace_back("lord");
     long firstClient = (long)firstClientSocket;
     n = read((int)firstClient, &buffer, sizeof(buffer));
     if (n == -1) {

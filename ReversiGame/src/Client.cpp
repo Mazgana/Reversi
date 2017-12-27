@@ -87,11 +87,20 @@ void Client::sendMove(int x, int y) {
     int n = write(clientSocket, &x, sizeof(x));
     if (n == -1) {
         throw "Error writing x to socket";
-    }
+    	}
     n = write(clientSocket, &y, sizeof(y));
     if (n == -1) {
         throw "Error writing y to socket";
     }
+}
+
+int Client :: sendCommandMessage(std::string message) {
+		//Sending the server the user's command
+
+    int n = write(clientSocket, &message, sizeof(message));
+    if (n == -1) {
+        throw "Error writing x to socket";
+    	}
 }
 
 void Client::attending(int mes) {

@@ -37,6 +37,17 @@ RemoteGame::RemoteGame() {
     	  displayer->printMessageWitheNewLine(msg);
         exit(-1);
       	}
+
+    int clientChoice = chooseSeverOption();
+
+    if(clientChoice == 1)
+    		startNewGame();
+    else if (clientChoice == 2)
+    		printListOfGames();
+    else
+    		joinGame();
+
+
     char chip = client.getOpeningPlayer();//find first client to connect to server, set to be black player
     if(chip == 'X') {
         blackPlayer = new ClientPlayer(BLACK, client);
@@ -51,6 +62,46 @@ RemoteGame :: ~RemoteGame() {
     delete[] displayer;
     delete[] blackPlayer;
     delete[] whitePlayer;
+}
+
+int RemoteGame :: chooseSeverOption() {
+		int choice = 0;
+		bool invalid = true;
+
+		displayer->printNewLine();
+		displayer->printMessageWitheNewLine("Please choose your action:");
+		displayer->printMessageWitheNewLine("1. Start new game.");
+		displayer->printMessageWitheNewLine("2. Get list of games.");
+		displayer->printMessageWitheNewLine("3. Join to an on going game.");
+
+		while (invalid) { //validating user's choice.
+			cin >> choice;
+			if (choice != 1 && choice != 2 && choice != 3) {
+				displayer->printMessageWitheNewLine("Invalid input. Please enter 1, 2 or 3.");
+				cin.get();
+			} else {
+				invalid = false;
+			}
+		}
+
+		return choice;
+}
+
+char RemoteGame :: startNewGame(Client client) {
+	std::string gameName;
+	displayer->printMessageWitheNewLine("Please enter your new game's name:");
+	cin >> gameName;
+
+	std::string startCommand = "Start <" + gameName + ">";
+	client.sendCommandMessage(startCommand);
+}
+
+void RemoteGame :: printListOfGames() {
+
+}
+
+char RemoteGame :: joinGame() {
+
 }
 
 bool RemoteGame :: playTurn(Player* p, Board* board) {

@@ -20,5 +20,4 @@ public:
 	void printNewLine();
 };
 
-
 #endif /* INCLUDE_CONSOLEDISPLAY_H_ */

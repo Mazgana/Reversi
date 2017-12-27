@@ -69,7 +69,7 @@ Status Board ::reveal(int x, int y) const {
 
 void Board :: putChip(Status chip, int x, int y) {
 	//making move of putting chip and calling to flipping chips accordingly.
-    CellArr[x][y].setStatus(chip);
+  CellArr[x][y].setStatus(chip);
 	flipChips(chip, Cell(x,y));
 }
 

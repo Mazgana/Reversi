@@ -7,6 +7,7 @@
 #include <string.h>
 #include <iostream>
 #include <stdio.h>
+#include <vector>
 
 using namespace std;
 #define MAX_CONNECTED_CLIENTS 2
@@ -20,9 +21,11 @@ void *handleClient1(void *clientSocket) {
 
 Server::Server(int port): port(port), serverSocket(0) {
 }
-/*
+
 void Server::start() {
-    serverSocket = socket(AF_INET , SOCK_STREAM , 0);
+	std::vector<int> listOfSockets;
+
+  serverSocket = socket(AF_INET , SOCK_STREAM , 0);
 	if (serverSocket == -1) {
 		throw "Error opening socket";
 	}
@@ -40,11 +43,12 @@ void Server::start() {
 
 	listen(serverSocket, MAX_CONNECTED_CLIENTS);
 
-    struct sockaddr_in clientAddress;
-    socklen_t clientAddressLen = sizeof(clientAddress);
+  struct sockaddr_in clientAddress;
+  socklen_t clientAddressLen = sizeof(clientAddress);
 
-    pthread_t thread;
-    while (true) {
+  pthread_t thread;
+
+  while (true) {
 		cout << "waiting for client connections..." << endl;
 
 		//The first client login
@@ -54,12 +58,17 @@ void Server::start() {
 		if (clientSocket == -1)
 			throw "Failed to connect the server";
 
-        int rc = pthread_create(&thread, NULL, handleClient1, (void *)clientSocket);
+	  listOfSockets.push_back(clientSocket);
 
-        close(clientSocket);
+    int rc = pthread_create(&thread, NULL, handleClient1, (void *)clientSocket);
 	}
+
+  for (int i = 0; i < (int) listOfSockets.size(); i++) {
+      close(listOfSockets[i]);
+  	 }
+  listOfSockets.clear();
 }
-*/
+
 
 void Server::handleClient(int firstClientSocket, int secondClientSocket) {
     int arg1, arg2, n, dumb;
@@ -121,11 +130,12 @@ void Server::stop() {
    close(serverSocket);
 }
 
+/*
 void Server::start() {
     serverSocket = socket(AF_INET , SOCK_STREAM , 0);
     if (serverSocket == -1) {
         throw "Error opening socket";
-    }
+    	}
 
     //Defining the server's settings and binding
     struct sockaddr_in serverAddress;
@@ -136,7 +146,7 @@ void Server::start() {
 
     if (bind(serverSocket, (struct sockaddr *)&serverAddress, sizeof(serverAddress)) == -1) {
         throw "Error on binding";
-    }
+    	}
 
     listen(serverSocket, MAX_CONNECTED_CLIENTS);
 
@@ -181,3 +191,4 @@ void Server::start() {
         close(secondClientSocket);
     }
 }
+*/
