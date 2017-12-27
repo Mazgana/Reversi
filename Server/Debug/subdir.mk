@@ -6,20 +6,29 @@
 CPP_SRCS += \
 ../ClientHandler.cpp \
 ../CommandManager.cpp \
+../ListGamesCommand.cpp \
 ../Main.cpp \
-../Server.cpp 
+../Server.cpp \
+../StartCommand.cpp 
+
+O_SRCS += \
+../Main.o 
 
 OBJS += \
 ./ClientHandler.o \
 ./CommandManager.o \
+./ListGamesCommand.o \
 ./Main.o \
-./Server.o 
+./Server.o \
+./StartCommand.o 
 
 CPP_DEPS += \
 ./ClientHandler.d \
 ./CommandManager.d \
+./ListGamesCommand.d \
 ./Main.d \
-./Server.d 
+./Server.d \
+./StartCommand.d 
 
 
 # Each subdirectory must supply rules for building sources it contributes
