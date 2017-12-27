@@ -1,16 +1,16 @@
 #include "CommandManager.h"
 
 CommandManager::CommandManager() {
-    commandsMap["start"] = new StartCommand(gamesList);
+    commandsMap["start"] = new StartCommand();
     commandsMap["list_games"] = new ListGamesCommand();
     commandsMap["join"] = new JoinCommand();
     commandsMap["play"] = new PlayCommand();
     commandsMap["close"] = new CloseCommand();
 }
 
-void CommandManager::executeCommand(string command, vector<string> args, int socketID) {
+void CommandManager::executeCommand(string command, string gameName, int socketID) {
     Command *commandObj = commandsMap[command];
-    commandObj->execute(args);
+    commandObj->execute(gameName, socketID, lfm);
 }
 
 CommandManager::~CommandManager() {

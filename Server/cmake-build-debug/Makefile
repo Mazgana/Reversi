@@ -177,6 +177,33 @@ CommandManager.cpp.s:
 	$(MAKE) -f CMakeFiles/Server.dir/build.make CMakeFiles/Server.dir/CommandManager.cpp.s
 .PHONY : CommandManager.cpp.s
 
+ListGamesCommand.o: ListGamesCommand.cpp.o
+
+.PHONY : ListGamesCommand.o
+
+# target to build an object file
+ListGamesCommand.cpp.o:
+	$(MAKE) -f CMakeFiles/Server.dir/build.make CMakeFiles/Server.dir/ListGamesCommand.cpp.o
+.PHONY : ListGamesCommand.cpp.o
+
+ListGamesCommand.i: ListGamesCommand.cpp.i
+
+.PHONY : ListGamesCommand.i
+
+# target to preprocess a source file
+ListGamesCommand.cpp.i:
+	$(MAKE) -f CMakeFiles/Server.dir/build.make CMakeFiles/Server.dir/ListGamesCommand.cpp.i
+.PHONY : ListGamesCommand.cpp.i
+
+ListGamesCommand.s: ListGamesCommand.cpp.s
+
+.PHONY : ListGamesCommand.s
+
+# target to generate assembly for a file
+ListGamesCommand.cpp.s:
+	$(MAKE) -f CMakeFiles/Server.dir/build.make CMakeFiles/Server.dir/ListGamesCommand.cpp.s
+.PHONY : ListGamesCommand.cpp.s
+
 Main.o: Main.cpp.o
 
 .PHONY : Main.o
@@ -231,6 +258,33 @@ Server.cpp.s:
 	$(MAKE) -f CMakeFiles/Server.dir/build.make CMakeFiles/Server.dir/Server.cpp.s
 .PHONY : Server.cpp.s
 
+StartCommand.o: StartCommand.cpp.o
+
+.PHONY : StartCommand.o
+
+# target to build an object file
+StartCommand.cpp.o:
+	$(MAKE) -f CMakeFiles/Server.dir/build.make CMakeFiles/Server.dir/StartCommand.cpp.o
+.PHONY : StartCommand.cpp.o
+
+StartCommand.i: StartCommand.cpp.i
+
+.PHONY : StartCommand.i
+
+# target to preprocess a source file
+StartCommand.cpp.i:
+	$(MAKE) -f CMakeFiles/Server.dir/build.make CMakeFiles/Server.dir/StartCommand.cpp.i
+.PHONY : StartCommand.cpp.i
+
+StartCommand.s: StartCommand.cpp.s
+
+.PHONY : StartCommand.s
+
+# target to generate assembly for a file
+StartCommand.cpp.s:
+	$(MAKE) -f CMakeFiles/Server.dir/build.make CMakeFiles/Server.dir/StartCommand.cpp.s
+.PHONY : StartCommand.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -246,12 +300,18 @@ help:
 	@echo "... CommandManager.o"
 	@echo "... CommandManager.i"
 	@echo "... CommandManager.s"
+	@echo "... ListGamesCommand.o"
+	@echo "... ListGamesCommand.i"
+	@echo "... ListGamesCommand.s"
 	@echo "... Main.o"
 	@echo "... Main.i"
 	@echo "... Main.s"
 	@echo "... Server.o"
 	@echo "... Server.i"
 	@echo "... Server.s"
+	@echo "... StartCommand.o"
+	@echo "... StartCommand.i"
+	@echo "... StartCommand.s"
 .PHONY : help
 
 

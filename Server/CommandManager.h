@@ -4,16 +4,16 @@
 
 #include <map>
 #include "Command.h"
+#include "StartCommand.h"
+
 class CommandManager {
-
-public:
-    CommandManager();
-    ~CommandManager();
-    void executeCommand(string command, vector<string> args, int socketID);
-
 private:
     vector<string> gamesList;
     map<string, Command *> commandsMap;
+public:
+    CommandManager();
+    ~CommandManager();
+    void executeCommand(string command, string gameName, int socketID);
 };
 
 #endif //SERVER_COMMANDMANAGER_H

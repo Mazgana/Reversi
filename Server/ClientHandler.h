@@ -1,6 +1,7 @@
 #ifndef SERVER_CLIENTHANDLER_H
 #define SERVER_CLIENTHANDLER_H
 
+#define MAX_STR 50
 
 class ClientHandler {
 private:
