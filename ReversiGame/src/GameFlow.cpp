@@ -20,8 +20,9 @@ GameFlow :: GameFlow() {
 	while (invalid) {//validating users game choice.
 		gameType = displayer->getInt();
 		if (gameType != 1 && gameType != 2 && gameType != 3) {
-			displayer->printMessageWitheNewLine("Invalid input. Please enter 1, 2 or 3.");
-			displayer->getBufferContent();
+			displayer->printMessageWitheNewLine("Invalid input! Please enter 1, 2 or 3.");
+			displayer->clearBuffer();
+			displayer->ignoreInput('\n');
 		} else {
 			invalid = false;
 		}

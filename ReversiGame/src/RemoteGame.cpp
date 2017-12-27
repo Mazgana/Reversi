@@ -79,6 +79,7 @@ int RemoteGame :: chooseSeverOption() {
 			if (choice != 1 && choice != 2 && choice != 3) {
 				displayer->printMessageWitheNewLine("Invalid input. Please enter 1, 2 or 3.");
 				displayer->clearBuffer();
+				displayer->ignoreInput('\n');
 			} else {
 				invalid = false;
 			}
