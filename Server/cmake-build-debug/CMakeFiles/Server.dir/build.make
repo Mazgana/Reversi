@@ -177,28 +177,28 @@ CMakeFiles/Server.dir/StartCommand.cpp.o.provides: CMakeFiles/Server.dir/StartCo
 CMakeFiles/Server.dir/StartCommand.cpp.o.provides.build: CMakeFiles/Server.dir/StartCommand.cpp.o
 
 
-CMakeFiles/Server.dir/ListFileManager.cpp.o: CMakeFiles/Server.dir/flags.make
-CMakeFiles/Server.dir/ListFileManager.cpp.o: ../ListFileManager.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/leah/CLionProjects/Reversi/Server/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/Server.dir/ListFileManager.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Server.dir/ListFileManager.cpp.o -c /home/leah/CLionProjects/Reversi/Server/ListFileManager.cpp
+CMakeFiles/Server.dir/ListGamesCommand.cpp.o: CMakeFiles/Server.dir/flags.make
+CMakeFiles/Server.dir/ListGamesCommand.cpp.o: ../ListGamesCommand.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/leah/CLionProjects/Reversi/Server/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/Server.dir/ListGamesCommand.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Server.dir/ListGamesCommand.cpp.o -c /home/leah/CLionProjects/Reversi/Server/ListGamesCommand.cpp
 
-CMakeFiles/Server.dir/ListFileManager.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Server.dir/ListFileManager.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/leah/CLionProjects/Reversi/Server/ListFileManager.cpp > CMakeFiles/Server.dir/ListFileManager.cpp.i
+CMakeFiles/Server.dir/ListGamesCommand.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Server.dir/ListGamesCommand.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/leah/CLionProjects/Reversi/Server/ListGamesCommand.cpp > CMakeFiles/Server.dir/ListGamesCommand.cpp.i
 
-CMakeFiles/Server.dir/ListFileManager.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Server.dir/ListFileManager.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/leah/CLionProjects/Reversi/Server/ListFileManager.cpp -o CMakeFiles/Server.dir/ListFileManager.cpp.s
+CMakeFiles/Server.dir/ListGamesCommand.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Server.dir/ListGamesCommand.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/leah/CLionProjects/Reversi/Server/ListGamesCommand.cpp -o CMakeFiles/Server.dir/ListGamesCommand.cpp.s
 
-CMakeFiles/Server.dir/ListFileManager.cpp.o.requires:
+CMakeFiles/Server.dir/ListGamesCommand.cpp.o.requires:
 
-.PHONY : CMakeFiles/Server.dir/ListFileManager.cpp.o.requires
+.PHONY : CMakeFiles/Server.dir/ListGamesCommand.cpp.o.requires
 
-CMakeFiles/Server.dir/ListFileManager.cpp.o.provides: CMakeFiles/Server.dir/ListFileManager.cpp.o.requires
-	$(MAKE) -f CMakeFiles/Server.dir/build.make CMakeFiles/Server.dir/ListFileManager.cpp.o.provides.build
-.PHONY : CMakeFiles/Server.dir/ListFileManager.cpp.o.provides
+CMakeFiles/Server.dir/ListGamesCommand.cpp.o.provides: CMakeFiles/Server.dir/ListGamesCommand.cpp.o.requires
+	$(MAKE) -f CMakeFiles/Server.dir/build.make CMakeFiles/Server.dir/ListGamesCommand.cpp.o.provides.build
+.PHONY : CMakeFiles/Server.dir/ListGamesCommand.cpp.o.provides
 
-CMakeFiles/Server.dir/ListFileManager.cpp.o.provides.build: CMakeFiles/Server.dir/ListFileManager.cpp.o
+CMakeFiles/Server.dir/ListGamesCommand.cpp.o.provides.build: CMakeFiles/Server.dir/ListGamesCommand.cpp.o
 
 
 # Object files for target Server
@@ -208,7 +208,7 @@ Server_OBJECTS = \
 "CMakeFiles/Server.dir/Server.cpp.o" \
 "CMakeFiles/Server.dir/ClientHandler.cpp.o" \
 "CMakeFiles/Server.dir/StartCommand.cpp.o" \
-"CMakeFiles/Server.dir/ListFileManager.cpp.o"
+"CMakeFiles/Server.dir/ListGamesCommand.cpp.o"
 
 # External object files for target Server
 Server_EXTERNAL_OBJECTS =
@@ -218,7 +218,7 @@ Server: CMakeFiles/Server.dir/Main.cpp.o
 Server: CMakeFiles/Server.dir/Server.cpp.o
 Server: CMakeFiles/Server.dir/ClientHandler.cpp.o
 Server: CMakeFiles/Server.dir/StartCommand.cpp.o
-Server: CMakeFiles/Server.dir/ListFileManager.cpp.o
+Server: CMakeFiles/Server.dir/ListGamesCommand.cpp.o
 Server: CMakeFiles/Server.dir/build.make
 Server: CMakeFiles/Server.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/leah/CLionProjects/Reversi/Server/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX executable Server"
@@ -234,7 +234,7 @@ CMakeFiles/Server.dir/requires: CMakeFiles/Server.dir/Main.cpp.o.requires
 CMakeFiles/Server.dir/requires: CMakeFiles/Server.dir/Server.cpp.o.requires
 CMakeFiles/Server.dir/requires: CMakeFiles/Server.dir/ClientHandler.cpp.o.requires
 CMakeFiles/Server.dir/requires: CMakeFiles/Server.dir/StartCommand.cpp.o.requires
-CMakeFiles/Server.dir/requires: CMakeFiles/Server.dir/ListFileManager.cpp.o.requires
+CMakeFiles/Server.dir/requires: CMakeFiles/Server.dir/ListGamesCommand.cpp.o.requires
 
 .PHONY : CMakeFiles/Server.dir/requires
 

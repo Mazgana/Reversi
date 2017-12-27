@@ -8,38 +8,39 @@
 #include <cstdlib>
 #include <sstream>
 
-#define MAX_STR 50
-
-pthread_mutex_t mutex1;
-
 ClientHandler::ClientHandler(){}
 
 void ClientHandler :: handleClient (int firstClientSocket) {
     int n;
     char buffer[MAX_STR];
-    vector<string> args;
+    string command = "get_list";
 
-    long firstClient = (long)firstClientSocket;
-    n = recv((int)firstClient, buffer, MAX_STR, 0);
-    if (n == -1) {
-        cout << "Error reading choice" << endl;
+    while(command.compare("get_list")) {
+        pthread_mutex_lock(&mutex1);
+        long firstClient = (long) firstClientSocket;
+        n = recv((int) firstClient, buffer, MAX_STR, 0);
+        if (n == -1) {
+            cout << "Error reading choice" << endl;
+        }
+
+        cout << buffer << endl;
+
+        string input = buffer;
+
+        stringstream ss(input);
+        string arg;
+        vector<string> tokens;
+        while (getline(ss, arg, ' ')) {
+            tokens.push_back(arg);
+        }
+
+        string gameName = NULL;
+        command = tokens[0];
+        if (tokens.size() > 0) {
+            gameName = tokens[1];
+        }
+        pthread_mutex_unlock(&mutex1);
+
+        CM.executeCommand(command, gameName, firstClientSocket);
     }
-
-    cout << buffer << endl;
-
-    string input = buffer;
-
-    stringstream ss(input);
-    string arg;
-    vector<string> tokens;
-    while (getline(ss, arg, ' ')) {
-        args.push_back(arg);
-    }
-
-    pthread_mutex_lock(&mutex1);
-    string command = args[0];
-    args.erase(args.begin());
-    pthread_mutex_unlock(&mutex1);
-
-    CM.executeCommand(command, args, firstClientSocket);
  }

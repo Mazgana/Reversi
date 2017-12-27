@@ -177,32 +177,32 @@ CommandManager.cpp.s:
 	$(MAKE) -f CMakeFiles/Server.dir/build.make CMakeFiles/Server.dir/CommandManager.cpp.s
 .PHONY : CommandManager.cpp.s
 
-ListFileManager.o: ListFileManager.cpp.o
+ListGamesCommand.o: ListGamesCommand.cpp.o
 
-.PHONY : ListFileManager.o
+.PHONY : ListGamesCommand.o
 
 # target to build an object file
-ListFileManager.cpp.o:
-	$(MAKE) -f CMakeFiles/Server.dir/build.make CMakeFiles/Server.dir/ListFileManager.cpp.o
-.PHONY : ListFileManager.cpp.o
+ListGamesCommand.cpp.o:
+	$(MAKE) -f CMakeFiles/Server.dir/build.make CMakeFiles/Server.dir/ListGamesCommand.cpp.o
+.PHONY : ListGamesCommand.cpp.o
 
-ListFileManager.i: ListFileManager.cpp.i
+ListGamesCommand.i: ListGamesCommand.cpp.i
 
-.PHONY : ListFileManager.i
+.PHONY : ListGamesCommand.i
 
 # target to preprocess a source file
-ListFileManager.cpp.i:
-	$(MAKE) -f CMakeFiles/Server.dir/build.make CMakeFiles/Server.dir/ListFileManager.cpp.i
-.PHONY : ListFileManager.cpp.i
+ListGamesCommand.cpp.i:
+	$(MAKE) -f CMakeFiles/Server.dir/build.make CMakeFiles/Server.dir/ListGamesCommand.cpp.i
+.PHONY : ListGamesCommand.cpp.i
 
-ListFileManager.s: ListFileManager.cpp.s
+ListGamesCommand.s: ListGamesCommand.cpp.s
 
-.PHONY : ListFileManager.s
+.PHONY : ListGamesCommand.s
 
 # target to generate assembly for a file
-ListFileManager.cpp.s:
-	$(MAKE) -f CMakeFiles/Server.dir/build.make CMakeFiles/Server.dir/ListFileManager.cpp.s
-.PHONY : ListFileManager.cpp.s
+ListGamesCommand.cpp.s:
+	$(MAKE) -f CMakeFiles/Server.dir/build.make CMakeFiles/Server.dir/ListGamesCommand.cpp.s
+.PHONY : ListGamesCommand.cpp.s
 
 Main.o: Main.cpp.o
 
@@ -300,9 +300,9 @@ help:
 	@echo "... CommandManager.o"
 	@echo "... CommandManager.i"
 	@echo "... CommandManager.s"
-	@echo "... ListFileManager.o"
-	@echo "... ListFileManager.i"
-	@echo "... ListFileManager.s"
+	@echo "... ListGamesCommand.o"
+	@echo "... ListGamesCommand.i"
+	@echo "... ListGamesCommand.s"
 	@echo "... Main.o"
 	@echo "... Main.i"
 	@echo "... Main.s"

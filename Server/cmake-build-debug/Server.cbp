@@ -99,10 +99,10 @@
 		<Unit filename="/home/leah/CLionProjects/Reversi/Server/CommandManager.h">
 			<Option target="Server"/>
 		</Unit>
-		<Unit filename="/home/leah/CLionProjects/Reversi/Server/ListFileManager.cpp">
+		<Unit filename="/home/leah/CLionProjects/Reversi/Server/ListGamesCommand.cpp">
 			<Option target="Server"/>
 		</Unit>
-		<Unit filename="/home/leah/CLionProjects/Reversi/Server/ListFileManager.h">
+		<Unit filename="/home/leah/CLionProjects/Reversi/Server/ListGamesCommand.h">
 			<Option target="Server"/>
 		</Unit>
 		<Unit filename="/home/leah/CLionProjects/Reversi/Server/Main.cpp">
