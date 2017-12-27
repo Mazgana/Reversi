@@ -54,14 +54,14 @@ int ConsoleDisplay :: getInt() {
 }
 
 string ConsoleDisplay :: getString() {
-	string inputStr;
-	cin >> inputStr;
+		string inputStr;
+		cin >> inputStr;
 
-	return inputStr;
+		return inputStr;
 }
 
 void ConsoleDisplay :: getBufferContent() {
-	cin.get();
+		cin.get();
 }
 
 void ConsoleDisplay :: ignoreInput(char c) {
@@ -69,9 +69,9 @@ void ConsoleDisplay :: ignoreInput(char c) {
 }
 
 void ConsoleDisplay :: clearBuffer() {
-	cin.clear();
+		cin.clear();
 }
 
 bool ConsoleDisplay :: isInputFailed() {
-	return cin.fail();
+		return cin.fail();
 }
