@@ -3,11 +3,11 @@
 ConsoleDisplay :: ConsoleDisplay() {
 }
 
-void ConsoleDisplay :: printMessage(std::string message) {
+void ConsoleDisplay :: printMessage(string message) {
 	cout << message;
 }
 
-void ConsoleDisplay :: printMessageWitheNewLine(std::string message) {
+void ConsoleDisplay :: printMessageWitheNewLine(string message) {
 	cout << message << endl;
 }
 
@@ -44,4 +44,34 @@ void ConsoleDisplay :: printCell(Cell c) {
 
 void ConsoleDisplay :: printNewLine() {
 	cout << endl;
+}
+
+int ConsoleDisplay :: getInt() {
+	int num;
+	cin >> num;
+
+	return num;
+}
+
+string ConsoleDisplay :: getString() {
+	string inputStr;
+	cin >> inputStr;
+
+	return inputStr;
+}
+
+void ConsoleDisplay :: getBufferContent() {
+	cin.get();
+}
+
+void ConsoleDisplay :: ignoreInput(char c) {
+    cin.ignore(numeric_limits<streamsize>::max(), c);
+}
+
+void ConsoleDisplay :: clearBuffer() {
+	cin.clear();
+}
+
+bool ConsoleDisplay :: isInputFailed() {
+	return cin.fail();
 }

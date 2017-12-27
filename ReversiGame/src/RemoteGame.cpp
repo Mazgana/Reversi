@@ -15,7 +15,7 @@ RemoteGame::RemoteGame() {
 		displayer = new ConsoleDisplay();
 
    	ifstream File;
-   	std::string details;
+   	string details;
 
    	File.open("clientConfiguration.txt");
    	if (!File) {
@@ -23,12 +23,12 @@ RemoteGame::RemoteGame() {
    		exit(1);
    		}
 
-   	std::getline(File,details);
-   	std::size_t pos = details.find("IP: ");
-   	std::string ipAddres = details.substr(pos + 4);
-   	std::getline(File,details);
+   	getline(File,details);
+   	size_t pos = details.find("IP: ");
+   	string ipAddres = details.substr(pos + 4);
+   	getline(File,details);
    	pos = details.find("Port: ");
-   	std::string port = details.substr (pos + 6);
+   	string port = details.substr (pos + 6);
    	int portNum = atoi(port.c_str());
 
     Client client(ipAddres.c_str(), portNum);//creating a client and connecting it to server.
@@ -77,10 +77,10 @@ int RemoteGame :: chooseSeverOption() {
 		displayer->printMessageWitheNewLine("3. Join to an on going game.");
 
 		while (invalid) { //validating user's choice.
-			cin >> choice;
+			choice = displayer->getInt();
 			if (choice != 1 && choice != 2 && choice != 3) {
 				displayer->printMessageWitheNewLine("Invalid input. Please enter 1, 2 or 3.");
-				cin.get();
+				displayer->getBufferContent();
 			} else {
 				invalid = false;
 			}
@@ -90,17 +90,14 @@ int RemoteGame :: chooseSeverOption() {
 }
 
 char RemoteGame :: startNewGame(Client client) {
-	std::string gameName;
-//	char command[MAX_LEN];
+	string gameName;
 	int serverResponse = 0;
 
 	displayer->printMessageWitheNewLine("Please enter your new game's name:");
 	while (serverResponse != 1) {
-		cin >> gameName;
+		gameName = displayer->getString();
 
-		std::string startCommand = "start " + gameName;
-//		strcpy(command, startCommand.c_str());
-
+		string startCommand = "start " + gameName;
 		serverResponse = client.sendCommandMessage(startCommand);
 
 		if (serverResponse == -1) {
@@ -112,7 +109,7 @@ char RemoteGame :: startNewGame(Client client) {
 }
 
 void RemoteGame :: printListOfGames() {
-
+	string listCommand = "list_games ";
 }
 
 char RemoteGame :: joinGame() {
@@ -125,7 +122,7 @@ bool RemoteGame :: playTurn(Player* p, Board* board) {
 				displayer->printChar((char) p->getChip());
 				displayer->printMessageWitheNewLine(": you have got no moves.");
 				displayer->printMessageWitheNewLine("press enter to continue..");
-				cin.get();
+				displayer->getBufferContent();
 
 				return false;
     }//no moves can be done, turn passes to other player

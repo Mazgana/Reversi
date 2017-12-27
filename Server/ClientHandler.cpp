@@ -1,4 +1,4 @@
-
+#include <algorithm>
 #include "CommandManager.h"
 #include "ClientHandler.h"
 #include <sys/socket.h>
@@ -12,7 +12,7 @@ ClientHandler::ClientHandler(){}
 
 void ClientHandler :: handleClient (int firstClientSocket) {
     int n;
-    char buffer[MAX_STR];
+    char buffer[MAX_STR] = "";
     string command = "get_list";
 
     while(command.compare("get_list")) {
@@ -23,9 +23,9 @@ void ClientHandler :: handleClient (int firstClientSocket) {
             cout << "Error reading choice" << endl;
         }
 
-        cout << buffer << endl;
-
         string input = buffer;
+
+        cout << input << endl;
 
         stringstream ss(input);
         string arg;
@@ -40,6 +40,8 @@ void ClientHandler :: handleClient (int firstClientSocket) {
             gameName = tokens[1];
         }
         pthread_mutex_unlock(&mutex1);
+
+        cout << "got command from client: " << command << endl;
 
         CM.executeCommand(command, gameName, firstClientSocket);
     }

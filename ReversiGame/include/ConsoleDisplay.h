@@ -7,9 +7,10 @@ class ConsoleDisplay : public Display {
 public:
 	ConsoleDisplay();
 
-	void printMessage(std::string mes);
+	//Output
+	void printMessage(string mes);
 
-	void printMessageWitheNewLine(std::string mes);
+	void printMessageWitheNewLine(string mes);
 
 	void printChar(char c);
 
@@ -18,6 +19,19 @@ public:
 	void printCell(Cell c);
 
 	void printNewLine();
+
+	//Input
+	int getInt();
+
+	string getString();
+
+	void getBufferContent();
+
+	void ignoreInput(char c);
+
+	void clearBuffer();
+
+	bool isInputFailed();
 };
 
 #endif /* INCLUDE_CONSOLEDISPLAY_H_ */
