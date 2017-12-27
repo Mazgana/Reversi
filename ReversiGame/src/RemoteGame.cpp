@@ -39,23 +39,27 @@ RemoteGame::RemoteGame() {
       	}
 
     int clientChoice = chooseSeverOption();
+    int serverResponse = 0;
 
     if(clientChoice == 1)
-    		startNewGame(client);
+    	serverResponse = startNewGame(client);
     else if (clientChoice == 2)
     		printListOfGames(client);
     else
     		joinGame(client);
 
+    cout << serverResponse << endl;
 
-    char chip = client.getOpeningPlayer();//find first client to connect to server, set to be black player
-    if(chip == 'X') {
-        blackPlayer = new ClientPlayer(BLACK, client);
-        whitePlayer = new OpponentClientPlayer(WHITE, client);
-    } else if (chip == 'O') {
-        whitePlayer = new ClientPlayer(WHITE, client);
-        blackPlayer = new OpponentClientPlayer(BLACK, client);
-    }
+		if (serverResponse == 1) {
+			char chip = client.getOpeningPlayer();//find first client to connect to server, set to be black player
+			if(chip == 'X') {
+				blackPlayer = new ClientPlayer(BLACK, client);
+				whitePlayer = new OpponentClientPlayer(WHITE, client);
+			} else if (chip == 'O') {
+				whitePlayer = new ClientPlayer(WHITE, client);
+				blackPlayer = new OpponentClientPlayer(BLACK, client);
+			}
+		}
 }
 
 RemoteGame :: ~RemoteGame() {

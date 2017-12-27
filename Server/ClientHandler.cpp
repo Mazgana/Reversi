@@ -18,22 +18,25 @@ void ClientHandler :: handleClient (int clientSocket) {
 
     while(!value.compare("list_games ")) {
         cout << "handling" << firstClientSocket << endl;
+
         long firstClient = (long) firstClientSocket;
         n = recv((int) firstClient, buffer, MAX_STR, 0);
         if (n == -1) {
             cout << "Error reading choice" << endl;
-        }
+        		}
 
         string input = buffer;
 
-        cout << "input: " << input << endl;
+        cout << "full input: " << input << endl;
 
         stringstream ss(input);
+        cout << "ss " << ss << endl;
         string arg;
         vector<string> tokens;
         while (getline(ss, arg, ' ')) {
             tokens.push_back(arg);
             cout << "arg: " << arg << endl;
+
         }
 
         string gameName = "";
