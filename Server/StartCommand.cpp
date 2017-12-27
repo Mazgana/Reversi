@@ -22,6 +22,7 @@ void StartCommand::execute(string gameName, int socketID) {
         }
         name = buffer;
     }
+
     GameList[name] = socketID;
     int success = 1;
     int m = write(socketID, &success, sizeof(success));

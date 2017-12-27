@@ -10,13 +10,14 @@
 
 ClientHandler::ClientHandler(){}
 
-void ClientHandler :: handleClient (int firstClientSocket) {
+void ClientHandler :: handleClient (int clientSocket) {
     int n;
     char buffer[MAX_STR] = "";
-    string command = "get_list";
+    string value = "list_games ";
+    int firstClientSocket = clientSocket;
 
-    cout << "handling" << endl;
-    while(!command.compare("get_list")) {
+    while(!value.compare("list_games ")) {
+        cout << "handling" << firstClientSocket << endl;
         long firstClient = (long) firstClientSocket;
         n = recv((int) firstClient, buffer, MAX_STR, 0);
         if (n == -1) {
@@ -25,23 +26,27 @@ void ClientHandler :: handleClient (int firstClientSocket) {
 
         string input = buffer;
 
-        cout << input << endl;
+        cout << "input: " << input << endl;
 
         stringstream ss(input);
         string arg;
         vector<string> tokens;
         while (getline(ss, arg, ' ')) {
             tokens.push_back(arg);
+            cout << "arg: " << arg << endl;
         }
 
-        string gameName = NULL;
-        command = tokens[0];
-        if (tokens.size() > 0) {
+        string gameName = "";
+        cout << "game name: " << gameName << endl;
+        string command = tokens[0];
+        if (tokens.size() > 1) {
             gameName = tokens[1];
         }
 
         cout << "got command from client: " << command << endl;
 
         CM.executeCommand(command, gameName, firstClientSocket);
+
+        value = command;
     }
  }

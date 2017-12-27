@@ -35,8 +35,6 @@ string
 -
 iostream
 -
-map
--
 
 /home/leah/CLionProjects/Reversi/Server/CommandManager.cpp
 CommandManager.h
@@ -46,6 +44,12 @@ ListGamesCommand.h
 
 /home/leah/CLionProjects/Reversi/Server/CommandManager.h
 map
+-
+vector
+-
+string
+-
+iostream
 -
 Command.h
 /home/leah/CLionProjects/Reversi/Server/Command.h
@@ -58,6 +62,8 @@ ListGamesCommand.h
 unistd.h
 -
 sys/socket.h
+-
+map
 -
 
 /home/leah/CLionProjects/Reversi/Server/ListGamesCommand.h
