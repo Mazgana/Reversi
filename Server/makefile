@@ -2,8 +2,8 @@
 # Leah Wachtfogel 206098931
 
 a.out: compileAll
-	g++ *.o 
+	g++ *.o -pthread
 	rm -f *.o
 
 compileAll: *.h *.cpp
-	g++ -c *.cpp
+	g++ -c *.cpp -pthread

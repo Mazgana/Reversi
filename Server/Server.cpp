@@ -22,7 +22,7 @@ void *handleClient1(void *clientSocket) {
 Server::Server(int port): port(port), serverSocket(0) {
 }
 
-/*
+
 void Server::start() {
 	std::vector<int> listOfSockets;
 
@@ -70,7 +70,7 @@ void Server::start() {
   listOfSockets.clear();
 }
 
-*/
+
 void Server::handleClient(int firstClientSocket, int secondClientSocket) {
     int arg1, arg2, n, dumb;
     int disconnection = -4;
@@ -131,7 +131,7 @@ void Server::stop() {
    close(serverSocket);
 }
 
-
+/*
 void Server::start() {
     serverSocket = socket(AF_INET , SOCK_STREAM , 0);
     if (serverSocket == -1) {
@@ -192,4 +192,4 @@ void Server::start() {
         close(secondClientSocket);
     }
 }
-
+*/
