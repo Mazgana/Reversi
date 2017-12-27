@@ -17,11 +17,16 @@ void ClientHandler :: handleClient (int firstClientSocket) {
     char buffer[MAX_STR];
     vector<string> args;
 
+    cout << "good" << endl;
+
     long firstClient = (long)firstClientSocket;
-    n = read((int)firstClient, &buffer, sizeof(buffer));
+    n = recv((int)firstClient, buffer, MAX_STR, 0);
     if (n == -1) {
         cout << "Error reading choice" << endl;
     }
+
+    cout << buffer << endl;
+
     string input = buffer;
 
     stringstream ss(input);
@@ -33,5 +38,6 @@ void ClientHandler :: handleClient (int firstClientSocket) {
     string command = args[0];
     args.erase(args.begin());
 
+    cout << "got command from client: " << command << endl;
     CM.executeCommand(command, args, firstClientSocket);
  }
