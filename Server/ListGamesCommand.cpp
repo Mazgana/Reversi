@@ -14,8 +14,6 @@ void ListGamesCommand::execute(string gameName, int socketID, map<string, int> &
         gameNames.push_back(it-> first);
     	}
 
-    cout << "in list command, for socket: " << socketID << endl;
-    cout << "Games list size: " << gameNames.size() << endl;
     for (int i = 0; i < (int) gameNames.size(); i++) {
     	 	len = gameNames[i].length();
     		write(socketID, &len, sizeof(len));
@@ -25,8 +23,8 @@ void ListGamesCommand::execute(string gameName, int socketID, map<string, int> &
         		}
     	}
 
-    string end = "\0";
-    int m = send(socketID, end.c_str(), end.length(), 0);
+    int end = -1;
+    int m = write(socketID, &end, sizeof(end));
     if (m == -1) {
         cout << "Error sending name" << endl;
     }

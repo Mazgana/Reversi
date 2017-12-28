@@ -21,7 +21,7 @@ public:
 
 	int startNewGame(Client client);
 
-	void printListOfGames(Client client);
+	int printListOfGames(Client client);
 
 	int joinGame(Client client);
 
