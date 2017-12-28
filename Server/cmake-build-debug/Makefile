@@ -177,6 +177,33 @@ CommandManager.cpp.s:
 	$(MAKE) -f CMakeFiles/Server.dir/build.make CMakeFiles/Server.dir/CommandManager.cpp.s
 .PHONY : CommandManager.cpp.s
 
+JoinCommand.o: JoinCommand.cpp.o
+
+.PHONY : JoinCommand.o
+
+# target to build an object file
+JoinCommand.cpp.o:
+	$(MAKE) -f CMakeFiles/Server.dir/build.make CMakeFiles/Server.dir/JoinCommand.cpp.o
+.PHONY : JoinCommand.cpp.o
+
+JoinCommand.i: JoinCommand.cpp.i
+
+.PHONY : JoinCommand.i
+
+# target to preprocess a source file
+JoinCommand.cpp.i:
+	$(MAKE) -f CMakeFiles/Server.dir/build.make CMakeFiles/Server.dir/JoinCommand.cpp.i
+.PHONY : JoinCommand.cpp.i
+
+JoinCommand.s: JoinCommand.cpp.s
+
+.PHONY : JoinCommand.s
+
+# target to generate assembly for a file
+JoinCommand.cpp.s:
+	$(MAKE) -f CMakeFiles/Server.dir/build.make CMakeFiles/Server.dir/JoinCommand.cpp.s
+.PHONY : JoinCommand.cpp.s
+
 ListGamesCommand.o: ListGamesCommand.cpp.o
 
 .PHONY : ListGamesCommand.o
@@ -300,6 +327,9 @@ help:
 	@echo "... CommandManager.o"
 	@echo "... CommandManager.i"
 	@echo "... CommandManager.s"
+	@echo "... JoinCommand.o"
+	@echo "... JoinCommand.i"
+	@echo "... JoinCommand.s"
 	@echo "... ListGamesCommand.o"
 	@echo "... ListGamesCommand.i"
 	@echo "... ListGamesCommand.s"

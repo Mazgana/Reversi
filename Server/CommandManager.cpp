@@ -1,10 +1,9 @@
 #include "CommandManager.h"
-#include "ListGamesCommand.h"
 
 CommandManager::CommandManager() {
     commandsMap["start"] = new StartCommand();
     commandsMap["list_games"] = new ListGamesCommand();
-//    commandsMap["join"] = new JoinCommand();
+    commandsMap["join"] = new JoinCommand();
 //    commandsMap["play"] = new PlayCommand();
 //    commandsMap["close"] = new CloseCommand();
 }

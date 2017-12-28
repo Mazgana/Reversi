@@ -17,7 +17,7 @@ Server::Server(int port): port(port), serverSocket(0) {
 
 
 void Server::start() {
-    ClientHandler ch;
+      ClientHandler ch;
 		vector<int> listOfSockets;
 
 	  serverSocket = socket(AF_INET , SOCK_STREAM , 0);
@@ -59,6 +59,7 @@ void Server::start() {
 		  close(listOfSockets[i]);
 		 }
 	  listOfSockets.clear();
+      stop();
 }
 
 

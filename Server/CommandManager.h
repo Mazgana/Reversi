@@ -7,6 +7,8 @@
 #include <iostream>
 #include "Command.h"
 #include "StartCommand.h"
+#include "ListGamesCommand.h"
+#include "JoinCommand.h"
 
 using namespace std;
 
