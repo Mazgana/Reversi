@@ -3,6 +3,8 @@
 
 #include "Command.h"
 #include <map>
+#include <unistd.h>
+#include <sys/socket.h>
 
 class ListGamesCommand: public Command {
 

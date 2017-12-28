@@ -1,11 +1,6 @@
-#include <unistd.h>
-#include <sys/socket.h>
 #include "StartCommand.h"
-#include <map>
 
-StartCommand::StartCommand() {
-
-}
+StartCommand::StartCommand(){};
 
 void StartCommand::execute(string gameName, int socketID, map<string, int> &GameList) {
     string name = gameName;

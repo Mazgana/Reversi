@@ -1,10 +1,15 @@
 #ifndef SERVER_CLIENTHANDLER_H
 #define SERVER_CLIENTHANDLER_H
 
+#include <map>
+#include <algorithm>
+#include "CommandManager.h"
+#include <cstring>
+#include <sstream>
+
 #define MAX_STR 50
 
-#include <map>
-static map<string, int> GameList;
+static map <string, int> GameList;
 
 class ClientHandler {
 private:
@@ -13,8 +18,6 @@ private:
 
 public:
     ClientHandler();
-
-    void getChoice(void* firstClientSocket);
 
     void handleClient(int firstClientSocket);
 
