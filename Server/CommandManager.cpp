@@ -4,8 +4,6 @@ CommandManager::CommandManager() {
     commandsMap["start"] = new StartCommand();
     commandsMap["list_games"] = new ListGamesCommand();
     commandsMap["join"] = new JoinCommand();
-//    commandsMap["play"] = new PlayCommand();
-//    commandsMap["close"] = new CloseCommand();
 }
 
 void CommandManager::executeCommand(string command, string gameName, int socketID, map<string, int> &gameList) {

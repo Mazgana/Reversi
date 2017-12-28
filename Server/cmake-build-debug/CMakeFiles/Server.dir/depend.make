@@ -5,24 +5,39 @@ CMakeFiles/Server.dir/ClientHandler.cpp.o: ../ClientHandler.cpp
 CMakeFiles/Server.dir/ClientHandler.cpp.o: ../ClientHandler.h
 CMakeFiles/Server.dir/ClientHandler.cpp.o: ../Command.h
 CMakeFiles/Server.dir/ClientHandler.cpp.o: ../CommandManager.h
+CMakeFiles/Server.dir/ClientHandler.cpp.o: ../JoinCommand.h
+CMakeFiles/Server.dir/ClientHandler.cpp.o: ../ListGamesCommand.h
 CMakeFiles/Server.dir/ClientHandler.cpp.o: ../StartCommand.h
 
 CMakeFiles/Server.dir/CommandManager.cpp.o: ../Command.h
 CMakeFiles/Server.dir/CommandManager.cpp.o: ../CommandManager.cpp
 CMakeFiles/Server.dir/CommandManager.cpp.o: ../CommandManager.h
+CMakeFiles/Server.dir/CommandManager.cpp.o: ../JoinCommand.h
 CMakeFiles/Server.dir/CommandManager.cpp.o: ../ListGamesCommand.h
 CMakeFiles/Server.dir/CommandManager.cpp.o: ../StartCommand.h
+
+CMakeFiles/Server.dir/JoinCommand.cpp.o: ../Command.h
+CMakeFiles/Server.dir/JoinCommand.cpp.o: ../JoinCommand.cpp
+CMakeFiles/Server.dir/JoinCommand.cpp.o: ../JoinCommand.h
 
 CMakeFiles/Server.dir/ListGamesCommand.cpp.o: ../Command.h
 CMakeFiles/Server.dir/ListGamesCommand.cpp.o: ../ListGamesCommand.cpp
 CMakeFiles/Server.dir/ListGamesCommand.cpp.o: ../ListGamesCommand.h
 
+CMakeFiles/Server.dir/Main.cpp.o: ../ClientHandler.h
+CMakeFiles/Server.dir/Main.cpp.o: ../Command.h
+CMakeFiles/Server.dir/Main.cpp.o: ../CommandManager.h
+CMakeFiles/Server.dir/Main.cpp.o: ../JoinCommand.h
+CMakeFiles/Server.dir/Main.cpp.o: ../ListGamesCommand.h
 CMakeFiles/Server.dir/Main.cpp.o: ../Main.cpp
 CMakeFiles/Server.dir/Main.cpp.o: ../Server.h
+CMakeFiles/Server.dir/Main.cpp.o: ../StartCommand.h
 
 CMakeFiles/Server.dir/Server.cpp.o: ../ClientHandler.h
 CMakeFiles/Server.dir/Server.cpp.o: ../Command.h
 CMakeFiles/Server.dir/Server.cpp.o: ../CommandManager.h
+CMakeFiles/Server.dir/Server.cpp.o: ../JoinCommand.h
+CMakeFiles/Server.dir/Server.cpp.o: ../ListGamesCommand.h
 CMakeFiles/Server.dir/Server.cpp.o: ../Server.cpp
 CMakeFiles/Server.dir/Server.cpp.o: ../Server.h
 CMakeFiles/Server.dir/Server.cpp.o: ../StartCommand.h

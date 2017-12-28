@@ -3,6 +3,8 @@
 
 #include "Command.h"
 #include <pthread.h>
+#include <unistd.h>
+#include <sys/socket.h>
 
 #define MAX_STR 50
 

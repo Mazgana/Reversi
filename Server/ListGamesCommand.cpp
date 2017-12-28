@@ -1,16 +1,11 @@
 #include "ListGamesCommand.h"
-#include <unistd.h>
-#include <sys/socket.h>
-#include <map>
 
-ListGamesCommand :: ListGamesCommand() {
-
-}
+ListGamesCommand :: ListGamesCommand() {}
 
 void ListGamesCommand::execute(string gameName, int socketID, map<string, int> &GameList) {
     vector<string> gameNames;
     int len;
-    for(map<string,int>::iterator it = GameList.begin(); it != GameList.end(); ++it) {
+    for (map<string,int>::iterator it = GameList.begin(); it != GameList.end(); ++it) {
         gameNames.push_back(it-> first);
     	}
 

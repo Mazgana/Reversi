@@ -7,26 +7,20 @@
 #IncludeRegexTransform: 
 
 /home/leah/CLionProjects/Reversi/Server/ClientHandler.cpp
+ClientHandler.h
+/home/leah/CLionProjects/Reversi/Server/ClientHandler.h
+
+/home/leah/CLionProjects/Reversi/Server/ClientHandler.h
+map
+-
 algorithm
 -
 CommandManager.h
 /home/leah/CLionProjects/Reversi/Server/CommandManager.h
-ClientHandler.h
-/home/leah/CLionProjects/Reversi/Server/ClientHandler.h
-sys/socket.h
--
-netinet/in.h
--
-unistd.h
--
-string.h
--
-cstdlib
+cstring
 -
 sstream
 -
-
-/home/leah/CLionProjects/Reversi/Server/ClientHandler.h
 
 /home/leah/CLionProjects/Reversi/Server/Command.h
 vector
@@ -35,12 +29,12 @@ string
 -
 iostream
 -
+map
+-
 
 /home/leah/CLionProjects/Reversi/Server/CommandManager.cpp
 CommandManager.h
 /home/leah/CLionProjects/Reversi/Server/CommandManager.h
-ListGamesCommand.h
-/home/leah/CLionProjects/Reversi/Server/ListGamesCommand.h
 
 /home/leah/CLionProjects/Reversi/Server/CommandManager.h
 map
@@ -55,6 +49,20 @@ Command.h
 /home/leah/CLionProjects/Reversi/Server/Command.h
 StartCommand.h
 /home/leah/CLionProjects/Reversi/Server/StartCommand.h
+ListGamesCommand.h
+/home/leah/CLionProjects/Reversi/Server/ListGamesCommand.h
+JoinCommand.h
+/home/leah/CLionProjects/Reversi/Server/JoinCommand.h
+
+/home/leah/CLionProjects/Reversi/Server/JoinCommand.cpp
+JoinCommand.h
+/home/leah/CLionProjects/Reversi/Server/JoinCommand.h
+
+/home/leah/CLionProjects/Reversi/Server/JoinCommand.h
+unistd.h
+-
+Command.h
+/home/leah/CLionProjects/Reversi/Server/Command.h
 
 /home/leah/CLionProjects/Reversi/Server/ListGamesCommand.cpp
 ListGamesCommand.h
@@ -69,6 +77,8 @@ map
 /home/leah/CLionProjects/Reversi/Server/ListGamesCommand.h
 Command.h
 /home/leah/CLionProjects/Reversi/Server/Command.h
+map
+-
 
 /home/leah/CLionProjects/Reversi/Server/Main.cpp
 Server.h
@@ -83,6 +93,8 @@ fstream
 /home/leah/CLionProjects/Reversi/Server/Server.cpp
 Server.h
 /home/leah/CLionProjects/Reversi/Server/Server.h
+
+/home/leah/CLionProjects/Reversi/Server/Server.h
 CommandManager.h
 /home/leah/CLionProjects/Reversi/Server/CommandManager.h
 ClientHandler.h
@@ -91,24 +103,10 @@ sys/socket.h
 -
 netinet/in.h
 -
-unistd.h
--
 string.h
 -
-iostream
--
-stdio.h
--
-vector
--
-
-/home/leah/CLionProjects/Reversi/Server/Server.h
 
 /home/leah/CLionProjects/Reversi/Server/StartCommand.cpp
-unistd.h
--
-sys/socket.h
--
 StartCommand.h
 /home/leah/CLionProjects/Reversi/Server/StartCommand.h
 
@@ -116,5 +114,9 @@ StartCommand.h
 Command.h
 /home/leah/CLionProjects/Reversi/Server/Command.h
 pthread.h
+-
+unistd.h
+-
+sys/socket.h
 -
 
