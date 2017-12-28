@@ -119,8 +119,10 @@ void Client::attending(int mes) {
 }
 
 vector<string> Client :: reciveStringList(string messageToServer) {
-	vector<string> list;
+		vector<string> list;
     char line[MAX_STR] = "";
+    string gameName;
+    int len;
 
 		//Sending the server the user's command
 		int n =	send(clientSocket, messageToServer.c_str(), messageToServer.length(), 0);
@@ -130,12 +132,15 @@ vector<string> Client :: reciveStringList(string messageToServer) {
 		}
 
     while (line != '\0') {
-			int n = recv((int)clientSocket, line, MAX_STR, 0);
+    	int w = read(clientSocket, &len, sizeof(int));
+			int n = recv((int)clientSocket, line, len, 0);
 			if (n == -1) {
 				cout << "Error reading choice" << endl;
 			}
 
-			list.push_back(line);
+			gameName = line;
+			cout << "game name: " << gameName << endl;
+			list.push_back(gameName);
     	}
 
     return list;

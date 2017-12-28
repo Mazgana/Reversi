@@ -112,6 +112,7 @@ void RemoteGame :: printListOfGames(Client client) {
 		listOfGames = client.reciveStringList(listCommand);
 
 		for (int i = 0; i < (int) listOfGames.size(); i++) {
+			cout << "client: ";
 			displayer->printMessageWitheNewLine(listOfGames[i]);
 		}
 }
