@@ -25,6 +25,8 @@ public:
 
 	string getString();
 
+	char getChar();
+
 	void getBufferContent();
 
 	void ignoreInput(char c);
