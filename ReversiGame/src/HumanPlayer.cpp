@@ -2,6 +2,9 @@
 #include "ConsoleDisplay.h"
 #include <limits>
 #include <iostream>
+#include <sstream>
+#include <stdlib.h>
+
 using namespace std;
 
 HumanPlayer::HumanPlayer() {
@@ -32,17 +35,20 @@ Cell HumanPlayer :: doTurn(vector<Cell> options) {
 
     //validating choice
     int x = 0, y = 0;
-    char tempY;
     bool valid = false;
+    char integers[3];
+    string input;
+
     while (!valid) {
         displayer->printMessageWitheNewLine("Please enter your move row,col: ");
-        x = displayer->getInt();
-        tempY = displayer->getChar();
+        input = displayer->getString();
 
-        if (tempY == ',') {
-        	y = displayer->getInt();
+        strcpy(integers, input.c_str());
+        x = (int) integers[0] - 48;
+        if (integers[1] == ',') {
+        	y = (int) integers[2] - 48;
         } else {
-        	y = (int) tempY - 48;
+        	y = (int) integers[1] - 48;
         		}
 
         if (displayer->isInputFailed()) {

@@ -135,7 +135,7 @@ int RemoteGame :: joinGame(Client client) {
 		return serverResponse;
 }
 
-bool RemoteGame :: playTurn(Player* p, Board* board) {
+int RemoteGame :: playTurn(Player* p, Board* board) {
     vector<Cell> options = board->getOptions(p->getChip());
     if (options.empty()) {
 				displayer->printChar((char) p->getChip());
@@ -149,12 +149,16 @@ bool RemoteGame :: playTurn(Player* p, Board* board) {
 
     chosen = p->doTurn(options);//getting cell to play
     if (chosen.getRow() == -4)
-        	return false;
+        	return 0;
+    else if (chosen.getRow() == -5) { // the player closed the game
+    		displayer->printMessageWitheNewLine("Game closed.");
+    		return 2;
+    	}
 
     board->putChip(p->getChip(), chosen.getRow(), chosen.getCol());// putting chip on board and flipping chips accordingly
     board->cleanOptionalMovesList();
 
-    return true;
+    return 1;
 }
 
 Player* RemoteGame :: getBlackPlayer() {

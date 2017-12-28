@@ -18,7 +18,7 @@ TwoClientsGame :: ~TwoClientsGame() {
     delete[] whitePlayer;
 }
 
-bool TwoClientsGame :: playTurn(Player* p, Board* board) {
+int TwoClientsGame :: playTurn(Player* p, Board* board) {
     vector<Cell> options = board->getOptions(p->getChip());
     if (options.empty()) {
 				displayer->printChar((char) p->getChip());
@@ -26,7 +26,7 @@ bool TwoClientsGame :: playTurn(Player* p, Board* board) {
 				displayer->printMessageWitheNewLine("press enter to continue..");
 				displayer->getBufferContent();
 
-        return false;
+        return 0;
     }//no moves can be done, turn passes to other player
     Cell chosen;
     chosen = p->doTurn(options);//getting cell to play
@@ -34,7 +34,7 @@ bool TwoClientsGame :: playTurn(Player* p, Board* board) {
     board->putChip(p->getChip(), chosen.getRow(), chosen.getCol());// putting chip on board and flipping chips accordingly
     board->cleanOptionalMovesList();
 
-    return true;
+    return 1;
 }
 
 Player* TwoClientsGame :: getBlackPlayer() {

@@ -27,7 +27,7 @@ public:
 
 	//calls on functions for each turn.
 	//returns true if a piece was put on board. false otherwise.
-	bool playTurn(Player *p, Board* b);
+	int playTurn(Player *p, Board* b);
 
 	Player* getBlackPlayer();
 	Player* getWhitePlayer();

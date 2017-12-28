@@ -13,7 +13,7 @@ AiGame :: ~AiGame() {
     delete[] whitePlayer;
 }
 
-bool AiGame :: playTurn(Player* p, Board* board) {
+int AiGame :: playTurn(Player* p, Board* board) {
     vector<Cell> options = board->getOptions(p->getChip());
     if (options.empty()) {
     		displayer->printChar((char) p->getChip());
@@ -47,12 +47,12 @@ bool AiGame :: playTurn(Player* p, Board* board) {
     } else {
         chosen = p->doTurn(options);//getting cell to play
         if (chosen.getRow() == -4)
-        	return false;
+        	return 0;
     	}
     board->putChip(p->getChip(), chosen.getRow(), chosen.getCol());// putting chip on board and flipping chips accordingly
     board->cleanOptionalMovesList();
 
-    return true;
+    return 1;
 }
 
 int AiGame::findEnemyMaxMoves(Cell chosen, Player *p, Board* board) {

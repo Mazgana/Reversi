@@ -18,6 +18,7 @@ public:
 
 		void run();
 		void endGame();
+		void closeGame();
 };
 
 #endif /* INCLUDE_GAMEFLOW_H_ */

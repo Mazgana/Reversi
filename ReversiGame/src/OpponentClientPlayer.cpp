@@ -20,14 +20,16 @@ OpponentClientPlayer :: ~OpponentClientPlayer() {
 Cell OpponentClientPlayer :: doTurn(vector<Cell> options) {
     int x,y;
 
-    displayer->printMessageWitheNewLine("Waiting for opponent to play turn...");
-
     //reading two integers that will represent coordinates
     x = messageReceiver.receiveCoordinate();
     messageReceiver.attending(1);
     y = messageReceiver.receiveCoordinate();
+
+    if (x != -5)
+    	displayer->printMessageWitheNewLine("Waiting for opponent to play turn...");
+
     Cell c(x,y);
-    if (x != -4) { //The opponent player disconnected
+    if (x != -4 && x != -5) { //The opponent player disconnected or closed the game
     	displayer->printChar((char) getChip());
     	displayer->printMessage(" played ");
 			displayer->printCell(c);

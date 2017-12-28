@@ -46,26 +46,43 @@ GameFlow :: ~GameFlow() {
 
 //runs basic game loop.
 void GameFlow :: run() {    //initializing board and starting.
-    bool oPlayed = true, xPlayed;
+    int oPlayed = 1, xPlayed;
+    bool closed = false;
     board.initialize();
     displayer->printBoard(board);
 
     //playing game, 1 round per player.
     while (!board.isBoardFull()) {
         xPlayed = logic->playTurn(logic->getBlackPlayer(), &board);
-        if (!xPlayed && !oPlayed) {
+        if (xPlayed == 0 && oPlayed == 0) {
             //when no more moves can be done.
             break;
-        }
-    displayer->printBoard(board);
-    oPlayed = logic->playTurn(logic->getWhitePlayer(), &board);
-    if (!xPlayed && !oPlayed) {
-        //when no more moves can be done.
-        break;
-        }
-    displayer->printBoard(board);
-    }
-    endGame();
+        } else if (xPlayed == 2) {
+        	//X closed the game
+        	closed = true;
+        	break;
+        		}
+
+        displayer->printBoard(board);
+
+        oPlayed = logic->playTurn(logic->getWhitePlayer(), &board);
+        if (xPlayed == 0 && oPlayed == 0) {
+        	//when no more moves can be done.
+        	break;
+        } else if (oPlayed == 2) {
+        	//O closed the game
+        	closed = true;
+        	break;
+        		}
+
+        displayer->printBoard(board);
+    	}
+
+		if (closed) {
+			closeGame();
+		} else {
+			endGame();
+		}
 }
 
 //ending game and declaring winner.
@@ -84,4 +101,9 @@ void GameFlow :: endGame() {
 
 	    logic->getBlackPlayer()->endGame();
 	    logic->getWhitePlayer()->endGame();
+}
+
+void GameFlow :: closeGame() {
+    logic->getBlackPlayer()->endGame();
+    logic->getWhitePlayer()->endGame();
 }

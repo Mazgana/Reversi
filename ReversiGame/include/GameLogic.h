@@ -20,8 +20,8 @@ private:
 
 public:
 	//calls on functions for each turn.
-	//returns true if a piece was put on board. false otherwise.
-	virtual bool playTurn(Player* p, Board* board) {};
+	//returns 1 if a piece was put on board. 0 if not and 2 if the game was closed.
+	virtual int playTurn(Player* p, Board* board) {};
 
 	virtual Player* getBlackPlayer() {};
 	virtual Player* getWhitePlayer() {};

@@ -6,6 +6,7 @@
 CPP_SRCS += \
 ../ClientHandler.cpp \
 ../CommandManager.cpp \
+../JoinCommand.cpp \
 ../ListGamesCommand.cpp \
 ../Main.cpp \
 ../Server.cpp \
@@ -14,6 +15,7 @@ CPP_SRCS += \
 OBJS += \
 ./ClientHandler.o \
 ./CommandManager.o \
+./JoinCommand.o \
 ./ListGamesCommand.o \
 ./Main.o \
 ./Server.o \
@@ -22,6 +24,7 @@ OBJS += \
 CPP_DEPS += \
 ./ClientHandler.d \
 ./CommandManager.d \
+./JoinCommand.d \
 ./ListGamesCommand.d \
 ./Main.d \
 ./Server.d \
