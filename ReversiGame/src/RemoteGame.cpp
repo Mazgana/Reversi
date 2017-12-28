@@ -38,28 +38,28 @@ RemoteGame::RemoteGame() {
         exit(-1);
       	}
 
-    int clientChoice = chooseSeverOption();
     int serverResponse = 0;
+    while (serverResponse == 0) { // The client asked list of games
+			int clientChoice = chooseSeverOption();
 
-    if(clientChoice == 1)
-    	serverResponse = startNewGame(client);
-    else if (clientChoice == 2)
-    		printListOfGames(client);
-    else
-    		joinGame(client);
+			if(clientChoice == 1)
+				serverResponse = startNewGame(client);
+			else if (clientChoice == 2)
+				serverResponse = printListOfGames(client);
+			else
+				serverResponse = joinGame(client);
 
-    cout << serverResponse << endl;
-
-		if (serverResponse == 1) {
-			char chip = client.getOpeningPlayer();//find first client to connect to server, set to be black player
-			if(chip == 'X') {
-				blackPlayer = new ClientPlayer(BLACK, client);
-				whitePlayer = new OpponentClientPlayer(WHITE, client);
-			} else if (chip == 'O') {
-				whitePlayer = new ClientPlayer(WHITE, client);
-				blackPlayer = new OpponentClientPlayer(BLACK, client);
+			if (serverResponse == 1) {
+				char chip = client.getOpeningPlayer();//find first client to connect to server, set to be black player
+				if(chip == 'X') {
+						blackPlayer = new ClientPlayer(BLACK, client);
+						whitePlayer = new OpponentClientPlayer(WHITE, client);
+				} else if (chip == 'O') {
+						whitePlayer = new ClientPlayer(WHITE, client);
+						blackPlayer = new OpponentClientPlayer(BLACK, client);
+				}
 			}
-		}
+    }
 }
 
 RemoteGame :: ~RemoteGame() {
@@ -76,7 +76,7 @@ int RemoteGame :: chooseSeverOption() {
 		displayer->printMessageWitheNewLine("Please choose your action:");
 		displayer->printMessageWitheNewLine("1. Start new game.");
 		displayer->printMessageWitheNewLine("2. Get list of games.");
-		displayer->printMessageWitheNewLine("3. Join to an on going game.");
+		displayer->printMessageWitheNewLine("3. Join an ongoing game.");
 
 		while (invalid) { //validating user's choice.
 			choice = displayer->getInt();
@@ -105,16 +105,21 @@ int RemoteGame :: startNewGame(Client client) {
 		return serverResponse;
 }
 
-void RemoteGame :: printListOfGames(Client client) {
+int RemoteGame :: printListOfGames(Client client) {
 		vector<string> listOfGames;
 
 		string listCommand = "list_games ";
 		listOfGames = client.reciveStringList(listCommand);
 
+		displayer->printMessageWitheNewLine("The games list:");
+
 		for (int i = 0; i < (int) listOfGames.size(); i++) {
-			cout << "client: ";
 			displayer->printMessageWitheNewLine(listOfGames[i]);
 		}
+
+		displayer->printNewLine();
+
+		return 0;
 }
 
 int RemoteGame :: joinGame(Client client) {
@@ -128,7 +133,6 @@ int RemoteGame :: joinGame(Client client) {
 		serverResponse = client.sendCommandMessage(joinCommand);
 
 		return serverResponse;
-
 }
 
 bool RemoteGame :: playTurn(Player* p, Board* board) {

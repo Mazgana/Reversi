@@ -122,7 +122,7 @@ vector<string> Client :: reciveStringList(string messageToServer) {
 		vector<string> list;
     char line[MAX_STR] = "";
     string gameName;
-    int len;
+    int len = 0;
 
 		//Sending the server the user's command
 		int n =	send(clientSocket, messageToServer.c_str(), messageToServer.length(), 0);
@@ -131,15 +131,19 @@ vector<string> Client :: reciveStringList(string messageToServer) {
 			throw "Error writing message to socket.";
 		}
 
-    while (line != '\0') {
+    while (len != -1) {
     	int w = read(clientSocket, &len, sizeof(int));
+    	if (w == -1)
+    			throw "Error reading string's length";
+    	if (len == -1)
+    			break;
+
 			int n = recv((int)clientSocket, line, len, 0);
 			if (n == -1) {
-				cout << "Error reading choice" << endl;
+				throw "Error reading string";
 			}
 
 			gameName = line;
-			cout << "game name: " << gameName << endl;
 			list.push_back(gameName);
     	}
 
