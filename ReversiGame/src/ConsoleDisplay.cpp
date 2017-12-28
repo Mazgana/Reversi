@@ -60,6 +60,13 @@ string ConsoleDisplay :: getString() {
 		return inputStr;
 }
 
+char ConsoleDisplay :: getChar() {
+	char inputChar;
+	cin >> inputChar;
+
+	return inputChar;
+}
+
 void ConsoleDisplay :: getBufferContent() {
 		cin.get();
 }

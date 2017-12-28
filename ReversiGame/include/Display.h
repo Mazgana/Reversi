@@ -28,6 +28,8 @@ public:
 
 	virtual string getString() {};
 
+	virtual char getChar() {};
+
 	virtual void getBufferContent() {};
 
 	virtual void ignoreInput(char c) {};

@@ -37,7 +37,8 @@ Cell HumanPlayer :: doTurn(vector<Cell> options) {
     while (!valid) {
         displayer->printMessageWitheNewLine("Please enter your move row,col: ");
         x = displayer->getInt();
-        tempY = displayer->getInt();
+        tempY = displayer->getChar();
+
         if (tempY == ',') {
         	y = displayer->getInt();
         } else {
