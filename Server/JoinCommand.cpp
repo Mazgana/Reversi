@@ -1,8 +1,9 @@
 #include "JoinCommand.h"
 
 void JoinCommand::execute(string gameName, int socketID, map<string, int> &gameList) {
+    cout << "joining game..." << endl;
     string name = gameName;
-    if(gameList.count(name)) {
+    if(!gameList.count(name)) {
         int fail = -1;
         int w = write(socketID, &fail, sizeof(fail));
         if (w == -1) {
@@ -14,6 +15,8 @@ void JoinCommand::execute(string gameName, int socketID, map<string, int> &gameL
     int firstClientSocket = gameList[name];
     int secondClientSocket = socketID;
     gameList.erase(name);
+
+    cout << "first ID: " << firstClientSocket << "second ID: " << secondClientSocket << endl;
 
     int success = 1;
     int m = write(socketID, &success, sizeof(success));
