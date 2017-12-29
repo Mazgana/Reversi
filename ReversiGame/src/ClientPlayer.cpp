@@ -1,10 +1,4 @@
-#include <iostream>
-#include <limits>
-#include <sstream>
 #include "ClientPlayer.h"
-#include "ConsoleDisplay.h"
-
-using namespace std;
 
 ClientPlayer::ClientPlayer(Client client) : contactServer(client) {
 		displayer = new ConsoleDisplay();
@@ -27,7 +21,8 @@ Cell ClientPlayer :: doTurn(vector<Cell> options) {
     for (i = 0; i < (int)options.size(); i++) {
     	displayer->printCell(options[i]);
     	displayer->printMessage(" ");
-    }
+    	}
+
     displayer->printNewLine();
     displayer->printNewLine();
 
@@ -37,47 +32,46 @@ Cell ClientPlayer :: doTurn(vector<Cell> options) {
     char integers[3];
 
     int x = 0, y = 0;
-    char tempY;
     bool valid = false;
     while (!valid) {
     		displayer->printMessageWitheNewLine("Please enter your move row,col: ");
     		input = displayer->getString();
 
-    		if (!close.compare(input)) {
-    				x = -5;
-    				y = -5;
-    				break;
-    		} else {
-
+    		if (!close.compare(input)) { //the player closed the game
+    			x = -5;
+    			y = -5;
+    			break;
+    		} else { //extracting two integers from the user's input
 					strcpy(integers, input.c_str());
 					x = (int) integers[0] - 48;
-					if (integers[1] == ',') {
+					if (integers[1] == ',' || integers[1] == ' ') {
 						y = (int) integers[2] - 48;
 					} else {
 						y = (int) integers[1] - 48;
-							}
+					}
 
 					if (displayer->isInputFailed()) {
 							displayer->clearBuffer();
-						displayer->ignoreInput('\n');
-								displayer->printMessageWitheNewLine("Invalid input!");
-								displayer->getBufferContent();
-							}
+							displayer->ignoreInput('\n');
+							displayer->printMessageWitheNewLine("Invalid input!");
+							displayer->getBufferContent();
+					}
 
+					// validate that the user's choice is one of the given options
 					for (i = 0; i < (int)options.size(); i++) {
 						if (options[i].getRow() == x && options[i].getCol() == y) {
 							valid = true;
 							break;
-									}
-							}
+						}
+					}
 
 					if (!valid) {
 								displayer->printMessageWitheNewLine("That is not an option.");
 								displayer->getBufferContent();
-							}
+					}
     			}
-    }
-    Cell c(x,y);//returning console choice
+    	}
+    Cell c(x,y); //returning the client's choice
     contactServer.sendMove(x,y);
     return c;
 }
@@ -111,5 +105,6 @@ void ClientPlayer::skipTurn() {
 }
 
  void ClientPlayer::endGame() {
+	 	 //sending random move so the server and the other player will know that the game ended.
 	 	 contactServer.sendMove(-3, -3);
  }

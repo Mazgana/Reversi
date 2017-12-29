@@ -3,6 +3,10 @@
 ConsoleDisplay :: ConsoleDisplay() {
 }
 
+ConsoleDisplay :: ~ConsoleDisplay() {
+
+}
+
 void ConsoleDisplay :: printMessage(string message) {
 	cout << message;
 }
@@ -46,21 +50,21 @@ void ConsoleDisplay :: printNewLine() {
 	cout << endl;
 }
 
-int ConsoleDisplay :: getInt() {
+int ConsoleDisplay :: getInt() const {
 	int num;
 	cin >> num;
 
 	return num;
 }
 
-string ConsoleDisplay :: getString() {
+string ConsoleDisplay :: getString() const{
 		string inputStr;
 		cin >> inputStr;
 
 		return inputStr;
 }
 
-char ConsoleDisplay :: getChar() {
+char ConsoleDisplay :: getChar() const{
 	char inputChar;
 	cin >> inputChar;
 
@@ -79,6 +83,6 @@ void ConsoleDisplay :: clearBuffer() {
 		cin.clear();
 }
 
-bool ConsoleDisplay :: isInputFailed() {
+bool ConsoleDisplay :: isInputFailed() const{
 		return cin.fail();
 }

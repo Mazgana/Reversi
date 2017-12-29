@@ -1,5 +1,4 @@
 #include "Board.h"
-#include <iostream>
 
 Board::Board() {
 	length = default_lenth;
@@ -178,34 +177,33 @@ Status Board::getWinner() const {
         	      ++oCount;
 			  	  	  	}
 				}
-    }// going over board and counting
+    } // going over board and counting
     if (xCount > oCount) {
         return  BLACK;
-    }
-    else if (xCount < oCount) {
+    } else if (xCount < oCount) {
         return  WHITE;
-    }
-    else {
+    } else {
         return EMPTY;
-    }
+    	}
 }
 
 bool Board::isCellInOptionArray(Cell check) {
     int i;
-	//checking if given cell is an empty one
+
+		//checking if given cell is an empty one
     if ((int)optionalMoves.size() == 0) {
 	    return false;
-    }
-	for (i = 0; i < (int)optionalMoves.size(); i++) {
-		if (optionalMoves[i].getRow() == check.getRow() && optionalMoves[i].getCol() == check.getCol())
-			return true;
-    }
+    	}
+		for (i = 0; i < (int)optionalMoves.size(); i++) {
+			if (optionalMoves[i].getRow() == check.getRow() && optionalMoves[i].getCol() == check.getCol())
+				return true;
+		}
 
-	return false;
+		return false;
 }
 
 void Board::cleanOptionalMovesList(){
-	optionalMoves.clear();
+		optionalMoves.clear();
 }
 
 bool Board::isBoardFull() {
@@ -217,5 +215,6 @@ bool Board::isBoardFull() {
 			}
 		}
 	}
+
 	return true;
 }

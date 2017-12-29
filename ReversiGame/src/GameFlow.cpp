@@ -1,8 +1,4 @@
 #include "GameFlow.h"
-#include "TwoHumansGame.h"
-#include "AiGame.h"
-#include "RemoteGame.h"
-#include "ConsoleDisplay.h"
 
 GameFlow :: GameFlow() {
 	displayer = new ConsoleDisplay();
@@ -17,7 +13,7 @@ GameFlow :: GameFlow() {
 	displayer->printMessageWitheNewLine("2. an AI player");
 	displayer->printMessageWitheNewLine("3. a remote player");
 
-	while (invalid) {//validating users game choice.
+	while (invalid) {		//validating users game choice.
 		gameType = displayer->getInt();
 		if (gameType != 1 && gameType != 2 && gameType != 3) {
 			displayer->printMessageWitheNewLine("Invalid input! Please enter 1, 2 or 3.");
@@ -45,7 +41,8 @@ GameFlow :: ~GameFlow() {
 }
 
 //runs basic game loop.
-void GameFlow :: run() {    //initializing board and starting.
+void GameFlow :: run() {
+	//initializing board and starting.
     int oPlayed = 1, xPlayed;
     bool closed = false;
     board.initialize();
@@ -103,6 +100,7 @@ void GameFlow :: endGame() {
 	    logic->getWhitePlayer()->endGame();
 }
 
+//closing the game for both players
 void GameFlow :: closeGame() {
     logic->getBlackPlayer()->endGame();
     logic->getWhitePlayer()->endGame();

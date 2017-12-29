@@ -1,11 +1,10 @@
-
 #ifndef REVERSI_OPPONENTCLIENTPLAYER_H
 #define REVERSI_OPPONENTCLIENTPLAYER_H
 
 #include "Player.h"
 #include "Cell.h"
 #include "Client.h"
-#include "Display.h"
+#include "ConsoleDisplay.h"
 
 using namespace std;
 /*

@@ -4,6 +4,11 @@
 #include "GameLogic.h"
 #include "HumanPlayer.h"
 #include "Display.h"
+#include "ConsoleDisplay.h"
+#include <fstream>
+#include <stdlib.h>
+
+using namespace std;
 
 class TwoClientsGame : public GameLogic {
 private:
@@ -18,10 +23,10 @@ public:
 
 	//calls on functions for each turn.
 	//returns true if a piece was put on board. false otherwise.
-	int playTurn(Player *p, Board* board);
+	int playTurn(Player *p, Board* board) const;
 
-	Player* getBlackPlayer();
-	Player* getWhitePlayer();
+	Player* getBlackPlayer() const;
+	Player* getWhitePlayer() const;
 
 };
 #endif /* INCLUDE_TWOCLIENTSGAME_H_ */

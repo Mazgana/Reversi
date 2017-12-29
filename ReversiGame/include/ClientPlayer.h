@@ -1,12 +1,15 @@
-
 #ifndef REVERSI_CLIENTPLAYER_H
 #define REVERSI_CLIENTPLAYER_H
 
 #include "Player.h"
 #include "Cell.h"
 #include "Client.h"
+#include "ConsoleDisplay.h"
 
-using namespace std;
+#include <iostream>
+#include <limits>
+#include <sstream>
+
 /*
  * Client player class. current player connecting to server to play against another remote player.
  */
@@ -37,6 +40,7 @@ public:
     //send message that turn was skipped
     void skipTurn();
 
+    //sending the sever the 'end of game' message
     void endGame();
 };
 

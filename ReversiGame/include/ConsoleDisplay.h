@@ -6,6 +6,7 @@
 class ConsoleDisplay : public Display {
 public:
 	ConsoleDisplay();
+	~ConsoleDisplay();
 
 	//Output
 	void printMessage(string mes);
@@ -21,11 +22,11 @@ public:
 	void printNewLine();
 
 	//Input
-	int getInt();
+	int getInt() const;
 
-	string getString();
+	string getString() const;
 
-	char getChar();
+	char getChar() const;
 
 	void getBufferContent();
 
@@ -33,7 +34,7 @@ public:
 
 	void clearBuffer();
 
-	bool isInputFailed();
+	bool isInputFailed() const;
 };
 
 #endif /* INCLUDE_CONSOLEDISPLAY_H_ */

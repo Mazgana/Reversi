@@ -3,6 +3,8 @@
 
 #include "Cell.h"
 #include <vector>
+#include <iostream>
+
 using namespace std;
 
 const int default_width = 8;
@@ -26,6 +28,7 @@ public:
     Board(int, int);
     Board(const Board &b);
 
+    // return the board's length and width
     int getLength();
     int getWidth();
 

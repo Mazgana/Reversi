@@ -2,7 +2,9 @@
 #define REVERSI_AI_H
 
 #include "Player.h"
-#include "Cell.h"
+#include <limits>
+#include <iostream>
+
 /*
  * AI player class. plays game specified game logic and printing it to console.
  */

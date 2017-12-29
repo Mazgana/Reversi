@@ -1,8 +1,4 @@
-#include <iostream>
 #include "OpponentClientPlayer.h"
-#include "ConsoleDisplay.h"
-
-using namespace std;
 
 OpponentClientPlayer::OpponentClientPlayer(Client client) : messageReceiver(client) {
 		displayer = new ConsoleDisplay();
@@ -22,10 +18,10 @@ Cell OpponentClientPlayer :: doTurn(vector<Cell> options) {
 
     //reading two integers that will represent coordinates
     x = messageReceiver.receiveCoordinate();
-    messageReceiver.attending(1);
+    messageReceiver.attending();
     y = messageReceiver.receiveCoordinate();
 
-    if (x != -5)
+    if (x != -5) //the game wasn't closed by the other player
     	displayer->printMessageWitheNewLine("Waiting for opponent to play turn...");
 
     Cell c(x,y);
@@ -59,7 +55,7 @@ void OpponentClientPlayer::skipTurn() {
 
     //reading two integers and dumping them, so server knows to skip turn
     messageReceiver.receiveCoordinate();
-    messageReceiver.attending(1);
+    messageReceiver.attending();
     messageReceiver.receiveCoordinate();
 
     displayer->printMessage("opponent ");

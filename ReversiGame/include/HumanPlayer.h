@@ -2,8 +2,13 @@
 #define REVERSI_HUMANPLAYER_H
 
 #include "Player.h"
-#include "Cell.h"
-#include "Display.h"
+#include "ConsoleDisplay.h"
+#include <limits>
+#include <iostream>
+#include <sstream>
+#include <stdlib.h>
+
+using namespace std;
 
 /*
  * human player, playing on current computer, using console

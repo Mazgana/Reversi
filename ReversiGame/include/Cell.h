@@ -1,6 +1,10 @@
 #ifndef CELL_H_
 #define CELL_H_
 
+#include <iostream>
+
+using namespace std;
+
 enum Status {BLACK = 'X', WHITE = 'O', EMPTY = ' '};
 /*
  * Cell class. holds coordinate and changes chip according to game.
@@ -26,7 +30,7 @@ public:
 	int getRow() const;
 	int getCol() const;
 
-	//fliiping chip- changing status from black to white or vice versa
+	//flipping chip- changing status from black to white or vice versa
 	void flip();
 };
 

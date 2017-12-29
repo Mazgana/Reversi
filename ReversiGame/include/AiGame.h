@@ -12,10 +12,10 @@ private:
 	Display* displayer;
 
   //finds best move using given strategy (least moves for next turn).
-  int findEnemyMaxMoves(Cell chosen, Player *p, Board* b);
+  int findEnemyMaxMoves(Cell chosen, Player *p, Board* b) const;
 
   //returns maximum number
-  int maximum(int first, int second);
+  int maximum(int first, int second) const;
 
 public:
 	//constructors
@@ -24,10 +24,11 @@ public:
 
 	//calls on functions for each turn.
 	//returns true if a piece was put on board. false otherwise.
-	int playTurn(Player *p, Board* b);
+	int playTurn(Player *p, Board* b) const;
 
-	Player* getBlackPlayer();
-	Player* getWhitePlayer();
+	// Returning the game's players
+	Player* getBlackPlayer() const;
+	Player* getWhitePlayer() const;
 };
 
 #endif /* INCLUDE_AIGAME_H_ */

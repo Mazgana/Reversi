@@ -1,11 +1,4 @@
 #include "HumanPlayer.h"
-#include "ConsoleDisplay.h"
-#include <limits>
-#include <iostream>
-#include <sstream>
-#include <stdlib.h>
-
-using namespace std;
 
 HumanPlayer::HumanPlayer() {
     type = BLACK;
@@ -26,7 +19,7 @@ Cell HumanPlayer :: doTurn(vector<Cell> options) {
     displayer->printMessageWitheNewLine(": It's your move.");
     displayer->printMessageWitheNewLine("your possible moves:");
 
-    for (i = 0; i < (int)options.size(); i++) {//getting move from console
+    for (i = 0; i < (int)options.size(); i++) { //getting move from console
     	displayer->printCell(options[i]);
     	displayer->printMessage(" ");
         }
@@ -43,9 +36,10 @@ Cell HumanPlayer :: doTurn(vector<Cell> options) {
         displayer->printMessageWitheNewLine("Please enter your move row,col: ");
         input = displayer->getString();
 
+        //extracting two integers from the player's choice
         strcpy(integers, input.c_str());
         x = (int) integers[0] - 48;
-        if (integers[1] == ',') {
+        if (integers[1] == ',' || integers[1] == ' ') {
         	y = (int) integers[2] - 48;
         } else {
         	y = (int) integers[1] - 48;
@@ -58,6 +52,7 @@ Cell HumanPlayer :: doTurn(vector<Cell> options) {
             displayer->getBufferContent();
         		}
 
+        //validate that the player's choice is one of the given options
         for (i = 0; i < (int)options.size(); i++) {
             if (options[i].getRow() == x && options[i].getCol() == y) {
                 valid = true;
@@ -67,7 +62,7 @@ Cell HumanPlayer :: doTurn(vector<Cell> options) {
 
         if (!valid) {
             displayer->printMessageWitheNewLine("That is not an option.");
-            cin.get();
+            displayer->getBufferContent();
         		}
     }
     Cell c(x,y);//returning console choice

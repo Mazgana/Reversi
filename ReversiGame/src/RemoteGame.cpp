@@ -1,13 +1,4 @@
 #include "RemoteGame.h"
-#include "Client.h"
-#include "OpponentClientPlayer.h"
-#include <iostream>
-#include <fstream>
-#include <stdlib.h>
-#include <string.h>
-#include <string>
-
-using namespace std;
 
 RemoteGame::RemoteGame() {
 		displayer = new ConsoleDisplay();
@@ -15,6 +6,7 @@ RemoteGame::RemoteGame() {
    	ifstream File;
    	string details;
 
+   	//extracting the client's connection details from file
    	File.open("clientConfiguration.txt");
    	if (!File) {
    		displayer->printMessageWitheNewLine("Error in opening client configuration file.");
@@ -42,6 +34,7 @@ RemoteGame::RemoteGame() {
     while (serverResponse == 0) { // The client asked list of games
 			int clientChoice = chooseSeverOption();
 
+			// sending the command according to the client's choice
 			if(clientChoice == 1)
 				serverResponse = startNewGame(client);
 			else if (clientChoice == 2)
@@ -49,8 +42,8 @@ RemoteGame::RemoteGame() {
 			else
 				serverResponse = joinGame(client);
 
-			if (serverResponse == 1) {
-				char chip = client.getOpeningPlayer();//find first client to connect to server, set to be black player
+			if (serverResponse == 1) {	//the command request succeeded
+				char chip = client.getOpeningPlayer();	//find first client to connect to server, set to be black player
 				if(chip == 'X') {
 						blackPlayer = new ClientPlayer(BLACK, client);
 						whitePlayer = new OpponentClientPlayer(WHITE, client);
@@ -96,6 +89,7 @@ int RemoteGame :: startNewGame(Client client) {
 		string gameName;
 		int serverResponse = 0;
 
+		//getting the new game's name from the client
 		displayer->printMessageWitheNewLine("Please enter your new game's name:");
 		gameName = displayer->getString();
 
@@ -109,10 +103,11 @@ int RemoteGame :: printListOfGames(Client client) {
 		vector<string> listOfGames;
 
 		string listCommand = "list_games ";
-		listOfGames = client.reciveStringList(listCommand);
+		listOfGames = client.receiveStringList(listCommand);
 
 		displayer->printMessageWitheNewLine("The games list:");
 
+		//printing the list
 		for (int i = 0; i < (int) listOfGames.size(); i++) {
 			displayer->printMessageWitheNewLine(listOfGames[i]);
 		}
@@ -126,6 +121,7 @@ int RemoteGame :: joinGame(Client client) {
 		string gameName;
 		int serverResponse = 0;
 
+		//getting the game's name from the client
 		displayer->printMessageWitheNewLine("Which game you would like to join:");
 		gameName = displayer->getString();
 
@@ -135,7 +131,7 @@ int RemoteGame :: joinGame(Client client) {
 		return serverResponse;
 }
 
-int RemoteGame :: playTurn(Player* p, Board* board) {
+int RemoteGame :: playTurn(Player* p, Board* board) const {
     vector<Cell> options = board->getOptions(p->getChip());
     if (options.empty()) {
 				displayer->printChar((char) p->getChip());
@@ -155,16 +151,17 @@ int RemoteGame :: playTurn(Player* p, Board* board) {
     		return 2;
     	}
 
-    board->putChip(p->getChip(), chosen.getRow(), chosen.getCol());// putting chip on board and flipping chips accordingly
+    // putting chip on board and flipping chips accordingly
+    board->putChip(p->getChip(), chosen.getRow(), chosen.getCol());
     board->cleanOptionalMovesList();
 
     return 1;
 }
 
-Player* RemoteGame :: getBlackPlayer() {
+Player* RemoteGame :: getBlackPlayer() const {
 	return blackPlayer;
 }
 
-Player* RemoteGame :: getWhitePlayer() {
+Player* RemoteGame :: getWhitePlayer() const {
 	return whitePlayer;
 }

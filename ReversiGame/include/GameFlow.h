@@ -1,8 +1,10 @@
 #ifndef INCLUDE_GAMEFLOW_H_
 #define INCLUDE_GAMEFLOW_H_
 
-#include "GameLogic.h"
-#include "Display.h"
+#include "TwoHumansGame.h"
+#include "AiGame.h"
+#include "RemoteGame.h"
+#include "ConsoleDisplay.h"
 
 class GameFlow {
 private:
@@ -16,8 +18,14 @@ public:
 		GameFlow();
 		~GameFlow();
 
+		//running the current game - each player play it's turn until the game ends or once one
+		//of the players closes the game
 		void run();
+
+		//ending the game and calculate who is the winner
 		void endGame();
+
+		//closing the game once one of the players ask it
 		void closeGame();
 };
 

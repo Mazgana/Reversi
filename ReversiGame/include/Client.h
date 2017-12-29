@@ -1,7 +1,14 @@
 #ifndef REVERSI_CLIENT_H
 #define REVERSI_CLIENT_H
 
-#include "Display.h"
+#include "ConsoleDisplay.h"
+#include <sys/socket.h>
+#include <netinet/in.h>
+#include <arpa/inet.h>
+#include <netdb.h>
+#include <unistd.h>
+
+using namespace std;
 
 #define MAX_STR 50
 
@@ -28,9 +35,11 @@ public:
     //receive move just done by other client player
     int receiveCoordinate();
 
-    void attending(int mes);
+    //sending to the server a message to approve that this client is still connected
+    void attending();
 
-    vector<string> reciveStringList(string messageToServer);
+    //receiving the game's list form the server
+    vector<string> receiveStringList(string messageToServer);
 
 private:
     const char *serverIP;

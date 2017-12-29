@@ -10,6 +10,8 @@ using namespace std;
 
 class Display {
 public:
+	virtual ~Display() {}
+
 	//Output
 	virtual void printMessage(string mes) {};
 
@@ -24,19 +26,23 @@ public:
 	virtual void printNewLine() {};
 
 	//Input
-	virtual int getInt() {};
+	virtual int getInt() const = 0;
 
-	virtual string getString() {};
+	virtual string getString() const = 0;
 
-	virtual char getChar() {};
+	virtual char getChar() const = 0;
 
+	//getting one char from the buffer
 	virtual void getBufferContent() {};
 
+	//ignoring the next input up to char 'c'
 	virtual void ignoreInput(char c) {};
 
+	//clearing the buffer
 	virtual void clearBuffer() {};
 
-	virtual bool isInputFailed() {};
+	//detects whether the value entered fits the value defined in the variable
+	virtual bool isInputFailed() const = 0;
 };
 
 #endif /* INCLUDE_DISPLAY_H_ */

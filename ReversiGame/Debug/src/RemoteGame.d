@@ -6,9 +6,7 @@ src/RemoteGame.o: ../src/RemoteGame.cpp \
  /home/adi/Reversi/ReversiGame/include/Player.h \
  /home/adi/Reversi/ReversiGame/include/ConsoleDisplay.h \
  /home/adi/Reversi/ReversiGame/include/Display.h \
- /home/adi/Reversi/ReversiGame/include/HumanPlayer.h \
  /home/adi/Reversi/ReversiGame/include/ClientPlayer.h \
- /home/adi/Reversi/ReversiGame/include/Client.h \
  /home/adi/Reversi/ReversiGame/include/Client.h \
  /home/adi/Reversi/ReversiGame/include/OpponentClientPlayer.h
 
@@ -26,11 +24,7 @@ src/RemoteGame.o: ../src/RemoteGame.cpp \
 
 /home/adi/Reversi/ReversiGame/include/Display.h:
 
-/home/adi/Reversi/ReversiGame/include/HumanPlayer.h:
-
 /home/adi/Reversi/ReversiGame/include/ClientPlayer.h:
-
-/home/adi/Reversi/ReversiGame/include/Client.h:
 
 /home/adi/Reversi/ReversiGame/include/Client.h:
 

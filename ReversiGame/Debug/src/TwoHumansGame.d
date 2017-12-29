@@ -6,8 +6,7 @@ src/TwoHumansGame.o: ../src/TwoHumansGame.cpp \
  /home/adi/Reversi/ReversiGame/include/Player.h \
  /home/adi/Reversi/ReversiGame/include/ConsoleDisplay.h \
  /home/adi/Reversi/ReversiGame/include/Display.h \
- /home/adi/Reversi/ReversiGame/include/HumanPlayer.h \
- /home/adi/Reversi/ReversiGame/include/Client.h
+ /home/adi/Reversi/ReversiGame/include/HumanPlayer.h
 
 /home/adi/Reversi/ReversiGame/include/TwoHumansGame.h:
 
@@ -24,5 +23,3 @@ src/TwoHumansGame.o: ../src/TwoHumansGame.cpp \
 /home/adi/Reversi/ReversiGame/include/Display.h:
 
 /home/adi/Reversi/ReversiGame/include/HumanPlayer.h:
-
-/home/adi/Reversi/ReversiGame/include/Client.h:

@@ -1,6 +1,5 @@
 #include "AI.h"
-#include <limits>
-#include <iostream>
+
 using namespace std;
 
 AI::AI() {

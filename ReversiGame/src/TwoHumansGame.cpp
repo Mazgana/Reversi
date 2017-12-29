@@ -1,10 +1,4 @@
 #include "TwoHumansGame.h"
-#include "Client.h"
-#include <iostream>
-#include <fstream>
-#include <stdlib.h>
-
-using namespace std;
 
 TwoClientsGame::TwoClientsGame() {
 	displayer = new ConsoleDisplay();
@@ -18,7 +12,7 @@ TwoClientsGame :: ~TwoClientsGame() {
     delete[] whitePlayer;
 }
 
-int TwoClientsGame :: playTurn(Player* p, Board* board) {
+int TwoClientsGame :: playTurn(Player* p, Board* board) const {
     vector<Cell> options = board->getOptions(p->getChip());
     if (options.empty()) {
 				displayer->printChar((char) p->getChip());
@@ -37,10 +31,10 @@ int TwoClientsGame :: playTurn(Player* p, Board* board) {
     return 1;
 }
 
-Player* TwoClientsGame :: getBlackPlayer() {
+Player* TwoClientsGame :: getBlackPlayer() const {
 	return blackPlayer;
 }
 
-Player* TwoClientsGame :: getWhitePlayer() {
+Player* TwoClientsGame :: getWhitePlayer() const {
 	return whitePlayer;
 }

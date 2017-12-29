@@ -14,6 +14,8 @@ private:
     Status type;
 
 public:
+    virtual ~Player() {}
+
     // passes player's char representing chip.
     virtual Status getChip() const = 0;
 
@@ -26,7 +28,7 @@ public:
     //checking if this player is a computer.
     virtual bool isComp() const = 0;
 
-    virtual void endGame(){};
+    virtual void endGame() {};
 };
 
 #endif /* PLAYER_H_ */

@@ -1,7 +1,4 @@
 #include "Cell.h"
-#include <iostream>
-
-using namespace std;
 
 Cell::Cell() {
 	cellStat = EMPTY;
