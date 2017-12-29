@@ -67,12 +67,6 @@ Command.h
 /home/leah/CLionProjects/Reversi/Server/ListGamesCommand.cpp
 ListGamesCommand.h
 /home/leah/CLionProjects/Reversi/Server/ListGamesCommand.h
-unistd.h
--
-sys/socket.h
--
-map
--
 
 /home/leah/CLionProjects/Reversi/Server/ListGamesCommand.h
 Command.h
@@ -103,7 +97,7 @@ sys/socket.h
 -
 netinet/in.h
 -
-string.h
+cstring
 -
 
 /home/leah/CLionProjects/Reversi/Server/StartCommand.cpp

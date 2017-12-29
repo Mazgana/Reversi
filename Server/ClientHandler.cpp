@@ -11,8 +11,7 @@ void *handleClient1(void *clientSocket) {
 
 void ClientHandler :: createNewThread(int clientSocket) {
 	pthread_t thread;
-	cout << "Map thread: " << GameList.size() << endl;
-	int rc = pthread_create(&thread, NULL, handleClient1, (void *)clientSocket);
+	int rc = pthread_create(&thread, NULL, handleClient1, (void *)(long)clientSocket);
 	if (rc == -1) {
 		throw "Failed creating thread";
 	}

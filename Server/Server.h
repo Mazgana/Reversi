@@ -8,9 +8,10 @@
 #include "ClientHandler.h"
 #include <sys/socket.h>
 #include <netinet/in.h>
-#include <string.h>
+#include <cstring>
 
 using namespace std;
+
 #define MAX_CONNECTED_CLIENTS 2
 
 class Server {
@@ -26,8 +27,7 @@ private:
 	int port;
 	int serverSocket;
 
-	void handleClient(int firstClientSocket, int secondClientSocket);
-
+    void createExitThread(int serverSocket);
 };
 
 #endif /* SERVER_H_ */

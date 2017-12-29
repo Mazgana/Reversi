@@ -10,6 +10,7 @@
 #define MAX_STR 50
 
 static map <string, int> GameList;
+//extern pthread_mutex_t mutex_map_games;
 
 class ClientHandler {
 private:
