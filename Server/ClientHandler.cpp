@@ -47,6 +47,6 @@ void ClientHandler :: handleClient (int clientSocket) {
 
         CM.executeCommand(command, gameName, firstClientSocket, GameList);
 
-        value = command;
+        value = command.append(" ");
     }
  }

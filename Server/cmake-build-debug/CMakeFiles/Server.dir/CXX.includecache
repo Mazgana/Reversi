@@ -54,6 +54,16 @@ ListGamesCommand.h
 JoinCommand.h
 /home/leah/CLionProjects/Reversi/Server/JoinCommand.h
 
+/home/leah/CLionProjects/Reversi/Server/GameManager.cpp
+GameManager.h
+/home/leah/CLionProjects/Reversi/Server/GameManager.h
+
+/home/leah/CLionProjects/Reversi/Server/GameManager.h
+iostream
+-
+unistd.h
+-
+
 /home/leah/CLionProjects/Reversi/Server/JoinCommand.cpp
 JoinCommand.h
 /home/leah/CLionProjects/Reversi/Server/JoinCommand.h
@@ -63,6 +73,8 @@ unistd.h
 -
 Command.h
 /home/leah/CLionProjects/Reversi/Server/Command.h
+GameManager.h
+/home/leah/CLionProjects/Reversi/Server/GameManager.h
 
 /home/leah/CLionProjects/Reversi/Server/ListGamesCommand.cpp
 ListGamesCommand.h

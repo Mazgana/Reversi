@@ -177,6 +177,33 @@ CommandManager.cpp.s:
 	$(MAKE) -f CMakeFiles/Server.dir/build.make CMakeFiles/Server.dir/CommandManager.cpp.s
 .PHONY : CommandManager.cpp.s
 
+GameManager.o: GameManager.cpp.o
+
+.PHONY : GameManager.o
+
+# target to build an object file
+GameManager.cpp.o:
+	$(MAKE) -f CMakeFiles/Server.dir/build.make CMakeFiles/Server.dir/GameManager.cpp.o
+.PHONY : GameManager.cpp.o
+
+GameManager.i: GameManager.cpp.i
+
+.PHONY : GameManager.i
+
+# target to preprocess a source file
+GameManager.cpp.i:
+	$(MAKE) -f CMakeFiles/Server.dir/build.make CMakeFiles/Server.dir/GameManager.cpp.i
+.PHONY : GameManager.cpp.i
+
+GameManager.s: GameManager.cpp.s
+
+.PHONY : GameManager.s
+
+# target to generate assembly for a file
+GameManager.cpp.s:
+	$(MAKE) -f CMakeFiles/Server.dir/build.make CMakeFiles/Server.dir/GameManager.cpp.s
+.PHONY : GameManager.cpp.s
+
 JoinCommand.o: JoinCommand.cpp.o
 
 .PHONY : JoinCommand.o
@@ -327,6 +354,9 @@ help:
 	@echo "... CommandManager.o"
 	@echo "... CommandManager.i"
 	@echo "... CommandManager.s"
+	@echo "... GameManager.o"
+	@echo "... GameManager.i"
+	@echo "... GameManager.s"
 	@echo "... JoinCommand.o"
 	@echo "... JoinCommand.i"
 	@echo "... JoinCommand.s"

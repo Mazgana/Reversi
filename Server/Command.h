@@ -1,3 +1,7 @@
+/*
+ * interface command.
+ * all command sent out by command manager from server to client/
+ */
 #ifndef SERVER_COMMAND_H
 #define SERVER_COMMAND_H
 #include <vector>
@@ -8,33 +12,11 @@
 using namespace std;
 
 class Command {
-protected:
-    int socket;
 public:
+    // execute given string command with related client and current game list.
     virtual void execute(string gameName, int socketID, map<string, int> &gameList) {};
+    //destructor.
     virtual ~Command() {}
 };
-
-////#include "Command.h"
-//class JoinCommand: public Command {
-//public:
-//    virtual void execute(string gameName, int socketID) {
-//
-//    }
-//};
-//
-////#include "Command.h"
-//class PlayCommand: public Command {
-//public:
-//    virtual void execute(string gameName, int socketID) {
-//    }
-//};
-//
-////#include "Command.h"
-//class CloseCommand: public Command {
-//public:
-//    virtual void execute(string gameName, int socketID) {
-//    }
-//};
 
 #endif //SERVER_COMMAND_H

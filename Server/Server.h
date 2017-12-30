@@ -26,7 +26,7 @@ public:
 private:
 	int port;
 	int serverSocket;
-
+	//gets ID of server socket and creates new thread to wait for an exit from console.
     void createExitThread(int serverSocket);
 };
 

@@ -6,6 +6,7 @@ CMakeFiles/Server.dir/ClientHandler.cpp.o
  /home/leah/CLionProjects/Reversi/Server/ClientHandler.h
  /home/leah/CLionProjects/Reversi/Server/Command.h
  /home/leah/CLionProjects/Reversi/Server/CommandManager.h
+ /home/leah/CLionProjects/Reversi/Server/GameManager.h
  /home/leah/CLionProjects/Reversi/Server/JoinCommand.h
  /home/leah/CLionProjects/Reversi/Server/ListGamesCommand.h
  /home/leah/CLionProjects/Reversi/Server/StartCommand.h
@@ -13,11 +14,16 @@ CMakeFiles/Server.dir/CommandManager.cpp.o
  /home/leah/CLionProjects/Reversi/Server/Command.h
  /home/leah/CLionProjects/Reversi/Server/CommandManager.cpp
  /home/leah/CLionProjects/Reversi/Server/CommandManager.h
+ /home/leah/CLionProjects/Reversi/Server/GameManager.h
  /home/leah/CLionProjects/Reversi/Server/JoinCommand.h
  /home/leah/CLionProjects/Reversi/Server/ListGamesCommand.h
  /home/leah/CLionProjects/Reversi/Server/StartCommand.h
+CMakeFiles/Server.dir/GameManager.cpp.o
+ /home/leah/CLionProjects/Reversi/Server/GameManager.cpp
+ /home/leah/CLionProjects/Reversi/Server/GameManager.h
 CMakeFiles/Server.dir/JoinCommand.cpp.o
  /home/leah/CLionProjects/Reversi/Server/Command.h
+ /home/leah/CLionProjects/Reversi/Server/GameManager.h
  /home/leah/CLionProjects/Reversi/Server/JoinCommand.cpp
  /home/leah/CLionProjects/Reversi/Server/JoinCommand.h
 CMakeFiles/Server.dir/ListGamesCommand.cpp.o
@@ -28,6 +34,7 @@ CMakeFiles/Server.dir/Main.cpp.o
  /home/leah/CLionProjects/Reversi/Server/ClientHandler.h
  /home/leah/CLionProjects/Reversi/Server/Command.h
  /home/leah/CLionProjects/Reversi/Server/CommandManager.h
+ /home/leah/CLionProjects/Reversi/Server/GameManager.h
  /home/leah/CLionProjects/Reversi/Server/JoinCommand.h
  /home/leah/CLionProjects/Reversi/Server/ListGamesCommand.h
  /home/leah/CLionProjects/Reversi/Server/Main.cpp
@@ -37,6 +44,7 @@ CMakeFiles/Server.dir/Server.cpp.o
  /home/leah/CLionProjects/Reversi/Server/ClientHandler.h
  /home/leah/CLionProjects/Reversi/Server/Command.h
  /home/leah/CLionProjects/Reversi/Server/CommandManager.h
+ /home/leah/CLionProjects/Reversi/Server/GameManager.h
  /home/leah/CLionProjects/Reversi/Server/JoinCommand.h
  /home/leah/CLionProjects/Reversi/Server/ListGamesCommand.h
  /home/leah/CLionProjects/Reversi/Server/Server.cpp

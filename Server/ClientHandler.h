@@ -1,3 +1,6 @@
+/*
+ * class to handle client- gets socket ID and reads commands from client, sending them to manager.
+ */
 #ifndef SERVER_CLIENTHANDLER_H
 #define SERVER_CLIENTHANDLER_H
 
@@ -14,14 +17,18 @@ static map <string, int> GameList;
 
 class ClientHandler {
 private:
-    vector<pthread_t> threads;
+    //command manger to send all string commands to.
     CommandManager CM;
 
 public:
+    //constructor
     ClientHandler();
 
+    //gets client socket as param
+    //gets command from client as string and passes to cm.
     void handleClient(int firstClientSocket);
 
+    //creates new thread for new client connection.
     void createNewThread(int socketId);
 };
 
