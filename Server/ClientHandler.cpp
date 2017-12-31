@@ -19,11 +19,9 @@ void ClientHandler :: createNewThread(int clientSocket) {
 
 void ClientHandler :: handleClient (int clientSocket) {
     int n;
-    string value = "list_games ";
     int firstClientSocket = clientSocket;
 
     while (true) {
-//    while(!value.compare("list_games ")) {
         char buffer[MAX_STR] = "";
         long firstClient = (long) firstClientSocket;
         n = recv((int) firstClient, buffer, MAX_STR, 0);
@@ -46,11 +44,5 @@ void ClientHandler :: handleClient (int clientSocket) {
         		}
 
         CM.executeCommand(command, gameName, firstClientSocket, GameList);
-
-        value = command.append(" ");
-
-        if (!value.compare("close ")) {
-            break;
-        		}
     }
  }

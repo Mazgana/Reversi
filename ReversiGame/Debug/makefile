@@ -11,6 +11,9 @@ RM := rm -rf
 -include test/subdir.mk
 -include src/subdir.mk
 -include gtest_src/gtest/subdir.mk
+-include cmake-build-debug/CMakeFiles/3.8.2/CompilerIdCXX/subdir.mk
+-include cmake-build-debug/CMakeFiles/3.8.2/CompilerIdC/subdir.mk
+-include cmake-build-debug/CMakeFiles/subdir.mk
 -include subdir.mk
 -include objects.mk
 
