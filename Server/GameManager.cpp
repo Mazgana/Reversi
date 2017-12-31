@@ -4,9 +4,11 @@ void GameManager::playGame(int firstClientSocket, int secondClientSocket) {
     int arg1, arg2, n, dumb;
     int disconnection = -4;
 
+    sendChips(firstClientSocket, secondClientSocket);
+
     while (true) {
         // Read new coordinate arguments from player
-        n = read(firstClientSocket, &arg1, sizeof(arg1));
+        n = (int) read(firstClientSocket, &arg1, sizeof(arg1));
         if (n == -1) {
             cout << "Error reading arg1" << endl;
             return;
@@ -21,21 +23,21 @@ void GameManager::playGame(int firstClientSocket, int secondClientSocket) {
             return;
         }
 
-        n = read(firstClientSocket, &arg2, sizeof(arg2));
+        n = (int) read(firstClientSocket, &arg2, sizeof(arg2));
         if (n == -1) {
             cout << "Error reading arg2" << endl;
             return;
         }
 
         // Write the result coordinates back to the client
-        int w = write(secondClientSocket, &arg1, sizeof(arg1));
+        int w = (int) write(secondClientSocket, &arg1, sizeof(arg1));
 
         if (w == -1) {
             cout << "Error writing to socket" << endl;
             return;
         }
 
-        int check = read(secondClientSocket, &dumb, sizeof(dumb));
+        int check = (int) read(secondClientSocket, &dumb, sizeof(dumb));
 
         if (check == 0) {
             write(firstClientSocket, &disconnection, sizeof(disconnection));
@@ -43,7 +45,7 @@ void GameManager::playGame(int firstClientSocket, int secondClientSocket) {
             return;
         }
 
-        int m = write(secondClientSocket, &arg2, sizeof(arg2));
+        int m = (int) write(secondClientSocket, &arg2, sizeof(arg2));
         if (m == -1) { //Client disconnected
             write(firstClientSocket, &disconnection, sizeof(disconnection));
             return;
@@ -54,4 +56,16 @@ void GameManager::playGame(int firstClientSocket, int secondClientSocket) {
         firstClientSocket = secondClientSocket;
         secondClientSocket = temp;
     }
+}
+
+void GameManager:: sendChips(int firstClientSocket, int secondClientSocket) {
+    int firstClient = 1;
+    int secondClient = 2;
+
+    int x = (int) write(firstClientSocket, &firstClient, sizeof(firstClient));
+    int o = (int) write(secondClientSocket, &secondClient, sizeof(secondClient));
+
+    if (x == -1 || o == -1)
+        throw "Error in sending the clients messages.";
+
 }

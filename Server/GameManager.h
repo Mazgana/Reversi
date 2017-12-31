@@ -15,6 +15,8 @@ class GameManager {
 public:
     //gets two socket ID's and passes coordinate messages between them.
     void playGame(int firstClientSocket, int secondClientSocket);
+private:
+    void sendChips(int firstClientSocket, int secondClientSocket);
 };
 
 

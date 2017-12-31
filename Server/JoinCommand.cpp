@@ -19,12 +19,10 @@ void JoinCommand::execute(string gameName, int socketID, map<string, int> &gameL
     	}
 
     int firstClientSocket = gameList[name];
+    gameList.erase(name);
     pthread_mutex_unlock(&mutex_join_game);
 
-    cout << "first: " << firstClientSocket << endl;
     int secondClientSocket = socketID;
-    cout << "second: " << secondClientSocket << endl;
-    gameList.erase(name);
 
     int success = 1;
     int m = write(socketID, &success, sizeof(success));
@@ -33,15 +31,6 @@ void JoinCommand::execute(string gameName, int socketID, map<string, int> &gameL
         cout << "Error writing to socket" << endl;
         return;
     }
-
-    int firstClient = 1;
-    int secondClient = 2;
-
-    int x = write(firstClientSocket, &firstClient, sizeof(firstClient));
-    int o = write(secondClientSocket, &secondClient, sizeof(secondClient));
-
-    if (x == -1 || o == -1)
-        throw "Error in sending the clients messages.";
 
     gameManager.playGame(firstClientSocket, secondClientSocket);
 

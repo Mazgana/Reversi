@@ -44,5 +44,9 @@ void ClientHandler :: handleClient (int clientSocket) {
         		}
 
         CM.executeCommand(command, gameName, firstClientSocket, GameList);
+
+        if (!command.compare("close")) {
+            break;
+        }
     }
  }
