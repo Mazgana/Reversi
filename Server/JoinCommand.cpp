@@ -1,10 +1,14 @@
 #include "JoinCommand.h"
 
+pthread_mutex_t mutex_join_game;
+
 JoinCommand::JoinCommand(){};
 
 void JoinCommand::execute(string gameName, int socketID, map<string, int> &gameList) {
 
     string name = gameName;
+
+    pthread_mutex_lock(&mutex_join_game);
     if(!gameList.count(name)) {
         int fail = -1;
         int w = write(socketID, &fail, sizeof(fail));
@@ -15,6 +19,8 @@ void JoinCommand::execute(string gameName, int socketID, map<string, int> &gameL
     	}
 
     int firstClientSocket = gameList[name];
+    pthread_mutex_unlock(&mutex_join_game);
+
     cout << "first: " << firstClientSocket << endl;
     int secondClientSocket = socketID;
     cout << "second: " << secondClientSocket << endl;

@@ -69,6 +69,7 @@ void *exit(void *serverSocket) {
     listOfSockets.clear();
     long socket = (long)serverSocket;
     close((int)socket);
+    exit(0);
 }
 
 void Server :: createExitThread(int serverSocket) {

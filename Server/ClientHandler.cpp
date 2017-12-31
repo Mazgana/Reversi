@@ -22,7 +22,8 @@ void ClientHandler :: handleClient (int clientSocket) {
     string value = "list_games ";
     int firstClientSocket = clientSocket;
 
-    while(!value.compare("list_games ")) {
+//    while(!value.compare("list_games ")) {
+    while (true) {
         char buffer[MAX_STR] = "";
         long firstClient = (long) firstClientSocket;
         n = recv((int) firstClient, buffer, MAX_STR, 0);
@@ -47,5 +48,9 @@ void ClientHandler :: handleClient (int clientSocket) {
         CM.executeCommand(command, gameName, firstClientSocket, GameList);
 
         value = command.append(" ");
+
+        if (value.compare("close ")) {
+            break;
+        }
     }
  }
