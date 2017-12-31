@@ -1,5 +1,7 @@
 #include "StartCommand.h"
 
+pthread_mutex_t mutex_map_games;
+
 StartCommand::StartCommand(){};
 
 void StartCommand::execute(string gameName, int socketID, map<string, int> &GameList) {
@@ -11,12 +13,14 @@ void StartCommand::execute(string gameName, int socketID, map<string, int> &Game
             cout << "Error writing to socket" << endl;
             return;
         }
+        /*
         char buffer[MAX_STR];
         int n = recv(socketID, buffer, MAX_STR, 0);
         if (n == -1) {
             cout << "Error reading choice" << endl;
         }
-        name = buffer;
+        name = buffer;*/
+        return;
     }
 
     GameList[name] = socketID;
