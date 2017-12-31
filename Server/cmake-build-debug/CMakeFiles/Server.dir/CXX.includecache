@@ -85,6 +85,10 @@ Command.h
 /home/leah/CLionProjects/Reversi/Server/Command.h
 map
 -
+unistd.h
+-
+sys/socket.h
+-
 
 /home/leah/CLionProjects/Reversi/Server/Main.cpp
 Server.h
