@@ -1,5 +1,6 @@
 CommandManager.o: ../CommandManager.cpp ../CommandManager.h ../Command.h \
- ../StartCommand.h ../ListGamesCommand.h ../JoinCommand.h
+ ../StartCommand.h ../ListGamesCommand.h ../JoinCommand.h \
+ ../GameManager.h
 
 ../CommandManager.h:
 
@@ -10,3 +11,5 @@ CommandManager.o: ../CommandManager.cpp ../CommandManager.h ../Command.h \
 ../ListGamesCommand.h:
 
 ../JoinCommand.h:
+
+../GameManager.h:
