@@ -3,22 +3,26 @@
 JoinCommand::JoinCommand(){};
 
 void JoinCommand::execute(string gameName, int socketID, map<string, int> &gameList) {
+
     string name = gameName;
     if(!gameList.count(name)) {
         int fail = -1;
         int w = write(socketID, &fail, sizeof(fail));
         if (w == -1) {
             cout << "Error writing to socket" << endl;
-        }
+        		}
         return;
-    }
+    	}
 
     int firstClientSocket = gameList[name];
+    cout << "first: " << firstClientSocket << endl;
     int secondClientSocket = socketID;
+    cout << "second: " << secondClientSocket << endl;
     gameList.erase(name);
 
     int success = 1;
     int m = write(socketID, &success, sizeof(success));
+    cout << "success: " << success << endl;
     if (m == -1) {
         cout << "Error writing to socket" << endl;
         return;

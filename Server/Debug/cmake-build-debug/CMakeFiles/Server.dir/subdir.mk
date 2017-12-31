@@ -6,6 +6,7 @@
 O_SRCS += \
 ../cmake-build-debug/CMakeFiles/Server.dir/ClientHandler.cpp.o \
 ../cmake-build-debug/CMakeFiles/Server.dir/CommandManager.cpp.o \
+../cmake-build-debug/CMakeFiles/Server.dir/GameManager.cpp.o \
 ../cmake-build-debug/CMakeFiles/Server.dir/JoinCommand.cpp.o \
 ../cmake-build-debug/CMakeFiles/Server.dir/ListGamesCommand.cpp.o \
 ../cmake-build-debug/CMakeFiles/Server.dir/Main.cpp.o \

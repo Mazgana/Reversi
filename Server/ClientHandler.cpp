@@ -19,12 +19,11 @@ void ClientHandler :: createNewThread(int clientSocket) {
 
 void ClientHandler :: handleClient (int clientSocket) {
     int n;
-    char buffer[MAX_STR] = "";
     string value = "list_games ";
     int firstClientSocket = clientSocket;
 
     while(!value.compare("list_games ")) {
-
+        char buffer[MAX_STR] = "";
         long firstClient = (long) firstClientSocket;
         n = recv((int) firstClient, buffer, MAX_STR, 0);
         if (n == -1) {
@@ -37,13 +36,13 @@ void ClientHandler :: handleClient (int clientSocket) {
         vector<string> tokens;
         while (getline(ss, arg, ' ')) {
             tokens.push_back(arg);
-        }
+        		}
 
         string gameName = "";
         string command = tokens[0];
         if (tokens.size() > 1) {
             gameName = tokens[1];
-        }
+        		}
 
         CM.executeCommand(command, gameName, firstClientSocket, GameList);
 

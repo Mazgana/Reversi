@@ -1,6 +1,6 @@
 Server.o: ../Server.cpp ../Server.h ../CommandManager.h ../Command.h \
  ../StartCommand.h ../ListGamesCommand.h ../JoinCommand.h \
- ../ClientHandler.h
+ ../GameManager.h ../ClientHandler.h
 
 ../Server.h:
 
@@ -13,5 +13,7 @@ Server.o: ../Server.cpp ../Server.h ../CommandManager.h ../Command.h \
 ../ListGamesCommand.h:
 
 ../JoinCommand.h:
+
+../GameManager.h:
 
 ../ClientHandler.h:
