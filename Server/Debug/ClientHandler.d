@@ -1,6 +1,6 @@
 ClientHandler.o: ../ClientHandler.cpp ../ClientHandler.h \
  ../CommandManager.h ../Command.h ../StartCommand.h ../ListGamesCommand.h \
- ../JoinCommand.h
+ ../JoinCommand.h ../GameManager.h
 
 ../ClientHandler.h:
 
@@ -13,3 +13,5 @@ ClientHandler.o: ../ClientHandler.cpp ../ClientHandler.h \
 ../ListGamesCommand.h:
 
 ../JoinCommand.h:
+
+../GameManager.h:

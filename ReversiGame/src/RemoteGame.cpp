@@ -52,7 +52,7 @@ RemoteGame::RemoteGame() {
 						blackPlayer = new OpponentClientPlayer(BLACK, client);
 				}
 			}
-    }
+    	}
 }
 
 RemoteGame :: ~RemoteGame() {

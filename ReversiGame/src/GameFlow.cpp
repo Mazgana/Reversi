@@ -37,7 +37,6 @@ GameFlow :: GameFlow() {
 }
 
 GameFlow :: ~GameFlow() {
-	delete[] displayer;
 }
 
 //runs basic game loop.
