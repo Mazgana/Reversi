@@ -5,7 +5,7 @@ ClientHandler::ClientHandler(){}
 void *handleClient1(void *clientSocket) {
     ClientHandler ch;
     long tid = (long)clientSocket;
-    cout << "Hello world. It's me, thread " << tid << endl;
+//    cout << "Hello world. It's me, thread " << tid << endl;
     ch.handleClient((int)tid);
 }
 
@@ -22,8 +22,8 @@ void ClientHandler :: handleClient (int clientSocket) {
     string value = "list_games ";
     int firstClientSocket = clientSocket;
 
-//    while(!value.compare("list_games ")) {
     while (true) {
+//    while(!value.compare("list_games ")) {
         char buffer[MAX_STR] = "";
         long firstClient = (long) firstClientSocket;
         n = recv((int) firstClient, buffer, MAX_STR, 0);
@@ -49,8 +49,8 @@ void ClientHandler :: handleClient (int clientSocket) {
 
         value = command.append(" ");
 
-        if (value.compare("close ")) {
+        if (!value.compare("close ")) {
             break;
-        }
+        		}
     }
  }
