@@ -39,6 +39,7 @@ Cell HumanPlayer :: doTurn(vector<Cell> options) {
         //extracting two integers from the player's choice
         strcpy(integers, input.c_str());
         x = (int) integers[0] - 48;
+
         if (integers[1] == ',' || integers[1] == ' ') {
         	y = (int) integers[2] - 48;
         } else {

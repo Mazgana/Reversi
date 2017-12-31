@@ -52,7 +52,8 @@ char Client::getOpeningPlayer() {
     int n = read(clientSocket, &playersPlace, sizeof(playersPlace));
     if (n == -1) {
         throw "Error reading result from socket";
-    } else if (n == 0) { // validate that the server is still connected
+    } else if (n == 0) {
+    		displayer->printMessageWitheNewLine("The server disconnected.");
     		throw "The server disconnected";
     	}
 
@@ -75,7 +76,8 @@ int Client::receiveCoordinate() {
     if (n == -1) {
         throw "Error reading result from socket";
     } else if (n == 0) {
-    	throw "The server disconnected";
+				displayer->printMessageWitheNewLine("The server disconnected.");
+				throw "The server disconnected";
     	}
 
     return cor;
@@ -87,6 +89,7 @@ void Client::sendMove(int x, int y) {
     if (n == -1) {
         throw "Error writing x to socket";
    	} else if (n == 0) {
+				displayer->printMessageWitheNewLine("The server disconnected.");
        	throw "The server disconnected";
        	}
 
@@ -94,7 +97,8 @@ void Client::sendMove(int x, int y) {
     if (n == -1) {
         throw "Error writing y to socket";
     } else if (n == 0) {
-    	throw "The server disconnected";
+				displayer->printMessageWitheNewLine("The server disconnected.");
+				throw "The server disconnected";
     	}
 }
 
@@ -107,6 +111,7 @@ int Client :: sendCommandMessage(string message) {
     if (n == -1) {
         throw "Error writing message to socket.";
    	} else if (n == 0) {
+				displayer->printMessageWitheNewLine("The server disconnected.");
        	throw "The server disconnected";
        	}
 
@@ -115,6 +120,7 @@ int Client :: sendCommandMessage(string message) {
     if (n == -1) {
         throw "Error reading response from socket.";
     } else if (n == 0) {
+				displayer->printMessageWitheNewLine("The server disconnected.");
        	throw "The server disconnected";
         }
 
@@ -127,7 +133,8 @@ void Client::attending() {
     if (n == -1) {
         throw "Error writing x to socket";
     } else if (n == 0) {
-    	throw "The server disconnected";
+				displayer->printMessageWitheNewLine("The server disconnected.");
+    		throw "The server disconnected";
     	}
 }
 
@@ -141,9 +148,10 @@ vector<string> Client :: receiveStringList(string messageToServer) {
 		int n =	send(clientSocket, messageToServer.c_str(), messageToServer.length(), 0);
 
 		if (n == -1) {
-			throw "Error writing message to socket.";
+				throw "Error writing message to socket.";
 		} else if (n == 0) {
-	   	throw "The server disconnected";
+				displayer->printMessageWitheNewLine("The server disconnected.");
+				throw "The server disconnected";
 	    }
 
 		// reading the list one name at a time and add them to the games vector
@@ -152,6 +160,7 @@ vector<string> Client :: receiveStringList(string messageToServer) {
     	if (w == -1) {
     			throw "Error reading string's length";
     	} else if (w == 0) {
+					displayer->printMessageWitheNewLine("The server disconnected.");
         	throw "The server disconnected";
         	}
 
@@ -160,9 +169,10 @@ vector<string> Client :: receiveStringList(string messageToServer) {
 
 			int n = recv((int)clientSocket, line, len, 0);
 			if (n == -1) {
-				throw "Error reading string";
+					throw "Error reading string";
 			} else if (n == 0) {
-	    	throw "The server disconnected";
+					displayer->printMessageWitheNewLine("The server disconnected.");
+					throw "The server disconnected";
 	    	}
 
 			gameName = line;

@@ -91,10 +91,16 @@ int RemoteGame :: startNewGame(Client client) {
 
 		//getting the new game's name from the client
 		displayer->printMessageWitheNewLine("Please enter your new game's name:");
-		gameName = displayer->getString();
 
-		string startCommand = "start " + gameName;
-		serverResponse = client.sendCommandMessage(startCommand);
+		while (serverResponse != 1) {
+			gameName = "";
+			gameName = displayer->getString();
+
+			string startCommand = "start " + gameName;
+			serverResponse = client.sendCommandMessage(startCommand);
+			if (serverResponse == -1)
+				displayer->printMessageWitheNewLine("Name already exists. Please enter new name:");
+			}
 
 		return serverResponse;
 }
@@ -123,10 +129,17 @@ int RemoteGame :: joinGame(Client client) {
 
 		//getting the game's name from the client
 		displayer->printMessageWitheNewLine("Which game you would like to join:");
-		gameName = displayer->getString();
+		while (serverResponse != 1) {
+			gameName = "";
+			gameName = displayer->getString();
 
-		string joinCommand = "join " + gameName;
-		serverResponse = client.sendCommandMessage(joinCommand);
+			string joinCommand = "join " + gameName;
+			serverResponse = client.sendCommandMessage(joinCommand);
+
+			if (serverResponse == -1) {
+				displayer->printMessageWitheNewLine("This game doesn't exist. Please choose one game from the list: ");
+			}
+		}
 
 		return serverResponse;
 }
@@ -148,6 +161,7 @@ int RemoteGame :: playTurn(Player* p, Board* board) const {
         	return 0;
     else if (chosen.getRow() == -5) { // the player closed the game
     		displayer->printMessageWitheNewLine("Game closed.");
+    		displayer->printNewLine();
     		return 2;
     	}
 

@@ -3,6 +3,13 @@
 GameFlow :: GameFlow() {
 	displayer = new ConsoleDisplay();
 
+	gameMenu();
+}
+
+GameFlow :: ~GameFlow() {
+}
+
+void GameFlow :: gameMenu() {
 	int gameType = 0;
 	bool invalid = true;
 
@@ -34,9 +41,6 @@ GameFlow :: GameFlow() {
 	} else {
 		logic = new RemoteGame();
 	}
-}
-
-GameFlow :: ~GameFlow() {
 }
 
 //runs basic game loop.
@@ -101,6 +105,5 @@ void GameFlow :: endGame() {
 
 //closing the game for both players
 void GameFlow :: closeGame() {
-    logic->getBlackPlayer()->endGame();
-    logic->getWhitePlayer()->endGame();
+	gameMenu();
 }

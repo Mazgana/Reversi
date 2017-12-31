@@ -18,6 +18,9 @@ public:
 		GameFlow();
 		~GameFlow();
 
+		// printing the game's menu and creating the proper choice object
+		void gameMenu();
+
 		//running the current game - each player play it's turn until the game ends or once one
 		//of the players closes the game
 		void run();
