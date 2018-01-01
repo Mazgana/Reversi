@@ -1,7 +1,5 @@
 #include "AI.h"
 
-using namespace std;
-
 AI::AI() {
     type = BLACK;
 }
@@ -9,8 +7,8 @@ AI::AI() {
 AI::AI(Status t) : type(t){
 }
 
-Cell AI :: doTurn(vector<Cell> options) {
-	Cell c;
+Cell AI :: doTurn(vector<Cell> options, int maxWidth, int maxLength) {
+		Cell c;
     return c;
 }
 

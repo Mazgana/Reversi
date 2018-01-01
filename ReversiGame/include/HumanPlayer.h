@@ -8,8 +8,6 @@
 #include <sstream>
 #include <stdlib.h>
 
-using namespace std;
-
 /*
  * human player, playing on current computer, using console
  */
@@ -31,7 +29,7 @@ public:
     Status getOppositeType() const;
 
     // presenting optional moves to player and getting move decision.
-    Cell doTurn(vector<Cell> options);
+    Cell doTurn(vector<Cell> options, int maxWidth, int maxLength);
 
     //Is the player a computer - return false
     bool isComp() const;

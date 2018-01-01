@@ -8,9 +8,9 @@
 #include <netdb.h>
 #include <unistd.h>
 
-using namespace std;
-
 #define MAX_STR 50
+
+using namespace std;
 
 /*
  * Client class. connects client to server, writes and reads messages to server.

@@ -44,7 +44,7 @@ int AiGame :: playTurn(Player* p, Board* board) const {
         displayer->printNewLine();
         displayer->printNewLine();
     } else {
-        chosen = p->doTurn(options); //getting cell to play
+        chosen = p->doTurn(options, board->getWidth(), board->getLength()); //getting cell to play
         if (chosen.getRow() == -4)
         	return 0;
     	}

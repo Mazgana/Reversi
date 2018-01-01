@@ -13,7 +13,7 @@ OpponentClientPlayer :: ~OpponentClientPlayer() {
 	delete[] displayer;
 }
 
-Cell OpponentClientPlayer :: doTurn(vector<Cell> options) {
+Cell OpponentClientPlayer :: doTurn(vector<Cell> options, int maxWidth, int maxLength) {
     int x,y;
 
     //reading two integers that will represent coordinates

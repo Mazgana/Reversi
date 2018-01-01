@@ -105,5 +105,5 @@ void GameFlow :: endGame() {
 
 //closing the game for both players
 void GameFlow :: closeGame() {
-	gameMenu();
+		gameMenu();
 }

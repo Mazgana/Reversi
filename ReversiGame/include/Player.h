@@ -6,6 +6,7 @@
 #include <iostream>
 
 using namespace std;
+
 /*
  * basic player interface.
  */
@@ -23,7 +24,7 @@ public:
     virtual Status getOppositeType() const = 0;
 
     // presenting optional moves to player and getting move decision.
-    virtual Cell doTurn(vector<Cell> options) = 0;
+    virtual Cell doTurn(vector<Cell> options, int maxWidth, int maxLength) = 0;
 
     //checking if this player is a computer.
     virtual bool isComp() const = 0;

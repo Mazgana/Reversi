@@ -23,7 +23,7 @@ public:
     Status getOppositeType() const;
 
     // presenting optional moves to player and getting move decision.
-    Cell doTurn(vector<Cell> options);
+    Cell doTurn(vector<Cell> options, int maxWidth, int maxLength);
 
     //Is the player a computer - return true
     bool isComp() const;
