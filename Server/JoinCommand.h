@@ -14,7 +14,7 @@ private:
     GameManager gameManager;
 public:
     //constructor
-    JoinCommand();
+    JoinCommand(){};
 
     // gets game name, ID of current client and the list of games started.
     // call game manager with both Id related to game(if exists in the game list) and caller ID.

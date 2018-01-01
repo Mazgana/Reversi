@@ -12,7 +12,7 @@
 class ListGamesCommand: public Command {
 public:
 	//constructor.
-	ListGamesCommand();
+	ListGamesCommand(){};
     // gets parameter like other command interface commands.
 	// sends client ID strings of all game names in game list.
 	void execute(string gameName, int socketID, map<string, int> &gameList);

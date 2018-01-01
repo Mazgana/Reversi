@@ -10,12 +10,14 @@ int main() {
 	ifstream File;
 	string details;
 
+	//opening file configuration for given port
 	File.open("serverConfiguration.txt");
 	if (!File) {
 		cout << "Error in opening server configuration file." << endl;
 		exit(1);
     }
 
+	//reading info from file to number of port
 	getline(File,details);
 	size_t pos = details.find("Port: ");
 	string port = details.substr (pos + 6);

@@ -62,6 +62,7 @@ void GameManager:: sendChips(int firstClientSocket, int secondClientSocket) {
     int firstClient = 1;
     int secondClient = 2;
 
+    //sending black chip to first client and white to second
     int x = (int) write(firstClientSocket, &firstClient, sizeof(firstClient));
     int o = (int) write(secondClientSocket, &secondClient, sizeof(secondClient));
 

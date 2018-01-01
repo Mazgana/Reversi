@@ -2,14 +2,10 @@
 
 pthread_mutex_t mutex_join_game;
 
-JoinCommand::JoinCommand(){};
-
 void JoinCommand::execute(string gameName, int socketID, map<string, int> &gameList) {
-
-    string name = gameName;
-
     pthread_mutex_lock(&mutex_join_game);
-    if (gameList.empty()) {
+
+    if (gameList.empty()) {//chaecking if list is empty and noticing client
         int empty = -2;
         int w = (int) write(socketID, &empty, sizeof(empty));
         if (w == -1) {
@@ -17,7 +13,7 @@ void JoinCommand::execute(string gameName, int socketID, map<string, int> &gameL
         }
         return;
     }
-    if (!gameList.count(name)) {
+    if (!gameList.count(gameName)) {//notifying client of invalid game to join
         int fail = -1;
         int w = (int) write(socketID, &fail, sizeof(fail));
         if (w == -1) {
@@ -26,12 +22,13 @@ void JoinCommand::execute(string gameName, int socketID, map<string, int> &gameL
         return;
     }
 
-    int firstClientSocket = gameList[name];
-    gameList.erase(name);
+    int firstClientSocket = gameList[gameName];//getting first player's ID
+    gameList.erase(gameName);// erasing game from list of available games
     pthread_mutex_unlock(&mutex_join_game);
 
     int secondClientSocket = socketID;
 
+    ///notifying client game is about to start
     int success = 1;
     int m = (int) write(socketID, &success, sizeof(success));
     cout << "success: " << success << endl;
@@ -40,8 +37,10 @@ void JoinCommand::execute(string gameName, int socketID, map<string, int> &gameL
         return;
     }
 
+    //starting game
     gameManager.playGame(firstClientSocket, secondClientSocket);
 
+    //closing sockets when game ends
     close(firstClientSocket);
     close(secondClientSocket);
 }
