@@ -4,7 +4,7 @@ void *handleClient1(void *clientSocket) {
     //calling first function of new thread
     ClientHandler ch;
     long tid = (long)clientSocket;
-//    cout << "Hello world. It's me, thread " << tid << endl;
+    cout << "Hello world. It's me, thread " << tid << endl;
     ch.handleClient((int)tid);
 }
 

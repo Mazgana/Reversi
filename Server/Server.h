@@ -12,7 +12,7 @@
 
 using namespace std;
 
-#define MAX_CONNECTED_CLIENTS 2
+#define MAX_CONNECTED_CLIENTS 20
 
 class Server {
 public:

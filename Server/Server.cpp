@@ -6,7 +6,6 @@ pthread_mutex_t mutex_sockets_list;
 Server::Server(int port): port(port), serverSocket(0) {
 }
 
-
 void Server::start() {
     ClientHandler ch;
 
@@ -38,7 +37,7 @@ void Server::start() {
 
         //The first client login
         int clientSocket = accept(serverSocket, (struct sockaddr *)&clientAddress, &clientAddressLen);
-        cout << "Connected to server" << endl;
+        cout <<  clientSocket << " Connected to server" << endl;
 
         if (clientSocket == -1)
             throw "Failed to connect the server";
@@ -57,7 +56,7 @@ void *exit(void *serverSocket) {
     while (command.compare("exit")) {
         cin >> command;
     }
-    cout << "closing server...";
+    cout << "closing server..." << endl;
     pthread_mutex_lock(&mutex_sockets_list);
 
     //closing all sockets that were opened

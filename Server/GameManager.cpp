@@ -6,6 +6,10 @@ void GameManager::playGame(int firstClientSocket, int secondClientSocket) {
 
     sendChips(firstClientSocket, secondClientSocket);
 
+
+    cout << "first: " << firstClientSocket << endl;
+    cout << "second: " << secondClientSocket << endl;
+
     while (true) {
         // Read new coordinate arguments from player
         n = (int) read(firstClientSocket, &arg1, sizeof(arg1));

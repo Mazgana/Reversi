@@ -79,19 +79,22 @@ void GameFlow :: run() {
     	}
 
 		if (closed) {
-			closeGame();
+			endGame(2); // One of the players closed the game
 		} else {
-			endGame();
+			endGame(1); // The game ended
 		}
 }
 
 //ending game and declaring winner.
-void GameFlow :: endGame() {
+void GameFlow :: endGame(int couse) {
 	    //ending game and announcing winner
-		  displayer->printMessageWitheNewLine("GAME ENDED!");
+			if (couse == 1) {
+				  displayer->printMessageWitheNewLine("GAME ENDED!");
+			}
+
 	    Status winner = board.getWinner();
 	    if(winner == EMPTY) {
-	    	displayer->printMessage("It's a tie!");
+	    	displayer->printMessageWitheNewLine("It's a tie!");
 	    	}
 	    else {
 	    	displayer->printMessage("Player ");
@@ -101,9 +104,7 @@ void GameFlow :: endGame() {
 
 	    logic->getBlackPlayer()->endGame();
 	    logic->getWhitePlayer()->endGame();
-}
 
-//closing the game for both players
-void GameFlow :: closeGame() {
 		gameMenu();
+		run();
 }

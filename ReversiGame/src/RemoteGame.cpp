@@ -43,7 +43,7 @@ RemoteGame::RemoteGame() {
 				serverResponse = joinGame(client);
 
 			if (serverResponse == -2) // The games list is empty
-				serverResponse = 0; //returning to the begining of the loop
+				startNewGame(client); //starting new game
 
 			if (serverResponse == 1) {	//the command request succeeded
 				char chip = client.getOpeningPlayer();	//find first client to connect to server, set to be black player
@@ -53,6 +53,8 @@ RemoteGame::RemoteGame() {
 				} else if (chip == 'O') {
 						whitePlayer = new ClientPlayer(WHITE, client);
 						blackPlayer = new OpponentClientPlayer(BLACK, client);
+				} else if (chip == 'E') { // The server disconnected
+					return;
 				}
 			}
     	}
@@ -145,6 +147,7 @@ int RemoteGame :: joinGame(Client client) {
 				displayer->printMessageWitheNewLine("This game doesn't exist. Please choose one game from the list: ");
 			} else if (serverResponse == -2) {
 				displayer->printMessageWitheNewLine("The games list is empty. Please start new game.");
+				displayer->printNewLine();
 				return -2;
 			}
 		}
