@@ -13,7 +13,7 @@ ClientPlayer :: ~ClientPlayer() {
 	delete[] displayer;
 }
 
-Cell ClientPlayer :: doTurn(vector<Cell> options) {
+Cell ClientPlayer :: doTurn(vector<Cell> options, int maxWidth, int maxLength) {
     int i;
     displayer->printChar((char) type);
     displayer->printMessageWitheNewLine(": It's your move.");
@@ -44,32 +44,32 @@ Cell ClientPlayer :: doTurn(vector<Cell> options) {
     		} else { //extracting two integers from the user's input
 					strcpy(integers, input.c_str());
 					x = (int) integers[0] - 48;
-					if (integers[1] == ',' || integers[1] == ' ') {
+					if (integers[1] == ',') {
 						y = (int) integers[2] - 48;
 					} else {
 						y = (int) integers[1] - 48;
 					}
 
-					if (displayer->isInputFailed()) {
-							displayer->clearBuffer();
-							displayer->ignoreInput('\n');
-							displayer->printMessageWitheNewLine("Invalid input!");
-							displayer->getBufferContent();
-					}
+					if (0 > x || x > maxWidth || y < 0 || y > maxLength) {
+						displayer->clearBuffer();
+			      displayer->ignoreInput('\n');
+						displayer->printMessageWitheNewLine("Invalid input!");
+						displayer->clearBuffer();
+					} else {
+						//validate that the player's choice is one of the given options
+						for (i = 0; i < (int)options.size(); i++) {
+							if (options[i].getRow() == x && options[i].getCol() == y) {
+								valid = true;
+								break;
+							}
+						}
 
-					// validate that the user's choice is one of the given options
-					for (i = 0; i < (int)options.size(); i++) {
-						if (options[i].getRow() == x && options[i].getCol() == y) {
-							valid = true;
-							break;
+						if (!valid) {
+							displayer->printMessageWitheNewLine("That is not an option.");
+							displayer->getBufferContent();
 						}
 					}
-
-					if (!valid) {
-								displayer->printMessageWitheNewLine("That is not an option.");
-								displayer->getBufferContent();
-					}
-    			}
+    		}
     	}
     Cell c(x,y); //returning the client's choice
     contactServer.sendMove(x,y);

@@ -13,7 +13,7 @@ HumanPlayer :: ~HumanPlayer() {
 	delete[] displayer;
 }
 
-Cell HumanPlayer :: doTurn(vector<Cell> options) {
+Cell HumanPlayer :: doTurn(vector<Cell> options, int maxWidth, int maxLength) {
     int i;
     displayer->printChar((char) type);
     displayer->printMessageWitheNewLine(": It's your move.");
@@ -33,38 +33,39 @@ Cell HumanPlayer :: doTurn(vector<Cell> options) {
     string input;
 
     while (!valid) {
-        displayer->printMessageWitheNewLine("Please enter your move row,col: ");
-        input = displayer->getString();
+					displayer->printMessageWitheNewLine("Please enter your move row,col: ");
 
-        //extracting two integers from the player's choice
-        strcpy(integers, input.c_str());
-        x = (int) integers[0] - 48;
+					input = displayer->getString();
 
-        if (integers[1] == ',' || integers[1] == ' ') {
-        	y = (int) integers[2] - 48;
-        } else {
-        	y = (int) integers[1] - 48;
-        		}
+					//extracting two integers from the player's choice
+					strcpy(integers, input.c_str());
+					x = (int) integers[0] - 48;
 
-        if (displayer->isInputFailed()) {
-            displayer->clearBuffer();
-            displayer->ignoreInput('\n');
-            displayer->printMessageWitheNewLine("Invalid input!");
-            displayer->getBufferContent();
-        		}
+					if (integers[1] == ',') {
+						y = (int) integers[2] - 48;
+					} else {
+						y = (int) integers[1] - 48;
+					}
 
-        //validate that the player's choice is one of the given options
-        for (i = 0; i < (int)options.size(); i++) {
-            if (options[i].getRow() == x && options[i].getCol() == y) {
-                valid = true;
-                break;
-            			}
-        		}
+					if (0 > x || x > maxWidth || y < 0 || y > maxLength) {
+						displayer->clearBuffer();
+			      displayer->ignoreInput('\n');
+						displayer->printMessageWitheNewLine("Invalid input!");
+						displayer->clearBuffer();
+					} else {
+						//validate that the player's choice is one of the given options
+						for (i = 0; i < (int)options.size(); i++) {
+							if (options[i].getRow() == x && options[i].getCol() == y) {
+								valid = true;
+								break;
+							}
+						}
 
-        if (!valid) {
-            displayer->printMessageWitheNewLine("That is not an option.");
-            displayer->getBufferContent();
-        		}
+						if (!valid) {
+							displayer->printMessageWitheNewLine("That is not an option.");
+							displayer->getBufferContent();
+						}
+					}
     }
     Cell c(x,y);//returning console choice
     return c;

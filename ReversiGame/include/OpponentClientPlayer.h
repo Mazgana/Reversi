@@ -6,7 +6,6 @@
 #include "Client.h"
 #include "ConsoleDisplay.h"
 
-using namespace std;
 /*
  * player of game with two clients. this player is the opponent playing on another computer.
  */
@@ -29,7 +28,7 @@ public:
     Status getOppositeType() const;
 
     // presenting optional moves to player and getting move decision.
-    Cell doTurn(vector<Cell> options);
+    Cell doTurn(vector<Cell> options, int maxWidth, int maxLength);
 
     //checkimg if player is a computer
     bool isComp() const;

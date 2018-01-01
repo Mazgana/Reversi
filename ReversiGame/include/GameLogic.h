@@ -6,8 +6,6 @@
 #include "Player.h"
 #include "ConsoleDisplay.h"
 
-using namespace std;
-
 const int default_game_type = 2;
 /*
  * basic game logic interface.

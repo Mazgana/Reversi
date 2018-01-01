@@ -8,8 +8,6 @@
 #include <fstream>
 #include <stdlib.h>
 
-using namespace std;
-
 class TwoClientsGame : public GameLogic {
 private:
 	Player* blackPlayer;
