@@ -11,12 +11,12 @@ void JoinCommand::execute(string gameName, int socketID, map<string, int> &gameL
     pthread_mutex_lock(&mutex_join_game);
     if(!gameList.count(name)) {
         int fail = -1;
-        int w = write(socketID, &fail, sizeof(fail));
+        int w = (int) write(socketID, &fail, sizeof(fail));
         if (w == -1) {
             cout << "Error writing to socket" << endl;
         		}
         return;
-    	}
+    }
 
     int firstClientSocket = gameList[name];
     gameList.erase(name);
@@ -25,7 +25,7 @@ void JoinCommand::execute(string gameName, int socketID, map<string, int> &gameL
     int secondClientSocket = socketID;
 
     int success = 1;
-    int m = write(socketID, &success, sizeof(success));
+    int m = (int) write(socketID, &success, sizeof(success));
     cout << "success: " << success << endl;
     if (m == -1) {
         cout << "Error writing to socket" << endl;
