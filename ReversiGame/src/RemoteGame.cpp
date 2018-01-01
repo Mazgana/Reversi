@@ -100,7 +100,9 @@ int RemoteGame :: startNewGame(Client client) {
 			serverResponse = client.sendCommandMessage(startCommand);
 			if (serverResponse == -1)
 				displayer->printMessageWitheNewLine("Name already exists. Please enter new name:");
-			}
+        }
+
+        displayer->printMessageWitheNewLine("Waiting for opponent to join...");
 
 		return serverResponse;
 }

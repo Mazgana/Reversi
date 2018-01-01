@@ -46,4 +46,5 @@ void JoinCommand::execute(string gameName, int socketID, map<string, int> &gameL
     //closing sockets when game ends
     close(firstClientSocket);
     close(secondClientSocket);
+    pthread_exit(NULL);
 }
