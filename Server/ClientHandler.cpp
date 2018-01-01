@@ -1,8 +1,7 @@
 #include "ClientHandler.h"
 
-ClientHandler::ClientHandler(){}
-
 void *handleClient1(void *clientSocket) {
+    //calling first function of new thread
     ClientHandler ch;
     long tid = (long)clientSocket;
 //    cout << "Hello world. It's me, thread " << tid << endl;
@@ -10,7 +9,8 @@ void *handleClient1(void *clientSocket) {
 }
 
 void ClientHandler :: createNewThread(int clientSocket) {
-	pthread_t thread;
+	//creating the new thread
+    pthread_t thread;
 	int rc = pthread_create(&thread, NULL, handleClient1, (void *)(long)clientSocket);
 	if (rc == -1) {
 		throw "Failed creating thread";
@@ -21,14 +21,16 @@ void ClientHandler :: handleClient (int clientSocket) {
     int n;
     int firstClientSocket = clientSocket;
 
-    while (true) {
+    while (true) {//loop to get another command after previous was executed
+        //getting string command from client
         char buffer[MAX_STR] = "";
         long firstClient = (long) firstClientSocket;
-        n = recv((int) firstClient, buffer, MAX_STR, 0);
+        n = (int) recv((int) firstClient, buffer, MAX_STR, 0);
         if (n == -1) {
             cout << "Error reading choice" << endl;
         		}
 
+        //splitting command to command name and other argument
         string input = buffer;
         stringstream ss(input);
         string arg;
@@ -38,13 +40,15 @@ void ClientHandler :: handleClient (int clientSocket) {
         		}
 
         string gameName = "";
-        string command = tokens[0];
+        string command = tokens[0];//putting first arg as command
         if (tokens.size() > 1) {
-            gameName = tokens[1];
+            gameName = tokens[1];//secong arg as game name
         		}
 
+        //executing the command
         CM.executeCommand(command, gameName, firstClientSocket, GameList);
 
+        //ending loop when command is close
         if (!command.compare("close")) {
             break;
         }

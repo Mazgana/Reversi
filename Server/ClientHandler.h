@@ -23,7 +23,7 @@ private:
 
 public:
     //constructor
-    ClientHandler();
+    ClientHandler(){};
 
     //gets client socket as param
     //gets command from client as string and passes to cm.

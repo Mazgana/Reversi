@@ -9,7 +9,15 @@ void JoinCommand::execute(string gameName, int socketID, map<string, int> &gameL
     string name = gameName;
 
     pthread_mutex_lock(&mutex_join_game);
-    if(!gameList.count(name)) {
+    if (gameList.empty()) {
+        int empty = -2;
+        int w = (int) write(socketID, &empty, sizeof(empty));
+        if (w == -1) {
+            cout << "Error writing to socket" << endl;
+        }
+        return;
+    }
+    if (!gameList.count(name)) {
         int fail = -1;
         int w = (int) write(socketID, &fail, sizeof(fail));
         if (w == -1) {
