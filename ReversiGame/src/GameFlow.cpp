@@ -86,9 +86,9 @@ void GameFlow :: run() {
 }
 
 //ending game and declaring winner.
-void GameFlow :: endGame(int couse) {
+void GameFlow :: endGame(int cause) {
 	    //ending game and announcing winner
-			if (couse == 1) {
+			if (cause == 1) {
 				  displayer->printMessageWitheNewLine("GAME ENDED!");
 			}
 

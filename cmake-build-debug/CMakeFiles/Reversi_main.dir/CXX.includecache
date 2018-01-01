@@ -53,10 +53,14 @@ Board.h
 ../ReversiGame/include/Board.h
 
 ../ReversiGame/include/GameFlow.h
-GameLogic.h
-../ReversiGame/include/GameLogic.h
-Display.h
-../ReversiGame/include/Display.h
+TwoHumansGame.h
+../ReversiGame/include/TwoHumansGame.h
+AiGame.h
+../ReversiGame/include/AiGame.h
+RemoteGame.h
+../ReversiGame/include/RemoteGame.h
+ConsoleDisplay.h
+../ReversiGame/include/ConsoleDisplay.h
 
 ../ReversiGame/include/GameLogic.h
 iostream
@@ -169,14 +173,6 @@ ConsoleDisplay.h
 /home/leah/CLionProjects/Reversi/ReversiGame/src/GameFlow.cpp
 GameFlow.h
 /home/leah/CLionProjects/Reversi/ReversiGame/src/GameFlow.h
-TwoHumansGame.h
-/home/leah/CLionProjects/Reversi/ReversiGame/src/TwoHumansGame.h
-AiGame.h
-/home/leah/CLionProjects/Reversi/ReversiGame/src/AiGame.h
-RemoteGame.h
-/home/leah/CLionProjects/Reversi/ReversiGame/src/RemoteGame.h
-ConsoleDisplay.h
-/home/leah/CLionProjects/Reversi/ReversiGame/src/ConsoleDisplay.h
 
 /home/leah/CLionProjects/Reversi/ReversiGame/src/HumanPlayer.cpp
 HumanPlayer.h

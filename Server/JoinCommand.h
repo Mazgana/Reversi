@@ -12,6 +12,8 @@
 class JoinCommand: public Command {
 private:
     GameManager gameManager;
+
+    int writeToSocket(int socket, int message);
 public:
     //constructor
     JoinCommand(){};
