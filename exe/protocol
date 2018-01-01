@@ -1,0 +1,36 @@
+Reversi Game
+
+exercise 5, multigames threading.s
+
+
+server:
+	connects when starts running, waiting for connections and executing commands.
+
+	when 'exit' and enter written to console, the server will close, ending program.
+
+
+client:
+
+	When run, the menu will appear.
+	user will enter 1 or 2 or 3, than enter.
+
+	When the game starts, player will input coordinates when given his turn.
+	the coordinates will be inputted as shown:
+ 	x,y
+	with no spaces, and from the given list of optional moves. If incorrect input is put in, an error message will show and user will insert new coordinates.
+
+	In the case that number 3 was chosen, and a remote game starts, the remote menu will open.
+	first option:
+		User starts a new game. The input will be as follow:
+		<newGameName>
+		No spaces are allowed in name.
+		If game is in list aleady, user will be asked to enter a different name. 
+	second option:
+		user gets list of games. The input will be:
+		list_games
+		no other arguments should follow.
+	third option:
+		Joining game. Input similar to start command.
+		<gameName>
+		If game does not exist in game list, the remote menu will show and user will choose new command.
+	client can close game at any point, by inputting 'close' instead of coordinates. Both clients will be disconnected and game will end.

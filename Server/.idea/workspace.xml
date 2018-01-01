@@ -25,8 +25,8 @@
       <file leaf-file-name="JoinCommand.cpp" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/JoinCommand.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="320">
-              <caret line="19" column="22" lean-forward="true" selection-start-line="19" selection-start-column="22" selection-end-line="19" selection-end-column="22" />
+            <state relative-caret-position="500">
+              <caret line="29" column="43" lean-forward="true" selection-start-line="29" selection-start-column="43" selection-end-line="29" selection-end-column="43" />
               <folding />
             </state>
           </provider>
@@ -183,16 +183,15 @@
       <workItem from="1514744116389" duration="14000" />
       <workItem from="1514744299471" duration="3334000" />
       <workItem from="1514751258895" duration="2630000" />
-      <workItem from="1514792312063" duration="4297000" />
+      <workItem from="1514792312063" duration="5590000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="82456000" />
+    <option name="totallyTimeSpent" value="83749000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="694" y="20" width="1857" height="1092" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21455525" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -502,7 +501,7 @@
         <state relative-caret-position="468">
           <caret line="26" column="0" lean-forward="true" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
           <folding>
-            <element signature="e#169#183#0" expanded="true" />
+            <element signature="e#169#183#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -589,8 +588,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/JoinCommand.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="320">
-          <caret line="19" column="22" lean-forward="true" selection-start-line="19" selection-start-column="22" selection-end-line="19" selection-end-column="22" />
+        <state relative-caret-position="500">
+          <caret line="29" column="43" lean-forward="true" selection-start-line="29" selection-start-column="43" selection-end-line="29" selection-end-column="43" />
           <folding />
         </state>
       </provider>
