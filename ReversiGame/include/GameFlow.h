@@ -26,10 +26,7 @@ public:
 		void run();
 
 		//ending the game and calculate who is the winner
-		void endGame();
-
-		//closing the game once one of the players ask it
-		void closeGame();
+		void endGame(int couse);
 };
 
 #endif /* INCLUDE_GAMEFLOW_H_ */
