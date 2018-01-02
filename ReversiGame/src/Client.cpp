@@ -46,18 +46,22 @@ void Client::connectToServer() {
 }
 
 char Client::getOpeningPlayer() {
-    //reading first integer sent from server indicates the player's cheap type.
-    int playersPlace = readInt();
+	try {
+        //reading first integer sent from server indicates the player's cheap type.
+        int playersPlace = readInt();
 
-    if(playersPlace == 1) {
-        displayer->printMessageWitheNewLine("You are the black player X, you go first");
-        return 'X';
-    } else if (playersPlace == 2) {
-        displayer->printMessageWitheNewLine("You are the white player O, you go second");
-        return 'O';
-    } else {
-        displayer->printMessageWitheNewLine("got unreadable starting player from server");
-        return ' ';
+        if(playersPlace == 1) {
+            displayer->printMessageWitheNewLine("You are the black player X, you go first");
+            return 'X';
+        } else if (playersPlace == 2) {
+            displayer->printMessageWitheNewLine("You are the white player O, you go second");
+            return 'O';
+        } else {
+            displayer->printMessageWitheNewLine("got unreadable starting player from server");
+            return ' ';
+        }
+    } catch  (const char *msg) {
+    		return 'F';
     }
 }
 
@@ -141,7 +145,7 @@ int Client::readInt() {
 		throw "Error reading int";
 	} else if (w == 0) {
 		displayer->printMessageWitheNewLine("The server disconnected.");
-		throw "The server disconnected";
+    exit(-1);
 	}
 	return val;
 }
@@ -153,6 +157,6 @@ void Client::writeInt(int val) {
 		throw "Error writing int";
 	} else if (n == 0) {
 		displayer->printMessageWitheNewLine("The server disconnected.");
-		throw "The server disconnected";
+	  exit(-1);
 	}
 }

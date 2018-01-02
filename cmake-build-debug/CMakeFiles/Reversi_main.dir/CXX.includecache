@@ -41,6 +41,8 @@ netdb.h
 -
 unistd.h
 -
+stdlib.h
+-
 
 ../ReversiGame/include/ClientPlayer.h
 Player.h
@@ -125,10 +127,6 @@ HumanPlayer.h
 /home/leah/CLionProjects/Reversi/ReversiGame/src/AI.cpp
 AI.h
 /home/leah/CLionProjects/Reversi/ReversiGame/src/AI.h
-limits
--
-iostream
--
 
 /home/leah/CLionProjects/Reversi/ReversiGame/src/AiGame.cpp
 AiGame.h
