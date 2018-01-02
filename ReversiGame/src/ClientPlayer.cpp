@@ -52,7 +52,7 @@ Cell ClientPlayer :: doTurn(vector<Cell> options, int maxWidth, int maxLength) {
 
 					if (0 > x || x > maxWidth || y < 0 || y > maxLength) {
 						displayer->clearBuffer();
-			      displayer->ignoreInput('\n');
+			      		displayer->ignoreInput('\n');
 						displayer->printMessageWitheNewLine("Invalid input!");
 						displayer->clearBuffer();
 					} else {
@@ -100,8 +100,8 @@ void ClientPlayer::skipTurn() {
 		displayer->printMessageWitheNewLine("press enter to continue..");
 		displayer->getBufferContent();
 
-    //sending random move so server knows to skip turn.
-    contactServer.sendMove(-2,-2);
+    	//sending random move so server knows to skip turn.
+	    contactServer.sendMove(-2,-2);
 }
 
  void ClientPlayer::endGame() {

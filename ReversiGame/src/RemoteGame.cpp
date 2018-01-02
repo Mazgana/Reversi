@@ -43,7 +43,7 @@ RemoteGame::RemoteGame() {
 				serverResponse = joinGame(client);
 
 			if (serverResponse == -2) // The games list is empty
-				startNewGame(client); //starting new game
+				serverResponse = startNewGame(client); //starting new game
 
 			if (serverResponse == 1) {	//the command request succeeded
 				char chip = client.getOpeningPlayer();	//find first client to connect to server, set to be black player

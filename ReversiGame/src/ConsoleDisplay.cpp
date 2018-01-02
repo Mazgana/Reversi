@@ -60,7 +60,6 @@ int ConsoleDisplay :: getInt() const {
 string ConsoleDisplay :: getString() const{
 		string inputStr;
 		cin >> inputStr;
-
 		return inputStr;
 }
 

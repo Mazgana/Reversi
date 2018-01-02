@@ -45,8 +45,10 @@ private:
     const char *serverIP;
     int serverPort;
     int clientSocket;
+    Display* displayer;
 
-		Display* displayer;
+    void writeInt(int val);
+    int readInt();
 };
 
 #endif //REVERSI_CLIENT_H

@@ -29,8 +29,18 @@ vector
 ../ReversiGame/include/Cell.h
 
 ../ReversiGame/include/Client.h
-Display.h
-../ReversiGame/include/Display.h
+ConsoleDisplay.h
+../ReversiGame/include/ConsoleDisplay.h
+sys/socket.h
+-
+netinet/in.h
+-
+arpa/inet.h
+-
+netdb.h
+-
+unistd.h
+-
 
 ../ReversiGame/include/ClientPlayer.h
 Player.h
@@ -139,32 +149,10 @@ iostream
 /home/leah/CLionProjects/Reversi/ReversiGame/src/Client.cpp
 Client.h
 /home/leah/CLionProjects/Reversi/ReversiGame/src/Client.h
-ConsoleDisplay.h
-/home/leah/CLionProjects/Reversi/ReversiGame/src/ConsoleDisplay.h
-iostream
--
-sys/socket.h
--
-netinet/in.h
--
-arpa/inet.h
--
-netdb.h
--
-string.h
--
-unistd.h
--
 
 /home/leah/CLionProjects/Reversi/ReversiGame/src/ClientPlayer.cpp
-iostream
--
-limits
--
 ClientPlayer.h
 /home/leah/CLionProjects/Reversi/ReversiGame/src/ClientPlayer.h
-ConsoleDisplay.h
-/home/leah/CLionProjects/Reversi/ReversiGame/src/ConsoleDisplay.h
 
 /home/leah/CLionProjects/Reversi/ReversiGame/src/ConsoleDisplay.cpp
 ConsoleDisplay.h
