@@ -70,13 +70,20 @@ CMakeFiles/Reversi_main.dir/ReversiGame/src/HumanPlayer.cpp.o: ../ReversiGame/in
 CMakeFiles/Reversi_main.dir/ReversiGame/src/HumanPlayer.cpp.o: ../ReversiGame/include/Player.h
 CMakeFiles/Reversi_main.dir/ReversiGame/src/HumanPlayer.cpp.o: ../ReversiGame/src/HumanPlayer.cpp
 
+CMakeFiles/Reversi_main.dir/ReversiGame/src/Main.cpp.o: ../ReversiGame/include/AI.h
+CMakeFiles/Reversi_main.dir/ReversiGame/src/Main.cpp.o: ../ReversiGame/include/AiGame.h
 CMakeFiles/Reversi_main.dir/ReversiGame/src/Main.cpp.o: ../ReversiGame/include/Board.h
 CMakeFiles/Reversi_main.dir/ReversiGame/src/Main.cpp.o: ../ReversiGame/include/Cell.h
+CMakeFiles/Reversi_main.dir/ReversiGame/src/Main.cpp.o: ../ReversiGame/include/Client.h
+CMakeFiles/Reversi_main.dir/ReversiGame/src/Main.cpp.o: ../ReversiGame/include/ClientPlayer.h
 CMakeFiles/Reversi_main.dir/ReversiGame/src/Main.cpp.o: ../ReversiGame/include/ConsoleDisplay.h
 CMakeFiles/Reversi_main.dir/ReversiGame/src/Main.cpp.o: ../ReversiGame/include/Display.h
 CMakeFiles/Reversi_main.dir/ReversiGame/src/Main.cpp.o: ../ReversiGame/include/GameFlow.h
 CMakeFiles/Reversi_main.dir/ReversiGame/src/Main.cpp.o: ../ReversiGame/include/GameLogic.h
+CMakeFiles/Reversi_main.dir/ReversiGame/src/Main.cpp.o: ../ReversiGame/include/HumanPlayer.h
 CMakeFiles/Reversi_main.dir/ReversiGame/src/Main.cpp.o: ../ReversiGame/include/Player.h
+CMakeFiles/Reversi_main.dir/ReversiGame/src/Main.cpp.o: ../ReversiGame/include/RemoteGame.h
+CMakeFiles/Reversi_main.dir/ReversiGame/src/Main.cpp.o: ../ReversiGame/include/TwoHumansGame.h
 CMakeFiles/Reversi_main.dir/ReversiGame/src/Main.cpp.o: ../ReversiGame/src/Main.cpp
 
 CMakeFiles/Reversi_main.dir/ReversiGame/src/OpponentClientPlayer.cpp.o: ../ReversiGame/include/Board.h

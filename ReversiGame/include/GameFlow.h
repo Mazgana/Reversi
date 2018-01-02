@@ -26,7 +26,7 @@ public:
 		void run();
 
 		//ending the game and calculate who is the winner
-		void endGame(int couse);
+		void endGame(int cause);
 };
 
 #endif /* INCLUDE_GAMEFLOW_H_ */
