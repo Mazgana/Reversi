@@ -1,0 +1,962 @@
+commit 2c1782d5e0c913a9f4eb83f0f5e06d889f24fd81
+Merge: 53a13cd 74ab572
+Author: Leah Wachtfogel <leah.wach@gmail.com>
+Date:   Tue Jan 2 20:10:15 2018 +0200
+
+    last
+
+commit 53a13cd8e8387dc0ac2209f298b6d62a269d0480
+Author: Leah Wachtfogel <leah.wach@gmail.com>
+Date:   Tue Jan 2 20:06:51 2018 +0200
+
+    cmake
+
+commit 74ab57209ab50d3f1f4254d54b0aa53dfc225b88
+Author: mazgana <adi.mazgani@gmail.com>
+Date:   Tue Jan 2 18:35:24 2018 +0200
+
+    exiting game when server disconnected
+
+commit 81c37bd29718e44f5f428368d6e11d9346db9e6c
+Merge: 04e0ba4 c792d98
+Author: Leah Wachtfogel <leah.wach@gmail.com>
+Date:   Tue Jan 2 14:27:29 2018 +0200
+
+    Merge branch 'master' of https://github.com/Mazgana/Reversi
+
+commit 04e0ba42759c2d5e305cc694b1b41af3450878ac
+Author: Leah Wachtfogel <leah.wach@gmail.com>
+Date:   Tue Jan 2 14:27:22 2018 +0200
+
+    reorganizing client and debugging remote game
+
+commit c792d98511181c72fbb2c56c06150a84f14c7ae7
+Author: mazgana <adi.mazgani@gmail.com>
+Date:   Tue Jan 2 14:06:28 2018 +0200
+
+    fixing bug when starting new game after trying to join when there are no games
+
+commit 2f73ac76a9f977b8a7a85430c04227bb3463f26e
+Merge: 21d71b3 291fbb2
+Author: mazgana <adi.mazgani@gmail.com>
+Date:   Tue Jan 2 13:47:28 2018 +0200
+
+    fixing conflicts
+
+commit 21d71b33633e764fc04132bae6466d1087b5cf63
+Author: mazgana <adi.mazgani@gmail.com>
+Date:   Tue Jan 2 13:46:25 2018 +0200
+
+    changing end game method
+
+commit a35f7debbd2776a86e0ea86d19ae765c07c1a5b4
+Author: Leah Wachtfogel <leah.wach@gmail.com>
+Date:   Tue Jan 2 12:50:56 2018 +0200
+
+    nothing
+
+commit 291fbb298428583207b244b60fa725383639cdfd
+Author: Leah Wachtfogel <leah.wach@gmail.com>
+Date:   Mon Jan 1 23:04:34 2018 +0200
+
+    adding function in join command
+
+commit 86915fbab053db57a48c321e8a98a6dbdab08c94
+Author: mazgana <adi.mazgani@gmail.com>
+Date:   Mon Jan 1 21:12:43 2018 +0200
+
+    Changing the output when player closes the game & changing the max number of clients in server
+
+commit 456ab7d0101a66baedd6db23b1e8bc395f140502
+Author: mazgana <adi.mazgani@gmail.com>
+Date:   Mon Jan 1 14:04:20 2018 +0200
+
+    Adding message to the client when the games list is empty
+
+commit e8965e0f677144c52ee1e8e05d475b053cc6cd81
+Author: Leah Wachtfogel <leah.wach@gmail.com>
+Date:   Mon Jan 1 12:24:10 2018 +0200
+
+    tiny changes in messages
+
+commit f533beeda899d6b570bbb6165cce11ea8a982b54
+Author: Leah Wachtfogel <leah.wach@gmail.com>
+Date:   Mon Jan 1 11:30:34 2018 +0200
+
+    adding protocol
+
+commit f31b6710ce46aa6649c51e335f8f31b5937e5586
+Author: Leah Wachtfogel <leah.wach@gmail.com>
+Date:   Mon Jan 1 10:53:33 2018 +0200
+
+    finished debugging in joingit add *
+
+commit 544d7c6b258e87bb9b2c64c8c09aa6bca254b357
+Author: Leah Wachtfogel <leah.wach@gmail.com>
+Date:   Mon Jan 1 10:32:48 2018 +0200
+
+    full comments to server
+
+commit 2767dc14f90755d65640f8267e9de1aa300e4e10
+Author: Leah Wachtfogel <leah.wach@gmail.com>
+Date:   Mon Jan 1 10:16:52 2018 +0200
+
+    join command debugging
+
+commit 0102d5ad355846aa6a55ef4bd64e19854cc9aa8f
+Merge: fc67348 11c37b7
+Author: Leah Wachtfogel <leah.wach@gmail.com>
+Date:   Mon Jan 1 09:40:11 2018 +0200
+
+    Merge branch 'master' of https://github.com/Mazgana/Reversi
+
+commit fc67348411b6efb22751369bef69aeb18021cfbc
+Author: Leah Wachtfogel <leah.wach@gmail.com>
+Date:   Mon Jan 1 09:38:08 2018 +0200
+
+    debugging join..
+
+commit 11c37b7784015c2ce0055fd33eebe1730dc5b3ce
+Author: mazgana <adi.mazgani@gmail.com>
+Date:   Mon Jan 1 09:17:00 2018 +0200
+
+    Adding messages for the client after entering the cell choice
+
+commit 451fbe7dec79fbe4b97b93c6dd0b2a97a2343b0d
+Author: Leah Wachtfogel <leah.wach@gmail.com>
+Date:   Sun Dec 31 22:42:46 2017 +0200
+
+    splitting game manager function and adding join mutex
+
+commit 22e079c3b6da300b8481c4eaffaa51ba36cb1bc5
+Author: mazgana <adi.mazgani@gmail.com>
+Date:   Sun Dec 31 22:13:14 2017 +0200
+
+    delete unnecessary values
+
+commit 0e39de6a32f2d7eefca8e8104075c3602755d9ed
+Author: mazgana <adi.mazgani@gmail.com>
+Date:   Sun Dec 31 21:56:54 2017 +0200
+
+    start new game in server
+
+commit fc08665478808c6f5da1f2e6fabefadc27f5d2cd
+Merge: d47d668 9dad765
+Author: mazgana <adi.mazgani@gmail.com>
+Date:   Sun Dec 31 21:15:08 2017 +0200
+
+    Merge branch 'master' of https://github.com/Mazgana/Reversi
+
+commit d47d668a0eaa8803723633dab98d05f14b226371
+Author: mazgana <adi.mazgani@gmail.com>
+Date:   Sun Dec 31 21:15:02 2017 +0200
+
+    Adding messages for the user
+
+commit 9dad765a6fc0bbd85e91cff8ffecc8557deff6c7
+Author: Leah Wachtfogel <leah.wach@gmail.com>
+Date:   Sun Dec 31 21:12:43 2017 +0200
+
+    exit server and join mutex
+
+commit ad4725368d74859ffa7f9f9c0e6248fa23914b8b
+Merge: 3b13ebc 4b0d9ae
+Author: mazgana <adi.mazgani@gmail.com>
+Date:   Sun Dec 31 20:10:06 2017 +0200
+
+    Merge branch 'master' of https://github.com/Mazgana/Reversi
+
+commit 4b0d9aed080c433990f67edcf7c235ee085627a9
+Merge: b8e4525 914509e
+Author: Leah Wachtfogel <leah.wach@gmail.com>
+Date:   Sun Dec 31 20:08:42 2017 +0200
+
+    no real change
+
+commit 3b13ebcf835ed9b9226cf134769dd29797a950fd
+Author: mazgana <adi.mazgani@gmail.com>
+Date:   Sun Dec 31 20:07:16 2017 +0200
+
+    Fixing memory problem when the game ends
+
+commit b8e4525a2b5d3b168a8b0e8abc4ce8ac71c207d2
+Author: Leah Wachtfogel <leah.wach@gmail.com>
+Date:   Sun Dec 31 20:04:51 2017 +0200
+
+    no real change
+
+commit 914509e06c4861065fd4e5dc85610d1bf89054f8
+Author: mazgana <adi.mazgani@gmail.com>
+Date:   Sun Dec 31 16:08:48 2017 +0200
+
+    fixing bug in sending command loop
+
+commit f71249073517abfa9a3513584403176a01639c7d
+Author: Leah Wachtfogel <leah.wach@gmail.com>
+Date:   Sat Dec 30 19:56:17 2017 +0200
+
+    adding game manger class and comments to server
+
+commit 787bad1a8799484e26761146ef466f917f9b83b5
+Author: Leah Wachtfogel <leah.wach@gmail.com>
+Date:   Fri Dec 29 14:42:15 2017 +0200
+
+    rewriting small thread additions.. shabbat shalom:)
+
+commit 67ad32368491eba542fb74abaf16d17a25906889
+Author: mazgana <adi.mazgani@gmail.com>
+Date:   Fri Dec 29 02:00:10 2017 +0200
+
+    adding validation if the server is still connected & adding comments to the clients class
+
+commit 064e27df095477d433ed76c5c55e2fcaada24da5
+Merge: 66bb378 8eacbf1
+Author: mazgana <adi.mazgani@gmail.com>
+Date:   Thu Dec 28 20:33:44 2017 +0200
+
+    Merge branch 'master' of https://github.com/Mazgana/Reversi
+
+commit 66bb378feb3cca0b8168c515eba6da8e271079e3
+Author: mazgana <adi.mazgani@gmail.com>
+Date:   Thu Dec 28 20:33:23 2017 +0200
+
+    adding the option yo close the game
+
+commit 8eacbf16dd410576251655dac752e6c1eb122727
+Merge: cb1d015 07503e3
+Author: Leah Wachtfogel <leah.wach@gmail.com>
+Date:   Thu Dec 28 12:13:57 2017 +0200
+
+    Merge branch 'master' of https://github.com/Mazgana/Reversi
+
+commit cb1d015845cd7f96f12a87fd1bd3de6f76e453a4
+Author: Leah Wachtfogel <leah.wach@gmail.com>
+Date:   Thu Dec 28 12:13:26 2017 +0200
+
+    cleaning server files and organizing headers
+
+commit 07503e31f56fb0d961a9b1a7dbd81a900f317732
+Author: mazgana <adi.mazgani@gmail.com>
+Date:   Thu Dec 28 12:11:56 2017 +0200
+
+    Fixing x,y input
+
+commit edc38bb09192addeca06651b13f253765cf3c861
+Author: Leah Wachtfogel <leah.wach@gmail.com>
+Date:   Thu Dec 28 11:45:40 2017 +0200
+
+    adding join command
+
+commit 5131b4ac5d675a397bf89e593f567ad4319f4171
+Merge: 3e54427 a67149b
+Author: Leah Wachtfogel <leah.wach@gmail.com>
+Date:   Thu Dec 28 11:30:26 2017 +0200
+
+    Merge branch 'master' of https://github.com/Mazgana/Reversi
+
+commit 3e544277cd9f3c499d3dd48eabc356681c2aa0e6
+Author: Leah Wachtfogel <leah.wach@gmail.com>
+Date:   Thu Dec 28 11:30:19 2017 +0200
+
+    adding join command
+
+commit a67149b71617c407050285fc43d22ff49766c7a3
+Author: mazgana <adi.mazgani@gmail.com>
+Date:   Thu Dec 28 11:28:07 2017 +0200
+
+    Adding loop to the client's choice and organizing the list game command
+
+commit 0b6814517c4e8ac1b8d86111356e2f227e879ce4
+Author: mazgana <adi.mazgani@gmail.com>
+Date:   Thu Dec 28 10:59:07 2017 +0200
+
+    Sending the lenth of the string before sending the string itself
+
+commit 1b87fead13f980aceda8d507f4c95ce828a4c79b
+Author: mazgana <adi.mazgani@gmail.com>
+Date:   Wed Dec 27 22:47:00 2017 +0200
+
+    global list of games map & moving threads creation to client handler
+
+commit ca83c6dc9a84bbd3ded2d86db1b11148a81b270e
+Merge: 47af3c7 1c18afd
+Author: mazgana <adi.mazgani@gmail.com>
+Date:   Wed Dec 27 21:39:18 2017 +0200
+
+    Merge branch 'master' of https://github.com/Mazgana/Reversi
+
+commit 47af3c71dd0821d5e9834e369351e0beaaf8f94d
+Author: mazgana <adi.mazgani@gmail.com>
+Date:   Wed Dec 27 21:39:14 2017 +0200
+
+    changes in debug files
+
+commit 1c18afdb60773a7a8c4bee09dcc00a62b4604fea
+Merge: f41e3c5 7b17f2b
+Author: Leah Wachtfogel <leah.wach@gmail.com>
+Date:   Wed Dec 27 21:35:13 2017 +0200
+
+    fixing conflicts
+
+commit f41e3c5f93d4eed76c71228dd1d4efda78838b8b
+Author: Leah Wachtfogel <leah.wach@gmail.com>
+Date:   Wed Dec 27 21:29:43 2017 +0200
+
+    trying to make game list
+
+commit 7b17f2b6a5f45f8f53d52cddfed458be0a45d2a6
+Merge: be73b16 0e7337b
+Author: mazgana <adi.mazgani@gmail.com>
+Date:   Wed Dec 27 19:02:56 2017 +0200
+
+    fixing conflicts
+
+commit be73b164cdfe1e353bdd353487ec2473270e9bb3
+Author: mazgana <adi.mazgani@gmail.com>
+Date:   Wed Dec 27 18:57:09 2017 +0200
+
+    Chainging client handler loop
+
+commit 0e7337b693094fa72d0e794e5d0eecac876cbc7f
+Merge: 2ff3b50 ace81b3
+Author: Leah Wachtfogel <leah.wach@gmail.com>
+Date:   Wed Dec 27 18:54:36 2017 +0200
+
+    debugging
+
+commit 2ff3b507fd1e939ecf27854db7956832905e9b57
+Author: Leah Wachtfogel <leah.wach@gmail.com>
+Date:   Wed Dec 27 18:53:12 2017 +0200
+
+    debugging
+
+commit ace81b34d1832a99d6457de32025258014aae8e6
+Merge: 8235519 ccca065
+Author: mazgana <adi.mazgani@gmail.com>
+Date:   Wed Dec 27 17:54:38 2017 +0200
+
+    delete o files
+
+commit 8235519ee1da5a976cd1415e14f7bd006a8133c9
+Author: mazgana <adi.mazgani@gmail.com>
+Date:   Wed Dec 27 17:53:26 2017 +0200
+
+    o files
+
+commit 1ab7938b5a7b2477c6570eb349771420272d4e18
+Author: mazgana <adi.mazgani@gmail.com>
+Date:   Wed Dec 27 17:51:39 2017 +0200
+
+    saving changes in server
+
+commit ccca06535afedd6d3e5faa70946a415f2b8152f1
+Merge: 64b2274 ceb04ec
+Author: Leah Wachtfogel <leah.wach@gmail.com>
+Date:   Wed Dec 27 17:48:32 2017 +0200
+
+    Merge branch 'master' of https://github.com/Mazgana/Reversi
+
+commit 64b22742dce96c8c4ba020ec4bce79b15deedd98
+Author: Leah Wachtfogel <leah.wach@gmail.com>
+Date:   Wed Dec 27 17:48:24 2017 +0200
+
+    debugging
+
+commit ceb04ec35ec46d86346123550181681a20fcddab
+Author: mazgana <adi.mazgani@gmail.com>
+Date:   Wed Dec 27 17:47:02 2017 +0200
+
+    fixing menu loops
+
+commit ffc313bbbf7d0898766386778121ffbefe5e36de
+Merge: 9b99a10 8dd4793
+Author: mazgana <adi.mazgani@gmail.com>
+Date:   Wed Dec 27 17:23:16 2017 +0200
+
+    Merge branch 'master' of https://github.com/Mazgana/Reversi
+
+commit 9b99a1000a4fda40af9b19ab633c7aed5a8e380c
+Author: mazgana <adi.mazgani@gmail.com>
+Date:   Wed Dec 27 17:22:51 2017 +0200
+
+    List of games and join game commands in client
+
+commit 8dd47930d6f524e45a660652d32454ade9eb676d
+Merge: 8cecd9b 2e387c4
+Author: Leah Wachtfogel <leah.wach@gmail.com>
+Date:   Wed Dec 27 17:22:39 2017 +0200
+
+    couts in server
+
+commit 8cecd9bda1eaa1cc7a1d1e6e5f16ffb91dad3b11
+Author: Leah Wachtfogel <leah.wach@gmail.com>
+Date:   Wed Dec 27 17:17:21 2017 +0200
+
+    adding start and join commands
+
+commit 2e387c411cd9aab6cbeac1999615f160208f776e
+Author: mazgana <adi.mazgani@gmail.com>
+Date:   Wed Dec 27 16:04:42 2017 +0200
+
+    Changing all input calls to be part of the displayer interface
+
+commit d631e4925c738919c328ce822d09eec979948524
+Merge: ab069cd 0964d7a
+Author: Leah Wachtfogel <leah.wach@gmail.com>
+Date:   Wed Dec 27 14:48:42 2017 +0200
+
+    trying mutex
+
+commit ab069cdc538f1956a9bafef8b418a0d9c2c66370
+Author: Leah Wachtfogel <leah.wach@gmail.com>
+Date:   Wed Dec 27 14:47:24 2017 +0200
+
+    trying mutex
+
+commit 0964d7ab7b9fe77b815968f96b2b37ea59a3d142
+Author: mazgana <adi.mazgani@gmail.com>
+Date:   Wed Dec 27 12:48:38 2017 +0200
+
+    Sending string to server
+
+commit dc05340ad633af27abc7d168d6dbf956a458de8f
+Merge: 548597a e6ab56c
+Author: mazgana <adi.mazgani@gmail.com>
+Date:   Wed Dec 27 12:35:10 2017 +0200
+
+    a.out files update
+
+commit 548597a742731ee10f9c2cf97409418905452ecc
+Author: mazgana <adi.mazgani@gmail.com>
+Date:   Wed Dec 27 12:34:03 2017 +0200
+
+    a.out files update
+
+commit 936bb25f968510f2f542703882199d103120f7c0
+Author: mazgana <adi.mazgani@gmail.com>
+Date:   Wed Dec 27 12:32:15 2017 +0200
+
+    Sending string command to server
+
+commit e6ab56c03ed2726b767fe9b5c8b5ee9fb16130c0
+Author: Leah Wachtfogel <leah.wach@gmail.com>
+Date:   Wed Dec 27 12:30:40 2017 +0200
+
+    small clienthandler change
+
+commit d45add25abff7c6390c82903c86e82025a02cf88
+Merge: 5c3f8c0 3ab4918
+Author: mazgana <adi.mazgani@gmail.com>
+Date:   Wed Dec 27 12:11:50 2017 +0200
+
+    Merge branch 'master' of https://github.com/Mazgana/Reversi
+
+commit 5c3f8c06a906cfd4f0b0e3f88d350ed64db019d2
+Author: mazgana <adi.mazgani@gmail.com>
+Date:   Wed Dec 27 12:11:46 2017 +0200
+
+    Server changes
+
+commit 3527377dccd259ca5e5a41f9132ffe1766b926bd
+Author: mazgana <adi.mazgani@gmail.com>
+Date:   Wed Dec 27 12:11:00 2017 +0200
+
+    start command in client
+
+commit 3ab4918b815977301d697de7eaae51e99608b1df
+Author: Leah Wachtfogel <leah.wach@gmail.com>
+Date:   Wed Dec 27 12:06:51 2017 +0200
+
+    small clienthandler change
+
+commit 4b5ae7ab0fdb0dd1248a78b5bacc0f3419410a10
+Merge: 93808ef 5f97e6a
+Author: Leah Wachtfogel <leah.wach@gmail.com>
+Date:   Wed Dec 27 10:59:50 2017 +0200
+
+    Merge branch 'master' of https://github.com/Mazgana/Reversi
+
+commit 93808efc18a363f73e34dd325a3457bc78e25c28
+Author: Leah Wachtfogel <leah.wach@gmail.com>
+Date:   Wed Dec 27 10:59:45 2017 +0200
+
+    small clienthandler change
+
+commit 5f97e6a96885cdf6a4bed232273bf22fb1131d64
+Author: mazgana <adi.mazgani@gmail.com>
+Date:   Wed Dec 27 10:50:54 2017 +0200
+
+    Start command
+
+commit f8f799a2e21568bedd7e5f039978c0df8217d311
+Author: mazgana <adi.mazgani@gmail.com>
+Date:   Wed Dec 27 10:30:46 2017 +0200
+
+    add start new game method
+
+commit bb551e241d3d301553464e2b7102c4769fdcfb19
+Author: mazgana <adi.mazgani@gmail.com>
+Date:   Tue Dec 26 13:42:02 2017 +0200
+
+    adding buffer cleaning after invalid input
+
+commit 5b2307e11d9f593430c4db98ebe2288992eac93f
+Merge: 65861fa 986e04a
+Author: mazgana <adi.mazgani@gmail.com>
+Date:   Tue Dec 26 00:59:45 2017 +0200
+
+    Merge branch 'master' of https://github.com/Mazgana/Reversi
+
+commit 65861faf805c41935eb1fa17d925eed0ddda17c5
+Author: mazgana <adi.mazgani@gmail.com>
+Date:   Tue Dec 26 00:59:26 2017 +0200
+
+    Console display changes
+
+commit 986e04a9d08e62928d4becf7466558e6862f52d2
+Author: Leah Wachtfogel <leah.wach@gmail.com>
+Date:   Mon Dec 25 23:13:57 2017 +0200
+
+    twoClients-> twoHumans
+
+commit 182069bce44a1911d33d88c000afc7fb46813264
+Author: Leah Wachtfogel <leah.wach@gmail.com>
+Date:   Mon Dec 25 23:10:46 2017 +0200
+
+    some commands changes and memory bug
+
+commit 2425c75ce57395c7c5001a15aaaf16f84ee5f34d
+Merge: 1f0a422 4badf20
+Author: mazgana <adi.mazgani@gmail.com>
+Date:   Mon Dec 25 20:46:59 2017 +0200
+
+    Merge branch 'master' of https://github.com/Mazgana/Reversi
+
+commit 1f0a422b559dfbc3febfc0fcf9405a43508833bc
+Author: mazgana <adi.mazgani@gmail.com>
+Date:   Mon Dec 25 20:46:34 2017 +0200
+
+    Console Displayer in every class
+
+commit 4badf20ee3d885c95b18d2df86d1793c9c9b1f0e
+Author: Leah Wachtfogel <leah.wach@gmail.com>
+Date:   Mon Dec 25 20:40:22 2017 +0200
+
+    thread start in server
+
+commit 8f1a97fc64415d8ff522a9b3eabcf301a2db8414
+Author: mazgana <adi.mazgani@gmail.com>
+Date:   Sun Dec 24 15:43:33 2017 +0200
+
+    Organize the game logic interface
+
+commit 2046c69407bfcd9d836a0f12d2943f4e9ee51c61
+Author: mazgana <adi.mazgani@gmail.com>
+Date:   Sun Dec 24 13:34:38 2017 +0200
+
+    Game logic interface, 3 game's types objects, display inteface & console display object
+
+commit d855a3714a99d0034f7733df6bd31a182be1daf5
+Author: Leah Wachtfogel <leah.wach@gmail.com>
+Date:   Sat Dec 23 23:46:02 2017 +0200
+
+    adding command interface and outlines
+
+commit f24d7095ac00012bb3a24971757cdbdfb445a45b
+Author: Leah Wachtfogel <leah.wach@gmail.com>
+Date:   Mon Dec 11 15:07:52 2017 +0200
+
+    empty project update
+
+commit bf662c73bfb12d808d97c30fdbc5f0db7d50a722
+Author: mazgana <adi.mazgani@gmail.com>
+Date:   Mon Dec 11 12:49:33 2017 +0200
+
+    Handling client disconnection and reading from configuration files
+
+commit e6707c3e7f1bd71cf3cd3cc0d54ebe5cadd67318
+Author: mazgana <adi.mazgani@gmail.com>
+Date:   Sun Dec 10 20:37:36 2017 +0200
+
+    Adding makefile to server
+
+commit fc94947a04d83807a4a6ec82de82bdfe03175839
+Author: mazgana <adi.mazgani@gmail.com>
+Date:   Sun Dec 10 18:04:30 2017 +0200
+
+    Deleting unnecessary folder and adding Exe folder
+
+commit 0ff9b96346c3cc1e98d8ab57534af96912e56a5f
+Author: mazgana <adi.mazgani@gmail.com>
+Date:   Sun Dec 10 17:46:53 2017 +0200
+
+    Adding comments to server
+
+commit ae229d47f2d90a2ec40dea264b18f62f530adc02
+Merge: 225cf4f 683637c
+Author: mazgana <adi.mazgani@gmail.com>
+Date:   Sat Dec 9 19:50:50 2017 +0200
+
+    Fixing conflicts
+
+commit 225cf4f8ea0062d2f19b60e0af31791fefc716a8
+Author: mazgana <adi.mazgani@gmail.com>
+Date:   Sat Dec 9 19:49:35 2017 +0200
+
+    Saving changes
+
+commit 683637c0453af3a612efb2df4f3a33acc275a7c5
+Author: Leah Wachtfogel <leah.wach@gmail.com>
+Date:   Sat Dec 9 19:31:24 2017 +0200
+
+    updating menu and adding comments
+
+commit bf58034a63aff95b0a77e29dc3784a7b2cda6bb7
+Author: Leah Wachtfogel <leah.wach@gmail.com>
+Date:   Fri Dec 8 14:17:10 2017 +0200
+
+    fixing skip turn bugs
+
+commit f056d413e9dcb21b277d007263a3a61215891f57
+Author: Leah Wachtfogel <leah.wach@gmail.com>
+Date:   Fri Dec 8 12:28:32 2017 +0200
+
+    oops component->opponent
+
+commit 4b343319b215a8b3f6ac633d0005698e60f81736
+Author: Leah Wachtfogel <leah.wach@gmail.com>
+Date:   Fri Dec 8 11:50:51 2017 +0200
+
+    server removing reading char
+
+commit e8b3e2dabad3d8ed0fdaf6f78d5b6a73807e8b5c
+Author: Leah Wachtfogel <leah.wach@gmail.com>
+Date:   Fri Dec 8 11:18:09 2017 +0200
+
+    server changing write command
+
+commit baf4043259e5c38944593c3ae6e9634e9624febb
+Author: Leah Wachtfogel <leah.wach@gmail.com>
+Date:   Thu Dec 7 22:37:22 2017 +0200
+
+    client and component classes. beginning of game logic for clients
+
+commit aedda51692e808b5b50c834366656926921904ad
+Author: mazgana <adi.mazgani@gmail.com>
+Date:   Tue Dec 5 17:42:41 2017 +0200
+
+    Matching the server to handel two clients and the communication between them
+
+commit cf3a68105e2d87c6b48c18c6abe786a3169ead4d
+Merge: 413fd31 a6a961d
+Author: mazgana <adi.mazgani@gmail.com>
+Date:   Mon Dec 4 20:48:39 2017 +0200
+
+    Merge branch 'master' of https://github.com/Mazgana/Reversi
+
+commit 413fd31e031f1a7d6a29af861e09f79c11e05bd8
+Author: mazgana <adi.mazgani@gmail.com>
+Date:   Mon Dec 4 20:42:28 2017 +0200
+
+    Adding server
+
+commit a6a961d36f36df075723c70e0ec6788eb281fe1d
+Author: Leah Wachtfogel <leah.wach@gmail.com>
+Date:   Mon Dec 4 20:40:57 2017 +0200
+
+    adding client
+
+commit ebb5ea4252b684356812f55f8d4c05bc7d552645
+Author: Leah Wachtfogel <leah.wach@gmail.com>
+Date:   Mon Dec 4 16:41:50 2017 +0200
+
+    adding google-test-release
+
+commit 5ef9ecee5d30a348efc070f67365524f3db7f934
+Author: mazgana <adi.mazgani@gmail.com>
+Date:   Mon Dec 4 16:16:54 2017 +0200
+
+    Organizing the project's folders
+
+commit c44f86f93eb7eda20d73ff6ede0607c47ec17571
+Author: mazgana <adi.mazgani@gmail.com>
+Date:   Sun Dec 3 17:06:59 2017 +0200
+
+    Update o files
+
+commit 07db3f62473287c00a099db1aa5ea0b71e6b4b8b
+Merge: 1bff825 558f3c8
+Author: mazgana <adi.mazgani@gmail.com>
+Date:   Sun Dec 3 01:18:24 2017 +0200
+
+    Update log file
+
+commit 1bff825c05c8ca78346102cf80d1cf399dff03c8
+Author: mazgana <adi.mazgani@gmail.com>
+Date:   Sun Dec 3 00:57:37 2017 +0200
+
+    Update log file
+
+commit 558f3c892fa124b25f34c3ac5aeb1a09d88c0cff
+Author: Leah Wachtfogel <leah.wach@gmail.com>
+Date:   Thu Nov 30 18:22:00 2017 +0200
+
+    changing functions to private and const when possible
+
+commit 455310a5942193238d2e8ff67a77e87c230b58ce
+Author: Leah Wachtfogel <leah.wach@gmail.com>
+Date:   Thu Nov 30 17:50:05 2017 +0200
+
+    comments cleanup
+
+commit f20f067d55545d6d47437243d18c5685ba9ba8de
+Merge: acef649 6367cd9
+Author: Leah Wachtfogel <leah.wach@gmail.com>
+Date:   Wed Nov 29 23:17:05 2017 +0200
+
+    Merge https://github.com/Mazgana/Reversi
+
+commit acef6495ed6ea88a8f55e8e656c37968bfb39844
+Author: Leah Wachtfogel <leah.wach@gmail.com>
+Date:   Wed Nov 29 23:16:02 2017 +0200
+
+    using generic player and pointers, optimizing playTurn methods,small end of game bugs, putChip and flip together
+
+commit 6367cd9784dad218d01af3356f147cf3cce33e07
+Author: mazgana <adi.mazgani@gmail.com>
+Date:   Wed Nov 29 23:02:46 2017 +0200
+
+    Add board test and log txt file
+
+commit ec8c8d103a8bb4683c4a8c21fce4ed85cdfbb2bd
+Author: Leah Wachtfogel <leah.wach@gmail.com>
+Date:   Wed Nov 29 16:12:24 2017 +0200
+
+    adding player and cell tests, starting board test, added comments
+
+commit 2ef6b3bb172104c0fd426f3928ca22d236317a93
+Author: Leah Wachtfogel <leah.wach@gmail.com>
+Date:   Wed Nov 29 11:09:18 2017 +0200
+
+    changing limits of game logic
+
+commit f0239f1eb1b95ffec66f889194aae7e5141ac5f4
+Merge: 446fa4f 8591e7a
+Author: Leah Wachtfogel <leah.wach@gmail.com>
+Date:   Wed Nov 29 08:54:11 2017 +0200
+
+    change opening message in main
+
+commit 446fa4f1fdb6eefb44c055533bafedd66e8586ba
+Author: Leah Wachtfogel <leah.wach@gmail.com>
+Date:   Wed Nov 29 08:51:44 2017 +0200
+
+    change opening message in menu
+
+commit 8591e7a6c628bae6a0bd714b07ba327dbf1f660d
+Author: mazgana <adi.mazgani@gmail.com>
+Date:   Tue Nov 28 19:58:48 2017 +0200
+
+    Change the possible cell input from the user
+
+commit e5e9a0e9672a41e59b4e8a772973c975116b615d
+Author: mazgana <adi.mazgani@gmail.com>
+Date:   Tue Nov 28 19:51:55 2017 +0200
+
+    Adding default numbers & fixing wrong cell access
+
+commit 49c7f92dd0f0a67767be1ea2d91ecae21774de74
+Author: mazgana <adi.mazgani@gmail.com>
+Date:   Tue Nov 28 17:49:29 2017 +0200
+
+    Presenting row before col
+
+commit dd19d8af023acaa866098b4957463243bf6d78dc
+Author: mazgana <adi.mazgani@gmail.com>
+Date:   Tue Nov 28 17:28:08 2017 +0200
+
+    Compile
+
+commit 5a921cb45167a42a80a3525e1f23def7e9864556
+Author: mazgana <adi.mazgani@gmail.com>
+Date:   Tue Nov 28 14:27:17 2017 +0200
+
+    Changing 'setStatus' to get status instead of char
+
+commit e6cd3e049ddcad9172a49bbdd81e888fa46221b9
+Author: mazgana <adi.mazgani@gmail.com>
+Date:   Tue Nov 28 14:24:00 2017 +0200
+
+    adding optional moves list to board
+
+commit 426668076bae638e2e6b84f4542bd37085f0c412
+Merge: 3c59a0d 934c331
+Author: mazgana <adi.mazgani@gmail.com>
+Date:   Mon Nov 27 23:58:43 2017 +0200
+
+    Merge branch 'master' of https://github.com/Mazgana/Reversi
+
+commit 3c59a0df92dbe2161a48a26d1a7ccb73b86a7296
+Author: mazgana <adi.mazgani@gmail.com>
+Date:   Mon Nov 27 23:58:27 2017 +0200
+
+    Adding number of players to game
+
+commit 934c331c0264aff7edbfe91eb065f5ec9eb2dd09
+Author: Leah Wachtfogel <leah.wach@gmail.com>
+Date:   Mon Nov 27 23:00:38 2017 +0200
+
+    google testing changes and files
+
+commit 1d5c5dbf644a71e452a30ff9511674b905d55f6c
+Author: Leah Wachtfogel <leah.wach@gmail.com>
+Date:   Mon Nov 27 22:59:01 2017 +0200
+
+    google testing changes and files
+
+commit c9f407d7ccebfee5817fd2e2814cdef9aaf6eae2
+Author: Leah Wachtfogel <leah.wach@gmail.com>
+Date:   Mon Nov 27 22:14:32 2017 +0200
+
+    removing not needed couts
+
+commit 74382acb32fd5206854168e186d350137e669b88
+Author: mazgana <adi.mazgani@gmail.com>
+Date:   Mon Nov 27 21:22:35 2017 +0200
+
+    Adding files
+
+commit 54d5a80149b4a8b31a5f4e7a6cc1cede4f6a402b
+Author: Leah Wachtfogel <leah.wach@gmail.com>
+Date:   Mon Nov 27 19:28:06 2017 +0200
+
+    adding test files
+
+commit 7d055a42c15bc8486d31aa260af6da0593c66484
+Author: mazgana <adi.mazgani@gmail.com>
+Date:   Mon Nov 27 19:08:55 2017 +0200
+
+    Delete files
+
+commit 068d57b0770cb77900ed654a3eb6c9b231dc7db3
+Merge: e69b269 e36d40a
+Author: Leah Wachtfogel <leah.wach@gmail.com>
+Date:   Mon Nov 27 18:55:47 2017 +0200
+
+    Merge https://github.com/Mazgana/Reversi
+
+commit e36d40a4c45e946d90114517d1b0193834e03591
+Merge: 566b77d abfaa9e
+Author: mazgana <adi.mazgani@gmail.com>
+Date:   Mon Nov 27 18:54:51 2017 +0200
+
+    Merge https://github.com/Mazgana/Reversi
+
+commit 566b77d327a07c10d4ac31f87346e880f37cb965
+Author: mazgana <adi.mazgani@gmail.com>
+Date:   Mon Nov 27 18:53:51 2017 +0200
+
+    Delete all deconstructors
+
+commit e69b269a72354e7428488a7273dce210c21b93ee
+Author: Leah Wachtfogel <leah.wach@gmail.com>
+Date:   Mon Nov 27 18:48:58 2017 +0200
+
+    trying commit
+
+commit abfaa9e0be6c30aba745867a58e7fd0535449778
+Author: mazgana <adi.mazgani@gmail.com>
+Date:   Mon Nov 27 18:30:29 2017 +0200
+
+    Adding src
+
+commit a308108ff003ab640f557a0dbf961458869ad65d
+Author: mazgana <adi.mazgani@gmail.com>
+Date:   Mon Nov 27 15:36:33 2017 +0200
+
+    adding .project
+
+commit 3b7bcc635944e2722efcedfa12614ccc39ca4ac6
+Author: mazgana <adi.mazgani@gmail.com>
+Date:   Mon Nov 27 13:06:20 2017 +0200
+
+    adding deconstructor
+
+commit 38ca6011645af4db9ae4ffae288c18eca549e9a1
+Author: mazgana <adi.mazgani@gmail.com>
+Date:   Mon Nov 27 12:17:35 2017 +0200
+
+    Fixing errors
+
+commit 94355203e36734c85604d2b8290196aaeaa80823
+Author: mazgana <adi.mazgani@gmail.com>
+Date:   Mon Nov 27 11:32:18 2017 +0200
+
+    Adding playTurn for AI player
+
+commit bd0655603e616192033b712319a9c9da951727b2
+Author: mazgana <adi.mazgani@gmail.com>
+Date:   Sun Nov 26 23:23:28 2017 +0200
+
+    Adding 'find enemy max moves' method
+
+commit d8562fe9369bc0d344e8ec5296802841dba15f44
+Author: mazgana <adi.mazgani@gmail.com>
+Date:   Sun Nov 26 22:38:17 2017 +0200
+
+    Create AI class
+
+commit 359055c60355a774f132ca481a480648ed1e9c88
+Author: mazgana <adi.mazgani@gmail.com>
+Date:   Sun Nov 26 21:41:15 2017 +0200
+
+    Copy constructor
+
+commit a617290df57c65fb9ec4d7e814c6f870fecb41df
+Author: Leah Wachtfogel <leah.wach@gmail.com>
+Date:   Sun Nov 26 16:31:03 2017 +0200
+
+    changing small human-humen changes
+
+commit dc3bb5fcda5ea9cb66f093a10181023c65a20721
+Author: Leah Wachtfogel <leah.wach@gmail.com>
+Date:   Sun Nov 26 16:28:28 2017 +0200
+
+    adding contents to human player
+
+commit 91d67546bc3ecedff1b00d480e6dd999429b85fe
+Author: Leah Wachtfogel <leah.wach@gmail.com>
+Date:   Sun Nov 26 16:27:27 2017 +0200
+
+    adding contents to human player
+
+commit c8c58875987ee2c71ce9bc18b99ea4b6cd00b7d0
+Merge: 902c94d bd56853
+Author: Leah Wachtfogel <leah.wach@gmail.com>
+Date:   Sun Nov 26 16:11:43 2017 +0200
+
+    Merge remote-tracking branch 'origin/master'
+
+commit 902c94dbf549973e57494967b032f0137f6aa2bd
+Author: Leah Wachtfogel <leah.wach@gmail.com>
+Date:   Sun Nov 26 15:59:11 2017 +0200
+
+    interface and human-humen
+
+commit bd5685368794b07085344f71a9ac0054ff7aceb1
+Author: wachtfl <33896946+wachtfl@users.noreply.github.com>
+Date:   Sat Nov 25 19:13:13 2017 +0200
+
+    Add files via upload
+
+commit f7990fb34052d6db512acf104c6e91b60e231d1b
+Author: Mazgana <33939685+Mazgana@users.noreply.github.com>
+Date:   Fri Nov 24 01:32:58 2017 +0200
+
+    Add files via upload
+
+commit 7352185dc0710a15515ba4dd54cd313c39d8b95e
+Author: Mazgana <33939685+Mazgana@users.noreply.github.com>
+Date:   Fri Nov 24 01:31:19 2017 +0200
+
+    Create README.md
