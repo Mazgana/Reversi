@@ -4,7 +4,6 @@ void *handleClient1(void *clientSocket) {
     //calling first function of new thread
     ClientHandler ch;
     long tid = (long)clientSocket;
-    cout << "Hello world. It's me, thread " << tid << endl;
     ch.handleClient((int)tid);
 }
 
@@ -13,7 +12,7 @@ void ClientHandler :: createNewThread(int clientSocket) {
     pthread_t thread;
 	int rc = pthread_create(&thread, NULL, handleClient1, (void *)(long)clientSocket);
 	if (rc == -1) {
-		throw "Failed creating thread";
+		cout << "Failed creating thread" << endl;
 	}
 }
 
@@ -27,7 +26,7 @@ void ClientHandler :: handleClient (int clientSocket) {
         long firstClient = (long) firstClientSocket;
         n = (int) recv((int) firstClient, buffer, MAX_STR, 0);
         if (n == -1) {
-            cout << "Error reading choice" << endl;
+            throw "Error reading choice";
         		}
 
         //splitting command to command name and other argument

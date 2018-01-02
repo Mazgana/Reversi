@@ -53,8 +53,6 @@ RemoteGame::RemoteGame() {
 				} else if (chip == 'O') {
 						whitePlayer = new ClientPlayer(WHITE, client);
 						blackPlayer = new OpponentClientPlayer(BLACK, client);
-				} else if (chip == 'E') { // The server disconnected
-					return;
 				}
 			}
     	}
@@ -105,9 +103,9 @@ int RemoteGame :: startNewGame(Client client) {
 			serverResponse = client.sendCommandMessage(startCommand);
 			if (serverResponse == -1)
 				displayer->printMessageWitheNewLine("Name already exists. Please enter new name:");
-        }
+			}
 
-        displayer->printMessageWitheNewLine("Waiting for opponent to join...");
+      displayer->printMessageWitheNewLine("Waiting for opponent to join...");
 
 		return serverResponse;
 }

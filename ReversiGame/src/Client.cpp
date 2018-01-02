@@ -46,6 +46,7 @@ void Client::connectToServer() {
 }
 
 char Client::getOpeningPlayer() {
+	try {
     //reading first integer sent from server indicates the player's cheap type.
     int playersPlace = readInt();
 
@@ -59,6 +60,9 @@ char Client::getOpeningPlayer() {
     		displayer->printMessageWitheNewLine("got unreadable starting player from server");
         return ' ';
     	}
+  } catch  (const char *msg) {
+    		return 'F';
+    }
 }
 
 int Client::receiveCoordinate() {
@@ -141,7 +145,7 @@ int Client::readInt() {
 		throw "Error reading int";
 	} else if (w == 0) {
 		displayer->printMessageWitheNewLine("The server disconnected.");
-		throw "The server disconnected";
+    exit(-1);
 	}
 	return val;
 }
@@ -153,6 +157,6 @@ void Client::writeInt(int val) {
 		throw "Error writing int";
 	} else if (n == 0) {
 		displayer->printMessageWitheNewLine("The server disconnected.");
-		throw "The server disconnected";
+	  exit(-1);
 	}
 }

@@ -37,7 +37,6 @@ void Server::start() {
 
         //The first client login
         int clientSocket = accept(serverSocket, (struct sockaddr *)&clientAddress, &clientAddressLen);
-        cout <<  clientSocket << " Connected to server" << endl;
 
         if (clientSocket == -1)
             throw "Failed to connect the server";
