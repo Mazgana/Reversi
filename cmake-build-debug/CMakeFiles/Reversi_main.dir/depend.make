@@ -103,7 +103,6 @@ CMakeFiles/Reversi_main.dir/ReversiGame/src/RemoteGame.cpp.o: ../ReversiGame/inc
 CMakeFiles/Reversi_main.dir/ReversiGame/src/RemoteGame.cpp.o: ../ReversiGame/include/Display.h
 CMakeFiles/Reversi_main.dir/ReversiGame/src/RemoteGame.cpp.o: ../ReversiGame/include/GameLogic.h
 CMakeFiles/Reversi_main.dir/ReversiGame/src/RemoteGame.cpp.o: ../ReversiGame/include/HumanPlayer.h
-CMakeFiles/Reversi_main.dir/ReversiGame/src/RemoteGame.cpp.o: ../ReversiGame/include/OpponentClientPlayer.h
 CMakeFiles/Reversi_main.dir/ReversiGame/src/RemoteGame.cpp.o: ../ReversiGame/include/Player.h
 CMakeFiles/Reversi_main.dir/ReversiGame/src/RemoteGame.cpp.o: ../ReversiGame/include/RemoteGame.h
 CMakeFiles/Reversi_main.dir/ReversiGame/src/RemoteGame.cpp.o: ../ReversiGame/src/RemoteGame.cpp

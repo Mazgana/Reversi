@@ -1,11 +1,11 @@
 cmake_minimum_required(VERSION 3.8)
 project(ReversiGame)
 
+set(CMAKE_CXX_STANDARD 98)
+
 include_directories(ReversiGame)
 include_directories(ReversiGame/src)
 include_directories(ReversiGame/include)
-
-set(CMAKE_CXX_STANDARD 98)
 
 set(SOURCE_FILES
         include/AI.h
@@ -37,4 +37,4 @@ set(SOURCE_FILES
         src/RemoteGame.cpp
         src/TwoHumansGame.cpp)
 
-add_executable(ReversiGame ${SOURCE_FILES})
+add_executable(Reversi_main ${SOURCE_FILES} src/Main.cpp src/Client.cpp include/Client.h src/ClientPlayer.cpp src/OpponentClientPlayer.cpp)

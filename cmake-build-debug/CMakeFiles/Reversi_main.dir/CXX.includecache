@@ -189,20 +189,6 @@ ConsoleDisplay.h
 /home/leah/CLionProjects/Reversi/ReversiGame/src/RemoteGame.cpp
 RemoteGame.h
 /home/leah/CLionProjects/Reversi/ReversiGame/src/RemoteGame.h
-Client.h
-/home/leah/CLionProjects/Reversi/ReversiGame/src/Client.h
-OpponentClientPlayer.h
-/home/leah/CLionProjects/Reversi/ReversiGame/src/OpponentClientPlayer.h
-iostream
--
-fstream
--
-stdlib.h
--
-string.h
--
-string
--
 
 /home/leah/CLionProjects/Reversi/ReversiGame/src/TwoHumansGame.cpp
 TwoHumansGame.h

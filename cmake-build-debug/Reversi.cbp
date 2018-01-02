@@ -5,53 +5,13 @@
 		<Option title="Reversi"/>
 		<Option makefile_is_custom="1"/>
 		<Option compiler="gcc"/>
-		<Option virtualFolders="CMake Files\;CMake Files\ReversiGame\;CMake Files\ReversiGame\googletest-release-1.8.0\;CMake Files\ReversiGame\googletest-release-1.8.0\googlemock\;CMake Files\ReversiGame\googletest-release-1.8.0\googletest\;CMake Files\ReversiGame\googletest-release-1.8.0\googletest\cmake\;"/>
+		<Option virtualFolders="CMake Files\;"/>
 		<Build>
 			<Target title="all">
 				<Option working_dir="/home/leah/CLionProjects/Reversi/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
 					<Build command="/usr/bin/make -j4 -f &quot;/home/leah/CLionProjects/Reversi/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/leah/CLionProjects/Reversi/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/leah/CLionProjects/Reversi/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/leah/CLionProjects/Reversi/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="install/strip">
-				<Option working_dir="/home/leah/CLionProjects/Reversi/cmake-build-debug"/>
-				<Option type="4"/>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/leah/CLionProjects/Reversi/cmake-build-debug/Makefile&quot;  VERBOSE=1 install/strip"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/leah/CLionProjects/Reversi/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/leah/CLionProjects/Reversi/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/leah/CLionProjects/Reversi/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="install/local">
-				<Option working_dir="/home/leah/CLionProjects/Reversi/cmake-build-debug"/>
-				<Option type="4"/>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/leah/CLionProjects/Reversi/cmake-build-debug/Makefile&quot;  VERBOSE=1 install/local"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/leah/CLionProjects/Reversi/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/leah/CLionProjects/Reversi/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/leah/CLionProjects/Reversi/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="install">
-				<Option working_dir="/home/leah/CLionProjects/Reversi/cmake-build-debug"/>
-				<Option type="4"/>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/leah/CLionProjects/Reversi/cmake-build-debug/Makefile&quot;  VERBOSE=1 install"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/leah/CLionProjects/Reversi/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/leah/CLionProjects/Reversi/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/leah/CLionProjects/Reversi/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="list_install_components">
-				<Option working_dir="/home/leah/CLionProjects/Reversi/cmake-build-debug"/>
-				<Option type="4"/>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/leah/CLionProjects/Reversi/cmake-build-debug/Makefile&quot;  VERBOSE=1 list_install_components"/>
 					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/leah/CLionProjects/Reversi/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="/usr/bin/make -j4 -f &quot;/home/leah/CLionProjects/Reversi/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 					<DistClean command="/usr/bin/make -j4 -f &quot;/home/leah/CLionProjects/Reversi/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
@@ -77,64 +37,6 @@
 					<DistClean command="/usr/bin/make -j4 -f &quot;/home/leah/CLionProjects/Reversi/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
-			<Target title="test_main">
-				<Option output="/home/leah/CLionProjects/Reversi/cmake-build-debug/test_main" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/leah/CLionProjects/Reversi/cmake-build-debug"/>
-				<Option object_output="./"/>
-				<Option type="1"/>
-				<Option compiler="gcc"/>
-				<Compiler>
-					<Add directory="/home/leah/CLionProjects/Reversi/ReversiGame/googletest-release-1.8.0/googletest/include"/>
-					<Add directory="/home/leah/CLionProjects/Reversi/ReversiGame/googletest-release-1.8.0/googlemock/include"/>
-					<Add directory="/home/leah/CLionProjects/Reversi/ReversiGame"/>
-					<Add directory="/home/leah/CLionProjects/Reversi/ReversiGame/test"/>
-					<Add directory="/home/leah/CLionProjects/Reversi/ReversiGame/src"/>
-					<Add directory="/home/leah/CLionProjects/Reversi/ReversiGame/include"/>
-					<Add directory="/usr/include/c++/5"/>
-					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
-					<Add directory="/usr/include/c++/5/backward"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
-					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
-					<Add directory="/usr/include/x86_64-linux-gnu"/>
-					<Add directory="/usr/include"/>
-				</Compiler>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/leah/CLionProjects/Reversi/cmake-build-debug/Makefile&quot;  VERBOSE=1 test_main"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/leah/CLionProjects/Reversi/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/leah/CLionProjects/Reversi/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/leah/CLionProjects/Reversi/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="test_main/fast">
-				<Option output="/home/leah/CLionProjects/Reversi/cmake-build-debug/test_main" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/leah/CLionProjects/Reversi/cmake-build-debug"/>
-				<Option object_output="./"/>
-				<Option type="1"/>
-				<Option compiler="gcc"/>
-				<Compiler>
-					<Add directory="/home/leah/CLionProjects/Reversi/ReversiGame/googletest-release-1.8.0/googletest/include"/>
-					<Add directory="/home/leah/CLionProjects/Reversi/ReversiGame/googletest-release-1.8.0/googlemock/include"/>
-					<Add directory="/home/leah/CLionProjects/Reversi/ReversiGame"/>
-					<Add directory="/home/leah/CLionProjects/Reversi/ReversiGame/test"/>
-					<Add directory="/home/leah/CLionProjects/Reversi/ReversiGame/src"/>
-					<Add directory="/home/leah/CLionProjects/Reversi/ReversiGame/include"/>
-					<Add directory="/usr/include/c++/5"/>
-					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
-					<Add directory="/usr/include/c++/5/backward"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
-					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
-					<Add directory="/usr/include/x86_64-linux-gnu"/>
-					<Add directory="/usr/include"/>
-				</Compiler>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/leah/CLionProjects/Reversi/cmake-build-debug/Makefile&quot;  VERBOSE=1 test_main/fast"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/leah/CLionProjects/Reversi/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/leah/CLionProjects/Reversi/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/leah/CLionProjects/Reversi/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
 			<Target title="Reversi_main">
 				<Option output="/home/leah/CLionProjects/Reversi/cmake-build-debug/Reversi_main" prefix_auto="0" extension_auto="0"/>
 				<Option working_dir="/home/leah/CLionProjects/Reversi/cmake-build-debug"/>
@@ -142,10 +44,7 @@
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/home/leah/CLionProjects/Reversi/ReversiGame/googletest-release-1.8.0/googletest/include"/>
-					<Add directory="/home/leah/CLionProjects/Reversi/ReversiGame/googletest-release-1.8.0/googlemock/include"/>
 					<Add directory="/home/leah/CLionProjects/Reversi/ReversiGame"/>
-					<Add directory="/home/leah/CLionProjects/Reversi/ReversiGame/test"/>
 					<Add directory="/home/leah/CLionProjects/Reversi/ReversiGame/src"/>
 					<Add directory="/home/leah/CLionProjects/Reversi/ReversiGame/include"/>
 					<Add directory="/usr/include/c++/5"/>
@@ -171,10 +70,7 @@
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/home/leah/CLionProjects/Reversi/ReversiGame/googletest-release-1.8.0/googletest/include"/>
-					<Add directory="/home/leah/CLionProjects/Reversi/ReversiGame/googletest-release-1.8.0/googlemock/include"/>
 					<Add directory="/home/leah/CLionProjects/Reversi/ReversiGame"/>
-					<Add directory="/home/leah/CLionProjects/Reversi/ReversiGame/test"/>
 					<Add directory="/home/leah/CLionProjects/Reversi/ReversiGame/src"/>
 					<Add directory="/home/leah/CLionProjects/Reversi/ReversiGame/include"/>
 					<Add directory="/usr/include/c++/5"/>
@@ -193,395 +89,93 @@
 					<DistClean command="/usr/bin/make -j4 -f &quot;/home/leah/CLionProjects/Reversi/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
-			<Target title="gmock_main">
-				<Option output="/home/leah/CLionProjects/Reversi/cmake-build-debug/ReversiGame/googletest-release-1.8.0/googlemock/libgmock_main.a" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/leah/CLionProjects/Reversi/cmake-build-debug/ReversiGame/googletest-release-1.8.0/googlemock"/>
-				<Option object_output="./"/>
-				<Option type="2"/>
-				<Option compiler="gcc"/>
-				<Compiler>
-					<Add directory="/home/leah/CLionProjects/Reversi/ReversiGame/googletest-release-1.8.0/googlemock/include"/>
-					<Add directory="/home/leah/CLionProjects/Reversi/ReversiGame/googletest-release-1.8.0/googlemock"/>
-					<Add directory="/home/leah/CLionProjects/Reversi/ReversiGame/googletest-release-1.8.0/googletest/include"/>
-					<Add directory="/home/leah/CLionProjects/Reversi/ReversiGame/googletest-release-1.8.0/googletest"/>
-					<Add directory="/usr/include/c++/5"/>
-					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
-					<Add directory="/usr/include/c++/5/backward"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
-					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
-					<Add directory="/usr/include/x86_64-linux-gnu"/>
-					<Add directory="/usr/include"/>
-				</Compiler>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/leah/CLionProjects/Reversi/cmake-build-debug/ReversiGame/googletest-release-1.8.0/googlemock/Makefile&quot;  VERBOSE=1 gmock_main"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/leah/CLionProjects/Reversi/cmake-build-debug/ReversiGame/googletest-release-1.8.0/googlemock/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/leah/CLionProjects/Reversi/cmake-build-debug/ReversiGame/googletest-release-1.8.0/googlemock/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/leah/CLionProjects/Reversi/cmake-build-debug/ReversiGame/googletest-release-1.8.0/googlemock/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="gmock_main/fast">
-				<Option output="/home/leah/CLionProjects/Reversi/cmake-build-debug/ReversiGame/googletest-release-1.8.0/googlemock/libgmock_main.a" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/leah/CLionProjects/Reversi/cmake-build-debug/ReversiGame/googletest-release-1.8.0/googlemock"/>
-				<Option object_output="./"/>
-				<Option type="2"/>
-				<Option compiler="gcc"/>
-				<Compiler>
-					<Add directory="/home/leah/CLionProjects/Reversi/ReversiGame/googletest-release-1.8.0/googlemock/include"/>
-					<Add directory="/home/leah/CLionProjects/Reversi/ReversiGame/googletest-release-1.8.0/googlemock"/>
-					<Add directory="/home/leah/CLionProjects/Reversi/ReversiGame/googletest-release-1.8.0/googletest/include"/>
-					<Add directory="/home/leah/CLionProjects/Reversi/ReversiGame/googletest-release-1.8.0/googletest"/>
-					<Add directory="/usr/include/c++/5"/>
-					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
-					<Add directory="/usr/include/c++/5/backward"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
-					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
-					<Add directory="/usr/include/x86_64-linux-gnu"/>
-					<Add directory="/usr/include"/>
-				</Compiler>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/leah/CLionProjects/Reversi/cmake-build-debug/ReversiGame/googletest-release-1.8.0/googlemock/Makefile&quot;  VERBOSE=1 gmock_main/fast"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/leah/CLionProjects/Reversi/cmake-build-debug/ReversiGame/googletest-release-1.8.0/googlemock/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/leah/CLionProjects/Reversi/cmake-build-debug/ReversiGame/googletest-release-1.8.0/googlemock/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/leah/CLionProjects/Reversi/cmake-build-debug/ReversiGame/googletest-release-1.8.0/googlemock/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="gmock">
-				<Option output="/home/leah/CLionProjects/Reversi/cmake-build-debug/ReversiGame/googletest-release-1.8.0/googlemock/libgmock.a" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/leah/CLionProjects/Reversi/cmake-build-debug/ReversiGame/googletest-release-1.8.0/googlemock"/>
-				<Option object_output="./"/>
-				<Option type="2"/>
-				<Option compiler="gcc"/>
-				<Compiler>
-					<Add directory="/home/leah/CLionProjects/Reversi/ReversiGame/googletest-release-1.8.0/googlemock/include"/>
-					<Add directory="/home/leah/CLionProjects/Reversi/ReversiGame/googletest-release-1.8.0/googlemock"/>
-					<Add directory="/home/leah/CLionProjects/Reversi/ReversiGame/googletest-release-1.8.0/googletest/include"/>
-					<Add directory="/home/leah/CLionProjects/Reversi/ReversiGame/googletest-release-1.8.0/googletest"/>
-					<Add directory="/usr/include/c++/5"/>
-					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
-					<Add directory="/usr/include/c++/5/backward"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
-					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
-					<Add directory="/usr/include/x86_64-linux-gnu"/>
-					<Add directory="/usr/include"/>
-				</Compiler>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/leah/CLionProjects/Reversi/cmake-build-debug/ReversiGame/googletest-release-1.8.0/googlemock/Makefile&quot;  VERBOSE=1 gmock"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/leah/CLionProjects/Reversi/cmake-build-debug/ReversiGame/googletest-release-1.8.0/googlemock/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/leah/CLionProjects/Reversi/cmake-build-debug/ReversiGame/googletest-release-1.8.0/googlemock/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/leah/CLionProjects/Reversi/cmake-build-debug/ReversiGame/googletest-release-1.8.0/googlemock/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="gmock/fast">
-				<Option output="/home/leah/CLionProjects/Reversi/cmake-build-debug/ReversiGame/googletest-release-1.8.0/googlemock/libgmock.a" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/leah/CLionProjects/Reversi/cmake-build-debug/ReversiGame/googletest-release-1.8.0/googlemock"/>
-				<Option object_output="./"/>
-				<Option type="2"/>
-				<Option compiler="gcc"/>
-				<Compiler>
-					<Add directory="/home/leah/CLionProjects/Reversi/ReversiGame/googletest-release-1.8.0/googlemock/include"/>
-					<Add directory="/home/leah/CLionProjects/Reversi/ReversiGame/googletest-release-1.8.0/googlemock"/>
-					<Add directory="/home/leah/CLionProjects/Reversi/ReversiGame/googletest-release-1.8.0/googletest/include"/>
-					<Add directory="/home/leah/CLionProjects/Reversi/ReversiGame/googletest-release-1.8.0/googletest"/>
-					<Add directory="/usr/include/c++/5"/>
-					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
-					<Add directory="/usr/include/c++/5/backward"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
-					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
-					<Add directory="/usr/include/x86_64-linux-gnu"/>
-					<Add directory="/usr/include"/>
-				</Compiler>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/leah/CLionProjects/Reversi/cmake-build-debug/ReversiGame/googletest-release-1.8.0/googlemock/Makefile&quot;  VERBOSE=1 gmock/fast"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/leah/CLionProjects/Reversi/cmake-build-debug/ReversiGame/googletest-release-1.8.0/googlemock/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/leah/CLionProjects/Reversi/cmake-build-debug/ReversiGame/googletest-release-1.8.0/googlemock/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/leah/CLionProjects/Reversi/cmake-build-debug/ReversiGame/googletest-release-1.8.0/googlemock/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="gtest_main">
-				<Option output="/home/leah/CLionProjects/Reversi/cmake-build-debug/ReversiGame/googletest-release-1.8.0/googlemock/gtest/libgtest_main.a" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/leah/CLionProjects/Reversi/cmake-build-debug/ReversiGame/googletest-release-1.8.0/googlemock/gtest"/>
-				<Option object_output="./"/>
-				<Option type="2"/>
-				<Option compiler="gcc"/>
-				<Compiler>
-					<Add directory="/home/leah/CLionProjects/Reversi/ReversiGame/googletest-release-1.8.0/googletest/include"/>
-					<Add directory="/home/leah/CLionProjects/Reversi/ReversiGame/googletest-release-1.8.0/googletest"/>
-					<Add directory="/usr/include/c++/5"/>
-					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
-					<Add directory="/usr/include/c++/5/backward"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
-					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
-					<Add directory="/usr/include/x86_64-linux-gnu"/>
-					<Add directory="/usr/include"/>
-				</Compiler>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/leah/CLionProjects/Reversi/cmake-build-debug/ReversiGame/googletest-release-1.8.0/googlemock/gtest/Makefile&quot;  VERBOSE=1 gtest_main"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/leah/CLionProjects/Reversi/cmake-build-debug/ReversiGame/googletest-release-1.8.0/googlemock/gtest/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/leah/CLionProjects/Reversi/cmake-build-debug/ReversiGame/googletest-release-1.8.0/googlemock/gtest/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/leah/CLionProjects/Reversi/cmake-build-debug/ReversiGame/googletest-release-1.8.0/googlemock/gtest/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="gtest_main/fast">
-				<Option output="/home/leah/CLionProjects/Reversi/cmake-build-debug/ReversiGame/googletest-release-1.8.0/googlemock/gtest/libgtest_main.a" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/leah/CLionProjects/Reversi/cmake-build-debug/ReversiGame/googletest-release-1.8.0/googlemock/gtest"/>
-				<Option object_output="./"/>
-				<Option type="2"/>
-				<Option compiler="gcc"/>
-				<Compiler>
-					<Add directory="/home/leah/CLionProjects/Reversi/ReversiGame/googletest-release-1.8.0/googletest/include"/>
-					<Add directory="/home/leah/CLionProjects/Reversi/ReversiGame/googletest-release-1.8.0/googletest"/>
-					<Add directory="/usr/include/c++/5"/>
-					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
-					<Add directory="/usr/include/c++/5/backward"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
-					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
-					<Add directory="/usr/include/x86_64-linux-gnu"/>
-					<Add directory="/usr/include"/>
-				</Compiler>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/leah/CLionProjects/Reversi/cmake-build-debug/ReversiGame/googletest-release-1.8.0/googlemock/gtest/Makefile&quot;  VERBOSE=1 gtest_main/fast"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/leah/CLionProjects/Reversi/cmake-build-debug/ReversiGame/googletest-release-1.8.0/googlemock/gtest/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/leah/CLionProjects/Reversi/cmake-build-debug/ReversiGame/googletest-release-1.8.0/googlemock/gtest/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/leah/CLionProjects/Reversi/cmake-build-debug/ReversiGame/googletest-release-1.8.0/googlemock/gtest/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="gtest">
-				<Option output="/home/leah/CLionProjects/Reversi/cmake-build-debug/ReversiGame/googletest-release-1.8.0/googlemock/gtest/libgtest.a" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/leah/CLionProjects/Reversi/cmake-build-debug/ReversiGame/googletest-release-1.8.0/googlemock/gtest"/>
-				<Option object_output="./"/>
-				<Option type="2"/>
-				<Option compiler="gcc"/>
-				<Compiler>
-					<Add directory="/home/leah/CLionProjects/Reversi/ReversiGame/googletest-release-1.8.0/googletest/include"/>
-					<Add directory="/home/leah/CLionProjects/Reversi/ReversiGame/googletest-release-1.8.0/googletest"/>
-					<Add directory="/usr/include/c++/5"/>
-					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
-					<Add directory="/usr/include/c++/5/backward"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
-					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
-					<Add directory="/usr/include/x86_64-linux-gnu"/>
-					<Add directory="/usr/include"/>
-				</Compiler>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/leah/CLionProjects/Reversi/cmake-build-debug/ReversiGame/googletest-release-1.8.0/googlemock/gtest/Makefile&quot;  VERBOSE=1 gtest"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/leah/CLionProjects/Reversi/cmake-build-debug/ReversiGame/googletest-release-1.8.0/googlemock/gtest/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/leah/CLionProjects/Reversi/cmake-build-debug/ReversiGame/googletest-release-1.8.0/googlemock/gtest/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/leah/CLionProjects/Reversi/cmake-build-debug/ReversiGame/googletest-release-1.8.0/googlemock/gtest/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="gtest/fast">
-				<Option output="/home/leah/CLionProjects/Reversi/cmake-build-debug/ReversiGame/googletest-release-1.8.0/googlemock/gtest/libgtest.a" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/leah/CLionProjects/Reversi/cmake-build-debug/ReversiGame/googletest-release-1.8.0/googlemock/gtest"/>
-				<Option object_output="./"/>
-				<Option type="2"/>
-				<Option compiler="gcc"/>
-				<Compiler>
-					<Add directory="/home/leah/CLionProjects/Reversi/ReversiGame/googletest-release-1.8.0/googletest/include"/>
-					<Add directory="/home/leah/CLionProjects/Reversi/ReversiGame/googletest-release-1.8.0/googletest"/>
-					<Add directory="/usr/include/c++/5"/>
-					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
-					<Add directory="/usr/include/c++/5/backward"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
-					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
-					<Add directory="/usr/include/x86_64-linux-gnu"/>
-					<Add directory="/usr/include"/>
-				</Compiler>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/leah/CLionProjects/Reversi/cmake-build-debug/ReversiGame/googletest-release-1.8.0/googlemock/gtest/Makefile&quot;  VERBOSE=1 gtest/fast"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/leah/CLionProjects/Reversi/cmake-build-debug/ReversiGame/googletest-release-1.8.0/googlemock/gtest/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/leah/CLionProjects/Reversi/cmake-build-debug/ReversiGame/googletest-release-1.8.0/googlemock/gtest/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/leah/CLionProjects/Reversi/cmake-build-debug/ReversiGame/googletest-release-1.8.0/googlemock/gtest/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
 		</Build>
-		<Unit filename="/home/leah/CLionProjects/Reversi/ReversiGame/googletest-release-1.8.0/googlemock/src/gmock-all.cc">
-			<Option target="gmock_main"/>
-			<Option target="gmock"/>
-		</Unit>
-		<Unit filename="/home/leah/CLionProjects/Reversi/ReversiGame/googletest-release-1.8.0/googlemock/src/gmock_main.cc">
-			<Option target="gmock_main"/>
-		</Unit>
-		<Unit filename="/home/leah/CLionProjects/Reversi/ReversiGame/googletest-release-1.8.0/googletest/src/gtest-all.cc">
-			<Option target="gmock_main"/>
-			<Option target="gmock"/>
-			<Option target="gtest"/>
-		</Unit>
-		<Unit filename="/home/leah/CLionProjects/Reversi/ReversiGame/googletest-release-1.8.0/googletest/src/gtest_main.cc">
-			<Option target="gtest_main"/>
-		</Unit>
 		<Unit filename="/home/leah/CLionProjects/Reversi/ReversiGame/include/AI.h">
-			<Option target="test_main"/>
 			<Option target="Reversi_main"/>
 		</Unit>
 		<Unit filename="/home/leah/CLionProjects/Reversi/ReversiGame/include/AiGame.h">
-			<Option target="test_main"/>
 			<Option target="Reversi_main"/>
 		</Unit>
 		<Unit filename="/home/leah/CLionProjects/Reversi/ReversiGame/include/Board.h">
-			<Option target="test_main"/>
 			<Option target="Reversi_main"/>
 		</Unit>
 		<Unit filename="/home/leah/CLionProjects/Reversi/ReversiGame/include/Cell.h">
-			<Option target="test_main"/>
 			<Option target="Reversi_main"/>
 		</Unit>
 		<Unit filename="/home/leah/CLionProjects/Reversi/ReversiGame/include/Client.h">
-			<Option target="test_main"/>
 			<Option target="Reversi_main"/>
 		</Unit>
 		<Unit filename="/home/leah/CLionProjects/Reversi/ReversiGame/include/ClientPlayer.h">
-			<Option target="test_main"/>
 			<Option target="Reversi_main"/>
 		</Unit>
 		<Unit filename="/home/leah/CLionProjects/Reversi/ReversiGame/include/ConsoleDisplay.h">
-			<Option target="test_main"/>
 			<Option target="Reversi_main"/>
 		</Unit>
 		<Unit filename="/home/leah/CLionProjects/Reversi/ReversiGame/include/Display.h">
-			<Option target="test_main"/>
 			<Option target="Reversi_main"/>
 		</Unit>
 		<Unit filename="/home/leah/CLionProjects/Reversi/ReversiGame/include/GameFlow.h">
-			<Option target="test_main"/>
 			<Option target="Reversi_main"/>
 		</Unit>
 		<Unit filename="/home/leah/CLionProjects/Reversi/ReversiGame/include/GameLogic.h">
-			<Option target="test_main"/>
 			<Option target="Reversi_main"/>
 		</Unit>
 		<Unit filename="/home/leah/CLionProjects/Reversi/ReversiGame/include/HumanPlayer.h">
-			<Option target="test_main"/>
 			<Option target="Reversi_main"/>
 		</Unit>
 		<Unit filename="/home/leah/CLionProjects/Reversi/ReversiGame/include/OpponentClientPlayer.h">
-			<Option target="test_main"/>
 			<Option target="Reversi_main"/>
 		</Unit>
 		<Unit filename="/home/leah/CLionProjects/Reversi/ReversiGame/include/Player.h">
-			<Option target="test_main"/>
 			<Option target="Reversi_main"/>
 		</Unit>
 		<Unit filename="/home/leah/CLionProjects/Reversi/ReversiGame/include/RemoteGame.h">
-			<Option target="test_main"/>
 			<Option target="Reversi_main"/>
 		</Unit>
 		<Unit filename="/home/leah/CLionProjects/Reversi/ReversiGame/include/TwoHumansGame.h">
-			<Option target="test_main"/>
 			<Option target="Reversi_main"/>
 		</Unit>
 		<Unit filename="/home/leah/CLionProjects/Reversi/ReversiGame/src/AI.cpp">
-			<Option target="test_main"/>
 			<Option target="Reversi_main"/>
 		</Unit>
 		<Unit filename="/home/leah/CLionProjects/Reversi/ReversiGame/src/AiGame.cpp">
-			<Option target="test_main"/>
 			<Option target="Reversi_main"/>
 		</Unit>
 		<Unit filename="/home/leah/CLionProjects/Reversi/ReversiGame/src/Board.cpp">
-			<Option target="test_main"/>
 			<Option target="Reversi_main"/>
 		</Unit>
 		<Unit filename="/home/leah/CLionProjects/Reversi/ReversiGame/src/Cell.cpp">
-			<Option target="test_main"/>
 			<Option target="Reversi_main"/>
 		</Unit>
 		<Unit filename="/home/leah/CLionProjects/Reversi/ReversiGame/src/Client.cpp">
-			<Option target="test_main"/>
 			<Option target="Reversi_main"/>
 		</Unit>
 		<Unit filename="/home/leah/CLionProjects/Reversi/ReversiGame/src/ClientPlayer.cpp">
-			<Option target="test_main"/>
 			<Option target="Reversi_main"/>
 		</Unit>
 		<Unit filename="/home/leah/CLionProjects/Reversi/ReversiGame/src/ConsoleDisplay.cpp">
-			<Option target="test_main"/>
 			<Option target="Reversi_main"/>
 		</Unit>
 		<Unit filename="/home/leah/CLionProjects/Reversi/ReversiGame/src/GameFlow.cpp">
-			<Option target="test_main"/>
 			<Option target="Reversi_main"/>
 		</Unit>
 		<Unit filename="/home/leah/CLionProjects/Reversi/ReversiGame/src/HumanPlayer.cpp">
-			<Option target="test_main"/>
 			<Option target="Reversi_main"/>
 		</Unit>
 		<Unit filename="/home/leah/CLionProjects/Reversi/ReversiGame/src/Main.cpp">
-			<Option target="test_main"/>
 			<Option target="Reversi_main"/>
 		</Unit>
 		<Unit filename="/home/leah/CLionProjects/Reversi/ReversiGame/src/OpponentClientPlayer.cpp">
-			<Option target="test_main"/>
 			<Option target="Reversi_main"/>
 		</Unit>
 		<Unit filename="/home/leah/CLionProjects/Reversi/ReversiGame/src/RemoteGame.cpp">
-			<Option target="test_main"/>
 			<Option target="Reversi_main"/>
 		</Unit>
 		<Unit filename="/home/leah/CLionProjects/Reversi/ReversiGame/src/TwoHumansGame.cpp">
-			<Option target="test_main"/>
 			<Option target="Reversi_main"/>
-		</Unit>
-		<Unit filename="/home/leah/CLionProjects/Reversi/ReversiGame/test/BoardTest.cpp">
-			<Option target="test_main"/>
-		</Unit>
-		<Unit filename="/home/leah/CLionProjects/Reversi/ReversiGame/test/CellTest.cpp">
-			<Option target="test_main"/>
-		</Unit>
-		<Unit filename="/home/leah/CLionProjects/Reversi/ReversiGame/test/PlayerTest.cpp">
-			<Option target="test_main"/>
-		</Unit>
-		<Unit filename="/home/leah/CLionProjects/Reversi/ReversiGame/test/gtest_main.cpp">
-			<Option target="test_main"/>
 		</Unit>
 		<Unit filename="/home/leah/CLionProjects/Reversi/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
-		</Unit>
-		<Unit filename="/home/leah/CLionProjects/Reversi/ReversiGame/googletest-release-1.8.0/CMakeLists.txt">
-			<Option virtualFolder="CMake Files\ReversiGame\googletest-release-1.8.0\"/>
-		</Unit>
-		<Unit filename="/home/leah/CLionProjects/Reversi/ReversiGame/googletest-release-1.8.0/CMakeLists.txt">
-			<Option virtualFolder="CMake Files\ReversiGame\googletest-release-1.8.0\"/>
-		</Unit>
-		<Unit filename="/home/leah/CLionProjects/Reversi/ReversiGame/googletest-release-1.8.0/googlemock/CMakeLists.txt">
-			<Option virtualFolder="CMake Files\ReversiGame\googletest-release-1.8.0\googlemock\"/>
-		</Unit>
-		<Unit filename="/home/leah/CLionProjects/Reversi/ReversiGame/googletest-release-1.8.0/googlemock/CMakeLists.txt">
-			<Option virtualFolder="CMake Files\ReversiGame\googletest-release-1.8.0\googlemock\"/>
-		</Unit>
-		<Unit filename="/home/leah/CLionProjects/Reversi/ReversiGame/googletest-release-1.8.0/googlemock/CMakeLists.txt">
-			<Option virtualFolder="CMake Files\ReversiGame\googletest-release-1.8.0\googlemock\"/>
-		</Unit>
-		<Unit filename="/home/leah/CLionProjects/Reversi/ReversiGame/googletest-release-1.8.0/googletest/CMakeLists.txt">
-			<Option virtualFolder="CMake Files\ReversiGame\googletest-release-1.8.0\googletest\"/>
-		</Unit>
-		<Unit filename="/home/leah/CLionProjects/Reversi/ReversiGame/googletest-release-1.8.0/googletest/CMakeLists.txt">
-			<Option virtualFolder="CMake Files\ReversiGame\googletest-release-1.8.0\googletest\"/>
-		</Unit>
-		<Unit filename="/home/leah/CLionProjects/Reversi/ReversiGame/googletest-release-1.8.0/googletest/CMakeLists.txt">
-			<Option virtualFolder="CMake Files\ReversiGame\googletest-release-1.8.0\googletest\"/>
-		</Unit>
-		<Unit filename="/home/leah/CLionProjects/Reversi/ReversiGame/googletest-release-1.8.0/googletest/CMakeLists.txt">
-			<Option virtualFolder="CMake Files\ReversiGame\googletest-release-1.8.0\googletest\"/>
-		</Unit>
-		<Unit filename="/home/leah/CLionProjects/Reversi/ReversiGame/googletest-release-1.8.0/googletest/cmake/internal_utils.cmake">
-			<Option virtualFolder="CMake Files\ReversiGame\googletest-release-1.8.0\googletest\cmake\"/>
-		</Unit>
-		<Unit filename="/home/leah/CLionProjects/Reversi/ReversiGame/googletest-release-1.8.0/googletest/cmake/internal_utils.cmake">
-			<Option virtualFolder="CMake Files\ReversiGame\googletest-release-1.8.0\googletest\cmake\"/>
-		</Unit>
-		<Unit filename="/home/leah/CLionProjects/Reversi/ReversiGame/googletest-release-1.8.0/googletest/cmake/internal_utils.cmake">
-			<Option virtualFolder="CMake Files\ReversiGame\googletest-release-1.8.0\googletest\cmake\"/>
-		</Unit>
-		<Unit filename="/home/leah/CLionProjects/Reversi/ReversiGame/googletest-release-1.8.0/googletest/cmake/internal_utils.cmake">
-			<Option virtualFolder="CMake Files\ReversiGame\googletest-release-1.8.0\googletest\cmake\"/>
 		</Unit>
 	</Project>
 </CodeBlocks_project_file>

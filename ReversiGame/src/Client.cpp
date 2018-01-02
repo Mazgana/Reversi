@@ -50,15 +50,15 @@ char Client::getOpeningPlayer() {
     int playersPlace = readInt();
 
     if(playersPlace == 1) {
-    		displayer->printMessageWitheNewLine("You are the black player X, you go first");
+        displayer->printMessageWitheNewLine("You are the black player X, you go first");
         return 'X';
     } else if (playersPlace == 2) {
-    		displayer->printMessageWitheNewLine("You are the white player O, you go second");
+        displayer->printMessageWitheNewLine("You are the white player O, you go second");
         return 'O';
     } else {
-    		displayer->printMessageWitheNewLine("got unreadable starting player from server");
+        displayer->printMessageWitheNewLine("got unreadable starting player from server");
         return ' ';
-    	}
+    }
 }
 
 int Client::receiveCoordinate() {

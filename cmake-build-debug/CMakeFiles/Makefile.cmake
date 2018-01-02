@@ -8,10 +8,6 @@ set(CMAKE_DEPENDS_GENERATOR "Unix Makefiles")
 set(CMAKE_MAKEFILE_DEPENDS
   "CMakeCache.txt"
   "../CMakeLists.txt"
-  "../ReversiGame/googletest-release-1.8.0/CMakeLists.txt"
-  "../ReversiGame/googletest-release-1.8.0/googlemock/CMakeLists.txt"
-  "../ReversiGame/googletest-release-1.8.0/googletest/CMakeLists.txt"
-  "../ReversiGame/googletest-release-1.8.0/googletest/cmake/internal_utils.cmake"
   "CMakeFiles/3.8.2/CMakeCCompiler.cmake"
   "CMakeFiles/3.8.2/CMakeCXXCompiler.cmake"
   "CMakeFiles/3.8.2/CMakeSystem.cmake"
@@ -24,16 +20,9 @@ set(CMAKE_MAKEFILE_DEPENDS
   "/home/leah/Downloads/clion-2017.2.3/bin/cmake/share/cmake-3.8/Modules/CMakeLanguageInformation.cmake"
   "/home/leah/Downloads/clion-2017.2.3/bin/cmake/share/cmake-3.8/Modules/CMakeSystemSpecificInformation.cmake"
   "/home/leah/Downloads/clion-2017.2.3/bin/cmake/share/cmake-3.8/Modules/CMakeSystemSpecificInitialize.cmake"
-  "/home/leah/Downloads/clion-2017.2.3/bin/cmake/share/cmake-3.8/Modules/CheckIncludeFile.cmake"
-  "/home/leah/Downloads/clion-2017.2.3/bin/cmake/share/cmake-3.8/Modules/CheckLibraryExists.cmake"
-  "/home/leah/Downloads/clion-2017.2.3/bin/cmake/share/cmake-3.8/Modules/CheckSymbolExists.cmake"
   "/home/leah/Downloads/clion-2017.2.3/bin/cmake/share/cmake-3.8/Modules/Compiler/GNU-C.cmake"
   "/home/leah/Downloads/clion-2017.2.3/bin/cmake/share/cmake-3.8/Modules/Compiler/GNU-CXX.cmake"
   "/home/leah/Downloads/clion-2017.2.3/bin/cmake/share/cmake-3.8/Modules/Compiler/GNU.cmake"
-  "/home/leah/Downloads/clion-2017.2.3/bin/cmake/share/cmake-3.8/Modules/FindPackageHandleStandardArgs.cmake"
-  "/home/leah/Downloads/clion-2017.2.3/bin/cmake/share/cmake-3.8/Modules/FindPackageMessage.cmake"
-  "/home/leah/Downloads/clion-2017.2.3/bin/cmake/share/cmake-3.8/Modules/FindPythonInterp.cmake"
-  "/home/leah/Downloads/clion-2017.2.3/bin/cmake/share/cmake-3.8/Modules/FindThreads.cmake"
   "/home/leah/Downloads/clion-2017.2.3/bin/cmake/share/cmake-3.8/Modules/Platform/Linux-GNU-C.cmake"
   "/home/leah/Downloads/clion-2017.2.3/bin/cmake/share/cmake-3.8/Modules/Platform/Linux-GNU-CXX.cmake"
   "/home/leah/Downloads/clion-2017.2.3/bin/cmake/share/cmake-3.8/Modules/Platform/Linux-GNU.cmake"
@@ -51,17 +40,9 @@ set(CMAKE_MAKEFILE_OUTPUTS
 # Byproducts of CMake generate step:
 set(CMAKE_MAKEFILE_PRODUCTS
   "CMakeFiles/CMakeDirectoryInformation.cmake"
-  "ReversiGame/googletest-release-1.8.0/CMakeFiles/CMakeDirectoryInformation.cmake"
-  "ReversiGame/googletest-release-1.8.0/googlemock/CMakeFiles/CMakeDirectoryInformation.cmake"
-  "ReversiGame/googletest-release-1.8.0/googlemock/gtest/CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
-  "CMakeFiles/test_main.dir/DependInfo.cmake"
   "CMakeFiles/Reversi_main.dir/DependInfo.cmake"
-  "ReversiGame/googletest-release-1.8.0/googlemock/CMakeFiles/gmock_main.dir/DependInfo.cmake"
-  "ReversiGame/googletest-release-1.8.0/googlemock/CMakeFiles/gmock.dir/DependInfo.cmake"
-  "ReversiGame/googletest-release-1.8.0/googlemock/gtest/CMakeFiles/gtest_main.dir/DependInfo.cmake"
-  "ReversiGame/googletest-release-1.8.0/googlemock/gtest/CMakeFiles/gtest.dir/DependInfo.cmake"
   )

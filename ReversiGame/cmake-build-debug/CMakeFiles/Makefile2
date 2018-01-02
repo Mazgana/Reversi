@@ -60,39 +60,39 @@ CMAKE_SOURCE_DIR = /home/leah/CLionProjects/Reversi/ReversiGame
 CMAKE_BINARY_DIR = /home/leah/CLionProjects/Reversi/ReversiGame/cmake-build-debug
 
 #=============================================================================
-# Target rules for target CMakeFiles/ReversiGame.dir
+# Target rules for target CMakeFiles/Reversi_main.dir
 
 # All Build rule for target.
-CMakeFiles/ReversiGame.dir/all:
-	$(MAKE) -f CMakeFiles/ReversiGame.dir/build.make CMakeFiles/ReversiGame.dir/depend
-	$(MAKE) -f CMakeFiles/ReversiGame.dir/build.make CMakeFiles/ReversiGame.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/leah/CLionProjects/Reversi/ReversiGame/cmake-build-debug/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10,11,12,13,14 "Built target ReversiGame"
-.PHONY : CMakeFiles/ReversiGame.dir/all
+CMakeFiles/Reversi_main.dir/all:
+	$(MAKE) -f CMakeFiles/Reversi_main.dir/build.make CMakeFiles/Reversi_main.dir/depend
+	$(MAKE) -f CMakeFiles/Reversi_main.dir/build.make CMakeFiles/Reversi_main.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/leah/CLionProjects/Reversi/ReversiGame/cmake-build-debug/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10,11,12,13,14 "Built target Reversi_main"
+.PHONY : CMakeFiles/Reversi_main.dir/all
 
 # Include target in all.
-all: CMakeFiles/ReversiGame.dir/all
+all: CMakeFiles/Reversi_main.dir/all
 
 .PHONY : all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/ReversiGame.dir/rule: cmake_check_build_system
+CMakeFiles/Reversi_main.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/leah/CLionProjects/Reversi/ReversiGame/cmake-build-debug/CMakeFiles 14
-	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/ReversiGame.dir/all
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/Reversi_main.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/leah/CLionProjects/Reversi/ReversiGame/cmake-build-debug/CMakeFiles 0
-.PHONY : CMakeFiles/ReversiGame.dir/rule
+.PHONY : CMakeFiles/Reversi_main.dir/rule
 
 # Convenience name for target.
-ReversiGame: CMakeFiles/ReversiGame.dir/rule
+Reversi_main: CMakeFiles/Reversi_main.dir/rule
 
-.PHONY : ReversiGame
-
-# clean rule for target.
-CMakeFiles/ReversiGame.dir/clean:
-	$(MAKE) -f CMakeFiles/ReversiGame.dir/build.make CMakeFiles/ReversiGame.dir/clean
-.PHONY : CMakeFiles/ReversiGame.dir/clean
+.PHONY : Reversi_main
 
 # clean rule for target.
-clean: CMakeFiles/ReversiGame.dir/clean
+CMakeFiles/Reversi_main.dir/clean:
+	$(MAKE) -f CMakeFiles/Reversi_main.dir/build.make CMakeFiles/Reversi_main.dir/clean
+.PHONY : CMakeFiles/Reversi_main.dir/clean
+
+# clean rule for target.
+clean: CMakeFiles/Reversi_main.dir/clean
 
 .PHONY : clean
 

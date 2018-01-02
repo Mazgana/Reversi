@@ -506,9 +506,6 @@ test_main: CMakeFiles/test_main.dir/ReversiGame/src/TwoHumansGame.cpp.o
 test_main: CMakeFiles/test_main.dir/ReversiGame/src/GameFlow.cpp.o
 test_main: CMakeFiles/test_main.dir/ReversiGame/test/gtest_main.cpp.o
 test_main: CMakeFiles/test_main.dir/build.make
-test_main: ReversiGame/googletest-release-1.8.0/googlemock/gtest/libgtest.a
-test_main: ReversiGame/googletest-release-1.8.0/googlemock/gtest/libgtest_main.a
-test_main: ReversiGame/googletest-release-1.8.0/googlemock/gtest/libgtest.a
 test_main: CMakeFiles/test_main.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/leah/CLionProjects/Reversi/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Linking CXX executable test_main"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/test_main.dir/link.txt --verbose=$(VERBOSE)
