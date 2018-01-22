@@ -9,7 +9,7 @@ void *handleClient1(void *clientSocket) {
 
 void ClientHandler :: createNewThread(int clientSocket) {
 	//creating the new thread
-    pthread_t thread;
+  pthread_t thread;
 	int rc = pthread_create(&thread, NULL, handleClient1, (void *)(long)clientSocket);
 	if (rc == -1) {
 		cout << "Failed creating thread" << endl;
