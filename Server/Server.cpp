@@ -2,8 +2,8 @@
 #include "Task.h"
 #include "ThreadPool.h"
 
-#define THREADS_NUM 3
-#define TASKS_NUM 5
+#define THREADS_NUM 5
+//#define TASKS_NUM 5
 
 static vector<int> listOfSockets;
 pthread_mutex_t mutex_sockets_list;
@@ -44,12 +44,12 @@ void Server::start() {
 
     createExitThread(serverSocket);
 
-    ThreadPool pool(THREADS_NUM);
-    Task *tasks[TASKS_NUM];
+    ThreadPool *pool = new ThreadPool(THREADS_NUM);
+//    Task *tasks[TASKS_NUM];
 
     cout << "waiting for client's connection.." << endl;
 
-    for (int i = 0; i < TASKS_NUM; i++) {
+    while (true){
 
         //The first client login
         int clientSocket = accept(serverSocket, (struct sockaddr *)&clientAddress, &clientAddressLen);
@@ -61,18 +61,18 @@ void Server::start() {
         listOfSockets.push_back(clientSocket);//adding new socket to list
         pthread_mutex_unlock(&mutex_sockets_list);
 
-        tasks[i] = new Task(handleClient1, (void *)clientSocket);
-        pool.addTask(tasks[i]);
+       // tasks[i] = new Task(handleClient1, (void *)clientSocket);
+        pool->addTask(new Task(handleClient1, (void *)clientSocket));
         }
 
 //    	char cha;
 //       cout << "Type a char to exit" << endl;
 //       cin >> cha;
 
-//    pool.terminate();
-//    for (int i = 0; i < TASKS_NUM; i++) {
-//        delete tasks[i];
-//    }
+ /*   pool->terminate();
+    for (int i = 0; i < TASKS_NUM; i++) {
+        delete tasks[i];
+    }*/
 }
 
 void *exit(void *serverSocket) {
