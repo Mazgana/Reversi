@@ -1,4 +1,9 @@
 #include "Server.h"
+#include "Task.h"
+#include "ThreadPool.h"
+
+#define THREADS_NUM 3
+#define TASKS_NUM 5
 
 static vector<int> listOfSockets;
 pthread_mutex_t mutex_sockets_list;
@@ -6,8 +11,16 @@ pthread_mutex_t mutex_sockets_list;
 Server::Server(int port): port(port), serverSocket(0) {
 }
 
-void Server::start() {
+void *handleClient1(void *clientSocket) {
+    //calling first function of new thread
     ClientHandler ch;
+    long tid = (long)clientSocket;
+    ch.handleClient((int)tid);
+}
+
+
+void Server::start() {
+//    ClientHandler ch;
 
     serverSocket = socket(AF_INET , SOCK_STREAM , 0);
     if (serverSocket == -1) {
@@ -32,7 +45,13 @@ void Server::start() {
 
     createExitThread(serverSocket);
 
-    while (true) {
+    ThreadPool pool(THREADS_NUM);
+    Task *tasks[TASKS_NUM];
+
+    char cha = 'a';
+
+    while (cha != 'b') {
+        cha = 'b';
         cout << "waiting for client connections..." << endl;
 
         //The first client login
@@ -45,7 +64,20 @@ void Server::start() {
         listOfSockets.push_back(clientSocket);//adding new socket to list
         pthread_mutex_unlock(&mutex_sockets_list);
 
-        ch.createNewThread(clientSocket);
+       // ch.createNewThread(clientSocket);
+
+        for (int i = 0; i < TASKS_NUM; i++) {
+            tasks[i] = new Task(handleClient1, (void *)i);
+            pool.addTask(tasks[i]);
+        }
+
+        cout << "Type a char to exit" << endl;
+        cin >> cha;
+    }
+
+    pool.terminate();
+    for (int i = 0; i < TASKS_NUM; i++) {
+        delete tasks[i];
     }
 }
 

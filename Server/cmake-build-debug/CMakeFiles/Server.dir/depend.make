@@ -49,8 +49,14 @@ CMakeFiles/Server.dir/Server.cpp.o: ../ListGamesCommand.h
 CMakeFiles/Server.dir/Server.cpp.o: ../Server.cpp
 CMakeFiles/Server.dir/Server.cpp.o: ../Server.h
 CMakeFiles/Server.dir/Server.cpp.o: ../StartCommand.h
+CMakeFiles/Server.dir/Server.cpp.o: ../Task.h
+CMakeFiles/Server.dir/Server.cpp.o: ../ThreadPool.h
 
 CMakeFiles/Server.dir/StartCommand.cpp.o: ../Command.h
 CMakeFiles/Server.dir/StartCommand.cpp.o: ../StartCommand.cpp
 CMakeFiles/Server.dir/StartCommand.cpp.o: ../StartCommand.h
+
+CMakeFiles/Server.dir/ThreadPool.cpp.o: ../Task.h
+CMakeFiles/Server.dir/ThreadPool.cpp.o: ../ThreadPool.cpp
+CMakeFiles/Server.dir/ThreadPool.cpp.o: ../ThreadPool.h
 

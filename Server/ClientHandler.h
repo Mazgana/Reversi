@@ -30,7 +30,7 @@ public:
     void handleClient(int firstClientSocket);
 
     //creates new thread for new client connection.
-    void createNewThread(int socketId);
+//    void createNewThread(int socketId);
 };
 
 
