@@ -50,7 +50,13 @@ CMakeFiles/Server.dir/Server.cpp.o
  /home/leah/CLionProjects/Reversi/Server/Server.cpp
  /home/leah/CLionProjects/Reversi/Server/Server.h
  /home/leah/CLionProjects/Reversi/Server/StartCommand.h
+ /home/leah/CLionProjects/Reversi/Server/Task.h
+ /home/leah/CLionProjects/Reversi/Server/ThreadPool.h
 CMakeFiles/Server.dir/StartCommand.cpp.o
  /home/leah/CLionProjects/Reversi/Server/Command.h
  /home/leah/CLionProjects/Reversi/Server/StartCommand.cpp
  /home/leah/CLionProjects/Reversi/Server/StartCommand.h
+CMakeFiles/Server.dir/ThreadPool.cpp.o
+ /home/leah/CLionProjects/Reversi/Server/Task.h
+ /home/leah/CLionProjects/Reversi/Server/ThreadPool.cpp
+ /home/leah/CLionProjects/Reversi/Server/ThreadPool.h

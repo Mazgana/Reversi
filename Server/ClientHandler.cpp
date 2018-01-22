@@ -1,12 +1,6 @@
 #include "ClientHandler.h"
 
-void *handleClient1(void *clientSocket) {
-    //calling first function of new thread
-    ClientHandler ch;
-    long tid = (long)clientSocket;
-    ch.handleClient((int)tid);
-}
-
+/*
 void ClientHandler :: createNewThread(int clientSocket) {
 	//creating the new thread
   pthread_t thread;
@@ -15,7 +9,7 @@ void ClientHandler :: createNewThread(int clientSocket) {
 		cout << "Failed creating thread" << endl;
 	}
 }
-
+*/
 void ClientHandler :: handleClient (int clientSocket) {
     int n;
     int firstClientSocket = clientSocket;

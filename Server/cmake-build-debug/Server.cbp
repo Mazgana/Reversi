@@ -132,6 +132,15 @@
 		<Unit filename="/home/leah/CLionProjects/Reversi/Server/StartCommand.h">
 			<Option target="Server"/>
 		</Unit>
+		<Unit filename="/home/leah/CLionProjects/Reversi/Server/Task.h">
+			<Option target="Server"/>
+		</Unit>
+		<Unit filename="/home/leah/CLionProjects/Reversi/Server/ThreadPool.cpp">
+			<Option target="Server"/>
+		</Unit>
+		<Unit filename="/home/leah/CLionProjects/Reversi/Server/ThreadPool.h">
+			<Option target="Server"/>
+		</Unit>
 		<Unit filename="/home/leah/CLionProjects/Reversi/Server/serverConfiguration.txt">
 			<Option target="Server"/>
 		</Unit>

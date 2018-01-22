@@ -103,6 +103,10 @@ fstream
 /home/leah/CLionProjects/Reversi/Server/Server.cpp
 Server.h
 /home/leah/CLionProjects/Reversi/Server/Server.h
+Task.h
+/home/leah/CLionProjects/Reversi/Server/Task.h
+ThreadPool.h
+/home/leah/CLionProjects/Reversi/Server/ThreadPool.h
 
 /home/leah/CLionProjects/Reversi/Server/Server.h
 CommandManager.h
@@ -128,5 +132,21 @@ pthread.h
 unistd.h
 -
 sys/socket.h
+-
+
+/home/leah/CLionProjects/Reversi/Server/Task.h
+
+/home/leah/CLionProjects/Reversi/Server/ThreadPool.cpp
+ThreadPool.h
+/home/leah/CLionProjects/Reversi/Server/ThreadPool.h
+unistd.h
+-
+
+/home/leah/CLionProjects/Reversi/Server/ThreadPool.h
+Task.h
+/home/leah/CLionProjects/Reversi/Server/Task.h
+queue
+-
+pthread.h
 -
 

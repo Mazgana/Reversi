@@ -12,6 +12,6 @@ set(SOURCE_FILES
         Main.cpp
         Server.cpp
         Server.h
-        serverConfiguration.txt ClientHandler.cpp ClientHandler.h StartCommand.cpp StartCommand.h ListGamesCommand.cpp ListGamesCommand.h JoinCommand.cpp JoinCommand.h GameManager.cpp GameManager.h)
+        serverConfiguration.txt ClientHandler.cpp ClientHandler.h StartCommand.cpp StartCommand.h ListGamesCommand.cpp ListGamesCommand.h JoinCommand.cpp JoinCommand.h GameManager.cpp GameManager.h ThreadPool.cpp ThreadPool.h Task.h)
 
 add_executable(Server ${SOURCE_FILES})
