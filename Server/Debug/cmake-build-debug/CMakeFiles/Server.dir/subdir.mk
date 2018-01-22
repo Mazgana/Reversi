@@ -11,7 +11,8 @@ O_SRCS += \
 ../cmake-build-debug/CMakeFiles/Server.dir/ListGamesCommand.cpp.o \
 ../cmake-build-debug/CMakeFiles/Server.dir/Main.cpp.o \
 ../cmake-build-debug/CMakeFiles/Server.dir/Server.cpp.o \
-../cmake-build-debug/CMakeFiles/Server.dir/StartCommand.cpp.o 
+../cmake-build-debug/CMakeFiles/Server.dir/StartCommand.cpp.o \
+../cmake-build-debug/CMakeFiles/Server.dir/ThreadPool.cpp.o 
 
 
 # Each subdirectory must supply rules for building sources it contributes

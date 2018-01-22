@@ -11,7 +11,7 @@ public:
     void execute() {
         func(arg);
     }
-    virtual ~Task() {}
+    virtual ~Task() { delete this; }
 private:
     void * (*func)(void *arg);
     void *arg;

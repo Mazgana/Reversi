@@ -18,7 +18,6 @@ void *handleClient1(void *clientSocket) {
     ch.handleClient((int)tid);
 }
 
-
 void Server::start() {
 //    ClientHandler ch;
 
@@ -48,11 +47,9 @@ void Server::start() {
     ThreadPool pool(THREADS_NUM);
     Task *tasks[TASKS_NUM];
 
-    char cha = 'a';
+    cout << "waiting for client's connection.." << endl;
 
-    while (cha != 'b') {
-        cha = 'b';
-        cout << "waiting for client connections..." << endl;
+    for (int i = 0; i < TASKS_NUM; i++) {
 
         //The first client login
         int clientSocket = accept(serverSocket, (struct sockaddr *)&clientAddress, &clientAddressLen);
@@ -64,21 +61,18 @@ void Server::start() {
         listOfSockets.push_back(clientSocket);//adding new socket to list
         pthread_mutex_unlock(&mutex_sockets_list);
 
-       // ch.createNewThread(clientSocket);
-
-        for (int i = 0; i < TASKS_NUM; i++) {
-            tasks[i] = new Task(handleClient1, (void *)i);
-            pool.addTask(tasks[i]);
+        tasks[i] = new Task(handleClient1, (void *)clientSocket);
+        pool.addTask(tasks[i]);
         }
 
-        cout << "Type a char to exit" << endl;
-        cin >> cha;
-    }
+//    	char cha;
+//       cout << "Type a char to exit" << endl;
+//       cin >> cha;
 
-    pool.terminate();
-    for (int i = 0; i < TASKS_NUM; i++) {
-        delete tasks[i];
-    }
+//    pool.terminate();
+//    for (int i = 0; i < TASKS_NUM; i++) {
+//        delete tasks[i];
+//    }
 }
 
 void *exit(void *serverSocket) {

@@ -11,7 +11,8 @@ CPP_SRCS += \
 ../ListGamesCommand.cpp \
 ../Main.cpp \
 ../Server.cpp \
-../StartCommand.cpp 
+../StartCommand.cpp \
+../ThreadPool.cpp 
 
 OBJS += \
 ./ClientHandler.o \
@@ -21,7 +22,8 @@ OBJS += \
 ./ListGamesCommand.o \
 ./Main.o \
 ./Server.o \
-./StartCommand.o 
+./StartCommand.o \
+./ThreadPool.o 
 
 CPP_DEPS += \
 ./ClientHandler.d \
@@ -31,7 +33,8 @@ CPP_DEPS += \
 ./ListGamesCommand.d \
 ./Main.d \
 ./Server.d \
-./StartCommand.d 
+./StartCommand.d \
+./ThreadPool.d 
 
 
 # Each subdirectory must supply rules for building sources it contributes

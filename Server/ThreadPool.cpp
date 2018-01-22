@@ -5,6 +5,8 @@
 #include "ThreadPool.h"
 #include <unistd.h>
 
+#include <iostream>
+
 ThreadPool::ThreadPool(int threadsNum) : stopped(false) {
     threads = new pthread_t[threadsNum];
     for (int i = 0; i < threadsNum; i++) {
@@ -16,10 +18,10 @@ void* ThreadPool::execute(void *arg) {
     ThreadPool *pool = (ThreadPool *)arg;
     pool->executeTasks();
 }
+
 void ThreadPool::addTask(Task *task) {
     tasksQueue.push(task);
 }
-
 
 void ThreadPool::executeTasks() {
     while (!stopped) {

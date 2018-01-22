@@ -18,6 +18,7 @@ void ClientHandler :: handleClient (int clientSocket) {
         //getting string command from client
         char buffer[MAX_STR] = "";
         long firstClient = (long) firstClientSocket;
+
         n = (int) recv((int) firstClient, buffer, MAX_STR, 0);
         if (n == -1) {
             throw "Error reading choice";
