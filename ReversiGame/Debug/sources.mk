@@ -23,6 +23,7 @@ CPP_DEPS :=
 
 # Every subdirectory with source files must be described here
 SUBDIRS := \
+cmake-build-debug/CMakeFiles/Reversi_main.dir/src \
 gtest_src/gtest \
 src \
 test \

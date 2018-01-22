@@ -11,6 +11,7 @@ RM := rm -rf
 -include test/subdir.mk
 -include src/subdir.mk
 -include gtest_src/gtest/subdir.mk
+-include cmake-build-debug/CMakeFiles/Reversi_main.dir/src/subdir.mk
 -include subdir.mk
 -include objects.mk
 
