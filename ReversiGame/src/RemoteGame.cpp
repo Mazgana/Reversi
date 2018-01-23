@@ -40,8 +40,6 @@ RemoteGame::RemoteGame() {
             serverResponse = printListOfGames(client);
         else
             serverResponse = joinGame(client);
-        if (serverResponse == -2) // The games list is empty
-            serverResponse = startNewGame(client); //starting new game
         if (serverResponse == 1) {	//the command request succeeded
             char chip = client.getOpeningPlayer();	//find first client to connect to server, set to be black player
             if(chip == 'X') {
@@ -113,7 +111,11 @@ int RemoteGame :: printListOfGames(Client client) {
 		string listCommand = "list_games ";
 		listOfGames = client.receiveStringList(listCommand);
 
-		displayer->printMessageWitheNewLine("The games list:");
+        if(listOfGames.size() <= 0) {
+            displayer->printMessageWitheNewLine("The games list is empty.");
+            return 0;
+        }
+        displayer->printMessageWitheNewLine("The games list:");
 
 		//printing the list
 		for (int i = 0; i < (int) listOfGames.size(); i++) {
@@ -140,6 +142,7 @@ int RemoteGame :: joinGame(Client client) {
 
 			if (serverResponse == -1) {
 				displayer->printMessageWitheNewLine("This game doesn't exist. Please choose one game from the list: ");
+                return 0;
 			} else if (serverResponse == -2) {
 				displayer->printMessageWitheNewLine("The games list is empty. Please start new game.");
 				displayer->printNewLine();
