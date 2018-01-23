@@ -1,7 +1,7 @@
 #include "RemoteGame.h"
 
 RemoteGame::RemoteGame() {
-		displayer = new ConsoleDisplay();
+	displayer = new ConsoleDisplay();
 
    	ifstream File;
    	string details;
@@ -22,40 +22,37 @@ RemoteGame::RemoteGame() {
    	int portNum = atoi(port.c_str());
 
     Client client(ipAddres.c_str(), portNum);//creating a client and connecting it to server.
-    try {
-        client.connectToServer();
-    } catch  (const char *msg) {
-    	  displayer->printMessage("Failed to connect to server. Reason: ");
-    	  displayer->printMessageWitheNewLine(msg);
-        exit(-1);
-      	}
-
     int serverResponse = 0;
     while (serverResponse == 0) { // The client asked list of games
-			int clientChoice = chooseSeverOption();
+        int clientChoice = chooseSeverOption();
+        try {
+            client.connectToServer();
+        } catch  (const char *msg) {
+            displayer->printMessage("Failed to connect to server. Reason: ");
+            displayer->printMessageWitheNewLine(msg);
+            exit(-1);
+        }
 
-			// sending the command according to the client's choice
-			if(clientChoice == 1)
-				serverResponse = startNewGame(client);
-			else if (clientChoice == 2)
-				serverResponse = printListOfGames(client);
-			else
-				serverResponse = joinGame(client);
-
-			if (serverResponse == -2) // The games list is empty
-				serverResponse = startNewGame(client); //starting new game
-
-			if (serverResponse == 1) {	//the command request succeeded
-				char chip = client.getOpeningPlayer();	//find first client to connect to server, set to be black player
-				if(chip == 'X') {
-						blackPlayer = new ClientPlayer(BLACK, client);
-						whitePlayer = new OpponentClientPlayer(WHITE, client);
-				} else if (chip == 'O') {
-						whitePlayer = new ClientPlayer(WHITE, client);
-						blackPlayer = new OpponentClientPlayer(BLACK, client);
-				}
-			}
-    	}
+        // sending the command according to the client's choice
+        if(clientChoice == 1)
+            serverResponse = startNewGame(client);
+        else if (clientChoice == 2)
+            serverResponse = printListOfGames(client);
+        else
+            serverResponse = joinGame(client);
+        if (serverResponse == -2) // The games list is empty
+            serverResponse = startNewGame(client); //starting new game
+        if (serverResponse == 1) {	//the command request succeeded
+            char chip = client.getOpeningPlayer();	//find first client to connect to server, set to be black player
+            if(chip == 'X') {
+                blackPlayer = new ClientPlayer(BLACK, client);
+                whitePlayer = new OpponentClientPlayer(WHITE, client);
+            } else if (chip == 'O') {
+                whitePlayer = new ClientPlayer(WHITE, client);
+                blackPlayer = new OpponentClientPlayer(BLACK, client);
+            }
+        }
+    }
 }
 
 RemoteGame :: ~RemoteGame() {

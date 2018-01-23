@@ -2,7 +2,7 @@
 #include "Task.h"
 #include "ThreadPool.h"
 
-#define THREADS_NUM 5
+#define THREADS_NUM 1
 //#define TASKS_NUM 5
 
 static vector<int> listOfSockets;
@@ -12,10 +12,12 @@ Server::Server(int port): port(port), serverSocket(0) {
 }
 
 void *handleClient1(void *clientSocket) {
+    cout << "handling task.." << endl;
     //calling first function of new thread
     ClientHandler ch;
     long tid = (long)clientSocket;
     ch.handleClient((int)tid);
+    cout << "after handle" << endl;
 }
 
 void Server::start() {
@@ -63,7 +65,9 @@ void Server::start() {
 
        // tasks[i] = new Task(handleClient1, (void *)clientSocket);
         pool->addTask(new Task(handleClient1, (void *)clientSocket));
-        }
+
+        cout << "in loop" << endl;
+    }
 
 //    	char cha;
 //       cout << "Type a char to exit" << endl;
