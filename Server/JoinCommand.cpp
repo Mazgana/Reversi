@@ -10,13 +10,13 @@ void JoinCommand::execute(string gameName, int socketID, map<string, int> &gameL
         writeToSocket(socketID, empty);
         pthread_mutex_unlock(&mutex_join_game);
         return;
-    }
+    	}
     if (!gameList.count(gameName)) {//notifying client of invalid game to join
         int fail = -1;
         writeToSocket(socketID, fail);
         pthread_mutex_unlock(&mutex_join_game);
         return;
-    }
+    	}
 
     int firstClientSocket = gameList[gameName];//getting first player's ID
 
@@ -35,7 +35,7 @@ void JoinCommand::execute(string gameName, int socketID, map<string, int> &gameL
     //closing sockets when game ends
     close(firstClientSocket);
     close(secondClientSocket);
-    pthread_exit(NULL);
+//    pthread_exit(NULL);
 }
 
 int JoinCommand::writeToSocket(int socket, int message) {

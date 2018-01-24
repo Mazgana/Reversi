@@ -13,8 +13,9 @@ void ClientHandler :: createNewThread(int clientSocket) {
 void ClientHandler :: handleClient (int clientSocket) {
     int n;
     int firstClientSocket = clientSocket;
+    bool run = true;
 
-    while (true) {//loop to get another command after previous was executed
+    while (run) {//loop to get another command after previous was executed
         //getting string command from client
         char buffer[MAX_STR] = "";
         long firstClient = (long) firstClientSocket;
@@ -42,9 +43,18 @@ void ClientHandler :: handleClient (int clientSocket) {
         //executing the command
         CM.executeCommand(command, gameName, firstClientSocket, GameList);
 
+        cout << "command: "  << command << endl;
+        if (!command.compare("list_games"))
+        		run = false;
+
+        if (!command.compare("start"))
+        		run = false;
+
         //ending loop when command is close
         if (!command.compare("close")) {
             break;
-        }
+        		}
+       // pthread_exit(NULL);
     }
+    cout << "finished!" << endl;
  }

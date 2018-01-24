@@ -78,7 +78,7 @@ void Client::sendMove(int x, int y) {
 }
 
 int Client :: sendCommandMessage(string message) {
-
+	connectToServer();
 	//Sending the server the user's command
 	int n =	(int) send(clientSocket, message.c_str(), message.length(), 0);
 

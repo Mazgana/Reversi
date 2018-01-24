@@ -31,5 +31,5 @@ void StartCommand::execute(string gameName, int socketID, map<string, int> &Game
     pthread_mutex_unlock(&mutex_start_game);
 
     //terminating current thread while waiting for game to start (socket saved in map)
-    pthread_exit(NULL);
+//    pthread_exit(NULL);
 }

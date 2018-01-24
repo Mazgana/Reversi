@@ -16,6 +16,7 @@ void *handleClient1(void *clientSocket) {
     ClientHandler ch;
     long tid = (long)clientSocket;
     ch.handleClient((int)tid);
+    cout<<"finished handling"<<endl;
 }
 
 void Server::start() {
