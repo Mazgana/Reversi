@@ -31,6 +31,7 @@ void ThreadPool::executeTasks() {
             tasksQueue.pop();
             pthread_mutex_unlock(&lock);
             task->execute();
+        //    delete task;
             cout << "task ended" << endl;
         }
         else {

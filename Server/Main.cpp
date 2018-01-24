@@ -27,6 +27,7 @@ int main() {
 	Server server(portNum);
 	try {
 		server.start();
+		server.stop();
 	} catch (const char *msg) {
 		cout << "Cannot start server. Reason: " << msg << endl;
 		exit(-1);

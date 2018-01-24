@@ -133,7 +133,7 @@ int RemoteGame :: joinGame(Client client) {
 
 		//getting the game's name from the client
 		displayer->printMessageWitheNewLine("Which game you would like to join:");
-		while (serverResponse != 1) {
+		//while (serverResponse != 1) {
 			gameName = "";
 			gameName = displayer->getString();
 
@@ -141,14 +141,14 @@ int RemoteGame :: joinGame(Client client) {
 			serverResponse = client.sendCommandMessage(joinCommand);
 
 			if (serverResponse == -1) {
-				displayer->printMessageWitheNewLine("This game doesn't exist. Please choose one game from the list: ");
+				displayer->printMessageWitheNewLine("This game doesn't exist. Please choose a game from the list.");
                 return 0;
 			} else if (serverResponse == -2) {
 				displayer->printMessageWitheNewLine("The games list is empty. Please start new game.");
 				displayer->printNewLine();
-				return -2;
+				return 0;
 			}
-		}
+		//}
 
 		return serverResponse;
 }

@@ -1,14 +1,11 @@
 #include "Server.h"
-#include "Task.h"
-#include "ThreadPool.h"
 
-#define THREADS_NUM 1
 //#define TASKS_NUM 5
 
-static vector<int> listOfSockets;
 pthread_mutex_t mutex_sockets_list;
 
-Server::Server(int port): port(port), serverSocket(0) {
+Server::Server(int port): port(port), serverSocket(0), running(1) {
+    pool = new ThreadPool(THREADS_NUM);
 }
 
 void *handleClient1(void *clientSocket) {
@@ -44,14 +41,13 @@ void Server::start() {
     struct sockaddr_in clientAddress;
     socklen_t clientAddressLen = sizeof(clientAddress);
 
-    createExitThread(serverSocket);
+    createExitThread(running);
 
-    ThreadPool *pool = new ThreadPool(THREADS_NUM);
 //    Task *tasks[TASKS_NUM];
 
     cout << "waiting for client's connection.." << endl;
 
-    while (true){
+    while (running){
 
         //The first client login
         int clientSocket = accept(serverSocket, (struct sockaddr *)&clientAddress, &clientAddressLen);
@@ -63,48 +59,53 @@ void Server::start() {
         listOfSockets.push_back(clientSocket);//adding new socket to list
         pthread_mutex_unlock(&mutex_sockets_list);
 
-       // tasks[i] = new Task(handleClient1, (void *)clientSocket);
-        pool->addTask(new Task(handleClient1, (void *)clientSocket));
+        Task *tsk = new Task(handleClient1, (void *)clientSocket);
+        listOfTasks.push_back(tsk);
+        pool->addTask(tsk);
 
         cout << "in loop" << endl;
     }
-
-//    	char cha;
-//       cout << "Type a char to exit" << endl;
-//       cin >> cha;
-
- /*   pool->terminate();
-    for (int i = 0; i < TASKS_NUM; i++) {
-        delete tasks[i];
-    }*/
 }
 
-void *exit(void *serverSocket) {
+void Server::stop(){
+
+    cout << "closing sockets.." << endl;
+    //closing all sockets that were opened
+    for (int i = 0; i < (int) listOfSockets.size(); i++) {
+        close(listOfSockets[i]);
+    }
+    listOfSockets.clear();
+
+    cout << "closing tasks.." << endl;
+
+    for (int i = 0; i < listOfTasks.size(); i++) {
+        delete listOfTasks[i];
+    }
+    cout << "terminating pool" << endl;
+    pool->terminate();
+    cout << "closing server socket.." << endl;
+    close(serverSocket);
+
+    pthread_mutex_unlock(&mutex_sockets_list);
+    //closing server socket and exiting program
+    exit(0);
+}
+void *exit(void *arg) {
+    Server *srvr = (Server *)arg;
     string command;
     //waiting for exit command from console
     while (command.compare("exit")) {
         cin >> command;
     }
     cout << "closing server..." << endl;
-    pthread_mutex_lock(&mutex_sockets_list);
-
-    //closing all sockets that were opened
-    for (int i = 0; i < (int) listOfSockets.size(); i++) {
-        close(listOfSockets[i]);
-    }
-    listOfSockets.clear();
-    pthread_mutex_unlock(&mutex_sockets_list);
-
-    //closing server socket and exiting program
-    long socket = (long)serverSocket;
-    close((int)socket);
-    exit(0);
+    srvr->stop();
+    //pthread_mutex_lock(&mutex_sockets_list);
 }
 
-void Server :: createExitThread(int serverSocket) {
+void Server :: createExitThread(int running) {
     //creating new thread
     pthread_t thread;
-    int rc = pthread_create(&thread, NULL, exit, (void *)(long)serverSocket);
+    int rc = pthread_create(&thread, NULL, exit, this);
     if (rc == -1) {
         throw "Failed creating thread";
     }
