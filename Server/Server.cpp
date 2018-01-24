@@ -11,16 +11,13 @@ void *handleClient1(void *clientSocket) {
     ClientHandler ch;
     long tid = (long)clientSocket;
     ch.handleClient((int)tid);
-    cout<<"finished handling"<<endl;
 }
 
 void Server::start() {
-//    ClientHandler ch;
-
     serverSocket = socket(AF_INET , SOCK_STREAM , 0);
     if (serverSocket == -1) {
         throw "Error opening socket";
-    }
+    	}
 
     //Defining the server's settings and binding
     struct sockaddr_in serverAddress;
@@ -43,7 +40,6 @@ void Server::start() {
     cout << "waiting for client's connection.." << endl;
 
     while (true){
-
         //The first client login
         int clientSocket = accept(serverSocket, (struct sockaddr *)&clientAddress, &clientAddressLen);
 
@@ -75,6 +71,7 @@ void Server::stop(){
     //closing server socket and exiting program
     exit(0);
 }
+
 void *exit(void *arg) {
     Server *srvr = (Server *)arg;
     string command;

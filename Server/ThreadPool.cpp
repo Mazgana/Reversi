@@ -26,9 +26,7 @@ void ThreadPool::executeTasks() {
             Task* task = tasksQueue.front();
             tasksQueue.pop();
             pthread_mutex_unlock(&lock);
-            	cout<<"executing"<<endl;
             task->execute();
-            cout<<"executed"<<endl;
         		}
         else {
             pthread_mutex_unlock(&lock);
