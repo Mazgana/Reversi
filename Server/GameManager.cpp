@@ -45,6 +45,9 @@ void GameManager::playGame(int firstClientSocket, int secondClientSocket) {
             return;
         }
 
+        if (arg1 == -5)
+            return;
+
         int m = (int) write(secondClientSocket, &arg2, sizeof(arg2));
         if (m == -1) { //Client disconnected
             write(firstClientSocket, &disconnection, sizeof(disconnection));

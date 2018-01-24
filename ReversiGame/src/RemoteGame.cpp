@@ -1,7 +1,7 @@
 #include "RemoteGame.h"
 
 RemoteGame::RemoteGame() {
-		displayer = new ConsoleDisplay();
+	displayer = new ConsoleDisplay();
 
    	ifstream File;
    	string details;
@@ -22,40 +22,35 @@ RemoteGame::RemoteGame() {
    	int portNum = atoi(port.c_str());
 
     Client client(ipAddres.c_str(), portNum);//creating a client and connecting it to server.
-    try {
-        client.connectToServer();
-    } catch  (const char *msg) {
-    	  displayer->printMessage("Failed to connect to server. Reason: ");
-    	  displayer->printMessageWitheNewLine(msg);
-        exit(-1);
-      	}
-
     int serverResponse = 0;
     while (serverResponse == 0) { // The client asked list of games
-			int clientChoice = chooseSeverOption();
+        int clientChoice = chooseSeverOption();
+        try {
+            client.connectToServer();
+        } catch  (const char *msg) {
+            displayer->printMessage("Failed to connect to server. Reason: ");
+            displayer->printMessageWitheNewLine(msg);
+            exit(-1);
+        }
 
-			// sending the command according to the client's choice
-			if(clientChoice == 1)
-				serverResponse = startNewGame(client);
-			else if (clientChoice == 2)
-				serverResponse = printListOfGames(client);
-			else
-				serverResponse = joinGame(client);
-
-			if (serverResponse == -2) // The games list is empty
-				serverResponse = startNewGame(client); //starting new game
-
-			if (serverResponse == 1) {	//the command request succeeded
-				char chip = client.getOpeningPlayer();	//find first client to connect to server, set to be black player
-				if(chip == 'X') {
-						blackPlayer = new ClientPlayer(BLACK, client);
-						whitePlayer = new OpponentClientPlayer(WHITE, client);
-				} else if (chip == 'O') {
-						whitePlayer = new ClientPlayer(WHITE, client);
-						blackPlayer = new OpponentClientPlayer(BLACK, client);
-				}
-			}
-    	}
+        // sending the command according to the client's choice
+        if(clientChoice == 1)
+            serverResponse = startNewGame(client);
+        else if (clientChoice == 2)
+            serverResponse = printListOfGames(client);
+        else
+            serverResponse = joinGame(client);
+        if (serverResponse == 1) {	//the command request succeeded
+            char chip = client.getOpeningPlayer();	//find first client to connect to server, set to be black player
+            if(chip == 'X') {
+                blackPlayer = new ClientPlayer(BLACK, client);
+                whitePlayer = new OpponentClientPlayer(WHITE, client);
+            } else if (chip == 'O') {
+                whitePlayer = new ClientPlayer(WHITE, client);
+                blackPlayer = new OpponentClientPlayer(BLACK, client);
+            }
+        }
+    }
 }
 
 RemoteGame :: ~RemoteGame() {
@@ -95,17 +90,16 @@ int RemoteGame :: startNewGame(Client client) {
 		//getting the new game's name from the client
 		displayer->printMessageWitheNewLine("Please enter your new game's name:");
 
-		while (serverResponse != 1) {
-			gameName = "";
-			gameName = displayer->getString();
+        gameName = "";
+        gameName = displayer->getString();
 
-			string startCommand = "start " + gameName;
-			serverResponse = client.sendCommandMessage(startCommand);
-			if (serverResponse == -1)
-				displayer->printMessageWitheNewLine("Name already exists. Please enter new name:");
-			}
+        string startCommand = "start " + gameName;
+        serverResponse = client.sendCommandMessage(startCommand);
+        if (serverResponse == -1)
+            displayer->printMessageWitheNewLine("Name already exists. Please enter new name:");
 
-      displayer->printMessageWitheNewLine("Waiting for opponent to join...");
+
+        displayer->printMessageWitheNewLine("Waiting for opponent to join...");
 
 		return serverResponse;
 }
@@ -116,7 +110,11 @@ int RemoteGame :: printListOfGames(Client client) {
 		string listCommand = "list_games ";
 		listOfGames = client.receiveStringList(listCommand);
 
-		displayer->printMessageWitheNewLine("The games list:");
+        if(listOfGames.size() <= 0) {
+            displayer->printMessageWitheNewLine("The games list is empty.");
+            return 0;
+        }
+        displayer->printMessageWitheNewLine("The games list:");
 
 		//printing the list
 		for (int i = 0; i < (int) listOfGames.size(); i++) {
@@ -134,7 +132,7 @@ int RemoteGame :: joinGame(Client client) {
 
 		//getting the game's name from the client
 		displayer->printMessageWitheNewLine("Which game you would like to join:");
-		while (serverResponse != 1) {
+		//while (serverResponse != 1) {
 			gameName = "";
 			gameName = displayer->getString();
 
@@ -142,13 +140,14 @@ int RemoteGame :: joinGame(Client client) {
 			serverResponse = client.sendCommandMessage(joinCommand);
 
 			if (serverResponse == -1) {
-				displayer->printMessageWitheNewLine("This game doesn't exist. Please choose one game from the list: ");
+				displayer->printMessageWitheNewLine("This game doesn't exist. Please choose a game from the list.");
+                return 0;
 			} else if (serverResponse == -2) {
 				displayer->printMessageWitheNewLine("The games list is empty. Please start new game.");
 				displayer->printNewLine();
-				return -2;
+				return 0;
 			}
-		}
+		//}
 
 		return serverResponse;
 }

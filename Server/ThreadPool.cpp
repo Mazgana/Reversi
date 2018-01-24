@@ -1,7 +1,3 @@
-//
-// Created by leah on 22/01/18.
-//
-
 #include "ThreadPool.h"
 #include <unistd.h>
 

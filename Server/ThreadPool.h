@@ -1,7 +1,3 @@
-//
-// Created by leah on 22/01/18.
-//
-
 #ifndef SERVER_THREADPOOL_H
 #define SERVER_THREADPOOL_H
 
