@@ -26,14 +26,13 @@ public:
     void stop();
 
 private:
-    int running;
 	int port;
 	int serverSocket;
     vector<int> listOfSockets;
     vector<Task *> listOfTasks;
     ThreadPool *pool;
 	//gets ID of server socket and creates new thread to wait for an exit from console.
-    void createExitThread(int running);
+    void createExitThread();
 };
 
 #endif /* SERVER_H_ */

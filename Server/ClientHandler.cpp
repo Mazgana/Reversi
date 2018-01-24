@@ -1,21 +1,10 @@
 #include "ClientHandler.h"
 
-/*
-void ClientHandler :: createNewThread(int clientSocket) {
-	//creating the new thread
-  pthread_t thread;
-	int rc = pthread_create(&thread, NULL, handleClient1, (void *)(long)clientSocket);
-	if (rc == -1) {
-		cout << "Failed creating thread" << endl;
-	}
-}
-*/
 void ClientHandler :: handleClient (int clientSocket) {
     int n;
     int firstClientSocket = clientSocket;
     bool run = true;
 
-//    while (run) {/1/loop to get another command after previous was executed
         //getting string command from client
         char buffer[MAX_STR] = "";
         long firstClient = (long) firstClientSocket;
@@ -43,13 +32,4 @@ void ClientHandler :: handleClient (int clientSocket) {
     cout << "executing command..: " << command << endl;
         //executing the command
     CM.executeCommand(command, gameName, firstClientSocket, GameList);
-
-//        //ending loop when command is close
-//        if (!command.compare("close")) {
-//            run = false;
-//            break;
-//        }
-//    }
-
-    cout << "exit loop" << endl;
  }

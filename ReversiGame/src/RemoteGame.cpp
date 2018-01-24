@@ -90,17 +90,16 @@ int RemoteGame :: startNewGame(Client client) {
 		//getting the new game's name from the client
 		displayer->printMessageWitheNewLine("Please enter your new game's name:");
 
-		while (serverResponse != 1) {
-			gameName = "";
-			gameName = displayer->getString();
+        gameName = "";
+        gameName = displayer->getString();
 
-			string startCommand = "start " + gameName;
-			serverResponse = client.sendCommandMessage(startCommand);
-			if (serverResponse == -1)
-				displayer->printMessageWitheNewLine("Name already exists. Please enter new name:");
-			}
+        string startCommand = "start " + gameName;
+        serverResponse = client.sendCommandMessage(startCommand);
+        if (serverResponse == -1)
+            displayer->printMessageWitheNewLine("Name already exists. Please enter new name:");
 
-      displayer->printMessageWitheNewLine("Waiting for opponent to join...");
+
+        displayer->printMessageWitheNewLine("Waiting for opponent to join...");
 
 		return serverResponse;
 }

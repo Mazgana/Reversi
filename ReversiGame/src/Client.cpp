@@ -42,7 +42,7 @@ void Client::connectToServer() {
         throw "Error connecting to server";
     	}
 
-		displayer->printMessageWitheNewLine("Connected to server");
+    //displayer->printMessageWitheNewLine("Connected to server");
 }
 
 char Client::getOpeningPlayer() {
@@ -86,7 +86,7 @@ int Client :: sendCommandMessage(string message) {
         throw "Error writing message to socket.";
    	} else if (n == 0) {
         displayer->printMessageWitheNewLine("The server disconnected.");
-       	throw "The server disconnected";
+       	throw "Lost server connection";
 	}
 
     // reading the server's response if the command succeeded or failed.

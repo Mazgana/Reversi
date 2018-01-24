@@ -1,7 +1,3 @@
-//
-// Created by leah on 22/01/18.
-//
-
 #ifndef SERVER_TASK_H
 #define SERVER_TASK_H
 class Task {
@@ -11,7 +7,7 @@ public:
     void execute() {
         func(arg);
     }
-    virtual ~Task() { delete this; }
+    virtual ~Task() {}
 private:
     void * (*func)(void *arg);
     void *arg;

@@ -32,7 +32,7 @@ void GameFlow :: gameMenu() {
 	}
 
 	numberOfPlayers = gameType;
-  board = Board(default_lenth, default_width);
+    board = Board(default_lenth, default_width);
 
 	if (numberOfPlayers == 1) {
 		logic = new TwoClientsGame();

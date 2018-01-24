@@ -1,20 +1,16 @@
 #include "Server.h"
 
-//#define TASKS_NUM 5
-
 pthread_mutex_t mutex_sockets_list;
 
-Server::Server(int port): port(port), serverSocket(0), running(1) {
+Server::Server(int port): port(port), serverSocket(0) {
     pool = new ThreadPool(THREADS_NUM);
 }
 
 void *handleClient1(void *clientSocket) {
-    cout << "handling task.." << endl;
     //calling first function of new thread
     ClientHandler ch;
     long tid = (long)clientSocket;
     ch.handleClient((int)tid);
-    cout << "after handle" << endl;
 }
 
 void Server::start() {
@@ -41,13 +37,11 @@ void Server::start() {
     struct sockaddr_in clientAddress;
     socklen_t clientAddressLen = sizeof(clientAddress);
 
-    createExitThread(running);
-
-//    Task *tasks[TASKS_NUM];
+    createExitThread();
 
     cout << "waiting for client's connection.." << endl;
 
-    while (running){
+    while (true){
 
         //The first client login
         int clientSocket = accept(serverSocket, (struct sockaddr *)&clientAddress, &clientAddressLen);
@@ -62,31 +56,21 @@ void Server::start() {
         Task *tsk = new Task(handleClient1, (void *)clientSocket);
         listOfTasks.push_back(tsk);
         pool->addTask(tsk);
-
-        cout << "in loop" << endl;
     }
 }
 
 void Server::stop(){
 
-    cout << "closing sockets.." << endl;
     //closing all sockets that were opened
     for (int i = 0; i < (int) listOfSockets.size(); i++) {
         close(listOfSockets[i]);
     }
     listOfSockets.clear();
-
-    cout << "closing tasks.." << endl;
-
     for (int i = 0; i < listOfTasks.size(); i++) {
         delete listOfTasks[i];
     }
-    cout << "terminating pool" << endl;
     pool->terminate();
-    cout << "closing server socket.." << endl;
     close(serverSocket);
-
-    pthread_mutex_unlock(&mutex_sockets_list);
     //closing server socket and exiting program
     exit(0);
 }
@@ -99,10 +83,9 @@ void *exit(void *arg) {
     }
     cout << "closing server..." << endl;
     srvr->stop();
-    //pthread_mutex_lock(&mutex_sockets_list);
 }
 
-void Server :: createExitThread(int running) {
+void Server :: createExitThread() {
     //creating new thread
     pthread_t thread;
     int rc = pthread_create(&thread, NULL, exit, this);

@@ -1,7 +1,3 @@
-//
-// Created by leah on 22/01/18.
-//
-
 #include "ThreadPool.h"
 #include <unistd.h>
 
@@ -31,8 +27,6 @@ void ThreadPool::executeTasks() {
             tasksQueue.pop();
             pthread_mutex_unlock(&lock);
             task->execute();
-        //    delete task;
-            cout << "task ended" << endl;
         }
         else {
             pthread_mutex_unlock(&lock);
