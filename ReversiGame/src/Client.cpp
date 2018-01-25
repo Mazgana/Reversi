@@ -14,8 +14,6 @@ void Client::connectToServer() {
         throw "Error opening socket";
     	}
 
-    cout << "in client: " << clientSocket << endl;
-
     //Convert the ip string to a network address
     struct in_addr address;
     if (!inet_aton(serverIP, &address)) {
@@ -53,12 +51,15 @@ char Client::getOpeningPlayer() {
         int playersPlace = readInt();
 
         if(playersPlace == 1) {
+        		displayer->printNewLine();
             displayer->printMessageWitheNewLine("You are the black player X, you go first");
             return 'X';
         } else if (playersPlace == 2) {
+        		displayer->printNewLine();
             displayer->printMessageWitheNewLine("You are the white player O, you go second");
             return 'O';
         } else {
+        		displayer->printNewLine();
             displayer->printMessageWitheNewLine("got unreadable starting player from server");
             return ' ';
         }

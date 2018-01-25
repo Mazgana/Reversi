@@ -90,16 +90,15 @@ int RemoteGame :: startNewGame(Client client) {
 		//getting the new game's name from the client
 		displayer->printMessageWitheNewLine("Please enter your new game's name:");
 
-        gameName = "";
-        gameName = displayer->getString();
+    gameName = "";
+    gameName = displayer->getString();
 
-        string startCommand = "start " + gameName;
-        serverResponse = client.sendCommandMessage(startCommand);
-        if (serverResponse == -1)
-            displayer->printMessageWitheNewLine("Name already exists. Please enter new name:");
+    string startCommand = "start " + gameName;
+    serverResponse = client.sendCommandMessage(startCommand);
+    if (serverResponse == -1)
+        displayer->printMessageWitheNewLine("Name already exists. Please enter new name:");
 
-
-        displayer->printMessageWitheNewLine("Waiting for opponent to join...");
+    displayer->printMessageWitheNewLine("Waiting for opponent to join...");
 
 		return serverResponse;
 }
@@ -110,11 +109,11 @@ int RemoteGame :: printListOfGames(Client client) {
 		string listCommand = "list_games ";
 		listOfGames = client.receiveStringList(listCommand);
 
-        if(listOfGames.size() <= 0) {
-            displayer->printMessageWitheNewLine("The games list is empty.");
-            return 0;
+    if(listOfGames.size() <= 0) {
+        displayer->printMessageWitheNewLine("The games list is empty.");
+        return 0;
         }
-        displayer->printMessageWitheNewLine("The games list:");
+    displayer->printMessageWitheNewLine("The games list:");
 
 		//printing the list
 		for (int i = 0; i < (int) listOfGames.size(); i++) {
@@ -132,22 +131,21 @@ int RemoteGame :: joinGame(Client client) {
 
 		//getting the game's name from the client
 		displayer->printMessageWitheNewLine("Which game you would like to join:");
-		//while (serverResponse != 1) {
-			gameName = "";
-			gameName = displayer->getString();
 
-			string joinCommand = "join " + gameName;
-			serverResponse = client.sendCommandMessage(joinCommand);
+		gameName = "";
+		gameName = displayer->getString();
 
-			if (serverResponse == -1) {
+		string joinCommand = "join " + gameName;
+		serverResponse = client.sendCommandMessage(joinCommand);
+
+		if (serverResponse == -1) {
 				displayer->printMessageWitheNewLine("This game doesn't exist. Please choose a game from the list.");
-                return 0;
-			} else if (serverResponse == -2) {
+				return 0;
+		} else if (serverResponse == -2) {
 				displayer->printMessageWitheNewLine("The games list is empty. Please start new game.");
 				displayer->printNewLine();
 				return 0;
-			}
-		//}
+		}
 
 		return serverResponse;
 }

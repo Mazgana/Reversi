@@ -11,6 +11,8 @@ void *handleClient1(void *clientSocket) {
     ClientHandler ch;
     long tid = (long)clientSocket;
     ch.handleClient((int)tid);
+
+    return NULL;
 }
 
 void Server::start() {
@@ -28,7 +30,7 @@ void Server::start() {
 
     if (bind(serverSocket, (struct sockaddr *)&serverAddress, sizeof(serverAddress)) == -1) {
         throw "Error on binding";
-    }
+    	}
 
     listen(serverSocket, MAX_CONNECTED_CLIENTS);
 
@@ -40,16 +42,18 @@ void Server::start() {
     cout << "waiting for client's connection.." << endl;
 
     while (true){
-        //The first client login
+        //Client's login
         int clientSocket = accept(serverSocket, (struct sockaddr *)&clientAddress, &clientAddressLen);
 
         if (clientSocket == -1)
             throw "Failed to connect the server";
 
+        //adding new socket to list
         pthread_mutex_lock(&mutex_sockets_list);
-        listOfSockets.push_back(clientSocket);//adding new socket to list
+        listOfSockets.push_back(clientSocket);
         pthread_mutex_unlock(&mutex_sockets_list);
 
+        //creating new task and adding it to the list in the threads pool
         Task *tsk = new Task(handleClient1, (void *)clientSocket);
         listOfTasks.push_back(tsk);
         pool->addTask(tsk);
@@ -60,14 +64,17 @@ void Server::stop(){
     //closing all sockets that were opened
     for (int i = 0; i < (int) listOfSockets.size(); i++) {
         close(listOfSockets[i]);
-    }
+    	}
+
+    //deleting all the tasks that were created
     listOfSockets.clear();
     for (int i = 0; i < listOfTasks.size(); i++) {
         delete listOfTasks[i];
-    }
+    	}
     pool->terminate();
-    close(serverSocket);
+
     //closing server socket and exiting program
+    close(serverSocket);
     exit(0);
 }
 
@@ -83,7 +90,7 @@ void *exit(void *arg) {
 }
 
 void Server :: createExitThread() {
-    //creating new thread
+    //creating new thread that waits for 'exit' command in the server
     pthread_t thread;
     int rc = pthread_create(&thread, NULL, exit, this);
     if (rc == -1) {

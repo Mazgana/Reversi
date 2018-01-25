@@ -1,5 +1,5 @@
-/*
- * Server class. creates sockets and connet=cts two clients to read and write coordinates for game.
+ /*
+  * Server class. creates sockets and connet=cts two clients to read and write coordinates for game.
  */
 #ifndef SERVER_H_
 #define SERVER_H_
@@ -9,10 +9,11 @@
 #include <sys/socket.h>
 #include <netinet/in.h>
 #include <cstring>
+#include <stdlib.h>
 #include "Task.h"
 #include "ThreadPool.h"
 
-#define THREADS_NUM 1
+#define THREADS_NUM 5
 #define MAX_CONNECTED_CLIENTS 20
 using namespace std;
 

@@ -15,6 +15,7 @@ void GameFlow :: gameMenu() {
 
 	//opening message for reversi game.
 	displayer->printMessageWitheNewLine("Welcome to Reversi!");
+	displayer->printNewLine();
 	displayer->printMessageWitheNewLine("Choose an opponent type:");
 	displayer->printMessageWitheNewLine("1. a human local player");
 	displayer->printMessageWitheNewLine("2. an AI player");
