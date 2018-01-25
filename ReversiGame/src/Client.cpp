@@ -9,10 +9,12 @@ Client :: ~Client() {
 
 void Client::connectToServer() {
     //create a socket point
-    clientSocket = socket(AF_INET, SOCK_STREAM, 0);
+    this->clientSocket = socket(AF_INET, SOCK_STREAM, 0);
     if (clientSocket == -1) {
         throw "Error opening socket";
     	}
+
+    cout << "in client: " << clientSocket << endl;
 
     //Convert the ip string to a network address
     struct in_addr address;
@@ -38,7 +40,7 @@ void Client::connectToServer() {
     serverAddress.sin_port = htons(serverPort);
 
     //Establish a connection with the TCP server
-    if (connect(clientSocket, (struct sockaddr *)&serverAddress, sizeof(serverAddress)) == -1) {
+    if (connect(this->clientSocket, (struct sockaddr *)&serverAddress, sizeof(serverAddress)) == -1) {
         throw "Error connecting to server";
     	}
 
@@ -78,9 +80,8 @@ void Client::sendMove(int x, int y) {
 }
 
 int Client :: sendCommandMessage(string message) {
-	connectToServer();
 	//Sending the server the user's command
-	int n =	(int) send(clientSocket, message.c_str(), message.length(), 0);
+	int n =	(int) send(this->clientSocket, message.c_str(), message.length(), 0);
 
     if (n == -1) {
         throw "Error writing message to socket.";

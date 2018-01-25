@@ -57,7 +57,6 @@ void Server::start() {
 }
 
 void Server::stop(){
-
     //closing all sockets that were opened
     for (int i = 0; i < (int) listOfSockets.size(); i++) {
         close(listOfSockets[i]);
